@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scene Kit"
+  short_description: "概念图优先、多视图拆件校验、Blender 装配与最终面片精修工作流"
+  default_prompt: "Use $scene-kit to explore architectural concepts before generating component-level 3D assets."
