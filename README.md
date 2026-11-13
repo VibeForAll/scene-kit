@@ -1,11 +1,32 @@
 # Scene Kit
 
-<p align="center">
-  <a href="assets/scene-kit-workflow-zh.png"><img src="assets/scene-kit-workflow-zh.png" alt="Scene Kit 中文流程图" width="49%"></a>
-  <a href="assets/scene-kit-workflow-en.png"><img src="assets/scene-kit-workflow-en.png" alt="Scene Kit English workflow" width="49%"></a>
-</p>
+[![Scene Kit bilingual workflow](assets/scene-kit-workflow-bilingual.png)](assets/scene-kit-workflow-bilingual.png)
+
+[Chinese full-size](assets/scene-kit-workflow-zh.png) · [English full-size](assets/scene-kit-workflow-en.png)
 
 Scene Kit is a concept-first Blender workflow that turns architectural references into modular, reusable, and construction-logically coherent 3D buildings through multi-view audits, AI-assisted component generation, and quality-first surface refinement.
+
+## Example: from rough blockout to refined result
+
+> The first two images are intentionally **unrefined work-in-progress** views. They still contain visible problems in surfaces, roof connections, supports, and assembly. That is expected at this stage and is exactly why Scene Kit keeps refining instead of treating the first assembled model as final.
+
+### 1. Ten-view inspection
+
+![Unrefined ten-view render](assets/ten-views-unrefined.jpg)
+
+Early multi-view render used to check the building from all required directions. The roughness and connection problems are visible, so this version is **not ready for delivery**.
+
+### 2. Rough assembly
+
+![Unrefined assembled model](assets/rough-assembly-unrefined.jpg)
+
+The first assembled blockout. Surface quality and several eave, roof, and support relationships still need repair. This is intentionally shown as a process state.
+
+### 3. Refined result
+
+![Refined result illustration](assets/refined-result-schematic.jpg)
+
+Refined-result illustration showing the intended finish: coherent surfaces, believable roof and eave connections, controlled materials, and a visually complete architectural presentation. A production model should pass the final `FINISHING` checks before reaching this level.
 
 ## What it does
 
