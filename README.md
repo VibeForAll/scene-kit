@@ -24,7 +24,7 @@ The first assembled blockout. Surface quality and several eave, roof, and suppor
 
 ### 3. Refined result
 
-Split the componets,reuse the assembly,and then refine the results
+Split the componets,reuse the assembly,and then refine the results.
 
 ![Refined result illustration](assets/refined-result-schematic.jpg)
 
