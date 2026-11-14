@@ -24,6 +24,8 @@ The first assembled blockout. Surface quality and several eave, roof, and suppor
 
 ### 3. Refined result
 
+Split the componets,reuse the assembly,and then refine the results
+
 ![Refined result illustration](assets/refined-result-schematic.jpg)
 
 Refined-result illustration showing the intended finish: coherent surfaces, believable roof and eave connections, controlled materials, and a visually complete architectural presentation. A production model should pass the final `FINISHING` checks before reaching this level.
