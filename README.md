@@ -121,17 +121,26 @@ flowchart LR
 
 阁楼双窗属于一个真实的封闭小房体，不是贴在屋面上的窗片。两侧墙使用沿主屋面坡度收束的**三角形截面**，底板止于屋面交线；小屋顶前沿比主檐退后 **0.09 m**，后缘埋入主屋面并继续覆盖房体深度。
 
-### 6.3 组件与正视遮挡
+### 6.3 组件化示例
+
+墙体、圆塔和藤蔓不是整栋模型中不可分离的一部分，而是拥有独立源文件、参数合同、材质绑定和 QA 的组件资产。它们完成验收后进入整栋装配，并可按同一接口复用到后续建筑。
+
+| 墙体外壳组件 | 圆形塔楼组件 | 攀援藤蔓组件 |
+|:---:|:---:|:---:|
+| <img src="assets/preview/components/wall_envelope/wall_envelope_v5_three_quarter.png" width="100%" alt="独立墙体外壳组件"> | <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="独立圆形塔楼组件"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="独立攀援藤蔓组件"> |
+| 参数化墙体与洞口 | 独立塔身、塔帽与窗组 | 可实例化的攀援模块 |
+
+### 6.4 组件与正视遮挡
 
 ![正视图逐组件轮廓审计](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
 21 扇主窗按照“立面 × 楼层”计数审计：正面一层为 3 扇并跳过门轴，二层为 4 扇且门轴上方有窗。圆塔、窗组、壁灯、藤蔓和烟囱均通过当前装配的实时实例与轮廓检查。
 
-### 6.4 颜色与表面
+### 6.5 颜色与表面
 
 屋面采用暗暖炭色扁平石板瓦，并使用 Poly Haven `roof_slates_02` 的 Color、NormalGL 与 Roughness。当前渲染与参考采样的绿色通道平均误差为 **1.1**、色相误差为 **0.0139**，处于项目记录容差内。
 
-### 6.5 案例交付内容
+### 6.6 案例交付内容
 
 本案例会交付整栋 Blender 源文件、整栋 GLB、17 件组件的库索引、当前装配报告、正视图组件审计、关键数量审计、数量门禁结果、宿主连接与背面体量审计、原始十视图输入审计，以及立面洞口合同。
 
@@ -174,4 +183,6 @@ internal/                  当前版本数量、洞口、宿主与验收审计
 
 ## 10. 最终效果
 
-![童话城堡 01 最终效果](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
+<p align="center">
+  <img src="assets/preview/assembly/castle_assembly_hero_three_quarter.png" width="72%" alt="童话城堡 01 最终效果">
+</p>

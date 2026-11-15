@@ -121,17 +121,26 @@ These ten views are the user-supplied source input, not renders regenerated from
 
 The paired attic windows belong to a real enclosed dormer volume. Both cheeks use **triangular sections** that taper along the main roof pitch, and the floor stops at the roof intersection. The small roof front is set back **0.09 m** from the main eave, while its rear edge remains embedded in the main roof.
 
-### 6.3 Components and front-view occlusion
+### 6.3 Component examples
+
+The walls, round tower, and vines are not inseparable parts of the final model. Each is a component asset with its own source, parametric contract, material bindings, and QA. Approved components are assembled into the building and can be reused in later projects through the same interfaces.
+
+| Wall envelope | Round corner tower | Climbing vine |
+|:---:|:---:|:---:|
+| <img src="assets/preview/components/wall_envelope/wall_envelope_v5_three_quarter.png" width="100%" alt="Standalone wall envelope component"> | <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="Standalone round tower component"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="Standalone climbing vine component"> |
+| Parametric wall and openings | Independent tower body, cap, and windows | Reusable instantiated vine module |
+
+### 6.4 Components and front-view occlusion
 
 ![Per-component front silhouette audit](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
 The 21 main windows are audited by elevation and floor: three on the ground-floor front elevation with the door axis skipped, and four on the upper floor including the centered door-axis window. The tower, window groups, wall lantern, vines, and chimneys pass the live-instance and silhouette checks for the current assembly.
 
-### 6.4 Color and surface
+### 6.5 Color and surface
 
 The roof uses a dark warm-charcoal flat slate and the Color, NormalGL, and Roughness maps from Poly Haven `roof_slates_02`. The current render has a mean green-channel error of **1.1** and a hue error of **0.0139** against the recorded reference samples.
 
-### 6.5 Case Deliverable Scope
+### 6.6 Case Deliverable Scope
 
 The case delivers the whole-building Blender source, whole-building GLB, a 17-component library index, the current assembly report, front-view component audit, key quantity audit, quantity gate result, host-connection and rear-volume audit, original ten-view input audit, and facade opening contract.
 
@@ -174,4 +183,6 @@ The example is not a final production-grade asset. Some railing connections, pos
 
 ## 10. Final Result
 
-![Final result of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
+<p align="center">
+  <img src="assets/preview/assembly/castle_assembly_hero_three_quarter.png" width="72%" alt="Final result of Fairy-Tale Castle 01">
+</p>
