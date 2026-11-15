@@ -95,21 +95,19 @@ Assembly is not delivery. Surfaces, normals, seams, intersections, supports, mat
 | Standalone components disagree with the assembly | Compare bounds, object counts, triangles, origins, and material bindings |
 | Stale screenshots or approvals | Bind revision, parameter hash, file hashes, and current QA together |
 
-## 5. Scene Kit 7.22
+## 5. Enhanced Detail Recognition
 
 The canonical ten views remain mandatory and continue to gate `analysis_ready`. If a local feature remains unclear, such as a roof joint, hidden rear face, window depth, railing connection, attachment, or repeated quantity, additional temporary close-up or oblique views may be rendered from the same normalized reference model.
 
 These diagnostic views support identification and cross-checking. They do not replace or reorder the fixed ten views and do not need to be retained in the final project. Conclusions from a diagnostic view must still be verified against an existing canonical view or original source material.
 
-The attachment-integrity requirements from 7.21 remain in force: dormer components need real volume, side and rear enclosure, projection beyond the host, an inboard roof edge, and a verified connection to the main roof.
+Attachment-integrity requirements also remain in force: dormer components need real volume, side and rear enclosure, projection beyond the host, an inboard roof edge, and a verified connection to the main roof.
 
 ## 6. Case Study: Fairy-Tale Castle 01
 
 The case below shows how the method applies to a real building. Its specific style, component counts, and roof forms are examples, not fixed Scene Kit rules.
 
-![Final render of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
-
-The case is at `FINISHING`, revision 11. The main facade is **11.4 m** wide and the assembly contains **40 component instances**, including 21 main windows, three climbing-vine modules, and one entrance planter. Per-instance front silhouettes cover all 40 instances, with no tower/window or unexplained cross-component overlaps.
+The main facade is **11.4 m** wide and the assembly contains **40 component instances**, including 21 main windows, three climbing-vine modules, and one entrance planter. Per-instance front silhouettes cover all 40 instances, with no tower/window or unexplained cross-component overlaps.
 
 ![Whole-building five-view contact sheet](assets/preview/assembly/castle_assembly_contact_sheet.jpg)
 
@@ -123,30 +121,19 @@ These ten views are the user-supplied source input, not renders regenerated from
 
 The paired attic windows belong to a real enclosed dormer volume. Both cheeks use **triangular sections** that taper along the main roof pitch, and the floor stops at the roof intersection. The small roof front is set back **0.09 m** from the main eave, while its rear edge remains embedded in the main roof.
 
-![Attic roof and wall junction repair](assets/preview/process/attic_window_junction_revision11.jpg)
-
 ### 6.3 Components and front-view occlusion
 
 ![Per-component front silhouette audit](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
-The 21 main windows are audited by elevation and floor: three on the ground-floor front elevation with the door axis skipped, and four on the upper floor including the centered door-axis window. The tower, window groups, wall lantern, vines, and chimneys pass the live-instance and silhouette checks for revision 11.
+The 21 main windows are audited by elevation and floor: three on the ground-floor front elevation with the door axis skipped, and four on the upper floor including the centered door-axis window. The tower, window groups, wall lantern, vines, and chimneys pass the live-instance and silhouette checks for the current assembly.
 
 ### 6.4 Color and surface
 
 The roof uses a dark warm-charcoal flat slate and the Color, NormalGL, and Roughness maps from Poly Haven `roof_slates_02`. The current render has a mean green-channel error of **1.1** and a hue error of **0.0139** against the recorded reference samples.
 
-### 6.5 Case deliverables
+### 6.5 Case Deliverable Scope
 
-- [Whole-building Blender source](assembly/castle_assembly.blend)
-- [Whole-building GLB](assembly/fairy_tale_castle_01.glb)
-- [Component library index](components/README.md)
-- [Current assembly report](assets/preview/assembly/assembly_report.json)
-- [Front-view component audit](internal/assembly_front_visibility_audit.json)
-- [Key quantity audit](internal/quantity_audit_v11.json)
-- [Quantity gate result](internal/quantity_census_audit.json)
-- [Host connection and rear-volume audit](internal/attachment_integrity_audit_v11.json)
-- [Original ten-view input audit](internal/source_ten_view_input_audit_v11.json)
-- [Facade opening contract](internal/wall_openings_v2.json)
+The case delivers the whole-building Blender source, whole-building GLB, a 17-component library index, the current assembly report, front-view component audit, key quantity audit, quantity gate result, host-connection and rear-volume audit, original ten-view input audit, and facade opening contract.
 
 ## 7. Install and Quick Start
 
@@ -169,7 +156,7 @@ See [INSTALL.md](INSTALL.md) for installation, commands, and migration guidance.
 ```text
 README.md / README.en.md   unified GitHub entry points
 INSTALL.md                 installation and command reference
-scene-kit/                 final Scene Kit 7.22 skill
+scene-kit/                 Scene Kit skill
 scene-kit.standalone.md    single-file rule variant
 assembly/                  case-study Blender and GLB files
 components/                case component index and QA; standalone component binaries remain in the full project workspace
@@ -179,8 +166,12 @@ internal/                  current quantity, opening, host, and acceptance audit
 
 ## 9. Limitations and License
 
-The example is not a final production-grade asset. Some railing connections, post spacing, local stonework, and molding continuity remain simplified, and extreme close-up surface detail can be refined further. The README reflects the actual state of revision 11.
+The example is not a final production-grade asset. Some railing connections, post spacing, local stonework, and molding continuity remain simplified, and extreme close-up surface detail can be refined further. The README reflects the current assembly state.
 
 - Runtime: Python 3.10+, Blender, and an optional AI 3D provider
 - Supported hosts: Codex, Claude Code, Trae, and similar skill hosts
 - This repository does not currently grant a license. Add an appropriate license before public redistribution.
+
+## 10. Final Result
+
+![Final result of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_hero_three_quarter.png)

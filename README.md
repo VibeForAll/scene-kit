@@ -95,21 +95,19 @@ flowchart LR
 | 独立组件与整栋尺寸不一致 | 比较包围盒、对象数、三角面、原点和材质绑定 |
 | 仍在使用旧截图或旧审批 | 绑定 revision、参数指纹、文件哈希和当前 QA |
 
-## 5. Scene Kit 7.22
+## 5. 细节识别增强
 
 固定十视图仍是必查主视图和 `analysis_ready` 门禁。若某个局部特征仍不明确，例如屋顶接缝、被遮挡背面、门窗深度、栏杆连接、附着结构或重复数量，可以从同一归一化参考模型临时补拍近景或斜向诊断视角。
 
 这些补充视角只用于识别和交叉确认，不替换或重排固定十视图，也不要求保存到最终项目。任何由补充视角得到的结论仍需与既有十视图或原始素材互相验证。
 
-7.21 的附着结构门禁继续保留：屋顶窗和老虎窗必须具有真实体积、侧向与背面结构、前凸深度、主檐内退和主屋面连接。
+附着结构门禁同时要求：屋顶窗和老虎窗必须具有真实体积、侧向与背面结构、前凸深度、主檐内退和主屋面连接。
 
 ## 6. 案例：童话城堡 01
 
 下面的案例用于展示上述方法如何落到一栋真实建筑，不把特定建筑风格、构件数量或屋顶形式变成 Scene Kit 的固定规则。
 
-![童话城堡 01 最终模型](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
-
-当前阶段为 `FINISHING`，版本为 `revision 11`。建筑主体宽 **11.4 m**，整栋包含 **40 个组件实例**，其中主窗 21、攀援藤蔓 3、入口盆栽 1。正视图逐实例遮罩覆盖全部 40 个实例，没有塔楼/窗或未解释的跨组件重叠。
+建筑主体宽 **11.4 m**，整栋包含 **40 个组件实例**，其中主窗 21、攀援藤蔓 3、入口盆栽 1。正视图逐实例遮罩覆盖全部 40 个实例，没有塔楼/窗或未解释的跨组件重叠。
 
 ![整栋装配五视图](assets/preview/assembly/castle_assembly_contact_sheet.jpg)
 
@@ -123,30 +121,19 @@ flowchart LR
 
 阁楼双窗属于一个真实的封闭小房体，不是贴在屋面上的窗片。两侧墙使用沿主屋面坡度收束的**三角形截面**，底板止于屋面交线；小屋顶前沿比主檐退后 **0.09 m**，后缘埋入主屋面并继续覆盖房体深度。
 
-![阁楼屋顶与墙体连接修正](assets/preview/process/attic_window_junction_revision11.jpg)
-
 ### 6.3 组件与正视遮挡
 
 ![正视图逐组件轮廓审计](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
-21 扇主窗按照“立面 × 楼层”计数审计：正面一层为 3 扇并跳过门轴，二层为 4 扇且门轴上方有窗。圆塔、窗组、壁灯、藤蔓和烟囱均通过当前 rev 11 的实时实例与轮廓检查。
+21 扇主窗按照“立面 × 楼层”计数审计：正面一层为 3 扇并跳过门轴，二层为 4 扇且门轴上方有窗。圆塔、窗组、壁灯、藤蔓和烟囱均通过当前装配的实时实例与轮廓检查。
 
 ### 6.4 颜色与表面
 
 屋面采用暗暖炭色扁平石板瓦，并使用 Poly Haven `roof_slates_02` 的 Color、NormalGL 与 Roughness。当前渲染与参考采样的绿色通道平均误差为 **1.1**、色相误差为 **0.0139**，处于项目记录容差内。
 
-### 6.5 案例交付
+### 6.5 案例交付内容
 
-- [整栋 Blender 源文件](assembly/castle_assembly.blend)
-- [整栋 GLB](assembly/fairy_tale_castle_01.glb)
-- [组件库索引](components/README.md)
-- [当前装配报告](assets/preview/assembly/assembly_report.json)
-- [正视图组件审计](internal/assembly_front_visibility_audit.json)
-- [关键数量审计](internal/quantity_audit_v11.json)
-- [数量门禁结果](internal/quantity_census_audit.json)
-- [宿主连接与背面体量审计](internal/attachment_integrity_audit_v11.json)
-- [原始十视图输入审计](internal/source_ten_view_input_audit_v11.json)
-- [立面洞口合同](internal/wall_openings_v2.json)
+本案例会交付整栋 Blender 源文件、整栋 GLB、17 件组件的库索引、当前装配报告、正视图组件审计、关键数量审计、数量门禁结果、宿主连接与背面体量审计、原始十视图输入审计，以及立面洞口合同。
 
 ## 7. 安装与快速开始
 
@@ -169,7 +156,7 @@ python scene-kit/scripts/scene_kit.py validate ./my-scene
 ```text
 README.md / README.en.md   合并后的 GitHub 首页
 INSTALL.md                 安装与命令说明
-scene-kit/                 最终版 7.22 skill
+scene-kit/                 Scene Kit skill
 scene-kit.standalone.md    单文件规则版
 assembly/                  案例整栋 Blender 与 GLB
 components/                案例组件索引与 QA 入口；独立 .blend/.glb 留在完整项目目录
@@ -179,8 +166,12 @@ internal/                  当前版本数量、洞口、宿主与验收审计
 
 ## 9. 当前不足与许可
 
-示例模型仍不是最终生产级资产。部分栏杆连接、立柱节奏、局部石砌和线脚连续性仍偏简化，极近景表面细节还可继续精修。README 展示的是 revision 11 的真实状态，不把未完成细节描述成已完成。
+示例模型仍不是最终生产级资产。部分栏杆连接、立柱节奏、局部石砌和线脚连续性仍偏简化，极近景表面细节还可继续精修。README 展示的是当前装配的真实状态，不把未完成细节描述成已完成。
 
 - 运行环境：Python 3.10+、Blender、可选的 AI 3D Provider
 - 支持宿主：Codex、Claude Code、Trae 等
 - 当前仓库尚未声明开源许可证；公开再分发前应补充合适的 License。
+
+## 10. 最终效果
+
+![童话城堡 01 最终效果](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
