@@ -12,6 +12,10 @@ Scene Kit is an architectural 3D workflow skill, not a fixed model pack and not 
 
 Scene Kit can work with Blender, parametric generators, and optional AI 3D providers. Those models are execution tools. The long-term efficiency and quality come from component contracts, parameter propagation, asset reuse, and evidence-based gates.
 
+![Bilingual Scene Kit workflow illustration](assets/scene-kit-workflow-bilingual.png)
+
+<sub>[Chinese full-size diagram](assets/scene-kit-workflow-zh.png) · [English full-size diagram](assets/scene-kit-workflow-en.png)</sub>
+
 ## 1. What Scene Kit Is
 
 The most common architectural-production problems are not simply "one component is not attractive enough." They are:

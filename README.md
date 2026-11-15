@@ -12,6 +12,10 @@ Scene Kit 是一个建筑 3D 工作流 skill，不是一组固定模型，也不
 
 Scene Kit 可以配合 Blender、参数化生成器和可选的 AI 3D 服务使用。具体模型只是执行工具；真正决定长期效率和质量的是组件合同、参数传播、资产复用和证据化门禁。
 
+![Scene Kit 双语工作流程图](assets/scene-kit-workflow-bilingual.png)
+
+<sub>[中文全尺寸流程图](assets/scene-kit-workflow-zh.png) · [English full-size diagram](assets/scene-kit-workflow-en.png)</sub>
+
 ## 1. Scene Kit 是什么
 
 建筑项目最常见的问题不是“某一个构件不够漂亮”，而是：
