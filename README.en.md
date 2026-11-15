@@ -1,73 +1,96 @@
-# Fairy-Tale Castle 01
+# Scene Kit
 
 Language: [中文](README.md) | English
 
-Current stage: `FINISHING`; current revision: `revision 11`.
+**A reference-model-first, component-based architectural 3D workflow for Blender.**
 
-This case was completed with **DeepSeek V4.1 Flash**. Planning, visual understanding, geometric reasoning, and repair capabilities differ between models, so other models may produce different or better results.
+Scene Kit does not treat a one-shot generated model as a finished asset. It decomposes a building into verifiable, reproducible, reusable, and continuously refinable components, then converges through quantity, silhouette, material, host-connection, and construction-logic gates.
 
-## Current Result
+![Final render of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
 
-![Whole-building assembly contact sheet](assets/preview/assembly/castle_assembly_contact_sheet.jpg)
+Current release: **Scene Kit 7.22**. This repository combines the skill workflow with the final result of its real-world case study, **Fairy-Tale Castle 01**.
 
-The main facade has been widened to **11.4 m**. Key quantities are audited separately by elevation and floor: the ground floor of the front elevation has **three windows** and skips the door axis, while the upper floor has **four windows**, including one above the door axis. After widening, the round tower on the left regains reliable contact with the wall while maintaining clearance from every window group.
+## Why Scene Kit
 
-![Attic roof junction, front vines, and complete assembly](assets/preview/process/attic_window_junction_revision11.jpg)
+- **Understand the whole building before decomposition:** create a `reference_only` 3D reference first, then use a fixed ten-view rig to verify massing, depth, occlusion, and attachments.
+- **Quantities before geometry:** count windows, doors, roofs, chimneys, flues, and repeated attachments before modeling so omissions and duplicates are caught early.
+- **A contract for every component:** interfaces, dimensions, origins, materials, parameters, build fingerprints, and QA are stored in structured contracts. Any parameter change invalidates stale results.
+- **Evidence-driven audits:** color, material semantics, texture projection, silhouette masks, host connections, and construction logic are verified separately rather than inferred from one hero image.
+- **Feedback must propagate backward:** missing parts, quantity errors, intersections, material mistakes, and seam problems update the reference inventory, contracts, component sources, and final assembly together.
 
-The current assembly contains 40 component instances, including 21 main window instances, three climbing-vine modules, and one entrance planter. Per-instance front-view silhouette masks cover all 40 instances. There are no unexplained overlaps between the round tower and windows or between wall lanterns and window frames.
+## Starting from the reference ten views
 
-![Per-component front-view silhouette audit](assets/preview/assembly/front_component_visibility_overlay.jpg)
+![User-supplied original ten-view material](assets/preview/concepts/source_ten_view_contact_sheet_v11.jpg)
 
-## Attic Volume, Roof, and Front Vegetation
+The ten views are the source input for this case. They establish the reference model, component boundaries and counts, material validation, and occlusion checks. Fixed views rendered from the reference model are process-audit evidence, not substitutes for the user-supplied source material.
 
-The paired attic windows form the front face of a small enclosed dormer volume rather than standing alone as window planes. Behind the windows are a front wall, a floor slab, and left and right side walls. The side walls now use **triangular sections** that taper along the main roof pitch, and the floor slab terminates at the roof intersection. The front edge of the small roof is set back **0.09 m** from the main eave, while its rear edge remains embedded in the main roof, eliminating the exposed vertical wall end formerly visible in side views.
+## Case Study: Fairy-Tale Castle 01
 
-All three vine modules have been repositioned onto the left front tower, the ground-floor wall pier between windows, and the right front wall pier. Each has a visible front elevation silhouette. The two stone chimneys retain their stone shafts and caps, with zero black metal flues on top.
+The case is at `FINISHING`, revision 11. The main facade is **11.4 m** wide and the assembly contains **40 component instances**, including 21 main windows, three climbing-vine modules, and one entrance planter. Per-instance front silhouettes cover all 40 instances, with no tower/window or unexplained cross-component overlaps.
 
-## Color and Surface
+![Whole-building five-view contact sheet](assets/preview/assembly/castle_assembly_contact_sheet.jpg)
 
-The roof retains its approved dark warm charcoal color and uses the flat slate Color, NormalGL, and Roughness maps from Poly Haven `roof_slates_02`. In the current render and reference sampling, the roof's mean green-channel error is 1.1 and its hue error is 0.0139, both within the recorded tolerances.
+### Attic and roof junction
 
-![Complete final model render](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
+The paired attic windows belong to a real enclosed dormer volume rather than sitting on the roof as window planes. Both cheeks use **triangular sections** that taper along the main roof pitch, and the floor stops at the roof intersection. The small roof front is set back **0.09 m** from the main eave, while its rear edge remains embedded in the main roof and continues to cover the full body depth.
 
-## Reference Basis
+![Attic roof and wall junction repair](assets/preview/process/attic_window_junction_revision11.jpg)
 
-![Original source ten-view contact sheet](assets/preview/concepts/source_ten_view_contact_sheet_v11.jpg)
+### Color and surface
 
-The image above contains the user-supplied original ten-view source material, not renders regenerated from the reference model. It was assembled from the original-view copies under the project's `assets/raw/` directory, allowing direct traceability between the input problems and the final assembly. Fixed views derived from the reference model are retained only as process-audit material under `assets/preview/reference/`.
+The roof uses a dark warm-charcoal flat slate and the Color, NormalGL, and Roughness maps from Poly Haven `roof_slates_02`. The current render has a mean green-channel error of **1.1** and a hue error of **0.0139** against the recorded reference samples, both within project tolerances.
 
-Original concept views and generation-input crops are stored only under `assets/raw/`. Reference views, component QA, whole-building renders, and concise process comparisons are stored only under `assets/preview/`. When the same image is shared by the README and an audit record, it is referenced through relative paths rather than duplicated.
+### Components and front-view occlusion
 
-## Advantages of the Skill Workflow
+![Per-component front silhouette audit](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
-- **Parametric batch changes:** Wall widths, floor heights, openings, window grids, roof pitches, and component arrays are controlled by contract parameters. Changing the building width or standardizing a window type rebuilds the affected components and audits in batches instead of regenerating each component individually.
-- **Component asset reuse:** Doors, windows, railings, moldings, chimneys, and vegetation enter the component library through shared interfaces and materials. Later buildings can recombine these assets while preserving a consistent style across different elevations, massing, and layouts.
-- **Less repeated AI 3D generation:** Rule-based structures, windows, doors, and repeated attachments favor parametric construction or reusable assets. AI 3D is reserved primarily for organic or sculpted pieces that are difficult to parameterize, avoiding a full 3D regeneration for every building.
+The 21 main windows are audited by elevation and floor: three on the ground-floor front elevation with the door axis skipped, and four on the upper floor including the centered door-axis window. The tower, window groups, wall lantern, vines, and chimneys all pass the live-instance and silhouette checks for revision 11.
 
-## Current Limitations
+## Workflow
 
-The model is not yet a final production-grade asset. Some railing connections and detail rhythms remain simplified, and the continuity of local stonework and moldings, along with surface detail at extreme close range, can be refined further. The README reflects the actual state of the current revision and does not describe unfinished construction details as complete.
-
-## Project Structure
-
-```text
-components/   17 final components, each with one .blend and one .glb
-assembly/     whole-building .blend, deliverable .glb, and current five-view render
-reference/    3D reference model and structured records
-assets/
-  raw/        original concept views and generation inputs
-  preview/    reference views, component QA, assembly QA, and selected process images
-concepts/     concept prompts and review records
-internal/     dimensional contracts, parametric contracts, audits, and migration records
-textures/     shared PBR textures
-scripts/      reproducible generation and audit scripts for the current revision
+```mermaid
+flowchart LR
+    A[Brief] --> B[Concept + Ten Views]
+    B --> C[Reference Model]
+    C --> D[Quantity Audit]
+    D --> E[Component Contracts]
+    E --> F[Blender / AI 3D Components]
+    F --> G[Assembly]
+    G --> H[Finishing and QA]
+    H --> I[User Review]
 ```
 
-Seven component source files affected by the facade widening were rebuilt from the verified assembly geometry. The attic-window component is now at revision 7, while the whole-building assembly, README, and GLB all belong to revision 11.
+1. **BRIEF / CONCEPTS:** define dimensions and delivery goals, then establish a consistent ten-view design language.
+2. **COMPONENTS:** create and validate the reference model, build the camera rig, count features, and complete multi-view decomposition.
+3. **REFERENCES / GENERATION:** define silhouettes, interfaces, materials, and generation routes for every component. Prefer parameterization or reuse for rule-based parts.
+4. **ASSEMBLY:** normalize scale, origins, orientation, and contact surfaces, then verify that standalone sources and the assembly agree.
+5. **FINISHING:** repair surfaces, normals, seams, intersections, supports, and materials, then rerun every audit for the current revision.
+6. **REVIEW / COMPLETE:** after user approval, record the accepted revision, export deliverables, and close the project.
 
-## Deliverables
+## Quality Gates
 
-- [Whole-building Blender source file](assembly/castle_assembly.blend)
+| Common failure | How Scene Kit checks it |
+|---|---|
+| Incomplete component inventory | Three-level inventory of macro components, repeated modules, and attachment details, linked to real parts |
+| Quantity drift | Cross-check `quantity_audit`, parametric contracts, and live assembly instances |
+| Front-only parts with no depth or mounting surface | Verify side walls, back enclosure, volume, projection depth, and host contact |
+| Dormer roof crosses the eave or misses the rear wall | Verify eave setback, rear-wall coverage, and real intersection with the main roof |
+| Tower, window, railing, or ornament occlusion | Measure live component masks, projected overlap, and front-to-back depth |
+| Close color but wrong surface identity | Validate material semantics, texture scale, normals, roughness, and projection separately |
+| Standalone components disagree with the assembly | Compare bounds, object counts, triangles, origins, and material bindings |
+| Stale screenshots or approvals | Bind revision, parameter hash, file hashes, and current QA together |
+
+## Scene Kit 7.22
+
+The canonical ten views remain mandatory and continue to gate `analysis_ready`. If a local feature remains unclear, such as a roof joint, hidden rear face, window depth, railing connection, attachment, or repeated quantity, additional temporary close-up or oblique views may be rendered from the same normalized reference model.
+
+These diagnostic views support identification and cross-checking. They do not replace or reorder the fixed ten views and do not need to be retained in the final project. Any conclusion from a diagnostic view must still be verified against an existing canonical view or the original source material.
+
+The 7.21 attachment-integrity requirements remain in force: dormer components need real volume, side and rear enclosure, projection beyond the host, an inboard roof edge, and a verified connection to the main roof.
+
+## Case Deliverables
+
+- [Whole-building Blender source](assembly/castle_assembly.blend)
 - [Whole-building GLB](assembly/fairy_tale_castle_01.glb)
 - [Component library index](components/README.md)
 - [Current assembly report](assets/preview/assembly/assembly_report.json)
@@ -77,8 +100,45 @@ Seven component source files affected by the facade widening were rebuilt from t
 - [Host connection and rear-volume audit](internal/attachment_integrity_audit_v11.json)
 - [Original ten-view input audit](internal/source_ten_view_input_audit_v11.json)
 - [Facade opening contract](internal/wall_openings_v2.json)
-- [Directory cleanup record](internal/media_structure_v11.json)
 
-## Next Step
+## Install and Quick Start
 
-The current revision has passed the quantity matrix, host-connection, scene, parametric-contract, component-source, export/import, front-view occlusion, and material gates. The next stage is user `REVIEW`; `COMPLETE` follows only after user approval.
+Copy the `scene-kit/` folder into the skill directory supported by your host.
+
+```powershell
+Copy-Item .\scene-kit "$HOME\.codex\skills\scene-kit" -Recurse
+```
+
+```bash
+python scene-kit/scripts/scene_kit.py init ./my-scene --name "Garden Villa"
+python scene-kit/scripts/scene_kit.py prompts ./my-scene
+python scene-kit/scripts/scene_kit.py validate ./my-scene
+```
+
+See [INSTALL.md](INSTALL.md) for installation, commands, and migration guidance. The main skill entry point is [scene-kit/SKILL.md](scene-kit/SKILL.md).
+
+## Repository Layout
+
+```text
+README.md / README.en.md   unified GitHub entry points
+INSTALL.md                 installation and command reference
+scene-kit/                 final Scene Kit 7.22 skill
+scene-kit.standalone.md    single-file rule variant
+assembly/                  case-study Blender and GLB files
+components/                case-study component index
+assets/preview/            reference images, QA, and current renders
+internal/                  current quantity, opening, host, and acceptance audits
+```
+
+## Current Limitations
+
+The example is not a final production-grade asset. Some railing connections, post spacing, local stonework, and molding continuity remain simplified, and extreme close-up surface detail can be refined further. The README reflects the actual state of revision 11 and does not describe unfinished details as complete.
+
+## Requirements and License
+
+- Python 3.10+
+- Blender
+- An optional AI 3D provider
+- A compatible skill host such as Codex, Claude Code, or Trae
+
+This repository does not currently grant a license. Add an appropriate license before public redistribution.

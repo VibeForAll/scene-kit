@@ -1,71 +1,94 @@
-# 童话城堡 01
+# Scene Kit
 
 语言：[English](README.en.md) | 中文
 
-当前阶段：`FINISHING`，当前版本：`revision 11`。
+**以参考模型优先的 Blender 建筑组件化流程。**
 
-本案例使用 **DeepSeek V4.1 Flash** 完成。不同模型的规划、视觉理解、几何推理和修复能力不同，其他模型可能获得更好的效果。
+Scene Kit 不把“一次生成完”当成成品，而是把建筑拆成可验证、可重建、可复用、可持续精修的组件，并用数量、轮廓、材质、宿主连接和构造逻辑门禁逐轮收敛。
 
-## 当前结果
+![童话城堡 01 最终模型](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
+
+当前发布版本：**Scene Kit 7.22**。下方首页同时展示 skill 工作流和实际案例 **童话城堡 01** 的最终结果。
+
+## 为什么使用 Scene Kit
+
+- **先理解整栋，再拆组件**：先生成 `reference_only` 整栋三维参考，再用固定十视图确认体量、深度、遮挡和附着关系。
+- **数量先于几何**：先记录窗、门、屋顶、烟囱、烟管和重复附件的数量，再开始建模，避免装配完成后才发现遗漏或重复。
+- **每件组件都有合同**：接口、尺寸、原点、材质、参数、构建指纹和 QA 都写入结构化合同，参数变化后旧结果自动失效。
+- **审计看证据**：颜色、材质、贴图投影、轮廓遮罩、宿主连接和构造逻辑分别检查，不依赖单张 hero 图或模型自述。
+- **返工必须回灌**：用户指出的漏项、数量、干涉、材质和接缝问题，要同步修正参考清单、合同、组件源和整栋装配。
+
+## 从参考十视图开始
+
+![用户提供的原始素材十视图](assets/preview/concepts/source_ten_view_contact_sheet_v11.jpg)
+
+十视图是这个案例的原始输入，用于建立整栋参考、识别组件边界与数量、核对材质和遮挡。由参考模型派生的固定十视图只作为过程审计资料，不用来冒充用户原始素材。
+
+## 案例：童话城堡 01
+
+当前阶段为 `FINISHING`，版本为 `revision 11`。建筑主体宽 **11.4 m**，整栋包含 **40 个组件实例**，其中主窗 21、攀援藤蔓 3、入口盆栽 1。正视图逐实例遮罩覆盖全部 40 个实例，没有塔楼/窗或未解释的跨组件重叠。
 
 ![整栋装配五视图](assets/preview/assembly/castle_assembly_contact_sheet.jpg)
 
-建筑主体已加宽到 **11.4 m**。关键数量已按“立面 × 楼层”单独审计：正面一层为 **3 扇窗**并跳过门轴，二层为 **4 扇窗**且门轴上方有窗。左侧圆塔使用加宽后恢复的墙体接触，同时保留与全部窗组的净距。
+### 阁楼与屋顶连接
 
-![阁楼屋面连接、正面藤蔓与整栋装配](assets/preview/process/attic_window_junction_revision11.jpg)
+阁楼双窗属于一个真实的封闭小房体，不是贴在屋面上的窗片。两侧墙使用沿主屋面坡度收束的**三角形截面**，底板止于屋面交线；小屋顶前沿比主檐退后 **0.09 m**，后缘埋入主屋面并继续覆盖房体深度。
 
-当前装配共 40 个组件实例，其中主窗 21、攀援藤蔓 3、入口盆栽 1。逐实例正视图遮罩已覆盖全部 40 个实例；圆塔与窗、壁灯与窗框均无未解释的重叠。
+![阁楼屋顶与墙体连接修正](assets/preview/process/attic_window_junction_revision11.jpg)
 
-![正视图逐组件轮廓检查](assets/preview/assembly/front_component_visibility_overlay.jpg)
+### 颜色与表面
 
-## 阁楼体量、屋顶与正面植物
+屋面采用暗暖炭色扁平石板瓦，并使用 Poly Haven `roof_slates_02` 的 Color、NormalGL 与 Roughness。当前渲染与参考采样的绿色通道平均误差为 **1.1**、色相误差为 **0.0139**，处于项目记录容差内。
 
-阁楼双窗是小房体的前脸，不是孤立窗户。窗后是带前墙、底板和左右侧墙的封闭老虎窗体量。两侧墙改为沿主屋面坡向收束的 **三角形截面**，底板止于屋面交线；小屋顶前沿比主檐退后 **0.09 m**，后缘继续埋入主屋面，避免侧视出现裸露的竖直墙体断面。
+### 组件与正视遮挡
 
-三组藤蔓已重新布置到左前圆塔、一层窗间墙墩和右侧前墙墩，全部位于正立面并具有可见轮廓。两座石烟囱保留石柱和石帽，顶部黑色金属烟管数量为 0。
+![正视图逐组件轮廓审计](assets/preview/assembly/front_component_visibility_overlay.jpg)
 
-## 颜色与表面
+21 扇主窗按照“立面 × 楼层”计数审计：正面一层为 3 扇并跳过门轴，二层为 4 扇且门轴上方有窗。圆塔、窗组、壁灯、藤蔓和烟囱均通过当前 rev 11 的实时实例与轮廓检查。
 
-屋面保持已经确认的暗暖炭色，并使用 Poly Haven `roof_slates_02` 的扁平石板瓦 Color、NormalGL 与 Roughness。当前渲染与参考采样中，屋顶绿色通道平均误差为 1.1、色相误差为 0.0139，处于已记录容差内。
+## 工作流
 
-![最终模型整体渲染](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
-
-## 参考依据
-
-![原始素材十视图](assets/preview/concepts/source_ten_view_contact_sheet_v11.jpg)
-
-上图为用户提供的原始素材十视图，不是由参考模型重新渲染的派生图。它以项目内 `assets/raw/` 的原始视图副本制作，可直接追溯问题输入与最终装配之间的差异；由参考模型派生的固定视角只作为过程审计资料保存在 `assets/preview/reference/`。
-
-原始输入与生成输入裁片只保存在 `assets/raw/`；参考视图、组件 QA、整栋渲染和精简过程对照只保存在 `assets/preview/`。同一张图通过相对路径被 README 和审计记录重复引用，不复制文件。
-
-## Skill 带来的优势
-
-- **参数化批量修改**：墙宽、层高、洞口、窗格、屋顶坡度和构件阵列都由合同参数控制。调整建筑宽度或统一窗型时，可以批量重建相关组件和审计，而不是逐件重新生成模型。
-- **组件资产复用**：门窗、栏杆、线脚、烟囱、植物等通过统一接口和材质进入组件库。后续建筑可以重新组合这些资产，在保持统一风格的同时形成不同立面、体量和布局。
-- **减少重复 AI 3D 生成**：规则结构、门窗和重复附件优先使用参数化或复用资产；AI 3D 主要留给难以参数化的有机或雕刻单体，因此不必为每一栋建筑重新生成全部三维模型。
-
-## 当前不足
-
-当前模型仍不是最终生产级资产：部分栏杆的连接与细部节奏仍偏简化，局部石砌和线脚的连续关系、极近景下的表面细节还可以继续精修。README 展示的是当前 revision 的真实状态，不把尚未完成的构造细节描述成已完成。
-
-## 项目结构
-
-```text
-components/   17 件最终组件，每件一份 .blend 与一份 .glb
-assembly/     整栋 .blend、交付 .glb 和当前五视图
-reference/    三维参考模型及结构化记录
-assets/
-  raw/        原始概念视图与生成输入
-  preview/    参考、组件 QA、整栋 QA 与精选过程图
-concepts/     概念提示词和审阅记录
-internal/     尺寸合同、参数合同、审计和迁移记录
-textures/     共享 PBR 贴图
-scripts/      当前版本可复现生成与审计脚本
+```mermaid
+flowchart LR
+    A[Brief] --> B[Concept + Ten Views]
+    B --> C[Reference Model]
+    C --> D[Quantity Audit]
+    D --> E[Component Contracts]
+    E --> F[Blender / AI 3D Components]
+    F --> G[Assembly]
+    G --> H[Finishing and QA]
+    H --> I[User Review]
 ```
 
-被加宽影响的 7 个组件源文件已从已验证的整栋几何重建。阁楼窗组件已升级到 revision 7，整栋装配、README 与 GLB 均属于 revision 11。
+1. **BRIEF / CONCEPTS**：明确尺寸与交付目标，建立一致的十视图设计语言。
+2. **COMPONENTS**：生成整栋参考，验证网格与相机轨道，清点构件并完成多视图拆件。
+3. **REFERENCES / GENERATION**：为每件组件建立轮廓、接口、材质和生成路线；规则构件优先参数化或复用。
+4. **ASSEMBLY**：统一比例、原点、朝向和接触面，核对组件源与整栋装配一致。
+5. **FINISHING**：修复面片、法线、接缝、穿插、支撑和材质问题，运行当前 revision 的全部审计。
+6. **REVIEW / COMPLETE**：用户确认后更新验收版本，完成导出和项目收尾。
 
-## 交付文件
+## 质量门禁
+
+| 常见问题 | Scene Kit 的检查方式 |
+|---|---|
+| 构件清单不完整 | 宏构件、重复模块、附着细节三层盘点，并链接真实组件 |
+| 数量漂移 | `quantity_audit` 分项合计、参数合同和实时装配实例联合核对 |
+| 只有正面，没有厚度或安装面 | 检查侧墙、背板、体积、前凸深度和宿主接触 |
+| 屋顶窗越檐或盖不到后墙 | 检查主檐退让、后墙覆盖和主屋面实际相交 |
+| 塔楼、窗、栏杆或装饰互相遮挡 | 实时组件遮罩、投影重叠和前后深度审计 |
+| 颜色接近但材质身份错误 | 分别检查材质语义、纹理尺度、法线、粗糙度和投影 |
+| 独立组件与整栋尺寸不一致 | 比较包围盒、对象数、三角面、原点和材质绑定 |
+| 仍在使用旧截图或旧审批 | 绑定 revision、参数指纹、文件哈希和当前 QA |
+
+## Scene Kit 7.22
+
+固定十视图仍是必查主视图和 `analysis_ready` 门禁。若某个局部特征仍不明确，例如屋顶接缝、被遮挡背面、门窗深度、栏杆连接、附着结构或重复数量，可以从同一归一化参考模型临时补拍近景或斜向诊断视角。
+
+这些补充视角只用于识别和交叉确认，不替换或重排固定十视图，也不要求保存到最终项目。任何由补充视角得到的结论仍需与既有十视图或原始素材互相验证。
+
+7.21 的附着结构门禁继续保留：屋顶窗和老虎窗必须具有真实体积、侧向与背面结构、前凸深度、主檐内退和主屋面连接。
+
+## 案例交付
 
 - [整栋 Blender 源文件](assembly/castle_assembly.blend)
 - [整栋 GLB](assembly/fairy_tale_castle_01.glb)
@@ -77,8 +100,45 @@ scripts/      当前版本可复现生成与审计脚本
 - [宿主连接与背面体量审计](internal/attachment_integrity_audit_v11.json)
 - [原始十视图输入审计](internal/source_ten_view_input_audit_v11.json)
 - [立面洞口合同](internal/wall_openings_v2.json)
-- [目录整理记录](internal/media_structure_v11.json)
 
-## 下一步
+## 安装与快速开始
 
-当前 revision 已通过数量矩阵、宿主连接、场景、参数合同、组件源、导出导入、正视图遮挡和材质门禁。下一步进入用户 `REVIEW`；用户确认后再执行 `COMPLETE`。
+把 `scene-kit/` 放入宿主支持的 skills 目录。
+
+```powershell
+Copy-Item .\scene-kit "$HOME\.codex\skills\scene-kit" -Recurse
+```
+
+```bash
+python scene-kit/scripts/scene_kit.py init ./my-scene --name "Garden Villa"
+python scene-kit/scripts/scene_kit.py prompts ./my-scene
+python scene-kit/scripts/scene_kit.py validate ./my-scene
+```
+
+完整安装、命令和迁移说明见 [INSTALL.md](INSTALL.md)，skill 主入口见 [scene-kit/SKILL.md](scene-kit/SKILL.md)。
+
+## 仓库结构
+
+```text
+README.md / README.en.md   合并后的 GitHub 首页
+INSTALL.md                 安装与命令说明
+scene-kit/                 最终版 7.22 skill
+scene-kit.standalone.md    单文件规则版
+assembly/                  案例整栋 Blender 与 GLB
+components/                案例组件索引
+assets/preview/            案例参考图、QA 与当前渲染
+internal/                  当前版本数量、洞口、宿主与验收审计
+```
+
+## 当前不足
+
+示例模型仍不是最终生产级资产。部分栏杆连接、立柱节奏、局部石砌和线脚连续性仍偏简化，极近景表面细节还可继续精修。README 展示的是 revision 11 的真实状态，不把未完成细节描述成已完成。
+
+## 环境与许可
+
+- Python 3.10+
+- Blender
+- 可选的 AI 3D Provider
+- 支持 skills 的宿主：Codex、Claude Code、Trae 等
+
+当前仓库尚未声明开源许可证。公开再分发前应补充合适的 License。
