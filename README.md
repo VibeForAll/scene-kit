@@ -183,6 +183,4 @@ internal/                  当前版本数量、洞口、宿主与验收审计
 
 ## 10. 最终效果
 
-<p align="center">
-  <img src="assets/preview/assembly/castle_assembly_final_full.png" width="88%" alt="童话城堡 01 最终效果">
-</p>
+![童话城堡 01 最终效果](assets/preview/assembly/castle_assembly_final_full.png)

@@ -183,6 +183,4 @@ The example is not a final production-grade asset. Some railing connections, pos
 
 ## 10. Final Result
 
-<p align="center">
-  <img src="assets/preview/assembly/castle_assembly_final_full.png" width="88%" alt="Final result of Fairy-Tale Castle 01">
-</p>
+![Final result of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_final_full.png)
