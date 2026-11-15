@@ -15,10 +15,34 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from parametric_components import validate_registry as validate_parametric_registry
+
 
 SCHEMA_VERSION = 1
-SKILL_VERSION = "7.2"
-SUPPORTED_SKILL_VERSIONS = {"7.1", "7.2"}
+SKILL_VERSION = "7.21"
+SUPPORTED_SKILL_VERSIONS = {
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "7.6",
+    "7.7",
+    "7.8",
+    "7.9",
+    "7.10",
+    "7.11",
+    "7.12",
+    "7.13",
+    "7.14",
+    "7.15",
+    "7.16",
+    "7.17",
+    "7.18",
+    "7.19",
+    "7.20",
+    "7.21",
+}
 STAGES = [
     "BRIEF",
     "CONCEPTS",
@@ -105,6 +129,11 @@ CONCEPT_VIEW_SPECS = (
 )
 CONCEPT_VIEW_IDS = tuple(spec["id"] for spec in CONCEPT_VIEW_SPECS)
 DELIVERY_PROFILES = {"unity_realtime", "offline_render", "concept_blockout"}
+RENDER_DISPLAY_MODES = {
+    "summary_only",
+    "milestone_contact_sheet",
+    "show_each_component",
+}
 DECISIONS = {"ai_3d", "library", "parametric", "reuse"}
 PROMPT_KEYS = {"positive_en", "negative_en", "positive_zh", "negative_zh"}
 IMAGE_INPUT_MODES = {"image_to_3d", "multiview_to_3d"}
@@ -124,6 +153,82 @@ ASSET_CLASSES = {
 }
 REUSE_MODES = {"direct", "scale_variants", "placement_variants", "reference_only"}
 MODEL_FORMATS = {".glb", ".gltf", ".obj", ".fbx"}
+DETAIL_CATEGORIES = {
+    "roof_and_skyline",
+    "openings_and_frames",
+    "trim_and_ornament",
+    "attachments_and_services",
+    "site_and_vegetation",
+    "surface_and_material_patterns",
+}
+DETAIL_COVERAGE_KEYS = {
+    "roof_and_skyline_scanned",
+    "openings_and_frames_scanned",
+    "trim_and_ornament_scanned",
+    "attachments_and_services_scanned",
+    "site_and_vegetation_scanned",
+    "surface_and_material_patterns_scanned",
+}
+DETAIL_VISUAL_IMPACTS = {"silhouette", "near_view", "surface_only"}
+DETAIL_DISPOSITIONS = {"part", "parametric", "reuse", "material"}
+GENERATION_ROUTES = {
+    "blender_procedural",
+    "blender_manual",
+    "library",
+    "ai_3d",
+    "tripo",
+    "external_ai_3d",
+}
+ROUTE_STATUSES = {"pending", "approved", "rejected"}
+ROUTE_PRECISIONS = {"exact", "design_guided", "organic"}
+ROUTE_LEVELS = {"low", "medium", "high"}
+MATERIAL_REVIEW_STATUSES = {"pending", "repair_required", "pass"}
+FINE_STRUCTURE_STATUSES = {"pending", "repair_required", "pass"}
+FINE_STRUCTURE_CONFIDENCE = {"low", "medium", "high"}
+REFERENCE_CONSENSUS_STATUSES = {"pending", "repair_required", "pass"}
+REFERENCE_CONSENSUS_CHECKS = {
+    "identity_consistent",
+    "silhouette_consistent",
+    "structure_consistent",
+    "material_consistent",
+    "attachment_consistent",
+    "lighting_variation_explained",
+}
+BOUNDARY_REVIEW_STATUSES = {"pending", "repair_required", "pass"}
+BOUNDARY_SURFACES = {
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom",
+}
+BOUNDARY_REVIEW_CHECKS = {
+    "volume_complete",
+    "all_surfaces_accounted",
+    "attachments_inventory_complete",
+    "attached_geometry_included",
+    "material_zones_complete",
+    "interface_vs_overall_bounds_verified",
+}
+REFERENCE_MODEL_STATUSES = {"pending", "repair_required", "pass"}
+REFERENCE_MODEL_INPUT_MODES = {
+    "single_image_to_3d",
+    "multiview_to_3d",
+}
+FEATURE_EXTRACTION_STATUSES = {"pending", "partial", "pass"}
+WINDOW_PART_TYPES = {
+    "window",
+    "divided_light_window",
+    "paired_attic_window",
+}
+PRECISE_REFERENCE_TYPES = WINDOW_PART_TYPES | {
+    "door",
+    "entrance_portal",
+    "iron_railing",
+    "wooden_porch_railing",
+}
+TEXTURE_SOURCES = {"project_pbr", "polyhaven", "generated", "existing"}
 
 
 def now_iso() -> str:
@@ -702,6 +807,12 @@ def initialize_project(root: Path, name: str) -> dict[str, Any]:
                 "profile": "unity_realtime",
                 "camera_use": "street_three_quarter",
             },
+            "render_policy": {
+                "qa_render": "required",
+                "display_mode": "summary_only",
+                "display_requires_confirmation": True,
+                "extra_presentation_renders_require_confirmation": True,
+            },
             "created_at": now_iso(),
         },
     )
@@ -776,6 +887,34 @@ def initialize_project(root: Path, name: str) -> dict[str, Any]:
             "object_id": "B01",
             "parts": [],
             "visual_inventory": [],
+            "quantity_audit": {
+                "status": "pending",
+                "source_views": [],
+                "counts": {},
+                "checks": {},
+                "unresolved": [],
+            },
+            "attachment_integrity_audit": {
+                "status": "pending",
+                "source_views": [],
+                "items": [],
+                "checks": {},
+                "unresolved": [],
+            },
+            "detail_audit": {
+                "status": "pending",
+                "scan_views": [],
+                "coverage": {
+                    "roof_and_skyline_scanned": False,
+                    "openings_and_frames_scanned": False,
+                    "trim_and_ornament_scanned": False,
+                    "attachments_and_services_scanned": False,
+                    "site_and_vegetation_scanned": False,
+                    "surface_and_material_patterns_scanned": False,
+                },
+                "features": [],
+                "unresolved": [],
+            },
             "decomposition_review": {
                 "status": "pending",
                 "source_views": [],
@@ -784,6 +923,10 @@ def initialize_project(root: Path, name: str) -> dict[str, Any]:
                     "multi_view_consistent": False,
                     "attachment_logic_verified": False,
                     "assembly_not_fragmented": False,
+                    "detail_features_complete": False,
+                    "detail_geometry_decisions_verified": False,
+                    "quantity_verified": False,
+                    "attachment_integrity_verified": False,
                 },
                 "notes": [],
             },
@@ -976,6 +1119,1577 @@ def _check_prompt(prompt: Any, where: str, errors: list[str]) -> None:
             errors.append(f"{where} 缺少 {key}")
 
 
+def _validate_route_assessment(part: dict[str, Any], errors: list[str]) -> None:
+    part_id = part.get("part_id", "<unknown>")
+    where = f"components.parts[{part_id}].route_assessment"
+    assessment = part.get("route_assessment")
+    if not isinstance(assessment, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    if assessment.get("status") not in ROUTE_STATUSES:
+        errors.append(f"{where}.status 无效")
+    recommended = assessment.get("recommended_route")
+    selected = assessment.get("selected_route")
+    if recommended not in GENERATION_ROUTES:
+        errors.append(f"{where}.recommended_route 无效")
+    if selected not in GENERATION_ROUTES:
+        errors.append(f"{where}.selected_route 无效")
+    if recommended != selected:
+        errors.append(f"{where} 推荐路线与选中路线不一致")
+    if not _nonempty_text(assessment.get("decision_summary")):
+        errors.append(f"{where}.decision_summary 不能为空")
+    repetition = assessment.get("repeat_count")
+    if (
+        not isinstance(repetition, int)
+        or isinstance(repetition, bool)
+        or repetition < 0
+    ):
+        errors.append(f"{where}.repeat_count 必须是非负整数")
+    if assessment.get("precision_demand") not in ROUTE_PRECISIONS:
+        errors.append(f"{where}.precision_demand 无效")
+    if assessment.get("blender_effort") not in ROUTE_LEVELS:
+        errors.append(f"{where}.blender_effort 无效")
+    ai_expected_benefit = assessment.get(
+        "ai_3d_expected_benefit",
+        assessment.get("tripo_expected_benefit"),
+    )
+    ai_token_risk = assessment.get(
+        "ai_3d_token_risk",
+        assessment.get("tripo_token_risk"),
+    )
+    if ai_expected_benefit not in ROUTE_LEVELS:
+        errors.append(
+            f"{where}.ai_3d_expected_benefit 无效"
+        )
+    if ai_token_risk not in ROUTE_LEVELS:
+        errors.append(f"{where}.ai_3d_token_risk 无效")
+    if assessment.get("reference_quality") not in ROUTE_LEVELS:
+        errors.append(f"{where}.reference_quality 无效")
+    evidence = assessment.get("evidence")
+    if not isinstance(evidence, list) or not all(
+        isinstance(value, str) and value.strip() for value in evidence
+    ):
+        errors.append(f"{where}.evidence 必须是字符串数组")
+
+    decision = part.get("decision")
+    if selected in {"ai_3d", "tripo", "external_ai_3d"}:
+        if not _nonempty_text(assessment.get("reference_model_id")):
+            errors.append(
+                f"{where}.reference_model_id 不能为空"
+            )
+        if decision != "ai_3d":
+            errors.append(f"{where} 选择 AI 3D 时组件 decision 必须为 ai_3d")
+        if assessment.get("status") != "approved":
+            errors.append(f"{where} AI 3D 路线尚未批准")
+        if ai_expected_benefit == "low":
+            errors.append(
+                f"{where} AI 3D 造型收益为 low，不应提交生成"
+            )
+        if assessment.get("precision_demand") == "exact":
+            errors.append(f"{where} 精确尺寸组件不应选择 AI 3D")
+        if assessment.get("reference_quality") == "low":
+            errors.append(f"{where} 参考质量不足，不应选择 AI 3D")
+        reference_sufficiency = assessment.get("reference_sufficiency")
+        if not isinstance(reference_sufficiency, dict):
+            errors.append(f"{where}.reference_sufficiency 必须是对象")
+        else:
+            if reference_sufficiency.get("status") != "pass":
+                errors.append(f"{where}.reference_sufficiency 尚未通过")
+            usable_views = reference_sufficiency.get("usable_views")
+            if not isinstance(usable_views, list) or not all(
+                isinstance(value, str) and value.strip()
+                for value in usable_views
+            ):
+                errors.append(
+                    f"{where}.reference_sufficiency.usable_views "
+                    "必须是字符串数组"
+                )
+                usable_views = []
+            minimum_views = (
+                2
+                if str(part.get("type", "")).lower()
+                in PRECISE_REFERENCE_TYPES
+                else 1
+            )
+            if len(set(usable_views)) < minimum_views:
+                errors.append(
+                    f"{where}.reference_sufficiency 至少需要 "
+                    f"{minimum_views} 个不同可用视角"
+                )
+            if minimum_views == 2 and (
+                reference_sufficiency.get("has_front") is not True
+                or reference_sufficiency.get(
+                    "has_side_or_three_quarter"
+                )
+                is not True
+            ):
+                errors.append(
+                    f"{where}.reference_sufficiency 精确构件必须同时"
+                    "具备正面和侧面/45 度参考"
+                )
+
+        budget = assessment.get("triangle_budget")
+        if not isinstance(budget, dict):
+            errors.append(f"{where}.triangle_budget 必须是对象")
+        else:
+            values: dict[str, int] = {}
+            for key in ("target_total", "hard_max"):
+                value = budget.get(key)
+                if (
+                    not isinstance(value, int)
+                    or isinstance(value, bool)
+                    or value < 1
+                ):
+                    errors.append(
+                        f"{where}.triangle_budget.{key} 必须是正整数"
+                    )
+                else:
+                    values[key] = value
+            if (
+                "target_total" in values
+                and "hard_max" in values
+                and values["target_total"] > values["hard_max"]
+            ):
+                errors.append(
+                    f"{where}.triangle_budget.target_total "
+                    "不能大于 hard_max"
+                )
+            if not _nonempty_text(budget.get("basis")):
+                errors.append(
+                    f"{where}.triangle_budget.basis 不能为空"
+                )
+
+        low_poly = assessment.get("low_poly_strategy")
+        if not isinstance(low_poly, dict):
+            errors.append(f"{where}.low_poly_strategy 必须是对象")
+        else:
+            if not _nonempty_text(low_poly.get("provider_quality")):
+                errors.append(
+                    f"{where}.low_poly_strategy.provider_quality 无效"
+                )
+            if not isinstance(
+                low_poly.get("provider_face_limit_exposed"),
+                bool,
+            ):
+                errors.append(
+                    f"{where}.low_poly_strategy."
+                    "provider_face_limit_exposed 必须是布尔值"
+                )
+            for key in ("postprocess", "preserve"):
+                values = low_poly.get(key)
+                if not isinstance(values, list) or not values or not all(
+                    isinstance(value, str) and value.strip()
+                    for value in values
+                ):
+                    errors.append(
+                        f"{where}.low_poly_strategy.{key} "
+                        "必须是非空字符串数组"
+                    )
+    elif selected in {"blender_procedural", "blender_manual"}:
+        if decision == "ai_3d":
+            errors.append(f"{where} 推荐 Blender 时不能保持 ai_3d 决策")
+    elif selected == "library" and decision != "library":
+        errors.append(f"{where} 选择 library 时组件 decision 必须为 library")
+
+
+def _validate_material_review(
+    part: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    part_id = part.get("part_id", "<unknown>")
+    where = f"components.parts[{part_id}].qa.material_review"
+    review = (part.get("qa") or {}).get("material_review")
+    if not isinstance(review, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    status = review.get("status")
+    if status not in MATERIAL_REVIEW_STATUSES:
+        errors.append(f"{where}.status 无效")
+    rendered_views = review.get("rendered_views")
+    if not isinstance(rendered_views, list):
+        errors.append(f"{where}.rendered_views 必须是数组")
+        rendered_views = []
+    for index, value in enumerate(rendered_views):
+        path = _relative_path(
+            value,
+            root,
+            f"{where}.rendered_views[{index}]",
+            errors,
+        )
+        if path is not None and not path.is_file():
+            errors.append(f"{where}.rendered_views[{index}] 图片不存在")
+    comparison = review.get("reference_comparison")
+    comparison_path = _relative_path(
+        comparison,
+        root,
+        f"{where}.reference_comparison",
+        errors,
+    )
+    if comparison_path is not None and not comparison_path.is_file():
+        errors.append(f"{where}.reference_comparison 图片不存在")
+    if not isinstance(review.get("polyhaven_checked"), bool):
+        errors.append(f"{where}.polyhaven_checked 必须是布尔值")
+    if review.get("texture_source") not in TEXTURE_SOURCES:
+        errors.append(f"{where}.texture_source 无效")
+    checks = review.get("checks")
+    required_checks = {
+        "reference_match",
+        "base_color_match",
+        "roughness_match",
+        "texture_scale_match",
+        "texture_projection_valid",
+        "surface_quality",
+    }
+    if not isinstance(checks, dict):
+        errors.append(f"{where}.checks 必须是对象")
+        checks = {}
+    notes = review.get("notes")
+    if not isinstance(notes, list) or not all(
+        isinstance(value, str) and value.strip() for value in notes
+    ):
+        errors.append(f"{where}.notes 必须是字符串数组")
+    texture_audit = review.get("texture_audit")
+    texture_checks: dict[str, Any] = {}
+    risk_findings: list[Any] = []
+    if not isinstance(texture_audit, dict):
+        if status == "pass":
+            errors.append(f"{where}.texture_audit 必须是对象")
+        texture_audit = {}
+    else:
+        audit_path = _relative_path(
+            texture_audit.get("audit_path"),
+            root,
+            f"{where}.texture_audit.audit_path",
+            errors,
+        )
+        if audit_path is not None and not audit_path.is_file():
+            errors.append(
+                f"{where}.texture_audit.audit_path 文件不存在"
+            )
+        if not _nonempty_text(texture_audit.get("mapping_mode")):
+            errors.append(
+                f"{where}.texture_audit.mapping_mode 不能为空"
+            )
+        views_checked = texture_audit.get("views_checked")
+        if (
+            not isinstance(views_checked, list)
+            or len(set(views_checked)) < 2
+        ):
+            errors.append(
+                f"{where}.texture_audit.views_checked "
+                "至少需要两个立面或角度"
+            )
+        texture_checks = texture_audit.get("checks")
+        if not isinstance(texture_checks, dict):
+            if status == "pass":
+                errors.append(
+                    f"{where}.texture_audit.checks 必须是对象"
+                )
+            texture_checks = {}
+        risk_findings = texture_audit.get("risk_findings")
+        if not isinstance(risk_findings, list):
+            if status == "pass":
+                errors.append(
+                    f"{where}.texture_audit.risk_findings "
+                    "必须是数组"
+                )
+            risk_findings = []
+
+    if review.get("texture_source") == "polyhaven":
+        assets = review.get("polyhaven_assets")
+        if not isinstance(assets, list) or not assets or not all(
+            isinstance(value, str) and value.strip() for value in assets
+        ):
+            errors.append(f"{where}.polyhaven_assets 不能为空")
+    if review.get("texture_source") == "generated":
+        textures = review.get("generated_textures")
+        if not isinstance(textures, list) or not textures:
+            errors.append(f"{where}.generated_textures 不能为空")
+
+    if status == "pass":
+        if len(set(rendered_views)) < 2:
+            errors.append(f"{where}.rendered_views 至少需要两个材质渲染视图")
+        if comparison_path is None:
+            errors.append(f"{where} 缺少 reference_comparison")
+        if review.get("polyhaven_checked") is not True:
+            errors.append(f"{where} 未完成 Poly Haven 适用性检查")
+        for key in sorted(required_checks):
+            if checks.get(key) is not True:
+                errors.append(f"{where}.checks.{key} 未通过")
+        for key in (
+            "source_image_loaded",
+            "projection_axis_valid",
+            "physical_scale_consistent",
+            "no_visible_stretch_across_faces",
+            "normal_and_roughness_aligned",
+        ):
+            if texture_checks.get(key) is not True:
+                errors.append(
+                    f"{where}.texture_audit.checks.{key} 未通过"
+                )
+        if texture_audit.get("status") != "pass":
+            errors.append(
+                f"{where}.texture_audit.status 必须为 pass"
+            )
+        if risk_findings:
+            errors.append(
+                f"{where}.texture_audit.risk_findings 必须为空"
+            )
+
+
+def _validate_reference_consensus(
+    part: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    part_id = part.get("part_id", "<unknown>")
+    where = f"components.parts[{part_id}].reference_consensus"
+    review = part.get("reference_consensus")
+    if not isinstance(review, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    status = review.get("status")
+    if status not in REFERENCE_CONSENSUS_STATUSES:
+        errors.append(f"{where}.status 无效")
+        return
+    if status != "pass":
+        errors.append(f"{where} 生成或建模前必须先通过多参考共识")
+        return
+
+    source_views = review.get("source_views")
+    if not isinstance(source_views, list) or len(set(source_views)) < 2:
+        errors.append(f"{where}.source_views 至少需要两个不同参考视角")
+        source_views = []
+    else:
+        for index, value in enumerate(source_views):
+            source = _relative_path(
+                value,
+                root,
+                f"{where}.source_views[{index}]",
+                errors,
+            )
+            if source is not None and not source.is_file():
+                errors.append(f"{where}.source_views[{index}] 图片不存在")
+
+    crops = review.get("crops")
+    if not isinstance(crops, list) or len(set(crops)) < 2:
+        errors.append(f"{where}.crops 至少需要两个构件裁剪图")
+    else:
+        for index, value in enumerate(crops):
+            crop = _relative_path(
+                value,
+                root,
+                f"{where}.crops[{index}]",
+                errors,
+            )
+            if crop is not None and not crop.is_file():
+                errors.append(f"{where}.crops[{index}] 图片不存在")
+
+    model_crops = review.get("model_crops")
+    if not isinstance(model_crops, list) or not model_crops:
+        errors.append(
+            f"{where}.model_crops 至少需要一个参考模型派生裁剪"
+        )
+    else:
+        for index, value in enumerate(model_crops):
+            crop = _relative_path(
+                value,
+                root,
+                f"{where}.model_crops[{index}]",
+                errors,
+            )
+            if crop is not None and not crop.is_file():
+                errors.append(
+                    f"{where}.model_crops[{index}] 图片不存在"
+                )
+
+    authority = review.get("authority_policy")
+    if not isinstance(authority, dict):
+        errors.append(f"{where}.authority_policy 必须是对象")
+    else:
+        expected = {
+            "primary_geometry": "reference_model",
+            "primary_component_reference": "model_derived_views",
+            "original_views_role": "validation_and_surface_detail",
+        }
+        for key, value in expected.items():
+            if authority.get(key) != value:
+                errors.append(
+                    f"{where}.authority_policy.{key} "
+                    f"必须为 {value}"
+                )
+
+    observations = review.get("observations")
+    if not isinstance(observations, list) or len(observations) < 2:
+        errors.append(f"{where}.observations 至少需要两个视角的观察")
+
+    samples = review.get("material_samples")
+    if not isinstance(samples, list) or len(samples) < 2:
+        errors.append(
+            f"{where}.material_samples 至少需要两个视角的材质样本"
+        )
+        samples = []
+    sample_views: set[str] = set()
+    for index, sample in enumerate(samples):
+        item_where = f"{where}.material_samples[{index}]"
+        if not isinstance(sample, dict):
+            errors.append(f"{item_where} 必须是对象")
+            continue
+        view = sample.get("view")
+        if not _nonempty_text(view):
+            errors.append(f"{item_where}.view 不能为空")
+        else:
+            sample_views.add(view)
+        if not _nonempty_text(sample.get("role")):
+            errors.append(f"{item_where}.role 不能为空")
+        if not _nonempty_text(sample.get("method")):
+            errors.append(f"{item_where}.method 不能为空")
+        rgb = sample.get("mean_rgb")
+        if (
+            not isinstance(rgb, list)
+            or len(rgb) != 3
+            or not all(
+                isinstance(value, int)
+                and not isinstance(value, bool)
+                and 0 <= value <= 255
+                for value in rgb
+            )
+        ):
+            errors.append(
+                f"{item_where}.mean_rgb 必须是三个 0-255 整数"
+            )
+    if source_views and len(sample_views) < 2:
+        errors.append(
+            f"{where}.material_samples 必须覆盖至少两个不同视角"
+        )
+
+    consensus = review.get("consensus")
+    if not isinstance(consensus, dict) or not _nonempty(consensus):
+        errors.append(f"{where}.consensus 必须记录材质/结构共识")
+    else:
+        for key, value in consensus.items():
+            if not _nonempty_text(value):
+                errors.append(
+                    f"{where}.consensus.{key} 必须是非空文本"
+                )
+
+    checks = review.get("checks")
+    if not isinstance(checks, dict):
+        errors.append(f"{where}.checks 必须是对象")
+    else:
+        for key in sorted(REFERENCE_CONSENSUS_CHECKS):
+            if checks.get(key) is not True:
+                errors.append(f"{where}.checks.{key} 未通过")
+    unresolved = review.get("unresolved")
+    if not isinstance(unresolved, list) or not all(
+        isinstance(value, str) and value.strip()
+        for value in unresolved
+    ):
+        errors.append(f"{where}.unresolved 必须是字符串数组")
+        unresolved = []
+    if unresolved:
+        errors.append(f"{where} 通过时不能留下未解决分歧")
+    if review.get("confirmed_before_generation") is not True:
+        errors.append(
+            f"{where}.confirmed_before_generation 必须为 true"
+        )
+    if review.get("confidence") not in {"medium", "high"}:
+        errors.append(f"{where}.confidence 必须为 medium 或 high")
+
+
+def _validate_boundary_review(
+    part: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    part_id = part.get("part_id", "<unknown>")
+    where = f"components.parts[{part_id}].boundary_review"
+    review = part.get("boundary_review")
+    if not isinstance(review, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    status = review.get("status")
+    if status not in BOUNDARY_REVIEW_STATUSES:
+        errors.append(f"{where}.status 无效")
+        return
+    if status != "pass":
+        errors.append(f"{where} 建模或装配前必须通过组件边界审查")
+        return
+
+    source_views = review.get("source_views")
+    if not isinstance(source_views, list) or len(set(source_views)) < 2:
+        errors.append(f"{where}.source_views 至少需要两个不同视角")
+        source_views = []
+    else:
+        for index, value in enumerate(source_views):
+            source = _relative_path(
+                value,
+                root,
+                f"{where}.source_views[{index}]",
+                errors,
+            )
+            if source is not None and not source.is_file():
+                errors.append(f"{where}.source_views[{index}] 图片不存在")
+
+    for key in (
+        "overall_dimensions_m",
+        "mounting_interface_dimensions_m",
+    ):
+        dimensions = review.get(key)
+        if (
+            not isinstance(dimensions, list)
+            or len(dimensions) != 3
+            or not all(
+                isinstance(value, (int, float))
+                and not isinstance(value, bool)
+                and value > 0
+                for value in dimensions
+            )
+        ):
+            errors.append(f"{where}.{key} 必须是三个正数")
+
+    surfaces = review.get("surfaces")
+    if not isinstance(surfaces, dict):
+        errors.append(f"{where}.surfaces 必须是对象")
+    else:
+        for surface in sorted(BOUNDARY_SURFACES):
+            if surfaces.get(surface) is not True:
+                errors.append(
+                    f"{where}.surfaces.{surface} 未完成核查"
+                )
+
+    attachments = review.get("attachments")
+    if not isinstance(attachments, list) or not attachments:
+        errors.append(f"{where}.attachments 必须列出附加结构")
+        attachments = []
+    included_attachment_ids: list[str] = []
+    for index, attachment in enumerate(attachments):
+        item_where = f"{where}.attachments[{index}]"
+        if not isinstance(attachment, dict):
+            errors.append(f"{item_where} 必须是对象")
+            continue
+        attachment_id = attachment.get("id")
+        if not _nonempty_text(attachment_id):
+            errors.append(f"{item_where}.id 不能为空")
+        if not _nonempty_text(attachment.get("type")):
+            errors.append(f"{item_where}.type 不能为空")
+        disposition = attachment.get("disposition")
+        if disposition not in {
+            "included_in_component",
+            "separate_component",
+            "not_present",
+        }:
+            errors.append(f"{item_where}.disposition 无效")
+        evidence_views = attachment.get("evidence_views")
+        if (
+            not isinstance(evidence_views, list)
+            or len(set(evidence_views)) < 2
+        ):
+            errors.append(
+                f"{item_where}.evidence_views 至少需要两个视角"
+            )
+        projection = attachment.get("projection_m")
+        if (
+            not isinstance(projection, (int, float))
+            or isinstance(projection, bool)
+            or projection < 0
+        ):
+            errors.append(
+                f"{item_where}.projection_m 必须是非负数"
+            )
+        if disposition == "included_in_component":
+            if _nonempty_text(attachment_id):
+                included_attachment_ids.append(attachment_id)
+            if attachment.get("geometry_included") is not True:
+                errors.append(
+                    f"{item_where} 已纳入组件但缺少几何"
+                )
+            if not _nonempty_text(attachment.get("material")):
+                errors.append(
+                    f"{item_where}.material 不能为空"
+                )
+        elif disposition == "separate_component":
+            if not _nonempty_text(attachment.get("part_id")):
+                errors.append(
+                    f"{item_where} 拆为独立组件时必须引用 part_id"
+                )
+    if not included_attachment_ids:
+        errors.append(f"{where}.attachments 至少有一个纳入组件")
+
+    material_zones = review.get("material_zones")
+    if not isinstance(material_zones, list) or not material_zones:
+        errors.append(f"{where}.material_zones 不能为空")
+    else:
+        for index, zone in enumerate(material_zones):
+            if not isinstance(zone, dict) or not _nonempty_text(
+                zone.get("role")
+            ) or not _nonempty_text(zone.get("material")):
+                errors.append(
+                    f"{where}.material_zones[{index}] "
+                    "必须记录 role 和 material"
+                )
+
+    checks = review.get("checks")
+    if not isinstance(checks, dict):
+        errors.append(f"{where}.checks 必须是对象")
+    else:
+        for key in sorted(BOUNDARY_REVIEW_CHECKS):
+            if checks.get(key) is not True:
+                errors.append(f"{where}.checks.{key} 未通过")
+    unresolved = review.get("unresolved")
+    if not isinstance(unresolved, list) or not all(
+        isinstance(value, str) and value.strip()
+        for value in unresolved
+    ):
+        errors.append(f"{where}.unresolved 必须是字符串数组")
+        unresolved = []
+    if unresolved:
+        errors.append(f"{where} 通过时不能留下未解决边界")
+
+    part_type = str(part.get("type", "")).lower()
+    if part_type in WINDOW_PART_TYPES:
+        sill = next(
+            (
+                item
+                for item in attachments
+                if isinstance(item, dict)
+                and "sill" in str(item.get("type", "")).lower()
+            ),
+            None,
+        )
+        if not isinstance(sill, dict):
+            errors.append(f"{where} 窗类组件必须记录窗台")
+        else:
+            if sill.get("disposition") != "included_in_component":
+                errors.append(
+                    f"{where} 窗台必须纳入当前窗户组件"
+                )
+            if "stone" not in str(sill.get("material", "")).lower():
+                errors.append(f"{where} 窗台材质必须明确记录为石材")
+
+
+def _validate_reference_models(
+    reference_models: Any,
+    root: Path,
+    errors: list[str],
+) -> None:
+    if not isinstance(reference_models, list) or not reference_models:
+        errors.append("components.reference_models 至少需要一个整栋参考模型")
+        return
+    ids: set[str] = set()
+    for index, model in enumerate(reference_models):
+        where = f"components.reference_models[{index}]"
+        if not isinstance(model, dict):
+            errors.append(f"{where} 必须是对象")
+            continue
+        model_id = model.get("reference_model_id")
+        if not _nonempty_text(model_id):
+            errors.append(f"{where}.reference_model_id 不能为空")
+        elif model_id in ids:
+            errors.append(f"重复整栋参考模型：{model_id}")
+        else:
+            ids.add(model_id)
+        if model.get("status") not in REFERENCE_MODEL_STATUSES:
+            errors.append(f"{where}.status 无效")
+        if model.get("role") != "reference_only":
+            errors.append(f"{where}.role 必须为 reference_only")
+        if model.get("reference_only") is not True:
+            errors.append(f"{where}.reference_only 必须为 true")
+        if model.get("input_mode") not in REFERENCE_MODEL_INPUT_MODES:
+            errors.append(f"{where}.input_mode 无效")
+        for key in ("provider", "model", "selection_reason"):
+            if not _nonempty_text(model.get(key)):
+                errors.append(f"{where}.{key} 不能为空")
+
+        authority = model.get("authority_policy")
+        if not isinstance(authority, dict):
+            errors.append(f"{where}.authority_policy 必须是对象")
+        else:
+            expected = {
+                "primary_geometry": "reference_model",
+                "primary_component_reference": "model_derived_views",
+                "original_views_role": "validation_and_surface_detail",
+            }
+            for key, value in expected.items():
+                if authority.get(key) != value:
+                    errors.append(
+                        f"{where}.authority_policy.{key} "
+                        f"必须为 {value}"
+                    )
+
+        quality = model.get("reference_quality")
+        if not isinstance(quality, dict):
+            errors.append(f"{where}.reference_quality 必须是对象")
+            quality = {}
+        if quality.get("status") not in REFERENCE_MODEL_STATUSES:
+            errors.append(f"{where}.reference_quality.status 无效")
+        quality_checks = quality.get("checks")
+        if not isinstance(quality_checks, dict):
+            errors.append(
+                f"{where}.reference_quality.checks 必须是对象"
+            )
+        elif quality.get("status") == "pass":
+            for key in (
+                "mesh_exists",
+                "main_massing_complete",
+                "roof_present",
+                "openings_present",
+                "attachment_relations_legible",
+            ):
+                if quality_checks.get(key) is not True:
+                    errors.append(
+                        f"{where}.reference_quality.checks.{key} "
+                        "未通过"
+                    )
+        limitations = quality.get("limitations")
+        if not isinstance(limitations, list) or not all(
+            isinstance(value, str) and value.strip()
+            for value in limitations
+        ):
+            errors.append(
+                f"{where}.reference_quality.limitations "
+                "必须是字符串数组"
+            )
+
+        camera_rig = model.get("camera_rig")
+        if not isinstance(camera_rig, dict):
+            errors.append(f"{where}.camera_rig 必须是对象")
+            camera_rig = {}
+        if camera_rig.get("status") not in REFERENCE_MODEL_STATUSES:
+            errors.append(f"{where}.camera_rig.status 无效")
+        if camera_rig.get("shared_center") is not True:
+            errors.append(f"{where}.camera_rig.shared_center 必须为 true")
+        views = camera_rig.get("views")
+        if not isinstance(views, dict) or not set(CONCEPT_VIEW_IDS) <= set(
+            views
+        ):
+            errors.append(
+                f"{where}.camera_rig.views 必须覆盖固定十视图"
+            )
+        ortho_scale = camera_rig.get("ortho_scale")
+        if (
+            not isinstance(ortho_scale, (int, float))
+            or isinstance(ortho_scale, bool)
+            or ortho_scale <= 0
+        ):
+            errors.append(
+                f"{where}.camera_rig.ortho_scale 必须为正数"
+            )
+
+        view_validation = model.get("derived_view_validation")
+        if not isinstance(view_validation, dict):
+            errors.append(
+                f"{where}.derived_view_validation 必须是对象"
+            )
+            view_validation = {}
+        if view_validation.get("status") not in REFERENCE_MODEL_STATUSES:
+            errors.append(
+                f"{where}.derived_view_validation.status 无效"
+            )
+        reliable_views = view_validation.get("reliable_views")
+        if (
+            not isinstance(reliable_views, list)
+            or len(set(reliable_views)) < 6
+            or not set(reliable_views) <= set(CONCEPT_VIEW_IDS)
+        ):
+            errors.append(
+                f"{where}.derived_view_validation.reliable_views "
+                "至少需要六个有效视图"
+            )
+        low_confidence_views = view_validation.get(
+            "low_confidence_views"
+        )
+        if not isinstance(low_confidence_views, list) or not all(
+            isinstance(value, str) and value in CONCEPT_VIEW_IDS
+            for value in low_confidence_views
+        ):
+            errors.append(
+                f"{where}.derived_view_validation."
+                "low_confidence_views 必须是视图 ID 数组"
+            )
+        view_checks = view_validation.get("checks")
+        if not isinstance(view_checks, dict):
+            errors.append(
+                f"{where}.derived_view_validation.checks 必须是对象"
+            )
+        elif view_validation.get("status") == "pass":
+            for key in (
+                "all_views_exist",
+                "all_views_nonempty",
+                "camera_rig_consistent",
+                "same_building_identity",
+                "scale_and_framing_consistent",
+            ):
+                if view_checks.get(key) is not True:
+                    errors.append(
+                        f"{where}.derived_view_validation.checks."
+                        f"{key} 未通过"
+                    )
+
+        derived_views = model.get("model_derived_views")
+        if not isinstance(derived_views, dict):
+            errors.append(f"{where}.model_derived_views 必须是对象")
+            derived_views = {}
+        else:
+            for view_id in CONCEPT_VIEW_IDS:
+                path = _relative_path(
+                    derived_views.get(view_id),
+                    root,
+                    f"{where}.model_derived_views.{view_id}",
+                    errors,
+                )
+                if path is not None and not path.is_file():
+                    errors.append(
+                        f"{where}.model_derived_views.{view_id} "
+                        "图片不存在"
+                    )
+
+        source_views = model.get("source_views")
+        if not isinstance(source_views, list) or not source_views:
+            errors.append(f"{where}.source_views 不能为空")
+            source_views = []
+        for view_index, value in enumerate(source_views):
+            path = _relative_path(
+                value,
+                root,
+                f"{where}.source_views[{view_index}]",
+                errors,
+            )
+            if path is not None and not path.is_file():
+                errors.append(
+                    f"{where}.source_views[{view_index}] 图片不存在"
+                )
+        if (
+            model.get("input_mode") == "multiview_to_3d"
+            and len(set(source_views)) < 2
+        ):
+            errors.append(
+                f"{where} 多图生成至少需要两个不同来源视图"
+            )
+
+        for key in ("raw_triangles", "decimated_triangles", "max_triangles"):
+            value = model.get(key)
+            if (
+                not isinstance(value, int)
+                or isinstance(value, bool)
+                or value < 1
+            ):
+                errors.append(f"{where}.{key} 必须是正整数")
+        if (
+            isinstance(model.get("decimated_triangles"), int)
+            and isinstance(model.get("max_triangles"), int)
+            and model["decimated_triangles"] > model["max_triangles"]
+        ):
+            errors.append(
+                f"{where}.decimated_triangles 超过 max_triangles"
+            )
+        if not _nonempty_text(model.get("decimation_method")):
+            errors.append(f"{where}.decimation_method 不能为空")
+
+        for key in (
+            "source_blend",
+            "decimated_blend",
+            "decimated_glb",
+            "preview",
+            "comparison",
+            "audit",
+        ):
+            path = _relative_path(
+                model.get(key),
+                root,
+                f"{where}.{key}",
+                errors,
+            )
+            if path is not None and not path.is_file():
+                errors.append(f"{where}.{key} 文件不存在")
+
+        normalization = model.get("normalization")
+        if not isinstance(normalization, dict):
+            errors.append(f"{where}.normalization 必须是对象")
+            normalization = {}
+        if normalization.get("status") not in {
+            "pending",
+            "pass",
+            "repair_required",
+        }:
+            errors.append(f"{where}.normalization.status 无效")
+
+        extraction = model.get("feature_extraction")
+        if not isinstance(extraction, dict):
+            errors.append(f"{where}.feature_extraction 必须是对象")
+            extraction = {}
+        if extraction.get("status") not in FEATURE_EXTRACTION_STATUSES:
+            errors.append(f"{where}.feature_extraction.status 无效")
+        segmentation_report = _relative_path(
+            extraction.get("segmentation_report"),
+            root,
+            f"{where}.feature_extraction.segmentation_report",
+            errors,
+        )
+        if (
+            segmentation_report is not None
+            and not segmentation_report.is_file()
+        ):
+            errors.append(
+                f"{where}.feature_extraction.segmentation_report "
+                "文件不存在"
+            )
+        component_map = extraction.get("component_map")
+        if not isinstance(component_map, list):
+            errors.append(
+                f"{where}.feature_extraction.component_map 必须是数组"
+            )
+        else:
+            for map_index, item in enumerate(component_map):
+                item_where = (
+                    f"{where}.feature_extraction."
+                    f"component_map[{map_index}]"
+                )
+                if not isinstance(item, dict):
+                    errors.append(f"{item_where} 必须是对象")
+                    continue
+                if not _nonempty_text(item.get("part_id")):
+                    errors.append(f"{item_where}.part_id 不能为空")
+                if item.get("primary_source") != "model_derived_views":
+                    errors.append(
+                        f"{item_where}.primary_source "
+                        "必须为 model_derived_views"
+                    )
+                island_ids = item.get("mesh_island_ids")
+                if not isinstance(island_ids, list) or not all(
+                    isinstance(value, int)
+                    and not isinstance(value, bool)
+                    and value > 0
+                    for value in island_ids
+                ):
+                    errors.append(
+                        f"{item_where}.mesh_island_ids "
+                        "必须是正整数数组"
+                    )
+                observations = item.get("reference_observations")
+                if (
+                    not isinstance(observations, list)
+                    or not _nonempty(observations)
+                ):
+                    errors.append(
+                        f"{item_where}.reference_observations 不能为空"
+                    )
+                views = item.get("views_checked")
+                if not isinstance(views, list) or len(set(views)) < 2:
+                    errors.append(
+                        f"{item_where}.views_checked "
+                        "至少需要两个参考视角"
+                    )
+
+        analysis_ready = model.get("analysis_ready")
+        if not isinstance(analysis_ready, bool):
+            errors.append(f"{where}.analysis_ready 必须是布尔值")
+        elif analysis_ready:
+            if model.get("status") != "pass":
+                errors.append(f"{where} 可分析前 status 必须为 pass")
+            if normalization.get("status") != "pass":
+                errors.append(f"{where} 可分析前必须完成多视图归一化")
+            if extraction.get("status") != "pass":
+                errors.append(f"{where} 可分析前必须完成组件特征映射")
+            if quality.get("status") != "pass":
+                errors.append(f"{where} 可分析前参考模型质量必须通过")
+            if camera_rig.get("status") != "pass":
+                errors.append(f"{where} 可分析前固定相机轨道必须通过")
+            if view_validation.get("status") != "pass":
+                errors.append(f"{where} 可分析前派生十视图必须通过验证")
+
+
+def _reference_model_gate_errors(
+    reference_models: Any,
+    part_ids: set[str] | None = None,
+) -> list[str]:
+    errors: list[str] = []
+    if not isinstance(reference_models, list) or not reference_models:
+        return ["缺少整栋三维参考模型"]
+    ready = [
+        model
+        for model in reference_models
+        if isinstance(model, dict)
+        and model.get("status") == "pass"
+        and model.get("reference_only") is True
+        and model.get("analysis_ready") is True
+    ]
+    if not ready:
+        errors.append(
+            "整栋三维参考模型尚未完成多视图归一化和组件特征映射"
+        )
+    elif part_ids:
+        mapped = {
+            item.get("part_id")
+            for model in ready
+            for item in (
+                (model.get("feature_extraction") or {}).get(
+                    "component_map",
+                    [],
+                )
+            )
+            if isinstance(item, dict)
+        }
+        missing = sorted(part_ids - mapped)
+        if missing:
+            errors.append(
+                "整栋参考模型尚未映射组件："
+                + "、".join(missing)
+            )
+    return errors
+
+
+def _validate_fine_structure_review(
+    part: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    part_id = part.get("part_id", "<unknown>")
+    where = f"components.parts[{part_id}].fine_structure_review"
+    review = part.get("fine_structure_review")
+    if not isinstance(review, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+
+    status = review.get("status")
+    if status not in FINE_STRUCTURE_STATUSES:
+        errors.append(f"{where}.status 无效")
+        return
+    built = (
+        (part.get("parametric_build") or {}).get("status") == "pass"
+        or (part.get("qa") or {}).get("result") == "pass"
+    )
+    if built and status != "pass":
+        errors.append(f"{where} 已建模组件必须通过细部结构复核")
+        return
+    if status != "pass":
+        return
+
+    evidence = review.get("evidence")
+    if not isinstance(evidence, dict):
+        errors.append(f"{where}.evidence 必须是对象")
+        evidence = {}
+    closeup = _relative_path(
+        evidence.get("closeup"),
+        root,
+        f"{where}.evidence.closeup",
+        errors,
+    )
+    if closeup is not None and not closeup.is_file():
+        errors.append(f"{where}.evidence.closeup 图片不存在")
+    if review.get("confidence") not in FINE_STRUCTURE_CONFIDENCE:
+        errors.append(f"{where}.confidence 无效")
+    if not _nonempty_text(evidence.get("observation")):
+        errors.append(f"{where}.evidence.observation 不能为空")
+    if not _nonempty_text(evidence.get("reidentification")):
+        errors.append(f"{where}.evidence.reidentification 不能为空")
+
+    source_views = review.get("source_views")
+    if not isinstance(source_views, list) or len(set(source_views)) < 2:
+        errors.append(f"{where}.source_views 至少需要两个不同视角")
+    else:
+        for index, value in enumerate(source_views):
+            source = _relative_path(
+                value,
+                root,
+                f"{where}.source_views[{index}]",
+                errors,
+            )
+            if source is not None and not source.is_file():
+                errors.append(
+                    f"{where}.source_views[{index}] 图片不存在"
+                )
+
+    materials = review.get("material_cues")
+    if not isinstance(materials, dict):
+        errors.append(f"{where}.material_cues 必须是对象")
+    else:
+        for key in ("frame", "trim", "glass"):
+            if not _nonempty_text(materials.get(key)):
+                errors.append(
+                    f"{where}.material_cues.{key} 不能为空"
+                )
+
+    unresolved = review.get("unresolved")
+    if not isinstance(unresolved, list) or not all(
+        isinstance(value, str) and value.strip()
+        for value in unresolved
+    ):
+        errors.append(f"{where}.unresolved 必须是字符串数组")
+        unresolved = []
+    if unresolved:
+        errors.append(f"{where} 通过时不能留下未解决分区")
+
+    pattern = review.get("pattern")
+    if not isinstance(pattern, dict):
+        errors.append(f"{where}.pattern 必须是对象")
+        return
+    for key in (
+        "major_vertical_sections",
+        "columns",
+        "rows",
+        "pane_count",
+        "horizontal_bars",
+    ):
+        value = pattern.get(key)
+        if (
+            not isinstance(value, int)
+            or isinstance(value, bool)
+            or value < 1
+        ):
+            errors.append(f"{where}.pattern.{key} 必须是正整数")
+    central = pattern.get("central_split")
+    if not isinstance(central, dict):
+        errors.append(f"{where}.pattern.central_split 必须是对象")
+        central = {}
+    enabled = central.get("enabled")
+    if not isinstance(enabled, bool):
+        errors.append(
+            f"{where}.pattern.central_split.enabled 必须是布尔值"
+        )
+    sub_columns = central.get("sub_columns")
+    if (
+        not isinstance(sub_columns, int)
+        or isinstance(sub_columns, bool)
+        or sub_columns < 1
+    ):
+        errors.append(
+            f"{where}.pattern.central_split.sub_columns 必须是正整数"
+        )
+    if isinstance(pattern.get("columns"), int) and isinstance(
+        pattern.get("major_vertical_sections"), int
+    ) and isinstance(sub_columns, int):
+        expected_columns = (
+            pattern["major_vertical_sections"] - 1 + sub_columns
+            if enabled
+            else pattern["major_vertical_sections"]
+        )
+        if pattern["columns"] != expected_columns:
+            errors.append(
+                f"{where}.pattern.columns 与主分区/中央再分列不一致"
+            )
+    if (
+        isinstance(pattern.get("columns"), int)
+        and isinstance(pattern.get("rows"), int)
+        and isinstance(pattern.get("pane_count"), int)
+        and pattern["pane_count"] != pattern["columns"] * pattern["rows"]
+    ):
+        errors.append(f"{where}.pattern.pane_count 与行列数不一致")
+
+    build = part.get("parametric_build")
+    if isinstance(build, dict) and build:
+        comparisons = {
+            "grid_columns": pattern.get("columns"),
+            "grid_rows": pattern.get("rows"),
+            "pane_count": pattern.get("pane_count"),
+        }
+        for key, expected in comparisons.items():
+            if build.get(key) != expected:
+                errors.append(
+                    f"{where} 与 parametric_build.{key} 不一致"
+                )
+
+
+def _validate_detail_audit(
+    detail_audit: Any,
+    part_ids: set[str],
+    root: Path,
+    where: str,
+    errors: list[str],
+    selected_views: set[str] | None = None,
+) -> None:
+    if not isinstance(detail_audit, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+
+    status = detail_audit.get("status")
+    if status not in {"pending", "repair_required", "pass"}:
+        errors.append(f"{where}.status 无效")
+
+    scan_views = detail_audit.get("scan_views")
+    if not isinstance(scan_views, list) or not all(
+        isinstance(value, str) and value.strip() for value in scan_views
+    ):
+        errors.append(f"{where}.scan_views 必须是字符串数组")
+        scan_views = []
+    else:
+        for index, value in enumerate(scan_views):
+            _relative_path(value, root, f"{where}.scan_views[{index}]", errors)
+        if (
+            status == "pass"
+            and selected_views is not None
+            and set(scan_views) != selected_views
+        ):
+            errors.append(
+                f"{where}.scan_views 必须覆盖选中方向的全部十视图"
+            )
+
+    coverage = detail_audit.get("coverage")
+    if not isinstance(coverage, dict):
+        errors.append(f"{where}.coverage 必须是对象")
+        coverage = {}
+    if status == "pass":
+        for key in sorted(DETAIL_COVERAGE_KEYS):
+            if coverage.get(key) is not True:
+                errors.append(f"{where}.coverage.{key} 未通过")
+
+    unresolved = detail_audit.get("unresolved")
+    if not isinstance(unresolved, list) or not all(
+        isinstance(value, str) and value.strip() for value in unresolved
+    ):
+        errors.append(f"{where}.unresolved 必须是字符串数组")
+        unresolved = []
+    if status == "pass" and unresolved:
+        errors.append(f"{where}.unresolved 通过时不能留有未解决细节")
+
+    features = detail_audit.get("features")
+    if not isinstance(features, list):
+        errors.append(f"{where}.features 必须是数组")
+        features = []
+    if status == "pass" and not features:
+        errors.append(f"{where}.features 通过时不能为空")
+
+    feature_ids: set[str] = set()
+    for index, feature in enumerate(features):
+        item_where = f"{where}.features[{index}]"
+        if not isinstance(feature, dict):
+            errors.append(f"{item_where} 必须是对象")
+            continue
+
+        feature_id = feature.get("feature_id")
+        if not isinstance(feature_id, str) or not re.fullmatch(
+            r"[a-z][a-z0-9_]*", feature_id
+        ):
+            errors.append(f"{item_where}.feature_id 无效")
+        elif feature_id in feature_ids:
+            errors.append(f"重复细节特征：{feature_id}")
+        else:
+            feature_ids.add(feature_id)
+
+        if feature.get("category") not in DETAIL_CATEGORIES:
+            errors.append(f"{item_where}.category 无效")
+        if not _nonempty_text(feature.get("type")):
+            errors.append(f"{item_where}.type 不能为空")
+        if feature.get("visual_impact") not in DETAIL_VISUAL_IMPACTS:
+            errors.append(f"{item_where}.visual_impact 无效")
+        if not isinstance(feature.get("geometry_required"), bool):
+            errors.append(f"{item_where}.geometry_required 必须是布尔值")
+
+        quantity = feature.get("quantity")
+        if (
+            not isinstance(quantity, int)
+            or isinstance(quantity, bool)
+            or quantity < 1
+        ):
+            errors.append(f"{item_where}.quantity 必须是正整数")
+
+        views = feature.get("views")
+        if not isinstance(views, list) or not all(
+            isinstance(value, str) and value.strip() for value in views
+        ):
+            errors.append(f"{item_where}.views 必须是字符串数组")
+            views = []
+        else:
+            for view_index, value in enumerate(views):
+                _relative_path(
+                    value,
+                    root,
+                    f"{item_where}.views[{view_index}]",
+                    errors,
+                )
+            if status == "pass" and len(set(views)) < 2:
+                errors.append(f"{item_where}.views 至少需要两个多视图来源")
+            if (
+                status == "pass"
+                and selected_views is not None
+                and not set(views) <= selected_views
+            ):
+                errors.append(
+                    f"{item_where}.views 必须来自选中方向的多视图"
+                )
+
+        disposition = feature.get("disposition")
+        if disposition not in DETAIL_DISPOSITIONS:
+            errors.append(f"{item_where}.disposition 无效")
+        if feature.get("geometry_required") is True and disposition == "material":
+            errors.append(
+                f"{item_where} 需要几何的细节不能只交给材质"
+            )
+        if disposition == "part" and feature.get("geometry_required") is not True:
+            errors.append(
+                f"{item_where} 独立组件必须声明 geometry_required=true"
+            )
+        part_id = feature.get("part_id")
+        if disposition == "part":
+            if not isinstance(part_id, str) or part_id not in part_ids:
+                errors.append(
+                    f"{item_where}.part_id 必须指向现有组件"
+                )
+        if not _nonempty_text(feature.get("observation")):
+            errors.append(f"{item_where}.observation 不能为空")
+
+
+def _validate_quantity_audit(
+    components: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    where = "components.quantity_audit"
+    audit = components.get("quantity_audit")
+    if not isinstance(audit, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    status = audit.get("status")
+    if status not in {"pending", "repair_required", "pass"}:
+        errors.append(f"{where}.status 无效")
+    source_views = audit.get("source_views")
+    if not isinstance(source_views, list):
+        errors.append(f"{where}.source_views 必须是数组")
+    elif status == "pass" and not source_views:
+        errors.append(f"{where}.source_views 通过时必须非空")
+    else:
+        for index, value in enumerate(source_views):
+            _relative_path(
+                value, root, f"{where}.source_views[{index}]", errors
+            )
+    counts = audit.get("counts")
+    if not isinstance(counts, dict):
+        errors.append(f"{where}.counts 必须是对象")
+        counts = {}
+    elif status == "pass" and not counts:
+        errors.append(f"{where}.counts 通过时必须非空")
+    for key, item in counts.items():
+        item_where = f"{where}.counts.{key}"
+        if not isinstance(item, dict):
+            errors.append(f"{item_where} 必须是对象")
+            continue
+        expected = item.get("expected")
+        actual = item.get("actual")
+        if (
+            not isinstance(expected, int)
+            or isinstance(expected, bool)
+            or expected < 0
+        ):
+            errors.append(f"{item_where}.expected 必须是非负整数")
+        if (
+            not isinstance(actual, int)
+            or isinstance(actual, bool)
+            or actual < 0
+        ):
+            errors.append(f"{item_where}.actual 必须是非负整数")
+        elif expected != actual:
+            errors.append(f"{item_where} 的 expected 与 actual 不一致")
+        if not _nonempty_text(item.get("unit")):
+            errors.append(f"{item_where}.unit 不能为空")
+        if item.get("count_scope") not in {
+            "live_part_instances",
+            "embedded_geometry",
+            "removed_feature",
+        }:
+            errors.append(f"{item_where}.count_scope 无效")
+        evidence = item.get("evidence")
+        if not isinstance(evidence, list) or not evidence:
+            errors.append(f"{item_where}.evidence 必须是非空数组")
+        else:
+            for index, value in enumerate(evidence):
+                _relative_path(
+                    value,
+                    root,
+                    f"{item_where}.evidence[{index}]",
+                    errors,
+                )
+        if item.get("count_scope") == "removed_feature" and actual != 0:
+            errors.append(f"{item_where} 为删除特征，actual 必须为 0")
+
+    windows = counts.get("main_windows")
+    if isinstance(windows, dict):
+        breakdown = windows.get("facade_breakdown")
+        if not isinstance(breakdown, dict) or not breakdown:
+            errors.append(
+                f"{where}.counts.main_windows.facade_breakdown 必须存在"
+            )
+            breakdown = {}
+        total = 0
+        for facade, floors in breakdown.items():
+            facade_where = (
+                f"{where}.counts.main_windows.facade_breakdown.{facade}"
+            )
+            if not isinstance(floors, dict):
+                errors.append(f"{facade_where} 必须是对象")
+                continue
+            lower = floors.get("lower")
+            upper = floors.get("upper")
+            facade_total = floors.get("total")
+            if not all(
+                isinstance(value, int)
+                and not isinstance(value, bool)
+                and value >= 0
+                for value in (lower, upper, facade_total)
+            ):
+                errors.append(
+                    f"{facade_where} lower/upper/total 必须是非负整数"
+                )
+                continue
+            if facade_total != lower + upper:
+                errors.append(
+                    f"{facade_where}.total 必须等于 lower + upper"
+                )
+            total += facade_total
+        if total != windows.get("expected"):
+            errors.append(
+                f"{where}.counts.main_windows 分面合计 {total} "
+                f"与 expected {windows.get('expected')} 不一致"
+            )
+
+    audit_checks = audit.get("checks")
+    if not isinstance(audit_checks, dict):
+        errors.append(f"{where}.checks 必须是对象")
+    elif status == "pass" and (
+        not audit_checks
+        or not all(value is True for value in audit_checks.values())
+    ):
+        errors.append(f"{where}.checks 通过时必须非空且全部为 true")
+    unresolved = audit.get("unresolved")
+    if not isinstance(unresolved, list):
+        errors.append(f"{where}.unresolved 必须是数组")
+    elif status == "pass" and unresolved:
+        errors.append(f"{where}.unresolved 通过时必须为空")
+    decomposition = components.get("decomposition_review") or {}
+    if (
+        status == "pass"
+        and (decomposition.get("checks") or {}).get("quantity_verified")
+        is not True
+    ):
+        errors.append(
+            "components.decomposition_review.checks.quantity_verified "
+            "必须为 true"
+        )
+
+
+def _validate_attachment_integrity_audit(
+    components: dict[str, Any],
+    root: Path,
+    errors: list[str],
+) -> None:
+    where = "components.attachment_integrity_audit"
+    audit = components.get("attachment_integrity_audit")
+    if not isinstance(audit, dict):
+        errors.append(f"{where} 必须是对象")
+        return
+    status = audit.get("status")
+    if status not in {"pending", "repair_required", "pass"}:
+        errors.append(f"{where}.status 无效")
+    source_views = audit.get("source_views")
+    if not isinstance(source_views, list):
+        errors.append(f"{where}.source_views 必须是数组")
+    else:
+        if status == "pass" and not source_views:
+            errors.append(f"{where}.source_views 通过时必须非空")
+        for index, value in enumerate(source_views):
+            _relative_path(
+                value, root, f"{where}.source_views[{index}]", errors
+            )
+    part_ids = {
+        part.get("part_id")
+        for part in components.get("parts", [])
+        if isinstance(part, dict)
+    }
+    items = audit.get("items")
+    if not isinstance(items, list):
+        errors.append(f"{where}.items 必须是数组")
+        items = []
+    elif status == "pass" and not items:
+        errors.append(f"{where}.items 通过时必须非空")
+    for index, item in enumerate(items):
+        item_where = f"{where}.items[{index}]"
+        if not isinstance(item, dict):
+            errors.append(f"{item_where} 必须是对象")
+            continue
+        if item.get("part_id") not in part_ids:
+            errors.append(f"{item_where}.part_id 必须指向现有组件")
+        if not _nonempty_text(item.get("attachment_id")):
+            errors.append(f"{item_where}.attachment_id 不能为空")
+        hosts = item.get("host_part_ids")
+        if not isinstance(hosts, list) or not hosts:
+            errors.append(f"{item_where}.host_part_ids 必须是非空数组")
+        else:
+            for host in hosts:
+                if host not in part_ids:
+                    errors.append(
+                        f"{item_where}.host_part_ids 包含未知组件 {host}"
+                    )
+        for key in (
+            "has_volume",
+            "has_back_enclosure",
+            "has_side_enclosure",
+        ):
+            if item.get(key) is not True:
+                errors.append(f"{item_where}.{key} 必须为 true")
+        if item.get("front_plane_only") is not False:
+            errors.append(f"{item_where}.front_plane_only 必须为 false")
+        if item.get("host_contact_verified") is not True:
+            errors.append(
+                f"{item_where}.host_contact_verified 必须为 true"
+            )
+        contact_evidence = item.get("host_contact_evidence")
+        if not isinstance(contact_evidence, list) or not contact_evidence:
+            errors.append(
+                f"{item_where}.host_contact_evidence 必须是非空数组"
+            )
+        else:
+            for evidence_index, value in enumerate(contact_evidence):
+                _relative_path(
+                    value,
+                    root,
+                    f"{item_where}.host_contact_evidence[{evidence_index}]",
+                    errors,
+                )
+        evidence_views = item.get("evidence_views")
+        if (
+            not isinstance(evidence_views, list)
+            or len(set(evidence_views)) < 2
+        ):
+            errors.append(
+                f"{item_where}.evidence_views 至少需要两个视角"
+            )
+        else:
+            for evidence_index, value in enumerate(evidence_views):
+                _relative_path(
+                    value,
+                    root,
+                    f"{item_where}.evidence_views[{evidence_index}]",
+                    errors,
+                )
+        if item.get("status") != "pass":
+            errors.append(f"{item_where}.status 必须为 pass")
+    audit_checks = audit.get("checks")
+    if not isinstance(audit_checks, dict):
+        errors.append(f"{where}.checks 必须是对象")
+    elif status == "pass" and (
+        not audit_checks
+        or not all(value is True for value in audit_checks.values())
+    ):
+        errors.append(f"{where}.checks 通过时必须非空且全部为 true")
+    unresolved = audit.get("unresolved")
+    if not isinstance(unresolved, list):
+        errors.append(f"{where}.unresolved 必须是数组")
+    elif status == "pass" and unresolved:
+        errors.append(f"{where}.unresolved 通过时必须为空")
+    decomposition = components.get("decomposition_review") or {}
+    if (
+        status == "pass"
+        and (decomposition.get("checks") or {}).get(
+            "attachment_integrity_verified"
+        )
+        is not True
+    ):
+        errors.append(
+            "components.decomposition_review.checks."
+            "attachment_integrity_verified 必须为 true"
+        )
+
+
 def validate_project(root: Path) -> tuple[list[str], list[str]]:
     root = root.resolve()
     errors: list[str] = []
@@ -1021,6 +2735,28 @@ def validate_project(root: Path) -> tuple[list[str], list[str]]:
     delivery = scene.get("delivery")
     if not isinstance(delivery, dict) or delivery.get("profile") not in DELIVERY_PROFILES:
         errors.append("scene.delivery.profile 无效")
+    render_policy = scene.get("render_policy")
+    if render_policy is not None:
+        if not isinstance(render_policy, dict):
+            errors.append("scene.render_policy 必须是对象")
+        else:
+            if render_policy.get("qa_render") != "required":
+                errors.append(
+                    "scene.render_policy.qa_render 必须为 required"
+                )
+            if (
+                render_policy.get("display_mode")
+                not in RENDER_DISPLAY_MODES
+            ):
+                errors.append("scene.render_policy.display_mode 无效")
+            for key in (
+                "display_requires_confirmation",
+                "extra_presentation_renders_require_confirmation",
+            ):
+                if not isinstance(render_policy.get(key), bool):
+                    errors.append(
+                        f"scene.render_policy.{key} 必须是布尔值"
+                    )
 
     stage = progress.get("stage")
     if progress.get("mode") != "concept_first":
@@ -1036,6 +2772,32 @@ def validate_project(root: Path) -> tuple[list[str], list[str]]:
         errors.append("components.object_id 与 progress.current_object 不一致")
     if assembly.get("object_id") != current_object:
         errors.append("assembly.object_id 与 progress.current_object 不一致")
+
+    reference_models = components.get("reference_models")
+    if reference_models is None:
+        if (
+            scene_skill_version == SKILL_VERSION
+            and stage in {
+                "COMPONENTS",
+                "REFERENCES",
+                "GENERATION",
+                "ASSEMBLY",
+                "FINISHING",
+                "REVIEW",
+                "COMPLETE",
+            }
+        ):
+            errors.append(
+                "components.reference_models 至少需要一个"
+                "整栋三维参考模型"
+            )
+        elif stage not in {"BRIEF", "CONCEPTS", "DESIGN"}:
+            warnings.append(
+                "项目缺少整栋三维参考模型；"
+                "进入 COMPONENTS 门禁前必须补齐"
+            )
+    else:
+        _validate_reference_models(reference_models, root, errors)
 
     quality_target = brief.get("quality_target")
     if quality_target is not None:
@@ -1380,6 +3142,47 @@ def validate_project(root: Path) -> tuple[list[str], list[str]]:
                     errors.append(f"{where}.qa.{key} 必须是字符串数组")
             if qa.get("result") not in {"pass", "repair_required"}:
                 errors.append(f"{where}.qa.result 无效")
+        if "route_assessment" in part:
+            _validate_route_assessment(part, errors)
+        part_qa = part.get("qa") or {}
+        generation_status = (part.get("generation") or {}).get("status")
+        model_started = (
+            part_qa.get("result") == "pass"
+            or (part.get("parametric_build") or {}).get("status") == "pass"
+            or generation_status
+            in {
+                "generated",
+                "approved",
+                "normalized",
+                "superseded_by_blender",
+            }
+        )
+        if "reference_consensus" in part or model_started:
+            _validate_reference_consensus(part, root, errors)
+        if "boundary_review" in part or model_started:
+            _validate_boundary_review(part, root, errors)
+        part_type = str(part.get("type", "")).lower()
+        if part_type in WINDOW_PART_TYPES and (
+            scene_skill_version == SKILL_VERSION
+            or "fine_structure_review" in part
+        ):
+            _validate_fine_structure_review(part, root, errors)
+        qa = part_qa
+        needs_material_review = (
+            qa.get("material_review") is not None
+            or qa.get("result") == "pass"
+            or (part.get("parametric_build") or {}).get("status") == "pass"
+        )
+        if needs_material_review and (
+            scene_skill_version == SKILL_VERSION
+            or qa.get("material_review") is not None
+        ):
+            _validate_material_review(part, root, errors)
+        elif needs_material_review:
+            warnings.append(
+                f"{part.get('part_id')} 缺少 7.7 材质审查；"
+                "再次标记通过或推进生成前必须补齐"
+            )
 
     decomposition_review = components.get("decomposition_review")
     if decomposition_review is not None:
@@ -1450,6 +3253,64 @@ def validate_project(root: Path) -> tuple[list[str], list[str]]:
             )
             if source_view is not None and not source_view.is_file():
                 errors.append(f"{where}.source_view 图片不存在")
+
+    detail_audit = components.get("detail_audit")
+    if detail_audit is None:
+        if scene_skill_version == SKILL_VERSION:
+            errors.append("components.detail_audit 必须是对象")
+        else:
+            warnings.append(
+                "项目缺少 Scene Kit 7.3+ 的 detail_audit；"
+                "进入 COMPONENTS 门禁前必须补齐细节特征盘点"
+            )
+    else:
+        selected_id = concepts.get("selected_direction")
+        selected_direction = next(
+            (
+                item
+                for item in concepts.get("directions", [])
+                if item.get("direction_id") == selected_id
+            ),
+            None,
+        )
+        selected_view_paths = (selected_direction or {}).get("view_paths", {})
+        selected_views = {
+            value
+            for value in selected_view_paths.values()
+            if isinstance(value, str) and value
+        }
+        _validate_detail_audit(
+            detail_audit,
+            part_ids,
+            root,
+            "components.detail_audit",
+            errors,
+            selected_views or None,
+        )
+
+    quantity_audit = components.get("quantity_audit")
+    if quantity_audit is None:
+        if scene_skill_version == SKILL_VERSION:
+            errors.append("components.quantity_audit 必须是对象")
+        else:
+            warnings.append(
+                "项目缺少 Scene Kit 7.20 的 quantity_audit；"
+                "拆件和装配数量校验前必须补齐"
+            )
+    else:
+        _validate_quantity_audit(components, root, errors)
+
+    attachment_integrity = components.get("attachment_integrity_audit")
+    if attachment_integrity is None:
+        if scene_skill_version == SKILL_VERSION:
+            errors.append("components.attachment_integrity_audit 必须是对象")
+        else:
+            warnings.append(
+                "项目缺少 Scene Kit 7.21 的 attachment_integrity_audit；"
+                "前置构件背面和宿主连接校验前必须补齐"
+            )
+    else:
+        _validate_attachment_integrity_audit(components, root, errors)
 
     _relative_path(assembly.get("blend_path"), root, "assembly.blend_path", errors)
     screenshots = assembly.get("screenshots")
@@ -1608,6 +3469,10 @@ def validate_project(root: Path) -> tuple[list[str], list[str]]:
 
     if stage == "COMPLETE" and not assembly.get("accepted"):
         warnings.append("项目已标记完成，但整栋尚未验收")
+    if scene_skill_version == SKILL_VERSION:
+        errors.extend(
+            validate_parametric_registry(root, components)
+        )
     return errors, warnings
 
 
@@ -1758,6 +3623,19 @@ def _stage_ready(
             (selected_direction or {}).get("view_paths", {}).values()
         )
         _require(bool(selected_views), "找不到选中方向的十视图路径")
+        reference_errors = _reference_model_gate_errors(
+            components.get("reference_models"),
+            {
+                part.get("part_id")
+                for part in parts
+                if isinstance(part.get("part_id"), str)
+            },
+        )
+        _require(
+            not reference_errors,
+            "拆件前必须完成整栋三维参考模型："
+            + "；".join(reference_errors),
+        )
         decomposition_review = components.get("decomposition_review")
         _require(
             isinstance(decomposition_review, dict),
@@ -1779,6 +3657,8 @@ def _stage_ready(
             "multi_view_consistent",
             "attachment_logic_verified",
             "assembly_not_fragmented",
+            "detail_features_complete",
+            "detail_geometry_decisions_verified",
         ):
             _require(
                 (decomposition_review.get("checks") or {}).get(key) is True,
@@ -1831,7 +3711,56 @@ def _stage_ready(
                 for key in ("locked", "guided", "free"):
                     _require(_nonempty(part.get(key)), f"{part.get('part_id')} 缺少 {key} 合同")
 
+        detail_audit = components.get("detail_audit")
+        _require(
+            isinstance(detail_audit, dict),
+            "缺少 components.detail_audit",
+        )
+        detail_errors: list[str] = []
+        _validate_detail_audit(
+            detail_audit,
+            {part.get("part_id") for part in parts if isinstance(part, dict)},
+            root,
+            "components.detail_audit",
+            detail_errors,
+            selected_views,
+        )
+        _require(
+            not detail_errors,
+            "细节特征盘点未通过：" + "；".join(detail_errors),
+        )
+        _require(
+            detail_audit.get("status") == "pass",
+            "细节特征盘点尚未通过",
+        )
+        linked_part_ids = {
+            feature.get("part_id")
+            for feature in detail_audit.get("features", [])
+            if isinstance(feature, dict)
+            and feature.get("disposition") == "part"
+        }
+        for part in parts:
+            if part.get("decision") == "ai_3d":
+                _require(
+                    part.get("part_id") in linked_part_ids,
+                    f"{part.get('part_id')} 未进入细节特征盘点",
+                )
+
     elif stage == "REFERENCES":
+        reference_errors = _reference_model_gate_errors(
+            components.get("reference_models"),
+            {
+                part.get("part_id")
+                for part in components.get("parts") or []
+                if isinstance(part, dict)
+                and isinstance(part.get("part_id"), str)
+            },
+        )
+        _require(
+            not reference_errors,
+            "参考包阶段缺少可分析的整栋三维参考模型："
+            + "；".join(reference_errors),
+        )
         parts = components.get("parts") or []
         selected_id = concepts.get("selected_direction")
         selected_direction = next(
@@ -1846,6 +3775,15 @@ def _stage_ready(
             (selected_direction or {}).get("view_paths", {}).values()
         )
         for part in parts:
+            consensus_errors: list[str] = []
+            _validate_reference_consensus(part, root, consensus_errors)
+            boundary_errors: list[str] = []
+            _validate_boundary_review(part, root, boundary_errors)
+            _require(
+                not consensus_errors and not boundary_errors,
+                f"{part.get('part_id')} 多参考共识未通过："
+                + "；".join(consensus_errors + boundary_errors),
+            )
             if part.get("decision") != "ai_3d":
                 continue
             part_id = part.get("part_id")
@@ -1891,7 +3829,48 @@ def _stage_ready(
                 f"{part_id} 的拆件图片审查缺少说明",
             )
 
+        route_errors = []
+        for part in parts:
+            if part.get("decision") == "ai_3d":
+                _validate_route_assessment(part, route_errors)
+        _require(
+            not route_errors,
+            "进入生成前必须完成路线评估：" + "；".join(route_errors),
+        )
+
     elif stage == "GENERATION":
+        reference_errors = _reference_model_gate_errors(
+            components.get("reference_models"),
+            {
+                part.get("part_id")
+                for part in components.get("parts") or []
+                if isinstance(part, dict)
+                and isinstance(part.get("part_id"), str)
+            },
+        )
+        _require(
+            not reference_errors,
+            "组件生成前必须完成整栋三维参考模型："
+            + "；".join(reference_errors),
+        )
+        consensus_errors: list[str] = []
+        boundary_errors: list[str] = []
+        for part in components.get("parts") or []:
+            _validate_reference_consensus(part, root, consensus_errors)
+            _validate_boundary_review(part, root, boundary_errors)
+        _require(
+            not consensus_errors and not boundary_errors,
+            "进入生成前必须完成多参考共识："
+            + "；".join(consensus_errors + boundary_errors),
+        )
+        route_errors: list[str] = []
+        for part in components.get("parts") or []:
+            if part.get("decision") == "ai_3d":
+                _validate_route_assessment(part, route_errors)
+        _require(
+            not route_errors,
+            "生成路线评估未通过：" + "；".join(route_errors),
+        )
         for part in components.get("parts") or []:
             if part.get("decision") != "ai_3d":
                 continue
@@ -1922,7 +3901,53 @@ def _stage_ready(
             ):
                 _require(review.get(key) is True, f"{part_id} 检查项 {key} 未通过")
 
+        for part in components.get("parts") or []:
+            qa = part.get("qa") or {}
+            built = (
+                part.get("decision") == "ai_3d" and qa.get("result") == "pass"
+            ) or (part.get("parametric_build") or {}).get("status") == "pass"
+            if not built:
+                continue
+            part_id = part.get("part_id")
+            material_errors: list[str] = []
+            _validate_material_review(part, root, material_errors)
+            _require(
+                not material_errors,
+                f"{part_id} 材质贴图审查未通过：" + "；".join(material_errors),
+            )
+            _require(
+                ((part.get("qa") or {}).get("material_review") or {}).get(
+                    "status"
+                )
+                == "pass",
+                f"{part_id} 材质与贴图渲染尚未通过",
+            )
+
     elif stage == "ASSEMBLY":
+        reference_errors = _reference_model_gate_errors(
+            components.get("reference_models"),
+            {
+                part.get("part_id")
+                for part in components.get("parts") or []
+                if isinstance(part, dict)
+                and isinstance(part.get("part_id"), str)
+            },
+        )
+        _require(
+            not reference_errors,
+            "装配前缺少可分析的整栋三维参考模型："
+            + "；".join(reference_errors),
+        )
+        consensus_errors: list[str] = []
+        boundary_errors: list[str] = []
+        for part in components.get("parts") or []:
+            _validate_reference_consensus(part, root, consensus_errors)
+            _validate_boundary_review(part, root, boundary_errors)
+        _require(
+            not consensus_errors and not boundary_errors,
+            "进入装配前所有组件都必须通过多参考共识："
+            + "；".join(consensus_errors + boundary_errors),
+        )
         blend_path = assembly.get("blend_path")
         _require(isinstance(blend_path, str) and (root / blend_path).is_file(), "缺少整栋 Blender 文件")
         screenshots = assembly.get("screenshots") or []

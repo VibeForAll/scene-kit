@@ -10,6 +10,7 @@ import unittest
 from pathlib import Path
 
 import scene_kit
+import parametric_components
 
 
 PNG_BYTES = b"\x89PNG\r\n\x1a\nscene-kit-test"
@@ -123,15 +124,58 @@ class SceneKitTests(unittest.TestCase):
         self.save("design", design)
 
     def complete_component(self, include_free: bool = True, misuse_review: bool = False) -> None:
+        reference_view = self.make_file(
+            "preview/reference-models/front_right_45.png"
+        )
+        reference_source = self.make_file(
+            "out/reference_source.blend"
+        )
+        reference_blend = self.make_file(
+            "out/reference_decimated.blend"
+        )
+        reference_glb = self.make_file("raw/reference_decimated.glb")
+        reference_preview = self.make_file(
+            "preview/reference-models/reference.png"
+        )
+        reference_comparison = self.make_file(
+            "preview/reference-models/comparison.png"
+        )
+        reference_audit = self.make_file(
+            "preview/reference-models/audit.json"
+        )
+        segmentation_report = self.make_file(
+            "internal/reference-mesh-segmentation.json"
+        )
+        derived_views = {
+            view_id: self.make_file(
+                f"preview/reference-models/derived-views/{view_id}.png"
+            )
+            for view_id in scene_kit.CONCEPT_VIEW_IDS
+        }
         geometry = self.make_file("preview/references/window_01/geometry.png")
         appearance = self.make_file("preview/references/window_01/appearance.png")
         review = self.make_file("preview/references/window_01/review.png")
         comparison = self.make_file("preview/qa/window_01/comparison.png")
-        source_front = self.make_file("concepts/D01/views/front.png")
-        source_left = self.make_file("concepts/D01/views/left.png")
-        source_three_quarter = self.make_file(
-            "concepts/D01/views/front_left_45.png"
+        material_front = self.make_file(
+            "preview/qa/window_01/material_front.png"
         )
+        material_three_quarter = self.make_file(
+            "preview/qa/window_01/material_three_quarter.png"
+        )
+        material_comparison = self.make_file(
+            "preview/qa/window_01/material_comparison.png"
+        )
+        texture_audit_path = self.make_file(
+            "preview/qa/window_01/blender_audit.json"
+        )
+        view_paths = {
+            view_id: self.make_file(f"concepts/D01/views/{view_id}.png")
+            for view_id in scene_kit.CONCEPT_VIEW_IDS
+        }
+        source_front = view_paths["front"]
+        source_left = view_paths["left"]
+        source_three_quarter = view_paths["front_left_45"]
+        all_views = list(view_paths.values())
         part = {
             "part_id": "window_01",
             "type": "window",
@@ -159,6 +203,37 @@ class SceneKitTests(unittest.TestCase):
                 "materials": ["painted metal", "glass"],
             },
             "free": ["mullion rhythm", "ornament"] if include_free else [],
+            "route_assessment": {
+                "reference_model_id": "whole_building_reference_01",
+                "status": "approved",
+                "recommended_route": "tripo",
+                "selected_route": "tripo",
+                "decision_summary": "测试构件具有独立造型参考，且尺寸可按锁定接口后处理。",
+                "repeat_count": 1,
+                "precision_demand": "design_guided",
+                "blender_effort": "high",
+                "tripo_expected_benefit": "high",
+                "tripo_token_risk": "low",
+                "reference_quality": "high",
+                "evidence": ["单件参考轮廓和风格裁剪已通过审查"],
+                "reference_sufficiency": {
+                    "status": "pass",
+                    "usable_views": [source_front, source_left],
+                    "has_front": True,
+                    "has_side_or_three_quarter": True,
+                },
+                "triangle_budget": {
+                    "target_total": 15000,
+                    "hard_max": 25000,
+                    "basis": "单体近景与实时场景预算",
+                },
+                "low_poly_strategy": {
+                    "provider_quality": "standard",
+                    "provider_face_limit_exposed": False,
+                    "postprocess": ["decimation", "retopology"],
+                    "preserve": ["silhouette", "UV seams", "material boundaries"],
+                },
+            },
             "reference_pack": {
                 "geometry": [geometry],
                 "appearance": [review if misuse_review else appearance],
@@ -183,6 +258,117 @@ class SceneKitTests(unittest.TestCase):
                     ],
                 },
             },
+            "reference_consensus": {
+                "status": "pass",
+                "confidence": "high",
+                "authority_policy": {
+                    "primary_geometry": "reference_model",
+                    "primary_component_reference": "model_derived_views",
+                    "original_views_role": "validation_and_surface_detail",
+                },
+                "source_views": [
+                    source_front,
+                    source_left,
+                    source_three_quarter,
+                ],
+                "crops": [appearance, review],
+                "model_crops": [derived_views["front"]],
+                "observations": [
+                    {
+                        "view": source_front,
+                        "silhouette": "slender rectangular window",
+                        "structure": "three major sections with a divided center",
+                        "material": "deep brown wood frame",
+                    },
+                    {
+                        "view": source_left,
+                        "silhouette": "same depth and sill",
+                        "structure": "rear mounting face visible",
+                        "material": "warm brown frame and pale stone trim",
+                    },
+                ],
+                "material_samples": [
+                    {
+                        "view": source_front,
+                        "role": "frame",
+                        "method": "dominant dark warm-pixel sample",
+                        "mean_rgb": [64, 50, 38],
+                    },
+                    {
+                        "view": source_left,
+                        "role": "frame",
+                        "method": "dominant dark warm-pixel sample",
+                        "mean_rgb": [71, 55, 42],
+                    },
+                ],
+                "consensus": {
+                    "frame": "deep brown low-sheen wood",
+                    "trim": "warm pale stone",
+                    "glass": "muted dark glazing",
+                },
+                "checks": {
+                    "identity_consistent": True,
+                    "silhouette_consistent": True,
+                    "structure_consistent": True,
+                    "material_consistent": True,
+                    "attachment_consistent": True,
+                    "lighting_variation_explained": True,
+                },
+                "unresolved": [],
+                "confirmed_before_generation": True,
+            },
+            "boundary_review": {
+                "status": "pass",
+                "source_views": [
+                    source_front,
+                    source_left,
+                    source_three_quarter,
+                ],
+                "overall_dimensions_m": [1.2, 0.32, 1.5],
+                "mounting_interface_dimensions_m": [1.2, 0.24, 1.5],
+                "surfaces": {
+                    "front": True,
+                    "back": True,
+                    "left": True,
+                    "right": True,
+                    "top": True,
+                    "bottom": True,
+                },
+                "attachments": [
+                    {
+                        "id": "stone_window_sill",
+                        "type": "protruding_stone_window_sill",
+                        "disposition": "included_in_component",
+                        "geometry_included": True,
+                        "material": "warm stone",
+                        "projection_m": 0.08,
+                        "evidence_views": [source_front, source_three_quarter],
+                    },
+                    {
+                        "id": "stone_surround",
+                        "type": "stone_window_surround",
+                        "disposition": "included_in_component",
+                        "geometry_included": True,
+                        "material": "warm stone",
+                        "projection_m": 0.02,
+                        "evidence_views": [source_front, source_left],
+                    },
+                ],
+                "material_zones": [
+                    {"role": "frame", "material": "deep brown wood"},
+                    {"role": "sill", "material": "warm stone"},
+                    {"role": "glass", "material": "muted dark glazing"},
+                ],
+                "checks": {
+                    "volume_complete": True,
+                    "all_surfaces_accounted": True,
+                    "attachments_inventory_complete": True,
+                    "attached_geometry_included": True,
+                    "material_zones_complete": True,
+                    "interface_vs_overall_bounds_verified": True,
+                },
+                "unresolved": [],
+            },
             "decomposition_audit": {
                 "status": "pass",
                 "source_views": [
@@ -197,6 +383,37 @@ class SceneKitTests(unittest.TestCase):
                     "not_fragmented": True,
                 },
                 "notes": ["窗框、百叶和洞口被视为一个完整可安装构件"],
+            },
+            "fine_structure_review": {
+                "status": "pass",
+                "confidence": "high",
+                "evidence": {
+                    "closeup": appearance,
+                    "observation": "三分区中，中区再分成两列，共四列四行。",
+                    "reidentification": "局部放大与独立问题复核一致。",
+                },
+                "source_views": [
+                    source_front,
+                    source_left,
+                    source_three_quarter,
+                ],
+                "material_cues": {
+                    "frame": "aged black-brown painted timber",
+                    "trim": "warm pale stone",
+                    "glass": "muted blue-grey",
+                },
+                "pattern": {
+                    "major_vertical_sections": 3,
+                    "columns": 4,
+                    "rows": 4,
+                    "pane_count": 16,
+                    "horizontal_bars": 3,
+                    "central_split": {
+                        "enabled": True,
+                        "sub_columns": 2,
+                    },
+                },
+                "unresolved": [],
             },
             "prompt": {
                 "positive_en": "One isolated window with repeatable interface.",
@@ -219,6 +436,46 @@ class SceneKitTests(unittest.TestCase):
                 "differences": [],
                 "repairs": [],
                 "result": "pass",
+                "material_review": {
+                    "status": "pass",
+                    "rendered_views": [
+                        material_front,
+                        material_three_quarter,
+                    ],
+                    "reference_comparison": material_comparison,
+                    "polyhaven_checked": True,
+                    "polyhaven_assets": [],
+                    "texture_source": "project_pbr",
+                    "checks": {
+                        "reference_match": True,
+                        "base_color_match": True,
+                        "roughness_match": True,
+                        "texture_scale_match": True,
+                        "texture_projection_valid": True,
+                        "surface_quality": True,
+                    },
+                    "texture_audit": {
+                        "status": "pass",
+                        "audit_path": texture_audit_path,
+                        "mapping_mode": "uv",
+                        "views_checked": [
+                            "front",
+                            "side",
+                            "three_quarter",
+                        ],
+                        "checks": {
+                            "source_image_loaded": True,
+                            "projection_axis_valid": True,
+                            "physical_scale_consistent": True,
+                            "no_visible_stretch_across_faces": True,
+                            "normal_and_roughness_aligned": True,
+                        },
+                        "risk_findings": [],
+                    },
+                    "notes": [
+                        "项目 PBR 材质与参考色调和粗糙度匹配",
+                    ],
+                },
             },
             "review": {
                 "single_object": True,
@@ -232,6 +489,158 @@ class SceneKitTests(unittest.TestCase):
         }
         components = self.load("components")
         components["parts"] = [part]
+        components["reference_models"] = [
+            {
+                "reference_model_id": "whole_building_reference_01",
+                "status": "pass",
+                "role": "reference_only",
+                "reference_only": True,
+                "input_mode": "single_image_to_3d",
+                "source_views": [reference_view],
+                "authority_policy": {
+                    "primary_geometry": "reference_model",
+                    "primary_component_reference": "model_derived_views",
+                    "original_views_role": "validation_and_surface_detail",
+                },
+                "model_derived_views": derived_views,
+                "reference_quality": {
+                    "status": "pass",
+                    "checks": {
+                        "mesh_exists": True,
+                        "main_massing_complete": True,
+                        "roof_present": True,
+                        "openings_present": True,
+                        "attachment_relations_legible": True,
+                    },
+                    "limitations": ["单图生成模型仅用于空间参考"],
+                },
+                "camera_rig": {
+                    "status": "pass",
+                    "shared_center": True,
+                    "ortho_scale": 12.0,
+                    "views": {
+                        view_id: {"camera": f"CAM_{view_id}"}
+                        for view_id in scene_kit.CONCEPT_VIEW_IDS
+                    },
+                },
+                "derived_view_validation": {
+                    "status": "pass",
+                    "reliable_views": list(scene_kit.CONCEPT_VIEW_IDS)[2:],
+                    "low_confidence_views": list(
+                        scene_kit.CONCEPT_VIEW_IDS
+                    )[:2],
+                    "checks": {
+                        "all_views_exist": True,
+                        "all_views_nonempty": True,
+                        "camera_rig_consistent": True,
+                        "same_building_identity": True,
+                        "scale_and_framing_consistent": True,
+                    },
+                },
+                "selection_reason": "三视角度同时展示正面和侧向深度。",
+                "provider": "tripo",
+                "model": "test-model",
+                "provider_quality": "standard",
+                "provider_face_limit_exposed": False,
+                "raw_triangles": 1000000,
+                "decimated_triangles": 150000,
+                "max_triangles": 200000,
+                "decimation_method": "collapse",
+                "source_blend": reference_source,
+                "decimated_blend": reference_blend,
+                "decimated_glb": reference_glb,
+                "preview": reference_preview,
+                "comparison": reference_comparison,
+                "audit": reference_audit,
+                "normalization": {
+                    "status": "pass",
+                    "verified_views": [
+                        source_front,
+                        source_left,
+                        source_three_quarter,
+                    ],
+                },
+                "feature_extraction": {
+                    "status": "pass",
+                    "segmentation_report": segmentation_report,
+                    "component_map": [
+                        {
+                            "part_id": "window_01",
+                            "primary_source": "model_derived_views",
+                            "mesh_island_ids": [1],
+                            "reference_observations": [
+                                "窗台外突",
+                                "窗套侧返口",
+                                "16 格窗棂",
+                            ],
+                            "views_checked": [
+                                source_front,
+                                source_left,
+                                source_three_quarter,
+                            ],
+                        }
+                    ],
+                },
+                "analysis_ready": True,
+            }
+        ]
+        components["detail_audit"] = {
+            "status": "pass",
+            "scan_views": all_views,
+            "coverage": {
+                "roof_and_skyline_scanned": True,
+                "openings_and_frames_scanned": True,
+                "trim_and_ornament_scanned": True,
+                "attachments_and_services_scanned": True,
+                "site_and_vegetation_scanned": True,
+                "surface_and_material_patterns_scanned": True,
+            },
+            "features": [
+                {
+                    "feature_id": "window_01_feature",
+                    "category": "openings_and_frames",
+                    "type": "divided_light_window",
+                    "views": [
+                        source_front,
+                        source_left,
+                        source_three_quarter,
+                    ],
+                    "quantity": 1,
+                    "visual_impact": "silhouette",
+                    "geometry_required": True,
+                    "disposition": "part",
+                    "part_id": "window_01",
+                    "observation": "高窄分格窗及其石质窗套在多视图中一致。",
+                },
+                {
+                    "feature_id": "chimney_01_feature",
+                    "category": "attachments_and_services",
+                    "type": "chimney",
+                    "views": [
+                        source_front,
+                        source_left,
+                        source_three_quarter,
+                    ],
+                    "quantity": 1,
+                    "visual_impact": "silhouette",
+                    "geometry_required": True,
+                    "disposition": "parametric",
+                    "observation": "屋面烟囱形成天际线特征，必须由参数化几何补回。",
+                },
+                {
+                    "feature_id": "roof_tile_pattern",
+                    "category": "surface_and_material_patterns",
+                    "type": "roof_tile_pattern",
+                    "views": [source_front, source_three_quarter],
+                    "quantity": 1,
+                    "visual_impact": "surface_only",
+                    "geometry_required": False,
+                    "disposition": "material",
+                    "observation": "石板瓦纹理没有独立厚度，由 PBR 与法线表达。",
+                },
+            ],
+            "unresolved": [],
+        }
         components["decomposition_review"] = {
             "status": "pass",
             "source_views": [
@@ -244,10 +653,13 @@ class SceneKitTests(unittest.TestCase):
                 "multi_view_consistent": True,
                 "attachment_logic_verified": True,
                 "assembly_not_fragmented": True,
+                "detail_features_complete": True,
+                "detail_geometry_decisions_verified": True,
             },
             "notes": ["所有可见构件均已在多视图之间核对"],
         }
         self.save("components", components)
+        parametric_components.scaffold_registry(self.root)
 
     def complete_assembly(self) -> None:
         blend = self.make_file("out/B01.blend")
@@ -367,6 +779,10 @@ class SceneKitTests(unittest.TestCase):
         self.assertEqual(warnings, [])
         self.assertEqual(self.load("progress")["stage"], "BRIEF")
         self.assertTrue(self.load("scene")["concept_first"])
+        self.assertEqual(
+            self.load("scene")["render_policy"]["qa_render"],
+            "required",
+        )
 
     def test_legacy_7_1_project_is_readable_with_migration_warning(self) -> None:
         scene = self.load("scene")
@@ -374,7 +790,7 @@ class SceneKitTests(unittest.TestCase):
         self.save("scene", scene)
         errors, warnings = scene_kit.validate_project(self.root)
         self.assertEqual(errors, [])
-        self.assertTrue(any("当前版本为 7.2" in warning for warning in warnings))
+        self.assertTrue(any(f"当前版本为 {scene_kit.SKILL_VERSION}" in warning for warning in warnings))
 
     def test_empty_brief_cannot_advance(self) -> None:
         with self.assertRaises(ValueError):
@@ -487,6 +903,71 @@ class SceneKitTests(unittest.TestCase):
         errors, _ = scene_kit.validate_project(self.root)
         self.assertTrue(any("free" in error for error in errors))
 
+    def test_components_require_whole_building_reference_model(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.assertEqual(self.advance()["to"], "COMPONENTS")
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any("reference_models" in error for error in errors)
+        )
+
+    def test_component_stage_blocks_unanalysed_reference_model(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        components = self.load("components")
+        components["reference_models"][0]["analysis_ready"] = False
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "尚未完成多视图归一化"):
+            self.advance(confirmed=True)
+
+    def test_reference_quality_rejects_incomplete_massing(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        quality = components["reference_models"][0]["reference_quality"]
+        quality["checks"]["main_massing_complete"] = False
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any(
+                "reference_quality.checks.main_massing_complete" in error
+                for error in errors
+            )
+        )
+
+    def test_camera_rig_requires_shared_center(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        components["reference_models"][0]["camera_rig"][
+            "shared_center"
+        ] = False
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any("camera_rig.shared_center" in error for error in errors)
+        )
+
+    def test_component_map_requires_traceable_mesh_islands(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        component_map = components["reference_models"][0][
+            "feature_extraction"
+        ]["component_map"]
+        component_map[0]["mesh_island_ids"] = ["island-a"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any("mesh_island_ids" in error for error in errors)
+        )
+
     def test_component_stage_requires_typed_asset_class(self) -> None:
         self.complete_brief()
         self.advance()
@@ -514,6 +995,175 @@ class SceneKitTests(unittest.TestCase):
         self.save("components", components)
         with self.assertRaisesRegex(ValueError, "拆件审查"):
             self.advance(confirmed=True)
+
+    def test_component_stage_requires_detail_audit(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        components = self.load("components")
+        del components["detail_audit"]
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "detail_audit"):
+            self.advance(confirmed=True)
+
+    def test_detail_audit_rejects_unresolved_features(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        components = self.load("components")
+        components["detail_audit"]["unresolved"] = [
+            "烟囱数量尚未在背视图确认"
+        ]
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "未解决细节"):
+            self.advance(confirmed=True)
+
+    def test_detail_audit_rejects_geometry_lost_to_material(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        components = self.load("components")
+        components["detail_audit"]["features"][1]["disposition"] = "material"
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "不能只交给材质"):
+            self.advance(confirmed=True)
+
+    def test_detail_audit_requires_all_ten_selected_views(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        components = self.load("components")
+        components["detail_audit"]["scan_views"].pop()
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "全部十视图"):
+            self.advance(confirmed=True)
+
+    def test_references_require_generation_route_assessment(self) -> None:
+        self.complete_brief()
+        self.advance()
+        self.complete_concepts()
+        self.advance(confirmed=True)
+        self.complete_design()
+        self.advance()
+        self.complete_component()
+        self.advance(confirmed=True)
+        components = self.load("components")
+        del components["parts"][0]["route_assessment"]
+        self.save("components", components)
+        with self.assertRaisesRegex(ValueError, "路线评估"):
+            self.advance(confirmed=True)
+
+    def test_tripo_route_rejects_exact_precision(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        components["parts"][0]["route_assessment"]["precision_demand"] = "exact"
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("精确尺寸" in error for error in errors))
+
+    def test_tripo_precise_window_requires_two_reference_views(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        sufficiency = components["parts"][0]["route_assessment"][
+            "reference_sufficiency"
+        ]
+        sufficiency["usable_views"] = sufficiency["usable_views"][:1]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("至少需要 2 个" in error for error in errors))
+
+    def test_tripo_route_requires_triangle_budget(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        del components["parts"][0]["route_assessment"]["triangle_budget"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("triangle_budget" in error for error in errors))
+
+    def test_model_start_requires_multi_reference_consensus(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        del components["parts"][0]["reference_consensus"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any("reference_consensus" in error for error in errors)
+        )
+
+    def test_reference_consensus_rejects_single_view(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        review = components["parts"][0]["reference_consensus"]
+        review["source_views"] = review["source_views"][:1]
+        review["crops"] = review["crops"][:1]
+        review["material_samples"] = review["material_samples"][:1]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("至少需要两个" in error for error in errors))
+
+    def test_model_start_requires_component_boundary_review(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        del components["parts"][0]["boundary_review"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("boundary_review" in error for error in errors))
+
+    def test_window_boundary_requires_included_stone_sill(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        sill = components["parts"][0]["boundary_review"]["attachments"][0]
+        sill["disposition"] = "separate_component"
+        sill["part_id"] = "separate_sill"
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("窗台必须纳入" in error for error in errors))
+
+    def test_built_window_requires_fine_structure_pass(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        components["parts"][0]["fine_structure_review"]["status"] = (
+            "repair_required"
+        )
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("细部结构" in error for error in errors))
+
+    def test_fine_structure_rejects_pane_count_mismatch(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        pattern = components["parts"][0]["fine_structure_review"]["pattern"]
+        pattern["columns"] = 3
+        pattern["pane_count"] = 12
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("中央再分列不一致" in error for error in errors))
+
+    def test_route_cannot_recommend_blender_but_keep_ai_decision(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        route = components["parts"][0]["route_assessment"]
+        route["recommended_route"] = "blender_procedural"
+        route["selected_route"] = "blender_procedural"
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("不能保持 ai_3d" in error for error in errors))
 
     def test_model_library_add_search_validate_and_link(self) -> None:
         library_root = Path(self.temp.name) / "library"
@@ -662,6 +1312,52 @@ class SceneKitTests(unittest.TestCase):
         self.advance(confirmed=True)
         with self.assertRaisesRegex(ValueError, "缺少参考对照图"):
             self.advance()
+
+    def test_generation_requires_material_review(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        del components["parts"][0]["qa"]["material_review"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("material_review" in error for error in errors))
+
+    def test_material_review_requires_polyhaven_check(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        review = components["parts"][0]["qa"]["material_review"]
+        review["polyhaven_checked"] = False
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("Poly Haven" in error for error in errors))
+
+    def test_material_review_requires_color_and_roughness_match(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        review = components["parts"][0]["qa"]["material_review"]
+        review["checks"]["base_color_match"] = False
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("base_color_match" in error for error in errors))
+
+    def test_material_review_requires_texture_projection_check(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        review = components["parts"][0]["qa"]["material_review"]
+        review["checks"]["texture_projection_valid"] = False
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(
+            any("texture_projection_valid" in error for error in errors)
+        )
+
+    def test_material_review_requires_texture_mapping_audit(self) -> None:
+        self.complete_component()
+        components = self.load("components")
+        review = components["parts"][0]["qa"]["material_review"]
+        del review["texture_audit"]
+        self.save("components", components)
+        errors, _ = scene_kit.validate_project(self.root)
+        self.assertTrue(any("texture_audit" in error for error in errors))
 
     def test_full_concept_to_review_workflow(self) -> None:
         self.reach_finishing()

@@ -67,9 +67,34 @@
 
 ## 4. COMPONENTS
 
-目标：决定哪些部分由 AI 创造，哪些部分由参数化或复用完成。
+目标：先生成整栋三维参考模型，用它确认空间深度和附属结构，再决定组件如何拆分和落地。
 
-先逐张阅读选中方向的十视图，不只识别门窗和结构件。把浮雕、木雕、铁艺、花簇、草、藤蔓、灌木、树、花盆和壁灯等非结构表现资产写入 `visual_inventory`。有独立轮廓、厚度和安装关系的元素作为单独模型；纯平面花纹交给材质系统；密集植物先做代表性模块再实例化。
+设计合同认可后，先选择特征最完整的 3/4 视图生成一个 `reference_only` 整栋三维模型。支持同一对象多图时优先正、背、左、右视图；只有单图接口时记录单图模式。模型必须减面、单独保存，并按以下顺序通过参考质量门禁：
+
+1. 用实际网格、材质和渲染检查主体体量、屋顶、洞口、烟囱、门廊、窗台和檐口等附着关系，写入 `reference_quality`。
+2. 默认只做统一缩放，保留模型原始轴向比例。非均匀拉伸只有在明确三轴尺寸和使用授权下才允许，并必须记录原因。
+3. 用同一中心、同一正交尺度、同一分辨率和固定方向定义建立 `camera_rig`，不得逐视图重新取景。
+4. 从模型实际渲染固定十视图到 `model_derived_views`，逐张检查存在性、身份、比例和取景，写入 `derived_view_validation`。
+5. 顶部和底部视图对开放壳体、缺底或碎片模型通常是低可信视图。主要拆件只使用标注为 `reliable_views` 的正、背、左右和四个 45 度视图；顶/底视图只辅助屋架、烟囱截面或底面关系判断。
+6. 对网格执行连通岛分析，保存 `segmentation_report`，并在 `feature_extraction.component_map` 中用 `mesh_island_ids` 追溯候选。连通岛不是语义组件，必须用至少两个模型派生有效视图确认身份、范围、附着和数量。
+7. 组件识别和拆件首先读取模型派生视图；原始图只做幻觉、缺项、比例和材质/微细节校验。
+
+只有参考模型 `status=pass`、`reference_quality.status=pass`、`normalization.status=pass`、`camera_rig.status=pass`、`derived_view_validation.status=pass`、`feature_extraction.status=pass` 且 `component_map` 覆盖全部 `part_id` 时，才可把 `analysis_ready` 设为 `true`。此条件通过后才能进行下面的拆件。
+
+先逐张阅读选中方向的十视图，不只识别门窗和结构件。必须执行一次独立的细节特征扫描，并把结果写入 `components.detail_audit`。扫描 `scan_views` 覆盖全部十视图，`coverage` 覆盖：
+
+- `roof_and_skyline_scanned`：烟囱、屋脊、压顶、尖顶饰、老虎窗和屋面高差。
+- `openings_and_frames_scanned`：不同门窗变体、框套、百叶、五金和洞口关系。
+- `trim_and_ornament_scanned`：檐口、托架、牛腿、山墙装饰、浮雕、木雕和徽章。
+- `attachments_and_services_scanned`：檐沟、落水管、烟囱帽、壁灯等附着构件。
+- `site_and_vegetation_scanned`：台阶、栏杆、花盆、花簇、藤蔓、苔藓和场地点景。
+- `surface_and_material_patterns_scanned`：瓦纹、砌石、抹灰、木纹和纯表面雕纹。
+
+每个 `features` 记录 `feature_id`、`category`、`type`、至少两个 `views`、`quantity`、`visual_impact`、`geometry_required`、`disposition`、`observation`。`disposition=part` 时必须声明 `geometry_required=true` 并绑定现有 `part_id`。需要几何的细节不能仅交给材质；`unresolved` 通过时必须为空。
+
+把浮雕、木雕、铁艺、花簇、草、藤蔓、灌木、树、花盆和壁灯等非结构表现资产写入 `visual_inventory`。有独立轮廓、厚度和安装关系的元素作为单独模型；纯平面花纹交给材质系统；密集植物先做代表性模块再实例化。简单接口示意图只控制安装，不作为最终细节完整性的证明。
+
+小尺度细节较多时，可运行 `scripts/detail_vision_audit.py` 生成 Florence-2 十视图描述、短语定位、代表性裁剪、VILT 问答和标注总览。该脚本只输出诊断证据，不修改 `components.json`，不能自动把 `detail_audit` 判为通过。模型的烟囱/塔帽身份、数量和安装关系发生冲突时，必须保守写入 `unresolved`。详细依赖与判定规则见 [detail-vision-audit.md](detail-vision-audit.md)。
 
 对每个组件记录：
 
@@ -84,9 +109,9 @@
 
 拆完后先按分类、类型、标签和风格检索跨项目模型库，把可用候选交给用户选择。复用、缩放或换材质都需要用户确认，不能自动替掉当前项目的新设计。
 
-每个组件还要回到选中方向的原始多视图复核，至少在 `decomposition_audit.source_views` 记录两个真实视图来源。检查拆件范围是否完整、是否带入相邻构件、侧面和安装背面是否缺失、多视图是否一致，以及拆下后能否连续装配。总审查写入 `components.decomposition_review`。
+每个组件先从模型派生有效视图和网格岛候选确定几何范围，再回到选中方向的原始多视图复核，至少在 `decomposition_audit.source_views` 记录两个真实视图来源。检查拆件范围是否完整、是否带入相邻构件、侧面和安装背面是否缺失、多视图是否一致，以及拆下后能否连续装配。总审查写入 `components.decomposition_review`。
 
-通过条件：用户认可组件拆分和自由区划分；选中视图中的装饰件和植物已完成 `visual_inventory`；每个组件在至少两个原多视图之间完成拆件审查；总审查确认不会装成散件；有可用模型库候选时，用户已经选择复用或重新生成。
+通过条件：整栋参考模型质量、固定相机轨道、派生视图验证、归一化和组件映射全部通过，且 `analysis_ready=true`；每个组件映射包含可追溯的 `mesh_island_ids`，但没有把网格岛候选直接当作最终语义组件；用户认可组件拆分和自由区划分；`detail_audit.status=pass`、十视图扫描完整、六类覆盖均确认且无未解决特征；所有 AI 组件都进入细节特征盘点；`visual_inventory` 完成；每个组件在至少两个原多视图之间完成拆件审查；`detail_features_complete` 和 `detail_geometry_decisions_verified` 均为真；总审查确认不会装成散件；有可用模型库候选时，用户已经选择复用或重新生成。
 
 ## 5. REFERENCES
 
@@ -106,7 +131,13 @@
 
 ## 6. GENERATION
 
-目标：逐件得到有设计价值的 3D 模型。
+目标：在已通过的整栋三维参考和组件映射基础上，逐件得到有设计价值的 3D 模型。
+
+开始前运行 `ensure_modeling_extensions.py --install`，读取 `internal/toolchain.json` 并确认 `ready=true`。缺少 Archimesh、MeasureIt、3D Print Toolbox、LoopTools、Edit Mesh Tools、CAD Sketcher、Surface Diagnostics 或 CurioMesh 时先安装；安装失败时停止依赖该扩展的建模工作。
+
+先确认 `generation_route_audit.py` 的整栋参考模型门禁为通过，再运行组件执行评估并完成 `route_assessment.reference_model_id`。它决定的是已映射组件如何实现，不是绕过整栋参考直接试生成。精确尺寸、多实例、标准结构或低自由区优先 Blender；有机雕刻、参考清楚、手工成本高且无需精确接口时考虑 AI 3D。`ai_3d` 是执行类别，具体提供方在提交前选择；推荐路线为 Blender 时，必须先把组件 decision 改为参数化/手工方案。
+
+每个组件生成前还必须存在通过的参数合同，并由 `components.parts[*].parametric_contract_id` 引用。合同定义生成器、可编辑参数、约束、材质绑定和参数指纹。合同状态为 `pending` 时允许完成生成器设计，但已有构建结果的组件必须把合同标为 `generated` 或 `pass`。参数或材质改变后，旧指纹立即失效。
 
 每次只处理一个组件：
 
@@ -116,18 +147,24 @@
 4. 正式提交前核对账号区域、插件区域或 Domain、实际 API 根地址、Key 有效性和余额。
 5. 得到用户对生成成本或额度的确认。
 6. 调用可用的 AI 3D 工具，或等待用户回传外部结果。
-7. 导入 Blender，渲染正面、侧面、3/4 和必要近景，与参考图实际对照并保存对照图。
-8. 先修复比例、原点、破洞、法线、面片、孤立碎片、接口、材质和安装逻辑；修复后重新渲染复审。
-9. 只有主体轮廓、构造或造型语言无法通过本地修面和调整挽救时，才申请有明确目标的付费重试；新的付费动作仍需用户确认。
-10. 通过后归一化，再询问用户是否把该组件加入模型库。
-11. 用户确认后执行 `library-add`；用户拒绝或暂未回答时保持项目内资产，不自动入库。
-12. 进入下一个组件。
+7. 导入 Blender，完成比例、原点、拓扑、接口和材质节点静态审计，并渲染正面、侧面、3/4 和必要近景，与参考图实际对照并保存对照图。
+8. 先修复比例、原点、破洞、法线、面片、孤立碎片、接口、材质和安装逻辑；修复后重新静态审计并重渲染受影响视图。
+9. 赋最终材质和贴图，检查 Poly Haven 是否已有合适 PBR；有则使用，没有才生成本地贴图。运行 `blender_audit.py` 检查 `texture_mapping_audit`，确认颜色、法线和粗糙度使用正确投影及同一物理尺度；渲染正、侧、3/4并写入 `qa.material_review`。
+10. 运行 `parametric_components.py refresh-build` 写入当前参数指纹，并确认 `last_build` 指向本次 revision 的审计、材质对照和输出文件。每个新参数变体重新执行第 7–9 步，不继承旧 QA。
+11. 只有主体轮廓、构造或造型语言无法通过本地修面和调整挽救时，才申请有明确目标的付费重试；新的付费动作仍需用户确认。
+12. 通过后归一化，再询问用户是否把该组件加入模型库。
+13. 用户确认后执行 `library-add`；用户拒绝或暂未回答时保持项目内资产，不自动入库。
+14. 进入下一个组件。
 
 通过条件：所有必需组件已有可装配结果，参考对照和修复记录完整，接口、材质、表面质量和构造逻辑检查通过。
+
+单件导入、修复和截图按 [blender-production.md](blender-production.md) 的执行基线进行。每次视觉结论必须对应当前文件 revision，不能复用旧单件截图。
 
 ## 7. ASSEMBLY
 
 目标：把 AI 单体放回尺寸受控的建筑骨架。
+
+装配和参数化建模开始前重新检查 `internal/toolchain.json`。Blender 版本或扩展启用状态变化时必须重跑预检。
 
 在 Blender 中：
 
@@ -143,6 +180,7 @@
 `ASSEMBLY` 只确认空间关系已经搭好，不等于可以交付。离开本阶段后必须逐件和逐栋检查面片、法线、材质、接缝和构造逻辑。
 
 详细积分和修复顺序见 [cost-and-repair.md](cost-and-repair.md)。
+场景组织、标准审阅相机和执行前状态检查见 [blender-production.md](blender-production.md)。
 
 整栋装配图只用于审阅，不回流成 AI 3D 的硬几何参考。
 
@@ -167,6 +205,8 @@
 通过条件：`blocker/high` 缺陷全部已修复；整栋远景、关键近景和参考对照图存在；当前 `.blend` 哈希与精修记录一致；所有资产来源覆盖检查通过；`medium/low` 残余差异已记录。通过后进入 `REVIEW`。
 
 详细 [面片、效果和智能构造检查](cost-and-repair.md)。
+
+进入本阶段先运行 `scripts/blender_audit.py`，保留审计 JSON、当前 `.blend`、整栋图、近景和参考对照。审计只提供现场数据，最终仍按 [blender-production.md](blender-production.md) 检查视觉效果、构造逻辑和导出可用性。
 
 ## 9. REVIEW
 
