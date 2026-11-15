@@ -123,12 +123,12 @@ flowchart LR
 
 ### 6.3 组件化示例
 
-墙体、圆塔和藤蔓不是整栋模型中不可分离的一部分，而是拥有独立源文件、参数合同、材质绑定和 QA 的组件资产。它们完成验收后进入整栋装配，并可按同一接口复用到后续建筑。
+圆形塔楼和攀援藤蔓不是整栋模型中不可分离的一部分，而是拥有独立源文件、参数合同、材质绑定和 QA 的组件资产。它们完成验收后进入整栋装配，并可按同一接口复用到后续建筑。
 
-| 墙体外壳组件 | 圆形塔楼组件 | 攀援藤蔓组件 |
-|:---:|:---:|:---:|
-| <img src="assets/preview/components/wall_envelope/wall_envelope_v5_three_quarter.png" width="100%" alt="独立墙体外壳组件"> | <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="独立圆形塔楼组件"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="独立攀援藤蔓组件"> |
-| 参数化墙体与洞口 | 独立塔身、塔帽与窗组 | 可实例化的攀援模块 |
+| 圆形塔楼组件 | 攀援藤蔓组件 |
+|:---:|:---:|
+| <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="独立圆形塔楼组件"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="独立攀援藤蔓组件"> |
+| 独立塔身、塔帽与窗组 | 可实例化的攀援模块 |
 
 ### 6.4 组件与正视遮挡
 

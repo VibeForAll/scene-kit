@@ -123,12 +123,12 @@ The paired attic windows belong to a real enclosed dormer volume. Both cheeks us
 
 ### 6.3 Component examples
 
-The walls, round tower, and vines are not inseparable parts of the final model. Each is a component asset with its own source, parametric contract, material bindings, and QA. Approved components are assembled into the building and can be reused in later projects through the same interfaces.
+The round tower and climbing vines are not inseparable parts of the final model. Each is a component asset with its own source, parametric contract, material bindings, and QA. Approved components are assembled into the building and can be reused in later projects through the same interfaces.
 
-| Wall envelope | Round corner tower | Climbing vine |
-|:---:|:---:|:---:|
-| <img src="assets/preview/components/wall_envelope/wall_envelope_v5_three_quarter.png" width="100%" alt="Standalone wall envelope component"> | <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="Standalone round tower component"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="Standalone climbing vine component"> |
-| Parametric wall and openings | Independent tower body, cap, and windows | Reusable instantiated vine module |
+| Round corner tower | Climbing vine |
+|:---:|:---:|
+| <img src="assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png" width="100%" alt="Standalone round tower component"> | <img src="assets/preview/components/climbing_vine_module/climbing_vine_module_v2_three_quarter.png" width="100%" alt="Standalone climbing vine component"> |
+| Independent tower body, cap, and windows | Reusable instantiated vine module |
 
 ### 6.4 Components and front-view occlusion
 
