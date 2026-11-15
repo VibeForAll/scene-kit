@@ -2,6 +2,8 @@
 
 共 17 件组件。每件只保留一份最终 Blender 源文件、一份 GLB 和当前 QA 入口；组件源文件不包含整栋参考物或临时调试物。
 
+GitHub 展示仓库提供组件索引、尺寸、面数和当前 QA 图片；17 件独立 `.blend`/`.glb` 源文件保留在完整项目工作目录中，不重复放入展示仓库。
+
 | 组件 | 类型 | 三角面 | 尺寸 / m | 源文件 | GLB | QA |
 |---|---|---:|---|---|---|---|
 | `wall_envelope` | castle_wall_envelope | 3010 | 11.40 × 7.50 × 6.00 | `wall_envelope.blend` | `wall_envelope.glb` | [对照图](../assets/preview/components/wall_envelope/wall_envelope_v5_material_comparison.jpg) |

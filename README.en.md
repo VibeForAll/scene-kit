@@ -125,7 +125,7 @@ INSTALL.md                 installation and command reference
 scene-kit/                 final Scene Kit 7.22 skill
 scene-kit.standalone.md    single-file rule variant
 assembly/                  case-study Blender and GLB files
-components/                case-study component index
+components/                case component index and QA entry points; standalone .blend/.glb files remain in the full project workspace
 assets/preview/            reference images, QA, and current renders
 internal/                  current quantity, opening, host, and acceptance audits
 ```
