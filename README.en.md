@@ -2,9 +2,9 @@
 
 Language: [中文](README.md) | English
 
-**A reference-model-first, component-based architectural 3D workflow for Blender.**
+**An auditable, component-based and parametric architectural workflow for Blender.**
 
-Scene Kit does not treat a one-shot generated model as a finished asset. It decomposes a building into verifiable, reproducible, reusable, and continuously refinable components, then converges through quantity, silhouette, material, host-connection, and construction-logic gates.
+Scene Kit's core advantage is not merely producing a reference model. It turns the complete process—from concept, quantity census, decomposition, generation, and assembly through finishing—into a reusable, parametric, and version-audited workflow. The reference model provides the spatial baseline; the durable value comes from component contracts, parametric reuse, and evidence-based quality gates.
 
 ![Final render of Fairy-Tale Castle 01](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
 
@@ -125,7 +125,7 @@ INSTALL.md                 installation and command reference
 scene-kit/                 final Scene Kit 7.22 skill
 scene-kit.standalone.md    single-file rule variant
 assembly/                  case-study Blender and GLB files
-components/                case component index and QA entry points; standalone .blend/.glb files remain in the full project workspace
+components/                case-study component index
 assets/preview/            reference images, QA, and current renders
 internal/                  current quantity, opening, host, and acceptance audits
 ```

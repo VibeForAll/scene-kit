@@ -2,9 +2,9 @@
 
 语言：[English](README.en.md) | 中文
 
-**以参考模型优先的 Blender 建筑组件化流程。**
+**面向 Blender 的可审计建筑组件化与参数化工作流。**
 
-Scene Kit 不把“一次生成完”当成成品，而是把建筑拆成可验证、可重建、可复用、可持续精修的组件，并用数量、轮廓、材质、宿主连接和构造逻辑门禁逐轮收敛。
+Scene Kit 的核心优势不是单独生成一个参考模型，而是把建筑从概念、数量、拆分、生成、装配到精修组织成一套可复用、可参数化、可逐版本审计的工作流。参考模型负责建立空间基准；真正产生长期价值的是组件合同、参数化复用和证据化质量门禁。
 
 ![童话城堡 01 最终模型](assets/preview/assembly/castle_assembly_hero_three_quarter.png)
 
@@ -125,7 +125,7 @@ INSTALL.md                 安装与命令说明
 scene-kit/                 最终版 7.22 skill
 scene-kit.standalone.md    单文件规则版
 assembly/                  案例整栋 Blender 与 GLB
-components/                案例组件索引与 QA 入口；独立 .blend/.glb 留在完整项目目录
+components/                案例组件索引
 assets/preview/            案例参考图、QA 与当前渲染
 internal/                  当前版本数量、洞口、宿主与验收审计
 ```
