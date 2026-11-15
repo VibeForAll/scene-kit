@@ -7,10 +7,11 @@
   "assembly": "assets/preview/assembly",
   "process": "assets/preview/process",
   "note": "One current image set per active component plus curated reference and process evidence. Superseded component revisions are removed.",
-  "item_count": 184,
+  "item_count": 185,
   "items": [
     "assets/preview/assembly/castle_assembly_contact_sheet.jpg",
     "assets/preview/assembly/castle_assembly_entrance_closeup.png",
+    "assets/preview/assembly/castle_assembly_final_full.png",
     "assets/preview/assembly/castle_assembly_front_ortho.png",
     "assets/preview/assembly/castle_assembly_hero_three_quarter.png",
     "assets/preview/assembly/castle_assembly_roof_chimney_closeup.png",
