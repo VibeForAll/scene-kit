@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "corner_stone_detail",
+  "revision": 5,
+  "source": "components/corner_stone_detail.blend",
+  "bounds_min_m": [
+    -5.76,
+    -3.81,
+    0.5154
+  ],
+  "bounds_max_m": [
+    5.76,
+    3.81,
+    5.6346
+  ],
+  "dimensions_m": [
+    11.52,
+    7.62,
+    5.1192
+  ],
+  "mesh_count": 1,
+  "triangles": 1824,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ]
+}

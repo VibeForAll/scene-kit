@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "source_contract": "internal/wall_openings_v2.json",
+  "wall_blend": "components/wall_envelope.blend",
+  "method": "50 cm inward scene ray from 35 cm outside each facade opening center",
+  "opening_count": 22,
+  "door_count": 1,
+  "window_count": 21,
+  "openings": [
+    {
+      "id": "door_front",
+      "facade": "front",
+      "kind": "door",
+      "center_m": [
+        0.0,
+        -3.75,
+        1.305
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_lower_01",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        -2.4,
+        -3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_lower_02",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        1.4,
+        -3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_lower_03",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        3.8,
+        -3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_upper_01",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        -2.4,
+        -3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_upper_02",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        0.0,
+        -3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_upper_03",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        2.4,
+        -3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_front_upper_04",
+      "facade": "front",
+      "kind": "window",
+      "center_m": [
+        4.8,
+        -3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_lower_01",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        -3.6,
+        3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_lower_02",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        0.0,
+        3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_lower_03",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        3.6,
+        3.75,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_upper_01",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        -3.8,
+        3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_upper_02",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        -1.27,
+        3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_upper_03",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        1.27,
+        3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_back_upper_04",
+      "facade": "back",
+      "kind": "window",
+      "center_m": [
+        3.8,
+        3.75,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_left_lower_01",
+      "facade": "left",
+      "kind": "window",
+      "center_m": [
+        -5.7,
+        0.0,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_left_upper_01",
+      "facade": "left",
+      "kind": "window",
+      "center_m": [
+        -5.7,
+        -1.4,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_left_upper_02",
+      "facade": "left",
+      "kind": "window",
+      "center_m": [
+        -5.7,
+        1.4,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_right_lower_01",
+      "facade": "right",
+      "kind": "window",
+      "center_m": [
+        5.7,
+        -1.2,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_right_lower_02",
+      "facade": "right",
+      "kind": "window",
+      "center_m": [
+        5.7,
+        1.2,
+        1.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_right_upper_01",
+      "facade": "right",
+      "kind": "window",
+      "center_m": [
+        5.7,
+        -1.2,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    },
+    {
+      "id": "win_right_upper_02",
+      "facade": "right",
+      "kind": "window",
+      "center_m": [
+        5.7,
+        1.2,
+        4.65
+      ],
+      "open": true,
+      "hit_object": null
+    }
+  ],
+  "failed": []
+}

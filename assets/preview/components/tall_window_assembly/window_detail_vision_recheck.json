@@ -1,0 +1,300 @@
+{
+  "appearance_front": {
+    "size": [
+      197,
+      255
+    ],
+    "tasks": {
+      "<MORE_DETAILED_CAPTION>": {
+        "<MORE_DETAILED_CAPTION>": "A picture of a window on a wall. The window is made of wood. The wood is dark brown. There is a white bench in front of the window. The bench has a white and black pattern on it. The wall behind the window is white. There are windows on the window with curtains on them. The curtains are dark gray."
+      },
+      "<DETAILED_CAPTION>": {
+        "<DETAILED_CAPTION>": "In this image we can see a window and a wall."
+      }
+    },
+    "vqa": {
+      "How many panes are in the window?": [
+        [
+          "12",
+          0.153
+        ],
+        [
+          "6",
+          0.087
+        ],
+        [
+          "16",
+          0.083
+        ]
+      ],
+      "Are there small panes inside the central window?": [
+        [
+          "yes",
+          0.997
+        ],
+        [
+          "no",
+          0.002
+        ],
+        [
+          "bottom",
+          0.0
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.887
+        ],
+        [
+          "no",
+          0.11
+        ],
+        [
+          "brown",
+          0.001
+        ]
+      ],
+      "Is the window trim white?": [
+        [
+          "no",
+          0.996
+        ],
+        [
+          "yes",
+          0.003
+        ],
+        [
+          "white",
+          0.0
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ],
+        [
+          "glass",
+          0.0
+        ]
+      ],
+      "Are the windows tall and narrow?": [
+        [
+          "yes",
+          0.962
+        ],
+        [
+          "no",
+          0.034
+        ],
+        [
+          "taller",
+          0.001
+        ]
+      ],
+      "Does the window have a stone sill?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ],
+        [
+          "1",
+          0.0
+        ]
+      ],
+      "Are there three columns of glass?": [
+        [
+          "yes",
+          0.558
+        ],
+        [
+          "no",
+          0.441
+        ],
+        [
+          "1",
+          0.0
+        ]
+      ]
+    }
+  },
+  "detail_crop": {
+    "size": [
+      260,
+      330
+    ],
+    "tasks": {
+      "<MORE_DETAILED_CAPTION>": {
+        "<MORE_DETAILED_CAPTION>": "A window is on the side of a building. The window has a wooden frame. The frame is dark brown. There is a white ledge on the window. There are black lines on the wall. "
+      },
+      "<DETAILED_CAPTION>": {
+        "<DETAILED_CAPTION>": "In this image we can see a window and a wall."
+      }
+    },
+    "vqa": {
+      "How many panes are in the window?": [
+        [
+          "12",
+          0.136
+        ],
+        [
+          "6",
+          0.088
+        ],
+        [
+          "16",
+          0.085
+        ]
+      ],
+      "Are there small panes inside the central window?": [
+        [
+          "yes",
+          0.993
+        ],
+        [
+          "no",
+          0.007
+        ],
+        [
+          "unknown",
+          0.0
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.997
+        ],
+        [
+          "no",
+          0.003
+        ],
+        [
+          "brown",
+          0.0
+        ]
+      ],
+      "Is the window trim white?": [
+        [
+          "no",
+          1.0
+        ],
+        [
+          "yes",
+          0.0
+        ],
+        [
+          "brown",
+          0.0
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ],
+        [
+          "glass",
+          0.0
+        ]
+      ],
+      "Are the windows tall and narrow?": [
+        [
+          "yes",
+          0.908
+        ],
+        [
+          "no",
+          0.089
+        ],
+        [
+          "taller",
+          0.001
+        ]
+      ],
+      "Does the window have a stone sill?": [
+        [
+          "no",
+          0.998
+        ],
+        [
+          "yes",
+          0.002
+        ],
+        [
+          "n",
+          0.0
+        ]
+      ],
+      "Are there three columns of glass?": [
+        [
+          "yes",
+          0.989
+        ],
+        [
+          "no",
+          0.01
+        ],
+        [
+          "1",
+          0.0
+        ]
+      ]
+    }
+  },
+  "front_mid_left_tall": {
+    "size": [
+      236,
+      311
+    ],
+    "tasks": {
+      "<MORE_DETAILED_CAPTION>": {
+        "<MORE_DETAILED_CAPTION>": "A window is on the side of a building. The building is made of stone. There is a small green plant next to the window. "
+      },
+      "<DETAILED_CAPTION>": {
+        "<DETAILED_CAPTION>": "In this image we can see a wall with a window and a plant."
+      }
+    }
+  },
+  "front_center_lower": {
+    "size": [
+      231,
+      260
+    ],
+    "tasks": {
+      "<MORE_DETAILED_CAPTION>": {
+        "<MORE_DETAILED_CAPTION>": "There is a window on the wall. The window has a wooden frame. There are curtains on the window. The curtains are dark colored. There is a small ledge in front of the window with a white cloth on it. "
+      },
+      "<DETAILED_CAPTION>": {
+        "<DETAILED_CAPTION>": "In this image we can see a window and a wall."
+      }
+    }
+  },
+  "front_attic_pair": {
+    "size": [
+      303,
+      325
+    ],
+    "tasks": {
+      "<MORE_DETAILED_CAPTION>": {
+        "<MORE_DETAILED_CAPTION>": "A picture of a small house. There are two windows on the side of the house. The windows are made of glass. There is a roof above the windows. The roof is made of wood. The wall behind the house is made up of rocks. The rocks are gray. The window panes are yellow. The panes of the windows are reflecting the light."
+      },
+      "<DETAILED_CAPTION>": {
+        "<DETAILED_CAPTION>": "In this image we can see a house with windows. In the background there is a wall."
+      }
+    }
+  }
+}

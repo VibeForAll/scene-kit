@@ -1,0 +1,23 @@
+SCENE KIT · porch_planter_primary · potted_plant
+参考图角色
+- geometry: preview/references-current/porch_planter_primary/geometry_front.png, preview/references-current/porch_planter_primary/geometry_side.png
+- appearance: preview/references-current/porch_planter_primary/appearance_front.png, preview/references-current/porch_planter_primary/generation_input.png
+- review_only: concepts/imported-castle-01/contact-sheet.jpg, preview/detail-scan/annotated-overview.jpg
+
+主生成输入：preview/references-current/porch_planter_primary/generation_input.png
+
+ENGLISH POSITIVE
+One isolated small porch potted plant, simple terracotta or dark pot, compact upright green foliage, complete pot base, side profile and porch-floor contact, suitable for near-view placement. A two-storey storybook European castle-house matching the approved ten-view reference set. Preserve the observed main-body proportions, two tall stone chimneys, roof silhouette, facade opening rhythm, entrance position and relative material balance across every component. Use weathered warm-grey masonry, aged cream plaster or pale stone, dark slate, dark stained timber, muted blue-grey glazing, white-painted window trim and restrained dark iron. Architectural details should feel handmade, romantic and construction-legible, with substantial stone surrounds, clear supporting masonry, coherent roof and chimney junctions and practical wall openings. Natural matte materials, softly weathered surfaces, neutral architectural presentation, no style drift.
+
+ENGLISH NEGATIVE
+complete building, porch slab, furniture, large tree, scattered floating leaves, oversized plant, labels, watermark. different castle, changed chimney count, changed chimney placement, added tower, changed roof silhouette, changed entrance, modern villa, generic suburban house, excessive gingerbread ornament, plastic surfaces, glossy toy materials, mixed architectural styles, floating structure, unsupported chimney, broken roof, impossible overhang, people, text, labels, watermark.
+
+中文正向
+一个独立完整的小型门廊盆栽，简洁陶土或深色花盆，紧凑直立绿植，包含完整盆底、侧视轮廓和门廊地面接触面，适合近景摆放。 两层童话欧式城堡住宅，严格对应已确认的十视图参考集。所有构件必须保持画面中观察到的主体比例、两座高石烟囱、屋顶轮廓、立面孔洞节奏、入口位置和相对材料比例。使用风化暖灰砌石、做旧奶油色抹灰或浅色石材、深色石板、深色木材、低饱和蓝灰玻璃、白色窗线和克制的深色铁件。细节应具有手工感、浪漫感和清楚的建造逻辑，石质洞口、支撑砌体和屋面/烟囱交接应可信，并保留实际可用的墙体洞口。自然哑光材质、轻微风化表面、中性建筑展示，不允许风格漂移。
+
+中文负向
+完整建筑，门廊板，家具，大树，散落漂浮叶片，超大植物，文字，标注，水印。 不同的城堡，改变烟囱数量，改变烟囱位置，额外塔楼，改变屋顶轮廓，改变入口，现代别墅，普通郊区住宅，过度的姜饼屋装饰，塑料表面，高光玩具材质，风格混搭失控，漂浮结构，无支撑烟囱，断裂屋顶，无法解释的悬挑，人物，文字，标注，水印。
+
+VIEW
+EN: Front elevation and side profile, complete pot and porch-floor contact visible.
+中文：正面立面和侧视轮廓，完整显示花盆和门廊地面接触。

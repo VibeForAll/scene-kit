@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "mode": "concept_first",
+  "stage": "FINISHING",
+  "last_approved_stage": "ASSEMBLY",
+  "pending_decision": null,
+  "current_object": "B01",
+  "history": [
+    {
+      "from": "REFERENCES",
+      "to": "COMPONENTS",
+      "kind": "reopen",
+      "reason": "7.3 细节特征门禁：当前拆件遗漏烟囱、屋面附件和装饰细节，需要重建完整细节盘点",
+      "at": "2026-11-14T18:23:36+08:00"
+    },
+    {
+      "from": "GENERATION",
+      "to": "GENERATION",
+      "kind": "component_revision",
+      "reason": "climbing_vine_module v2: 按用户反馈由程序化/图生3D改为 Tripo 纯文生3D隔离单体，本地归一化减面至6万面并通过全部门禁",
+      "at": "2026-11-15T09:06:07+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "COMPONENTS",
+      "kind": "reopen",
+      "reason": "用户发现并多视图确认参考建筑左侧圆形塔楼未拆件；现有16个组件已生成但完整组件清单遗漏 round_corner_tower",
+      "at": "2026-11-15T09:35:37+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 5: widened facade to 11.4 m, fixed front windows to 3 lower + 4 upper, cleared tower/window and lantern/window interference, placed three vines and one planter, rebuilt changed standalone sources from the verified assembly, and reran all current audits.",
+      "at": "2026-11-15T10:53:51+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 6: added a quantity-first feature census, replaced the attic hood with a full projecting dormer roof, and removed all four black metal chimney flues from sources and assembly.",
+      "at": "2026-11-15T11:05:46+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 7: added an enclosed attic dormer body with verified main-roof intersection and moved all three vines to visible front-facing tower/facade placement zones.",
+      "at": "2026-11-15T11:56:46+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 8: made the dormer room visibly project 0.41 m beyond the host wall, added the front pier, preserved the windows as the room front face, and revalidated main-roof intersections and front vines.",
+      "at": "2026-11-15T12:28:53+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 9: moved the dormer behind the main eave, extended the roof across the rear attic wall, preserved the enclosed room and windows, and revalidated roof coverage, host intersections, and front vines.",
+      "at": "2026-11-15T12:36:25+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 10: moved the complete attic room another 0.05 m inward, kept the roof 0.09 m behind the main eave, preserved rear-wall coverage, and refreshed versioned README images.",
+      "at": "2026-11-15T12:41:57+08:00"
+    },
+    {
+      "from": "FINISHING",
+      "to": "FINISHING",
+      "kind": "component_revision",
+      "reason": "Revision 11: rebuilt the attic cheeks as triangular prisms on the main roof, shortened the floor to the roof intersection, preserved roof burial and coverage, and replaced the README ten-view image with the original user-supplied views.",
+      "at": "2026-11-15T23:18:28+08:00"
+    }
+  ],
+  "updated_at": "2026-11-15T23:18:47+08:00"
+}

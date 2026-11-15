@@ -1,0 +1,437 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-15T10:51:32+08:00",
+  "tool": "scene-kit blender_audit.py",
+  "strict_requested": false,
+  "blend_file": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\components\\wall_envelope.blend",
+  "scene": {
+    "name": "Scene",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "frame_start": 1,
+    "frame_end": 250,
+    "render_engine": "BLENDER_EEVEE",
+    "resolution": [
+      900,
+      700
+    ],
+    "resolution_percentage": 100
+  },
+  "inventory": {
+    "objects_total": 10,
+    "mesh_objects": 4,
+    "cameras": [
+      "CAM_Review_front",
+      "CAM_Review_side",
+      "CAM_Review_three_quarter"
+    ],
+    "review_cameras": [
+      "CAM_Review_front",
+      "CAM_Review_side",
+      "CAM_Review_three_quarter"
+    ],
+    "lights": [
+      "SK_Review_Fill",
+      "SK_Review_Sun"
+    ],
+    "collections": [
+      "Collection",
+      "SK_COL_AI",
+      "SK_COL_Cameras",
+      "SK_COL_Debug",
+      "SK_COL_Lights",
+      "SK_COL_Ornament",
+      "SK_COL_Reference",
+      "SK_COL_Review",
+      "SK_COL_Site",
+      "SK_COL_Structure",
+      "SK_COL_Vegetation"
+    ],
+    "materials_total": 1
+  },
+  "totals": {
+    "vertices": 1471,
+    "edges": 2917,
+    "polygons": 1412,
+    "triangles": 3010,
+    "non_manifold_edges": 0,
+    "boundary_edges": 0,
+    "wire_edges": 0,
+    "loose_vertices": 0,
+    "zero_area_faces": 0,
+    "ngons": 29,
+    "duplicate_edges": 0,
+    "duplicate_faces": 0
+  },
+  "images": [
+    {
+      "name": "old_stone_wall_diff_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_diff_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_diff_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "old_stone_wall_nor_gl_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_nor_gl_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_nor_gl_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "old_stone_wall_rough_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_rough_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_rough_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "Render Result",
+      "source": "VIEWER",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": false
+    },
+    {
+      "name": "Viewer Node",
+      "source": "VIEWER",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": false
+    }
+  ],
+  "texture_mapping_audit": {
+    "status": "pass",
+    "image_texture_materials": 1,
+    "materials": [
+      {
+        "material": "MAT_wall_envelope_OldStoneWall_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "old_stone_wall_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "old_stone_wall_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "old_stone_wall_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      }
+    ],
+    "risk_findings": []
+  },
+  "objects": [
+    {
+      "name": "SK_wall_envelope_v1_back",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        3.65,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        11.4,
+        0.2,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          -5.7,
+          3.55,
+          0.0
+        ],
+        "max": [
+          5.7,
+          3.75,
+          6.0
+        ]
+      },
+      "vertices": 451,
+      "edges": 897,
+      "polygons": 434,
+      "triangles": 926,
+      "modifiers": [],
+      "data_name": "Cube.007",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 9,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_front",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        -3.65,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        11.4,
+        0.2,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          -5.7,
+          -3.75,
+          0.0
+        ],
+        "max": [
+          5.7,
+          -3.55,
+          6.0
+        ]
+      },
+      "vertices": 513,
+      "edges": 1015,
+      "polygons": 490,
+      "triangles": 1050,
+      "modifiers": [],
+      "data_name": "Cube.006",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 10,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_left",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        -5.6,
+        0.0,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2,
+        7.1,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          -5.7,
+          -3.55,
+          0.0
+        ],
+        "max": [
+          -5.5,
+          3.55,
+          6.0
+        ]
+      },
+      "vertices": 227,
+      "edges": 449,
+      "polygons": 218,
+      "triangles": 462,
+      "modifiers": [],
+      "data_name": "Cube.008",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 6,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_right",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        5.6,
+        0.0,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2,
+        7.1,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          5.5,
+          -3.55,
+          0.0
+        ],
+        "max": [
+          5.7,
+          3.55,
+          6.0
+        ]
+      },
+      "vertices": 280,
+      "edges": 556,
+      "polygons": 270,
+      "triangles": 572,
+      "modifiers": [],
+      "data_name": "Cube.009",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 4,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Report does not judge concept match, proportions, construction logic, material quality, or target-engine acceptance.",
+    "Boundary and non-manifold edges may be intentional on open or temporary surfaces.",
+    "Non-unit scaling may be intentional for instances and must be checked against export requirements."
+  ]
+}

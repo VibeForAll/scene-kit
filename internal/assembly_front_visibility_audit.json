@@ -1,0 +1,2409 @@
+{
+  "schema_version": 2,
+  "status": "pass",
+  "source": "live_blend_enumeration",
+  "camera": "CAM_ASM_front_ortho",
+  "resolution": [
+    900,
+    675
+  ],
+  "source_image": "assets/preview/assembly/castle_assembly_front_ortho.png",
+  "overlay_image": "assets/preview/assembly/front_component_visibility_overlay.jpg",
+  "checks": {
+    "live_inventory_pass": true,
+    "facade_schedule_pass": true,
+    "all_masks_nonempty": true,
+    "plants_visible": true,
+    "no_tower_window_overlap": true,
+    "no_unexpected_overlap": true
+  },
+  "inventory": {
+    "status": "pass",
+    "expected_instance_count": 40,
+    "live_instance_count": 40,
+    "checks": {
+      "live_instance_count_matches_records": true,
+      "every_expected_part_has_visible_instance": true,
+      "vegetation_visible": true,
+      "round_tower_present": true
+    },
+    "part_counts": {
+      "attic_window_assembly": 1,
+      "climbing_vine_module": 3,
+      "corner_stone_detail": 1,
+      "entrance_portal": 1,
+      "entrance_steps": 1,
+      "floor_slab_system": 1,
+      "main_roof_assembly": 1,
+      "porch_planter_primary": 1,
+      "porch_railing_primary": 1,
+      "round_corner_tower": 1,
+      "stone_base_plinth": 1,
+      "stone_chimney_primary": 2,
+      "stone_facade_trim": 1,
+      "tall_window_assembly": 21,
+      "wall_envelope": 1,
+      "wall_lantern_primary": 1,
+      "wooden_entrance_porch": 1
+    },
+    "rendered_groups": 40
+  },
+  "facade_schedule": {
+    "status": "pass",
+    "source_contract": "internal/wall_openings_v2.json",
+    "footprint_width_m": 11.4,
+    "checks": {
+      "window_count_matches_contract": true,
+      "front_lower_matches_3": true,
+      "front_upper_matches_4": true,
+      "front_lower_skips_door_axis": true,
+      "front_upper_has_door_axis": true,
+      "back_counts_match_contract": true,
+      "left_counts_match_contract": true,
+      "right_counts_match_contract": true
+    },
+    "actual_counts": {
+      "front": {
+        "lower": 3,
+        "upper": 4
+      },
+      "back": {
+        "lower": 3,
+        "upper": 4
+      },
+      "left": {
+        "lower": 1,
+        "upper": 2
+      },
+      "right": {
+        "lower": 2,
+        "upper": 2
+      }
+    },
+    "window_center_x_m": {
+      "front": {
+        "lower": [
+          -2.4,
+          1.4,
+          3.8
+        ],
+        "upper": [
+          -2.4,
+          0.0,
+          2.4,
+          4.8
+        ]
+      },
+      "back": {
+        "lower": [
+          -3.6,
+          0.0,
+          3.6
+        ],
+        "upper": [
+          -3.8,
+          -1.27,
+          1.27,
+          3.8
+        ]
+      },
+      "left": {
+        "lower": [
+          -5.7
+        ],
+        "upper": [
+          -5.7,
+          -5.7
+        ]
+      },
+      "right": {
+        "lower": [
+          5.7,
+          5.7
+        ],
+        "upper": [
+          5.7,
+          5.7
+        ]
+      }
+    },
+    "door_axis_rule": "ground floor skips x=0; upper floor has a centered window"
+  },
+  "plant_visibility": {
+    "status": "pass",
+    "instances": [
+      {
+        "part_id": "climbing_vine_module",
+        "instance_id": "entrance_right_wall",
+        "bbox_pixels": [
+          617,
+          611,
+          669,
+          675
+        ],
+        "visible_pixels": 950
+      },
+      {
+        "part_id": "climbing_vine_module",
+        "instance_id": "left_front_wall",
+        "bbox_pixels": [
+          75,
+          607,
+          127,
+          675
+        ],
+        "visible_pixels": 1040
+      },
+      {
+        "part_id": "climbing_vine_module",
+        "instance_id": "right_side_wall",
+        "bbox_pixels": [
+          789,
+          610,
+          841,
+          675
+        ],
+        "visible_pixels": 950
+      },
+      {
+        "part_id": "porch_planter_primary",
+        "instance_id": "porch_right_against_wall",
+        "bbox_pixels": [
+          494,
+          635,
+          514,
+          671
+        ],
+        "visible_pixels": 381
+      }
+    ],
+    "expected_vines": 3,
+    "expected_planters": 1
+  },
+  "groups": [
+    {
+      "part_id": "attic_window_assembly",
+      "instance_id": "SK_attic_window_assembly_ROOT",
+      "root": "SK_attic_window_assembly_ROOT",
+      "root_location_m": [
+        0.0,
+        -3.67,
+        6.05
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        367,
+        170,
+        533,
+        285
+      ],
+      "visible_pixels": 15282
+    },
+    {
+      "part_id": "climbing_vine_module",
+      "instance_id": "entrance_right_wall",
+      "root": "SK_climbing_vine_entrance_right_wall_ROOT",
+      "root_location_m": [
+        2.65,
+        -3.76,
+        0.15
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        617,
+        611,
+        669,
+        675
+      ],
+      "visible_pixels": 950
+    },
+    {
+      "part_id": "climbing_vine_module",
+      "instance_id": "left_front_wall",
+      "root": "SK_climbing_vine_left_front_wall_ROOT",
+      "root_location_m": [
+        -4.8,
+        -5.58,
+        0.2
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        75,
+        607,
+        127,
+        675
+      ],
+      "visible_pixels": 1040
+    },
+    {
+      "part_id": "climbing_vine_module",
+      "instance_id": "right_side_wall",
+      "root": "SK_climbing_vine_right_side_wall_ROOT",
+      "root_location_m": [
+        5.02,
+        -3.76,
+        0.15
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        789,
+        610,
+        841,
+        675
+      ],
+      "visible_pixels": 950
+    },
+    {
+      "part_id": "corner_stone_detail",
+      "instance_id": "SK_corner_stone_detail_v1_ROOT",
+      "root": "SK_corner_stone_detail_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        32,
+        299,
+        868,
+        670
+      ],
+      "visible_pixels": 23406
+    },
+    {
+      "part_id": "entrance_portal",
+      "instance_id": "SK_entrance_portal_v1_ROOT",
+      "root": "SK_entrance_portal_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        -3.68,
+        0.51
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        407,
+        507,
+        493,
+        671
+      ],
+      "visible_pixels": 11650
+    },
+    {
+      "part_id": "entrance_steps",
+      "instance_id": "SK_entrance_steps_v1_ROOT",
+      "root": "SK_entrance_steps_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        385,
+        671,
+        515,
+        675
+      ],
+      "visible_pixels": 520
+    },
+    {
+      "part_id": "floor_slab_system",
+      "instance_id": "SK_floor_slab_system_v1_ROOT",
+      "root": "SK_floor_slab_system_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        51,
+        490,
+        849,
+        506
+      ],
+      "visible_pixels": 12768
+    },
+    {
+      "part_id": "main_roof_assembly",
+      "instance_id": "SK_main_roof_assembly_v1_ROOT",
+      "root": "SK_main_roof_assembly_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        13,
+        62,
+        887,
+        285
+      ],
+      "visible_pixels": 191141
+    },
+    {
+      "part_id": "porch_planter_primary",
+      "instance_id": "porch_right_against_wall",
+      "root": "SK_porch_planter_primary_ROOT",
+      "root_location_m": [
+        0.74,
+        -3.62,
+        0.51
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "bbox_pixels": [
+        494,
+        635,
+        514,
+        671
+      ],
+      "visible_pixels": 381
+    },
+    {
+      "part_id": "porch_railing_primary",
+      "instance_id": "porch_front_two_bays",
+      "root": "SK_porch_railing_primary_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        318,
+        599,
+        582,
+        671
+      ],
+      "visible_pixels": 4291
+    },
+    {
+      "part_id": "round_corner_tower",
+      "instance_id": "SK_round_corner_tower_ROOT",
+      "root": "SK_round_corner_tower_ROOT",
+      "root_location_m": [
+        -4.8,
+        -4.3,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        9,
+        181,
+        195,
+        675
+      ],
+      "visible_pixels": 69135
+    },
+    {
+      "part_id": "stone_base_plinth",
+      "instance_id": "SK_stone_base_plinth_v1_ROOT",
+      "root": "SK_stone_base_plinth_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        25,
+        671,
+        875,
+        675
+      ],
+      "visible_pixels": 3400
+    },
+    {
+      "part_id": "stone_chimney_primary",
+      "instance_id": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "root": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "root_location_m": [
+        2.9,
+        1.0,
+        8.09114
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        625,
+        0,
+        696,
+        139
+      ],
+      "visible_pixels": 8047
+    },
+    {
+      "part_id": "stone_chimney_primary",
+      "instance_id": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "root": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "root_location_m": [
+        -2.9,
+        -1.0,
+        8.09114
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        204,
+        0,
+        275,
+        139
+      ],
+      "visible_pixels": 8047
+    },
+    {
+      "part_id": "stone_facade_trim",
+      "instance_id": "SK_stone_facade_trim_v1_ROOT",
+      "root": "SK_stone_facade_trim_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        30,
+        288,
+        870,
+        495
+      ],
+      "visible_pixels": 15905
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_lower_01",
+      "root": "SK_tall_window_instance_win_back_lower_01_ROOT",
+      "root_location_m": [
+        -3.6,
+        3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        145,
+        533,
+        232,
+        642
+      ],
+      "visible_pixels": 8917
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_lower_02",
+      "root": "SK_tall_window_instance_win_back_lower_02_ROOT",
+      "root_location_m": [
+        0.0,
+        3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        406,
+        533,
+        494,
+        642
+      ],
+      "visible_pixels": 9110
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_lower_03",
+      "root": "SK_tall_window_instance_win_back_lower_03_ROOT",
+      "root_location_m": [
+        3.6,
+        3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        668,
+        533,
+        755,
+        642
+      ],
+      "visible_pixels": 8998
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_upper_01",
+      "root": "SK_tall_window_instance_win_back_upper_01_ROOT",
+      "root_location_m": [
+        -3.8,
+        3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        131,
+        316,
+        218,
+        425
+      ],
+      "visible_pixels": 8991
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_upper_02",
+      "root": "SK_tall_window_instance_win_back_upper_02_ROOT",
+      "root_location_m": [
+        -1.27,
+        3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        314,
+        316,
+        401,
+        425
+      ],
+      "visible_pixels": 8986
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_upper_03",
+      "root": "SK_tall_window_instance_win_back_upper_03_ROOT",
+      "root_location_m": [
+        1.27,
+        3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        499,
+        316,
+        586,
+        425
+      ],
+      "visible_pixels": 8991
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_back_upper_04",
+      "root": "SK_tall_window_instance_win_back_upper_04_ROOT",
+      "root_location_m": [
+        3.8,
+        3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        682,
+        316,
+        769,
+        425
+      ],
+      "visible_pixels": 8987
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_lower_01",
+      "root": "SK_tall_window_instance_win_front_lower_01_ROOT",
+      "root_location_m": [
+        -2.4,
+        -3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        232,
+        533,
+        319,
+        642
+      ],
+      "visible_pixels": 8989
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_lower_02",
+      "root": "SK_tall_window_instance_win_front_lower_02_ROOT",
+      "root_location_m": [
+        1.4,
+        -3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        508,
+        533,
+        595,
+        642
+      ],
+      "visible_pixels": 8917
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_lower_03",
+      "root": "SK_tall_window_instance_win_front_lower_03_ROOT",
+      "root_location_m": [
+        3.8,
+        -3.75,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        682,
+        533,
+        769,
+        642
+      ],
+      "visible_pixels": 8989
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_upper_01",
+      "root": "SK_tall_window_instance_win_front_upper_01_ROOT",
+      "root_location_m": [
+        -2.4,
+        -3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        232,
+        316,
+        319,
+        425
+      ],
+      "visible_pixels": 8987
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_upper_02",
+      "root": "SK_tall_window_instance_win_front_upper_02_ROOT",
+      "root_location_m": [
+        0.0,
+        -3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        406,
+        316,
+        494,
+        425
+      ],
+      "visible_pixels": 9107
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_upper_03",
+      "root": "SK_tall_window_instance_win_front_upper_03_ROOT",
+      "root_location_m": [
+        2.4,
+        -3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        581,
+        316,
+        668,
+        425
+      ],
+      "visible_pixels": 8991
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_front_upper_04",
+      "root": "SK_tall_window_instance_win_front_upper_04_ROOT",
+      "root_location_m": [
+        4.8,
+        -3.75,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        755,
+        316,
+        842,
+        425
+      ],
+      "visible_pixels": 8914
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_left_lower_01",
+      "root": "SK_tall_window_instance_win_left_lower_01_ROOT",
+      "root_location_m": [
+        -5.7,
+        0.0,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        22,
+        533,
+        45,
+        642
+      ],
+      "visible_pixels": 1877
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_left_upper_01",
+      "root": "SK_tall_window_instance_win_left_upper_01_ROOT",
+      "root_location_m": [
+        -5.7,
+        -1.4,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        22,
+        316,
+        45,
+        425
+      ],
+      "visible_pixels": 1881
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_left_upper_02",
+      "root": "SK_tall_window_instance_win_left_upper_02_ROOT",
+      "root_location_m": [
+        -5.7,
+        1.4,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        22,
+        316,
+        45,
+        425
+      ],
+      "visible_pixels": 1881
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_right_lower_01",
+      "root": "SK_tall_window_instance_win_right_lower_01_ROOT",
+      "root_location_m": [
+        5.7,
+        -1.2,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        855,
+        533,
+        878,
+        642
+      ],
+      "visible_pixels": 1879
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_right_lower_02",
+      "root": "SK_tall_window_instance_win_right_lower_02_ROOT",
+      "root_location_m": [
+        5.7,
+        1.2,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        855,
+        533,
+        878,
+        642
+      ],
+      "visible_pixels": 1879
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_right_upper_01",
+      "root": "SK_tall_window_instance_win_right_upper_01_ROOT",
+      "root_location_m": [
+        5.7,
+        -1.2,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        855,
+        316,
+        878,
+        425
+      ],
+      "visible_pixels": 1881
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "instance_id": "win_right_upper_02",
+      "root": "SK_tall_window_instance_win_right_upper_02_ROOT",
+      "root_location_m": [
+        5.7,
+        1.2,
+        3.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        855,
+        316,
+        878,
+        425
+      ],
+      "visible_pixels": 1881
+    },
+    {
+      "part_id": "wall_envelope",
+      "instance_id": "SK_wall_envelope_v1_ROOT",
+      "root": "SK_wall_envelope_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        36,
+        272,
+        864,
+        675
+      ],
+      "visible_pixels": 315267
+    },
+    {
+      "part_id": "wall_lantern_primary",
+      "instance_id": "SK_wall_lantern_primary_v1_ROOT",
+      "root": "SK_wall_lantern_primary_v1_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        398,
+        531,
+        502,
+        568
+      ],
+      "visible_pixels": 1159
+    },
+    {
+      "part_id": "wooden_entrance_porch",
+      "instance_id": "SK_wooden_entrance_porch_v4_ROOT",
+      "root": "SK_wooden_entrance_porch_v4_ROOT",
+      "root_location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bbox_pixels": [
+        386,
+        486,
+        514,
+        675
+      ],
+      "visible_pixels": 5296
+    }
+  ],
+  "empty_masks": [],
+  "overlaps": [
+    {
+      "parts": [
+        "attic_window_assembly",
+        "main_roof_assembly"
+      ],
+      "roots": [
+        "SK_attic_window_assembly_ROOT",
+        "SK_main_roof_assembly_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_attic_window_assembly_ROOT",
+        "SK_main_roof_assembly_v1_ROOT"
+      ],
+      "overlap_pixels": 15282,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "attic_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_attic_window_assembly_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_attic_window_assembly_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 1897,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "stone_base_plinth"
+      ],
+      "roots": [
+        "SK_climbing_vine_entrance_right_wall_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "instance_ids": [
+        "entrance_right_wall",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "overlap_pixels": 96,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_climbing_vine_entrance_right_wall_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "entrance_right_wall",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 950,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "round_corner_tower"
+      ],
+      "roots": [
+        "SK_climbing_vine_left_front_wall_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "instance_ids": [
+        "left_front_wall",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "overlap_pixels": 1040,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "corner_stone_detail"
+      ],
+      "roots": [
+        "SK_climbing_vine_right_side_wall_ROOT",
+        "SK_corner_stone_detail_v1_ROOT"
+      ],
+      "instance_ids": [
+        "right_side_wall",
+        "SK_corner_stone_detail_v1_ROOT"
+      ],
+      "overlap_pixels": 65,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "stone_base_plinth"
+      ],
+      "roots": [
+        "SK_climbing_vine_right_side_wall_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "instance_ids": [
+        "right_side_wall",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "overlap_pixels": 96,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "climbing_vine_module",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_climbing_vine_right_side_wall_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "right_side_wall",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 950,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "floor_slab_system"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_floor_slab_system_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_floor_slab_system_v1_ROOT"
+      ],
+      "overlap_pixels": 485,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "round_corner_tower"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "overlap_pixels": 11693,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "stone_facade_trim"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "overlap_pixels": 517,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_front_upper_04_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_front_upper_04"
+      ],
+      "overlap_pixels": 532,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_left_lower_01_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_left_lower_01"
+      ],
+      "overlap_pixels": 1350,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_left_upper_01_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_left_upper_01"
+      ],
+      "overlap_pixels": 1362,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_left_upper_02_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_left_upper_02"
+      ],
+      "overlap_pixels": 1362,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_right_lower_01_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_right_lower_01"
+      ],
+      "overlap_pixels": 1353,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_right_lower_02_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_right_lower_02"
+      ],
+      "overlap_pixels": 1353,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_right_upper_01_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_right_upper_01"
+      ],
+      "overlap_pixels": 1363,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_tall_window_instance_win_right_upper_02_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "win_right_upper_02"
+      ],
+      "overlap_pixels": 1363,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "corner_stone_detail",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_corner_stone_detail_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 20508,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "entrance_portal",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 4973,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "entrance_portal",
+        "wall_lantern_primary"
+      ],
+      "roots": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wall_lantern_primary_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wall_lantern_primary_v1_ROOT"
+      ],
+      "overlap_pixels": 509,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "entrance_portal",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_entrance_portal_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 259,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "entrance_steps",
+        "stone_base_plinth"
+      ],
+      "roots": [
+        "SK_entrance_steps_v1_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_entrance_steps_v1_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "overlap_pixels": 520,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "entrance_steps",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_entrance_steps_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_entrance_steps_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 480,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "floor_slab_system",
+        "round_corner_tower"
+      ],
+      "roots": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "instance_ids": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "overlap_pixels": 2059,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "floor_slab_system",
+        "stone_facade_trim"
+      ],
+      "roots": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "overlap_pixels": 3990,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "floor_slab_system",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 12768,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "floor_slab_system",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_floor_slab_system_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 1717,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "main_roof_assembly",
+        "round_corner_tower"
+      ],
+      "roots": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "instance_ids": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_round_corner_tower_ROOT"
+      ],
+      "overlap_pixels": 8019,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "main_roof_assembly",
+        "stone_chimney_primary"
+      ],
+      "roots": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_stone_chimney_primary_v1_chimney_back_right_ROOT"
+      ],
+      "instance_ids": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_stone_chimney_primary_v1_chimney_back_right_ROOT"
+      ],
+      "overlap_pixels": 4824,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "main_roof_assembly",
+        "stone_chimney_primary"
+      ],
+      "roots": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_stone_chimney_primary_v1_chimney_front_left_ROOT"
+      ],
+      "instance_ids": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_stone_chimney_primary_v1_chimney_front_left_ROOT"
+      ],
+      "overlap_pixels": 4824,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "main_roof_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_main_roof_assembly_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 10763,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "porch_planter_primary",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_porch_planter_primary_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "porch_right_against_wall",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 381,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "porch_planter_primary",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_porch_planter_primary_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "porch_right_against_wall",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 172,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "porch_railing_primary",
+        "tall_window_assembly"
+      ],
+      "roots": [
+        "SK_porch_railing_primary_v1_ROOT",
+        "SK_tall_window_instance_win_front_lower_02_ROOT"
+      ],
+      "instance_ids": [
+        "porch_front_two_bays",
+        "win_front_lower_02"
+      ],
+      "overlap_pixels": 1312,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "porch_railing_primary",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_porch_railing_primary_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "porch_front_two_bays",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 4291,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "round_corner_tower",
+        "stone_base_plinth"
+      ],
+      "roots": [
+        "SK_round_corner_tower_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_round_corner_tower_ROOT",
+        "SK_stone_base_plinth_v1_ROOT"
+      ],
+      "overlap_pixels": 632,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "round_corner_tower",
+        "stone_facade_trim"
+      ],
+      "roots": [
+        "SK_round_corner_tower_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_round_corner_tower_ROOT",
+        "SK_stone_facade_trim_v1_ROOT"
+      ],
+      "overlap_pixels": 2948,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "round_corner_tower",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_round_corner_tower_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_round_corner_tower_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 57895,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "stone_base_plinth",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_stone_base_plinth_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_stone_base_plinth_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 3312,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "stone_base_plinth",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_stone_base_plinth_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_stone_base_plinth_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 480,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "stone_facade_trim",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_stone_facade_trim_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "SK_stone_facade_trim_v1_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 15732,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "stone_facade_trim",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_stone_facade_trim_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_stone_facade_trim_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 407,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_lower_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_lower_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8917,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_lower_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_lower_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 1473,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_lower_03_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_lower_03",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 1231,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_upper_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_upper_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8991,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_upper_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_upper_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8472,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_upper_03_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_upper_03",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8477,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_back_upper_04_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_back_upper_04",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 7766,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_lower_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_lower_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8989,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_lower_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_lower_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8917,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_lower_03_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_lower_03",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 1225,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_upper_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_upper_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8473,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_upper_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_upper_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 9107,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_upper_03_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_upper_03",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 8477,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_front_upper_04_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_front_upper_04",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 7693,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_left_lower_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_left_lower_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 956,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_left_upper_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_left_upper_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 955,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_left_upper_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_left_upper_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 955,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_right_lower_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_right_lower_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 958,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_right_lower_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_right_lower_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 958,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_right_upper_01_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_right_upper_01",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 955,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "tall_window_assembly",
+        "wall_envelope"
+      ],
+      "roots": [
+        "SK_tall_window_instance_win_right_upper_02_ROOT",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "instance_ids": [
+        "win_right_upper_02",
+        "SK_wall_envelope_v1_ROOT"
+      ],
+      "overlap_pixels": 955,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "wall_envelope",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_wall_envelope_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_wall_envelope_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 5296,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    },
+    {
+      "parts": [
+        "wall_lantern_primary",
+        "wooden_entrance_porch"
+      ],
+      "roots": [
+        "SK_wall_lantern_primary_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "instance_ids": [
+        "SK_wall_lantern_primary_v1_ROOT",
+        "SK_wooden_entrance_porch_v4_ROOT"
+      ],
+      "overlap_pixels": 205,
+      "depth_ranges_overlap": true,
+      "policy": "allowed"
+    }
+  ],
+  "unexpected_overlaps": [],
+  "tower_window_overlaps": []
+}

@@ -1,0 +1,94 @@
+{
+  "roof": {
+    "min": [
+      -4.7,
+      -3.95,
+      5.82
+    ],
+    "max": [
+      4.7,
+      3.95,
+      8.8
+    ],
+    "dimensions": [
+      9.4,
+      7.9,
+      2.98
+    ]
+  },
+  "gable": {
+    "min": [
+      -4.5,
+      -3.75,
+      6.0
+    ],
+    "max": [
+      4.5,
+      3.75,
+      8.8
+    ],
+    "dimensions": [
+      9.0,
+      7.5,
+      2.8
+    ]
+  },
+  "ridge_cap": {
+    "min": [
+      -4.8,
+      -0.1,
+      8.7
+    ],
+    "max": [
+      4.8,
+      0.1,
+      8.9
+    ],
+    "dimensions": [
+      9.6,
+      0.2,
+      0.2
+    ]
+  },
+  "fascia": {
+    "min": [
+      -4.7,
+      -3.95,
+      5.82
+    ],
+    "max": [
+      4.7,
+      3.95,
+      6.0
+    ],
+    "dimensions": [
+      9.4,
+      7.9,
+      0.18
+    ]
+  },
+  "gutter": {
+    "min": [
+      -4.7,
+      -4.04,
+      5.817
+    ],
+    "max": [
+      4.7,
+      4.04,
+      5.937
+    ],
+    "dimensions": [
+      9.4,
+      8.08,
+      0.12
+    ]
+  },
+  "checks": {
+    "wall_top_matches_gable_base": true,
+    "roof_overlaps_wall_top": true,
+    "ridge_above_eave": true,
+    "double_slope_roof_has_12_faces": true,
+    "two_gable_closures": true
+  }
+}

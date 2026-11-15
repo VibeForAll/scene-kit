@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "main_roof_assembly",
+  "revision": 5,
+  "source": "components/main_roof_assembly.blend",
+  "bounds_min_m": [
+    -6.02553,
+    -4.04,
+    5.817
+  ],
+  "bounds_max_m": [
+    6.02553,
+    4.04,
+    8.9
+  ],
+  "dimensions_m": [
+    12.05106,
+    8.08,
+    3.083
+  ],
+  "mesh_count": 5,
+  "triangles": 164,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ]
+}

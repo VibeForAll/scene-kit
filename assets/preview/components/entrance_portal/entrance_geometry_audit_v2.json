@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "entrance_portal",
+  "revision": 2,
+  "generated_at": "2026-11-14T23:15:51+08:00",
+  "blend_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\out\\entrance_steps_parametric_v1.blend",
+  "blend_sha256": "91ee55be48cdf0ae7d35c90c8bfd1a493c192bfe8176f2a3effb9051b3ecee9f",
+  "parameter_document": "internal/entrance_portal_v1.json",
+  "parameter_document_sha256": "10d49dc656138bbd52bd4b4a52976f7ee77ba4430c5522e82216f94258574cf5",
+  "root_world_location_m": [
+    0.0,
+    -3.68,
+    0.51
+  ],
+  "bounds_m": {
+    "stone": {
+      "min": [
+        -0.59,
+        -3.86,
+        0.51
+      ],
+      "max": [
+        0.59,
+        -3.54,
+        2.77
+      ]
+    },
+    "door": {
+      "min": [
+        -0.43,
+        -3.83,
+        0.555
+      ],
+      "max": [
+        0.43,
+        -3.745,
+        2.535
+      ]
+    },
+    "iron": {
+      "min": [
+        -0.43,
+        -3.855,
+        1.046667
+      ],
+      "max": [
+        0.2982,
+        -3.81,
+        1.613333
+      ]
+    },
+    "steps": {
+      "min": [
+        -0.9,
+        -4.86,
+        0.0
+      ],
+      "max": [
+        0.9,
+        -3.82,
+        0.51
+      ]
+    }
+  },
+  "dimensions_m": [
+    1.18,
+    0.32,
+    2.26
+  ],
+  "leaf_count": 1,
+  "panel_grid": [
+    2,
+    3
+  ],
+  "panel_count": 6,
+  "mesh_checks": {
+    "SK_entrance_portal_v1_door": {
+      "triangles": 344,
+      "material_names": [
+        "MAT_entrance_portal_AgedDarkWood_v1"
+      ],
+      "missing_materials": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    "SK_entrance_portal_v1_iron": {
+      "triangles": 292,
+      "material_names": [
+        "MAT_roof_system_GutterDarkMetal_v1"
+      ],
+      "missing_materials": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    "SK_entrance_portal_v1_stone": {
+      "triangles": 156,
+      "material_names": [
+        "MAT_wall_envelope_OldStoneWall_v1"
+      ],
+      "missing_materials": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    }
+  },
+  "checks": {
+    "root_at_platform_height": true,
+    "overall_width": true,
+    "overall_depth": true,
+    "overall_height": true,
+    "threshold_on_step_platform": true,
+    "door_inside_stone_aperture": true,
+    "door_clear_of_steps": true,
+    "three_closed_material_meshes": true,
+    "all_child_meshes_closed": true,
+    "all_materials_assigned": true,
+    "closed_material_meshes": true
+  },
+  "unresolved": []
+}

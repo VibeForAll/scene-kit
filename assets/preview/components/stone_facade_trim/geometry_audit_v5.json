@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "stone_facade_trim",
+  "revision": 5,
+  "source": "components/stone_facade_trim.blend",
+  "bounds_min_m": [
+    -5.78,
+    -3.83,
+    2.93
+  ],
+  "bounds_max_m": [
+    5.78,
+    3.83,
+    5.78
+  ],
+  "dimensions_m": [
+    11.56,
+    7.66,
+    2.85
+  ],
+  "mesh_count": 1,
+  "triangles": 288,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ]
+}

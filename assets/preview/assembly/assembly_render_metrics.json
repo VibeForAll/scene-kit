@@ -1,0 +1,97 @@
+{
+  "status": "pass",
+  "checks": {
+    "all_views_nonblank": true,
+    "all_views_framed": true,
+    "no_blown_highlights": true,
+    "contact_sheet_exists": true
+  },
+  "views": [
+    {
+      "path": "assets/preview/assembly/castle_assembly_front_ortho.png",
+      "size": [
+        1200,
+        900
+      ],
+      "mean_rgb": [
+        97.708,
+        92.19,
+        84.467
+      ],
+      "luminance_mean": 92.965,
+      "luminance_stddev": 55.954,
+      "edge_mean": 12.947,
+      "non_dark_fraction": 0.73651,
+      "bright_fraction": 0.02643
+    },
+    {
+      "path": "assets/preview/assembly/castle_assembly_side_ortho.png",
+      "size": [
+        1200,
+        900
+      ],
+      "mean_rgb": [
+        99.096,
+        95.804,
+        92.141
+      ],
+      "luminance_mean": 96.386,
+      "luminance_stddev": 63.456,
+      "edge_mean": 11.279,
+      "non_dark_fraction": 0.57265,
+      "bright_fraction": 0.02925
+    },
+    {
+      "path": "assets/preview/assembly/castle_assembly_hero_three_quarter.png",
+      "size": [
+        1200,
+        900
+      ],
+      "mean_rgb": [
+        101.309,
+        96.066,
+        89.254
+      ],
+      "luminance_mean": 96.866,
+      "luminance_stddev": 60.222,
+      "edge_mean": 12.547,
+      "non_dark_fraction": 0.68275,
+      "bright_fraction": 0.0346
+    },
+    {
+      "path": "assets/preview/assembly/castle_assembly_entrance_closeup.png",
+      "size": [
+        1200,
+        900
+      ],
+      "mean_rgb": [
+        110.097,
+        101.24,
+        92.917
+      ],
+      "luminance_mean": 102.918,
+      "luminance_stddev": 60.058,
+      "edge_mean": 14.477,
+      "non_dark_fraction": 0.85486,
+      "bright_fraction": 0.02639
+    },
+    {
+      "path": "assets/preview/assembly/castle_assembly_roof_chimney_closeup.png",
+      "size": [
+        1200,
+        900
+      ],
+      "mean_rgb": [
+        75.928,
+        70.935,
+        61.083
+      ],
+      "luminance_mean": 71.334,
+      "luminance_stddev": 46.425,
+      "edge_mean": 8.672,
+      "non_dark_fraction": 0.64248,
+      "bright_fraction": 0.02594
+    }
+  ],
+  "contact_sheet": "assets/preview/assembly/castle_assembly_contact_sheet.jpg"
+}

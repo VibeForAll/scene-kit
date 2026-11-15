@@ -1,0 +1,4985 @@
+{
+  "status": "diagnostic_only",
+  "created_at": "2026-11-15T00:13:34+08:00",
+  "project": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01",
+  "selected_direction": "model_derived_views",
+  "florence_model": "microsoft/Florence-2-base-ft",
+  "vqa_model": "dandelin/vilt-b32-finetuned-vqa",
+  "device": "cpu",
+  "views": {
+    "top": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\top.png",
+      "caption": {
+        "raw": "</s><s>The image is of a rectangular piece of wood. The wood is light brown. The background of the image is dark. There are cracks on the wood. There is a white rectangle in the middle of the wooden frame. The rectangle has small squares on it. The squares are light brown in color. The square is divided into two equal parts.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a rectangular piece of wood. The wood is light brown. The background of the image is dark. There are cracks on the wood. There is a white rectangle in the middle of the wooden frame. The rectangle has small squares on it. The squares are light brown in color. The square is divided into two equal parts."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_242><loc_337><loc_758><loc_670>column<loc_243><loc_338><loc_757><loc_669>triangular gable window<loc_242><loc_338><loc_757><loc_670>window frame<loc_242><loc_338><loc_758><loc_670> slate roof<loc_243><loc_339><loc_757><loc_669></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                174.60000610351562,
+                182.25,
+                546.1199951171875,
+                362.07000732421875
+              ],
+              [
+                175.32000732421875,
+                182.79000854492188,
+                545.4000244140625,
+                361.530029296875
+              ],
+              [
+                174.60000610351562,
+                182.79000854492188,
+                545.4000244140625,
+                362.07000732421875
+              ],
+              [
+                174.60000610351562,
+                182.79000854492188,
+                546.1199951171875,
+                362.07000732421875
+              ],
+              [
+                175.32000732421875,
+                183.3300018310547,
+                545.4000244140625,
+                361.530029296875
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "triangular gable window",
+              "window frame",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    },
+    "bottom": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\bottom.png",
+      "caption": {
+        "raw": "</s><s>The image is a black and white image of a building. The building appears to be made of stone or concrete. There are steps going down the side of the building. At the top of the image there is a rectangular black object. The background is dark.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is a black and white image of a building. The building appears to be made of stone or concrete. There are steps going down the side of the building. At the top of the image there is a rectangular black object. The background is dark."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_242><loc_337><loc_759><loc_669>column<loc_311><loc_463><loc_344><loc_609>window frame<loc_242><loc_338><loc_759><loc_669> slate roof<loc_257><loc_339><loc_742><loc_474></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                174.60000610351562,
+                182.25,
+                546.8400268554688,
+                361.530029296875
+              ],
+              [
+                224.28001403808594,
+                250.29000854492188,
+                248.04000854492188,
+                329.1300048828125
+              ],
+              [
+                174.60000610351562,
+                182.79000854492188,
+                546.8400268554688,
+                361.530029296875
+              ],
+              [
+                185.40000915527344,
+                183.3300018310547,
+                534.6000366210938,
+                256.2300109863281
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "window frame",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    },
+    "left": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\left.png",
+      "caption": {
+        "raw": "</s><s>A tall wooden pole with a square wooden top on top of it. There is a dark blue sky behind the pole. </s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "A tall wooden pole with a square wooden top on top of it. There is a dark blue sky behind the pole. "
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_379><loc_0><loc_628><loc_998>column<loc_379><loc_0><loc_629><loc_998><loc_380><loc_0><loc_627><loc_998><loc_380><loc_64><loc_591><loc_998><loc_434><loc_71><loc_479><loc_998>window frame<loc_0><loc_0><loc_998><loc_998> slate roof<loc_399><loc_0><loc_628><loc_80>wall bracket<loc_391><loc_65><loc_591><loc_208>roof eave<loc_399><loc_0><loc_629><loc_80></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                273.2400207519531,
+                0.27000001072883606,
+                452.52001953125,
+                539.1900024414062
+              ],
+              [
+                273.2400207519531,
+                0.27000001072883606,
+                453.2400207519531,
+                539.1900024414062
+              ],
+              [
+                273.96002197265625,
+                0.27000001072883606,
+                451.8000183105469,
+                539.1900024414062
+              ],
+              [
+                273.96002197265625,
+                34.83000183105469,
+                425.8800048828125,
+                539.1900024414062
+              ],
+              [
+                312.84002685546875,
+                38.61000061035156,
+                345.2400207519531,
+                539.1900024414062
+              ],
+              [
+                0.36000001430511475,
+                0.27000001072883606,
+                718.9200439453125,
+                539.1900024414062
+              ],
+              [
+                287.6400146484375,
+                0.27000001072883606,
+                452.52001953125,
+                43.470001220703125
+              ],
+              [
+                281.8800048828125,
+                35.37000274658203,
+                425.8800048828125,
+                112.59000396728516
+              ],
+              [
+                287.6400146484375,
+                0.27000001072883606,
+                453.2400207519531,
+                43.470001220703125
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "column",
+              "window frame",
+              "slate roof",
+              "wall bracket",
+              "roof eave"
+            ]
+          }
+        }
+      }
+    },
+    "right": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\right.png",
+      "caption": {
+        "raw": "</s><s>The image is of a cross. The cross is made of wood. The wood is light brown in color. The background is dark. There is a white cross at the top of the cross.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a cross. The cross is made of wood. The wood is light brown in color. The background is dark. There is a white cross at the top of the cross."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_371><loc_0><loc_624><loc_998>column<loc_371><loc_0><loc_623><loc_998><loc_432><loc_66><loc_621><loc_998><loc_517><loc_68><loc_620><loc_998>triangular gable window<loc_371><loc_0><loc_601><loc_83>window frame<loc_371><loc_0><loc_602><loc_83> slate roof<loc_371><loc_0><loc_600><loc_83>wall bracket<loc_371><loc_0><loc_625><loc_998><loc_432><loc_67><loc_621><loc_998>roof<loc_371><loc_0><loc_518><loc_83></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                449.6400146484375,
+                539.1900024414062
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                448.9200134277344,
+                539.1900024414062
+              ],
+              [
+                311.4000244140625,
+                35.90999984741211,
+                447.4800109863281,
+                539.1900024414062
+              ],
+              [
+                372.6000061035156,
+                36.9900016784668,
+                446.760009765625,
+                539.1900024414062
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                433.08001708984375,
+                45.09000015258789
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                433.8000183105469,
+                45.09000015258789
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                432.3600158691406,
+                45.09000015258789
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                450.3600158691406,
+                539.1900024414062
+              ],
+              [
+                311.4000244140625,
+                36.45000076293945,
+                447.4800109863281,
+                539.1900024414062
+              ],
+              [
+                267.4800109863281,
+                0.27000001072883606,
+                373.32000732421875,
+                45.09000015258789
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "triangular gable window",
+              "window frame",
+              "slate roof",
+              "wall bracket",
+              "wall bracket",
+              "roof"
+            ]
+          }
+        }
+      }
+    },
+    "front": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\front.png",
+      "caption": {
+        "raw": "</s><s>The image is of a structure. The structure is made of wood. The wood is a light brown color. The background of the image is dark blue. There is a small window at the top of the structure.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a structure. The structure is made of wood. The wood is a light brown color. The background of the image is dark blue. There is a small window at the top of the structure."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_243><loc_0><loc_758><loc_998>column<loc_244><loc_0><loc_757><loc_998><loc_676><loc_82><loc_722><loc_969><loc_280><loc_84><loc_326><loc_970>triangular gable window<loc_443><loc_8><loc_559><loc_52>window frame<loc_243><loc_0><loc_757><loc_997> slate roof<loc_243><loc_0><loc_759><loc_98>wall bracket<loc_243><loc_0><loc_760><loc_998>roof eave<loc_243><loc_0><loc_756><loc_98></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                546.1199951171875,
+                539.1900024414062
+              ],
+              [
+                176.04000854492188,
+                0.27000001072883606,
+                545.4000244140625,
+                539.1900024414062
+              ],
+              [
+                487.08001708984375,
+                44.55000305175781,
+                520.2000122070312,
+                523.530029296875
+              ],
+              [
+                201.9600067138672,
+                45.630001068115234,
+                235.0800018310547,
+                524.0700073242188
+              ],
+              [
+                319.32000732421875,
+                4.590000152587891,
+                402.84002685546875,
+                28.350000381469727
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                545.4000244140625,
+                538.6500244140625
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                546.8400268554688,
+                53.19000244140625
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                547.5599975585938,
+                539.1900024414062
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                544.6799926757812,
+                53.19000244140625
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "triangular gable window",
+              "window frame",
+              "slate roof",
+              "wall bracket",
+              "roof eave"
+            ]
+          }
+        }
+      }
+    },
+    "back": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\back.png",
+      "caption": {
+        "raw": "</s><s>The image is of a wooden structure. The structure is square and rectangle. The wood is light brown. The background of the image is black.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a wooden structure. The structure is square and rectangle. The wood is light brown. The background of the image is black."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_242><loc_0><loc_759><loc_998>column<loc_243><loc_0><loc_758><loc_998>triangular gable window<loc_244><loc_0><loc_758><loc_997><loc_316><loc_110><loc_686><loc_968>window frame<loc_243><loc_0><loc_759><loc_997> slate roof<loc_242><loc_0><loc_758><loc_87>wall bracket<loc_243><loc_0><loc_760><loc_998>roof eave<loc_242><loc_0><loc_757><loc_87></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                174.60000610351562,
+                0.27000001072883606,
+                546.8400268554688,
+                539.1900024414062
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                546.1199951171875,
+                539.1900024414062
+              ],
+              [
+                176.04000854492188,
+                0.27000001072883606,
+                546.1199951171875,
+                538.6500244140625
+              ],
+              [
+                227.8800048828125,
+                59.67000198364258,
+                494.280029296875,
+                522.9900512695312
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                546.8400268554688,
+                538.6500244140625
+              ],
+              [
+                174.60000610351562,
+                0.27000001072883606,
+                546.1199951171875,
+                47.25
+              ],
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                547.5599975585938,
+                539.1900024414062
+              ],
+              [
+                174.60000610351562,
+                0.27000001072883606,
+                545.4000244140625,
+                47.25
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "triangular gable window",
+              "triangular gable window",
+              "window frame",
+              "slate roof",
+              "wall bracket",
+              "roof eave"
+            ]
+          }
+        }
+      }
+    },
+    "front_left_45": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\front_left_45.png",
+      "caption": {
+        "raw": "</s><s>The image is of a wooden structure. The structure is made up of three wooden poles. The top of the structure is flat and rectangular. The background is dark. The wood is a light brown color.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a wooden structure. The structure is made up of three wooden poles. The top of the structure is flat and rectangular. The background is dark. The wood is a light brown color."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_244><loc_0><loc_768><loc_998>column<loc_245><loc_0><loc_767><loc_998><loc_296><loc_110><loc_363><loc_988><loc_578><loc_119><loc_639><loc_940>window frame<loc_244><loc_0><loc_767><loc_997> slate roof<loc_249><loc_0><loc_766><loc_136></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                176.04000854492188,
+                0.27000001072883606,
+                553.3200073242188,
+                539.1900024414062
+              ],
+              [
+                176.760009765625,
+                0.27000001072883606,
+                552.6000366210938,
+                539.1900024414062
+              ],
+              [
+                213.48001098632812,
+                59.67000198364258,
+                261.7200012207031,
+                533.7900390625
+              ],
+              [
+                416.52001953125,
+                64.52999877929688,
+                460.4400329589844,
+                507.8700256347656
+              ],
+              [
+                176.04000854492188,
+                0.27000001072883606,
+                552.6000366210938,
+                538.6500244140625
+              ],
+              [
+                179.6400146484375,
+                0.27000001072883606,
+                551.8800048828125,
+                73.71000671386719
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "window frame",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    },
+    "front_right_45": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\front_right_45.png",
+      "caption": {
+        "raw": "</s><s>The image is of a wooden table. The table is made of light brown wood. The background is dark. The wood is a light brown color. The top of the table is light brown and made of wood. There are two wooden poles on the table. There is a small rectangular piece of wood at the top.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a wooden table. The table is made of light brown wood. The background is dark. The wood is a light brown color. The top of the table is light brown and made of wood. There are two wooden poles on the table. There is a small rectangular piece of wood at the top."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_233><loc_0><loc_758><loc_998>column<loc_234><loc_0><loc_757><loc_998><loc_560><loc_98><loc_711><loc_988><loc_360><loc_114><loc_424><loc_942>window frame<loc_233><loc_0><loc_757><loc_997> slate roof<loc_234><loc_0><loc_752><loc_138></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                546.1199951171875,
+                539.1900024414062
+              ],
+              [
+                168.8400115966797,
+                0.27000001072883606,
+                545.4000244140625,
+                539.1900024414062
+              ],
+              [
+                403.5600280761719,
+                53.19000244140625,
+                512.280029296875,
+                533.7900390625
+              ],
+              [
+                259.55999755859375,
+                61.83000183105469,
+                305.6400146484375,
+                508.95001220703125
+              ],
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                545.4000244140625,
+                538.6500244140625
+              ],
+              [
+                168.8400115966797,
+                0.27000001072883606,
+                541.800048828125,
+                74.79000091552734
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "window frame",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    },
+    "back_left_45": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\back_left_45.png",
+      "caption": {
+        "raw": "</s><s>The image is of a wooden structure. The structure is made of light brown wood. The background is dark. The wood is a light brown color. The top of the structure is light brown and made of small square tiles. The legs are also light brown. There is a small platform underneath the structure.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a wooden structure. The structure is made of light brown wood. The background is dark. The wood is a light brown color. The top of the structure is light brown and made of small square tiles. The legs are also light brown. There is a small platform underneath the structure."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_243><loc_0><loc_768><loc_998>column<loc_244><loc_0><loc_767><loc_998><loc_576><loc_137><loc_640><loc_998><loc_296><loc_105><loc_362><loc_951>slate roof<loc_248><loc_0><loc_766><loc_125></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                175.32000732421875,
+                0.27000001072883606,
+                553.3200073242188,
+                539.1900024414062
+              ],
+              [
+                176.04000854492188,
+                0.27000001072883606,
+                552.6000366210938,
+                539.1900024414062
+              ],
+              [
+                415.08001708984375,
+                74.25,
+                461.1600036621094,
+                539.1900024414062
+              ],
+              [
+                213.48001098632812,
+                56.970001220703125,
+                261.0,
+                513.8099975585938
+              ],
+              [
+                178.92001342773438,
+                0.27000001072883606,
+                551.8800048828125,
+                67.77000427246094
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    },
+    "back_right_45": {
+      "path": "preview\\qa\\wooden_entrance_porch\\v4_ten_view\\back_right_45.png",
+      "caption": {
+        "raw": "</s><s>The image is of a wooden table. The table is made of light brown wood. The background is dark. The wood is a light brown color. The top of the table is white. The legs of the tables are also light brown. There is a small platform under the table on the bottom. The image is a 3D rendering.</s>",
+        "parsed": {
+          "<MORE_DETAILED_CAPTION>": "The image is of a wooden table. The table is made of light brown wood. The background is dark. The wood is a light brown color. The top of the table is white. The legs of the tables are also light brown. There is a small platform under the table on the bottom. The image is a 3D rendering."
+        }
+      },
+      "grounding": {
+        "raw": "</s><s>timber post<loc_233><loc_0><loc_758><loc_998>column<loc_233><loc_0><loc_757><loc_998><loc_358><loc_125><loc_424><loc_998><loc_639><loc_105><loc_703><loc_950>window frame<loc_233><loc_0><loc_759><loc_998> slate roof<loc_233><loc_0><loc_752><loc_123></s>",
+        "parsed": {
+          "<CAPTION_TO_PHRASE_GROUNDING>": {
+            "bboxes": [
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                546.1199951171875,
+                539.1900024414062
+              ],
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                545.4000244140625,
+                539.1900024414062
+              ],
+              [
+                258.1199951171875,
+                67.77000427246094,
+                305.6400146484375,
+                539.1900024414062
+              ],
+              [
+                460.4400329589844,
+                56.970001220703125,
+                506.52001953125,
+                513.27001953125
+              ],
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                546.8400268554688,
+                539.1900024414062
+              ],
+              [
+                168.12001037597656,
+                0.27000001072883606,
+                541.800048828125,
+                66.69000244140625
+              ]
+            ],
+            "labels": [
+              "timber post",
+              "column",
+              "column",
+              "column",
+              "window frame",
+              "slate roof"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "grounding_summary": {
+    "per_view": {
+      "top": {
+        "timber post": 1,
+        "column": 1,
+        "triangular gable window": 1,
+        "window frame": 1,
+        "slate roof": 1
+      },
+      "bottom": {
+        "timber post": 1,
+        "column": 1,
+        "window frame": 1,
+        "slate roof": 1
+      },
+      "left": {
+        "timber post": 1,
+        "column": 4,
+        "window frame": 1,
+        "slate roof": 1,
+        "wall bracket": 1,
+        "roof eave": 1
+      },
+      "right": {
+        "timber post": 1,
+        "column": 3,
+        "triangular gable window": 1,
+        "window frame": 1,
+        "slate roof": 1,
+        "wall bracket": 2,
+        "roof": 1
+      },
+      "front": {
+        "timber post": 1,
+        "column": 3,
+        "triangular gable window": 1,
+        "window frame": 1,
+        "slate roof": 1,
+        "wall bracket": 1,
+        "roof eave": 1
+      },
+      "back": {
+        "timber post": 1,
+        "column": 1,
+        "triangular gable window": 2,
+        "window frame": 1,
+        "slate roof": 1,
+        "wall bracket": 1,
+        "roof eave": 1
+      },
+      "front_left_45": {
+        "timber post": 1,
+        "column": 3,
+        "window frame": 1,
+        "slate roof": 1
+      },
+      "front_right_45": {
+        "timber post": 1,
+        "column": 3,
+        "window frame": 1,
+        "slate roof": 1
+      },
+      "back_left_45": {
+        "timber post": 1,
+        "column": 3,
+        "slate roof": 1
+      },
+      "back_right_45": {
+        "timber post": 1,
+        "column": 3,
+        "window frame": 1,
+        "slate roof": 1
+      }
+    },
+    "aggregate": {
+      "timber post": {
+        "max": 1,
+        "min": 1,
+        "views_seen": 10
+      },
+      "column": {
+        "max": 4,
+        "min": 1,
+        "views_seen": 10
+      },
+      "triangular gable window": {
+        "max": 2,
+        "min": 1,
+        "views_seen": 4
+      },
+      "window frame": {
+        "max": 1,
+        "min": 1,
+        "views_seen": 9
+      },
+      "slate roof": {
+        "max": 1,
+        "min": 1,
+        "views_seen": 10
+      },
+      "wall bracket": {
+        "max": 2,
+        "min": 1,
+        "views_seen": 4
+      },
+      "roof eave": {
+        "max": 1,
+        "min": 1,
+        "views_seen": 3
+      },
+      "roof": {
+        "max": 1,
+        "min": 1,
+        "views_seen": 1
+      }
+    }
+  },
+  "multi_view_evidence": {
+    "column": {
+      "view_count": 10,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7292
+            },
+            {
+              "rgb": [
+                52,
+                43,
+                37
+              ],
+              "hex": "#342B25",
+              "sample_ratio": 0.0562
+            },
+            {
+              "rgb": [
+                42,
+                37,
+                33
+              ],
+              "hex": "#2A2521",
+              "sample_ratio": 0.0486
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0405
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0364
+            },
+            {
+              "rgb": [
+                104,
+                87,
+                74
+              ],
+              "hex": "#68574A",
+              "sample_ratio": 0.036
+            },
+            {
+              "rgb": [
+                33,
+                29,
+                26
+              ],
+              "hex": "#211D1A",
+              "sample_ratio": 0.0283
+            },
+            {
+              "rgb": [
+                40,
+                35,
+                32
+              ],
+              "hex": "#282320",
+              "sample_ratio": 0.0248
+            }
+          ],
+          "size": [
+            499,
+            540
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_back.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.684
+            },
+            {
+              "rgb": [
+                136,
+                116,
+                100
+              ],
+              "hex": "#887464",
+              "sample_ratio": 0.1375
+            },
+            {
+              "rgb": [
+                64,
+                56,
+                51
+              ],
+              "hex": "#403833",
+              "sample_ratio": 0.0588
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0479
+            },
+            {
+              "rgb": [
+                27,
+                32,
+                36
+              ],
+              "hex": "#1B2024",
+              "sample_ratio": 0.0349
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0201
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0165
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0004
+            }
+          ],
+          "size": [
+            500,
+            540
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.8106
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0455
+            },
+            {
+              "rgb": [
+                33,
+                24,
+                17
+              ],
+              "hex": "#211811",
+              "sample_ratio": 0.0443
+            },
+            {
+              "rgb": [
+                37,
+                32,
+                28
+              ],
+              "hex": "#25201C",
+              "sample_ratio": 0.0335
+            },
+            {
+              "rgb": [
+                113,
+                105,
+                96
+              ],
+              "hex": "#716960",
+              "sample_ratio": 0.025
+            },
+            {
+              "rgb": [
+                40,
+                39,
+                38
+              ],
+              "hex": "#282726",
+              "sample_ratio": 0.014
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0136
+            },
+            {
+              "rgb": [
+                40,
+                35,
+                31
+              ],
+              "hex": "#28231F",
+              "sample_ratio": 0.0134
+            }
+          ],
+          "size": [
+            309,
+            540
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7464
+            },
+            {
+              "rgb": [
+                172,
+                158,
+                147
+              ],
+              "hex": "#AC9E93",
+              "sample_ratio": 0.0949
+            },
+            {
+              "rgb": [
+                63,
+                59,
+                57
+              ],
+              "hex": "#3F3B39",
+              "sample_ratio": 0.0483
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0432
+            },
+            {
+              "rgb": [
+                25,
+                30,
+                33
+              ],
+              "hex": "#191E21",
+              "sample_ratio": 0.0358
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0227
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.008
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0008
+            }
+          ],
+          "size": [
+            311,
+            540
+          ]
+        },
+        "front_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_front_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6905
+            },
+            {
+              "rgb": [
+                46,
+                40,
+                36
+              ],
+              "hex": "#2E2824",
+              "sample_ratio": 0.0981
+            },
+            {
+              "rgb": [
+                100,
+                88,
+                79
+              ],
+              "hex": "#64584F",
+              "sample_ratio": 0.0709
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.047
+            },
+            {
+              "rgb": [
+                34,
+                30,
+                27
+              ],
+              "hex": "#221E1B",
+              "sample_ratio": 0.0373
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0289
+            },
+            {
+              "rgb": [
+                38,
+                35,
+                33
+              ],
+              "hex": "#262321",
+              "sample_ratio": 0.0189
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0083
+            }
+          ],
+          "size": [
+            505,
+            540
+          ]
+        },
+        "front_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_front_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6725
+            },
+            {
+              "rgb": [
+                149,
+                134,
+                122
+              ],
+              "hex": "#95867A",
+              "sample_ratio": 0.1017
+            },
+            {
+              "rgb": [
+                49,
+                44,
+                41
+              ],
+              "hex": "#312C29",
+              "sample_ratio": 0.0758
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0475
+            },
+            {
+              "rgb": [
+                33,
+                30,
+                29
+              ],
+              "hex": "#211E1D",
+              "sample_ratio": 0.033
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0325
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                34
+              ],
+              "hex": "#252322",
+              "sample_ratio": 0.0295
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0075
+            }
+          ],
+          "size": [
+            506,
+            540
+          ]
+        },
+        "back_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_back_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6742
+            },
+            {
+              "rgb": [
+                122,
+                101,
+                86
+              ],
+              "hex": "#7A6556",
+              "sample_ratio": 0.088
+            },
+            {
+              "rgb": [
+                58,
+                52,
+                47
+              ],
+              "hex": "#3A342F",
+              "sample_ratio": 0.0635
+            },
+            {
+              "rgb": [
+                156,
+                145,
+                134
+              ],
+              "hex": "#9C9186",
+              "sample_ratio": 0.0483
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0431
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0328
+            },
+            {
+              "rgb": [
+                30,
+                30,
+                30
+              ],
+              "hex": "#1E1E1E",
+              "sample_ratio": 0.031
+            },
+            {
+              "rgb": [
+                33,
+                35,
+                37
+              ],
+              "hex": "#212325",
+              "sample_ratio": 0.0192
+            }
+          ],
+          "size": [
+            506,
+            540
+          ]
+        },
+        "back_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_back_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6503
+            },
+            {
+              "rgb": [
+                159,
+                143,
+                131
+              ],
+              "hex": "#9F8F83",
+              "sample_ratio": 0.1427
+            },
+            {
+              "rgb": [
+                71,
+                63,
+                57
+              ],
+              "hex": "#473F39",
+              "sample_ratio": 0.0799
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0551
+            },
+            {
+              "rgb": [
+                27,
+                32,
+                36
+              ],
+              "hex": "#1B2024",
+              "sample_ratio": 0.03
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0211
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0199
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.001
+            }
+          ],
+          "size": [
+            507,
+            540
+          ]
+        },
+        "top": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_top.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.399
+            },
+            {
+              "rgb": [
+                117,
+                107,
+                96
+              ],
+              "hex": "#756B60",
+              "sample_ratio": 0.2547
+            },
+            {
+              "rgb": [
+                182,
+                177,
+                170
+              ],
+              "hex": "#B6B1AA",
+              "sample_ratio": 0.1949
+            },
+            {
+              "rgb": [
+                49,
+                45,
+                42
+              ],
+              "hex": "#312D2A",
+              "sample_ratio": 0.0871
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0296
+            },
+            {
+              "rgb": [
+                25,
+                30,
+                34
+              ],
+              "hex": "#191E22",
+              "sample_ratio": 0.0247
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0076
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0024
+            }
+          ],
+          "size": [
+            459,
+            268
+          ]
+        },
+        "bottom": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\column_bottom.png",
+          "palette": [
+            {
+              "rgb": [
+                114,
+                94,
+                79
+              ],
+              "hex": "#725E4F",
+              "sample_ratio": 0.1734
+            },
+            {
+              "rgb": [
+                12,
+                11,
+                10
+              ],
+              "hex": "#0C0B0A",
+              "sample_ratio": 0.1654
+            },
+            {
+              "rgb": [
+                157,
+                155,
+                151
+              ],
+              "hex": "#9D9B97",
+              "sample_ratio": 0.1438
+            },
+            {
+              "rgb": [
+                1,
+                0,
+                0
+              ],
+              "hex": "#010000",
+              "sample_ratio": 0.1369
+            },
+            {
+              "rgb": [
+                127,
+                111,
+                99
+              ],
+              "hex": "#7F6F63",
+              "sample_ratio": 0.1128
+            },
+            {
+              "rgb": [
+                139,
+                134,
+                126
+              ],
+              "hex": "#8B867E",
+              "sample_ratio": 0.1121
+            },
+            {
+              "rgb": [
+                5,
+                3,
+                2
+              ],
+              "hex": "#050302",
+              "sample_ratio": 0.0975
+            },
+            {
+              "rgb": [
+                60,
+                50,
+                42
+              ],
+              "hex": "#3C322A",
+              "sample_ratio": 0.058
+            }
+          ],
+          "size": [
+            43,
+            98
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\column_multi_view_contact_sheet.jpg"
+    },
+    "roof": {
+      "view_count": 1,
+      "views": {
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\roof_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.2502
+            },
+            {
+              "rgb": [
+                222,
+                221,
+                219
+              ],
+              "hex": "#DEDDDB",
+              "sample_ratio": 0.1604
+            },
+            {
+              "rgb": [
+                124,
+                126,
+                126
+              ],
+              "hex": "#7C7E7E",
+              "sample_ratio": 0.1461
+            },
+            {
+              "rgb": [
+                140,
+                139,
+                136
+              ],
+              "hex": "#8C8B88",
+              "sample_ratio": 0.1405
+            },
+            {
+              "rgb": [
+                103,
+                97,
+                92
+              ],
+              "hex": "#67615C",
+              "sample_ratio": 0.1022
+            },
+            {
+              "rgb": [
+                193,
+                181,
+                172
+              ],
+              "hex": "#C1B5AC",
+              "sample_ratio": 0.0938
+            },
+            {
+              "rgb": [
+                49,
+                46,
+                44
+              ],
+              "hex": "#312E2C",
+              "sample_ratio": 0.0673
+            },
+            {
+              "rgb": [
+                31,
+                30,
+                30
+              ],
+              "hex": "#1F1E1E",
+              "sample_ratio": 0.0395
+            }
+          ],
+          "size": [
+            131,
+            58
+          ]
+        }
+      },
+      "contact_sheet": null
+    },
+    "roof eave": {
+      "view_count": 3,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\roof eave_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4162
+            },
+            {
+              "rgb": [
+                45,
+                37,
+                31
+              ],
+              "hex": "#2D251F",
+              "sample_ratio": 0.19
+            },
+            {
+              "rgb": [
+                27,
+                20,
+                15
+              ],
+              "hex": "#1B140F",
+              "sample_ratio": 0.0982
+            },
+            {
+              "rgb": [
+                95,
+                81,
+                70
+              ],
+              "hex": "#5F5146",
+              "sample_ratio": 0.0977
+            },
+            {
+              "rgb": [
+                38,
+                32,
+                28
+              ],
+              "hex": "#26201C",
+              "sample_ratio": 0.0933
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0417
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0362
+            },
+            {
+              "rgb": [
+                41,
+                35,
+                31
+              ],
+              "hex": "#29231F",
+              "sample_ratio": 0.0268
+            }
+          ],
+          "size": [
+            458,
+            98
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\roof eave_back.png",
+          "palette": [
+            {
+              "rgb": [
+                99,
+                79,
+                65
+              ],
+              "hex": "#634F41",
+              "sample_ratio": 0.3262
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.324
+            },
+            {
+              "rgb": [
+                160,
+                147,
+                136
+              ],
+              "hex": "#A09388",
+              "sample_ratio": 0.1738
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0565
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0378
+            },
+            {
+              "rgb": [
+                42,
+                41,
+                41
+              ],
+              "hex": "#2A2929",
+              "sample_ratio": 0.0373
+            },
+            {
+              "rgb": [
+                27,
+                31,
+                35
+              ],
+              "hex": "#1B1F23",
+              "sample_ratio": 0.0334
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.011
+            }
+          ],
+          "size": [
+            460,
+            92
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\roof eave_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3194
+            },
+            {
+              "rgb": [
+                138,
+                130,
+                119
+              ],
+              "hex": "#8A8277",
+              "sample_ratio": 0.241
+            },
+            {
+              "rgb": [
+                85,
+                79,
+                71
+              ],
+              "hex": "#554F47",
+              "sample_ratio": 0.1576
+            },
+            {
+              "rgb": [
+                28,
+                21,
+                17
+              ],
+              "hex": "#1C1511",
+              "sample_ratio": 0.1406
+            },
+            {
+              "rgb": [
+                47,
+                46,
+                43
+              ],
+              "hex": "#2F2E2B",
+              "sample_ratio": 0.0545
+            },
+            {
+              "rgb": [
+                35,
+                35,
+                34
+              ],
+              "hex": "#232322",
+              "sample_ratio": 0.0385
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0382
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0101
+            }
+          ],
+          "size": [
+            205,
+            63
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\roof eave_multi_view_contact_sheet.jpg"
+    },
+    "slate roof": {
+      "view_count": 10,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4359
+            },
+            {
+              "rgb": [
+                47,
+                38,
+                31
+              ],
+              "hex": "#2F261F",
+              "sample_ratio": 0.187
+            },
+            {
+              "rgb": [
+                26,
+                19,
+                14
+              ],
+              "hex": "#1A130E",
+              "sample_ratio": 0.1062
+            },
+            {
+              "rgb": [
+                96,
+                82,
+                71
+              ],
+              "hex": "#605247",
+              "sample_ratio": 0.0964
+            },
+            {
+              "rgb": [
+                39,
+                32,
+                27
+              ],
+              "hex": "#27201B",
+              "sample_ratio": 0.0906
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0349
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0255
+            },
+            {
+              "rgb": [
+                41,
+                35,
+                31
+              ],
+              "hex": "#29231F",
+              "sample_ratio": 0.0234
+            }
+          ],
+          "size": [
+            460,
+            98
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_back.png",
+          "palette": [
+            {
+              "rgb": [
+                99,
+                79,
+                65
+              ],
+              "hex": "#634F41",
+              "sample_ratio": 0.3246
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3196
+            },
+            {
+              "rgb": [
+                160,
+                147,
+                137
+              ],
+              "hex": "#A09389",
+              "sample_ratio": 0.1743
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.062
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0384
+            },
+            {
+              "rgb": [
+                41,
+                41,
+                41
+              ],
+              "hex": "#292929",
+              "sample_ratio": 0.0362
+            },
+            {
+              "rgb": [
+                27,
+                31,
+                34
+              ],
+              "hex": "#1B1F22",
+              "sample_ratio": 0.0329
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0121
+            }
+          ],
+          "size": [
+            461,
+            92
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3448
+            },
+            {
+              "rgb": [
+                138,
+                130,
+                119
+              ],
+              "hex": "#8A8277",
+              "sample_ratio": 0.2434
+            },
+            {
+              "rgb": [
+                86,
+                79,
+                71
+              ],
+              "hex": "#564F47",
+              "sample_ratio": 0.1517
+            },
+            {
+              "rgb": [
+                28,
+                22,
+                17
+              ],
+              "hex": "#1C1611",
+              "sample_ratio": 0.1448
+            },
+            {
+              "rgb": [
+                47,
+                46,
+                44
+              ],
+              "hex": "#2F2E2C",
+              "sample_ratio": 0.0611
+            },
+            {
+              "rgb": [
+                35,
+                35,
+                35
+              ],
+              "hex": "#232323",
+              "sample_ratio": 0.0267
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0156
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0118
+            }
+          ],
+          "size": [
+            204,
+            63
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3172
+            },
+            {
+              "rgb": [
+                146,
+                140,
+                135
+              ],
+              "hex": "#928C87",
+              "sample_ratio": 0.2665
+            },
+            {
+              "rgb": [
+                215,
+                212,
+                208
+              ],
+              "hex": "#D7D4D0",
+              "sample_ratio": 0.2433
+            },
+            {
+              "rgb": [
+                70,
+                65,
+                62
+              ],
+              "hex": "#46413E",
+              "sample_ratio": 0.0867
+            },
+            {
+              "rgb": [
+                28,
+                30,
+                31
+              ],
+              "hex": "#1C1E1F",
+              "sample_ratio": 0.036
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                34
+              ],
+              "hex": "#252322",
+              "sample_ratio": 0.0292
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0144
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0067
+            }
+          ],
+          "size": [
+            204,
+            65
+          ]
+        },
+        "front_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_front_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4321
+            },
+            {
+              "rgb": [
+                49,
+                42,
+                37
+              ],
+              "hex": "#312A25",
+              "sample_ratio": 0.1704
+            },
+            {
+              "rgb": [
+                115,
+                106,
+                97
+              ],
+              "hex": "#736A61",
+              "sample_ratio": 0.1388
+            },
+            {
+              "rgb": [
+                32,
+                27,
+                24
+              ],
+              "hex": "#201B18",
+              "sample_ratio": 0.0912
+            },
+            {
+              "rgb": [
+                41,
+                35,
+                31
+              ],
+              "hex": "#29231F",
+              "sample_ratio": 0.0658
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0512
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0321
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0183
+            }
+          ],
+          "size": [
+            462,
+            118
+          ]
+        },
+        "front_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_front_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4317
+            },
+            {
+              "rgb": [
+                172,
+                163,
+                155
+              ],
+              "hex": "#ACA39B",
+              "sample_ratio": 0.2037
+            },
+            {
+              "rgb": [
+                42,
+                35,
+                30
+              ],
+              "hex": "#2A231E",
+              "sample_ratio": 0.1108
+            },
+            {
+              "rgb": [
+                57,
+                50,
+                44
+              ],
+              "hex": "#39322C",
+              "sample_ratio": 0.0933
+            },
+            {
+              "rgb": [
+                32,
+                27,
+                24
+              ],
+              "hex": "#201B18",
+              "sample_ratio": 0.0688
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0488
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0275
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0154
+            }
+          ],
+          "size": [
+            463,
+            120
+          ]
+        },
+        "back_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_back_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3854
+            },
+            {
+              "rgb": [
+                136,
+                122,
+                109
+              ],
+              "hex": "#887A6D",
+              "sample_ratio": 0.2178
+            },
+            {
+              "rgb": [
+                80,
+                70,
+                62
+              ],
+              "hex": "#50463E",
+              "sample_ratio": 0.1168
+            },
+            {
+              "rgb": [
+                174,
+                169,
+                162
+              ],
+              "hex": "#AEA9A2",
+              "sample_ratio": 0.0965
+            },
+            {
+              "rgb": [
+                34,
+                35,
+                37
+              ],
+              "hex": "#222325",
+              "sample_ratio": 0.0512
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.048
+            },
+            {
+              "rgb": [
+                29,
+                28,
+                28
+              ],
+              "hex": "#1D1C1C",
+              "sample_ratio": 0.0466
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0376
+            }
+          ],
+          "size": [
+            463,
+            113
+          ]
+        },
+        "back_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_back_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.375
+            },
+            {
+              "rgb": [
+                108,
+                91,
+                78
+              ],
+              "hex": "#6C5B4E",
+              "sample_ratio": 0.2459
+            },
+            {
+              "rgb": [
+                186,
+                180,
+                175
+              ],
+              "hex": "#BAB4AF",
+              "sample_ratio": 0.2156
+            },
+            {
+              "rgb": [
+                34,
+                37,
+                40
+              ],
+              "hex": "#222528",
+              "sample_ratio": 0.0657
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                35
+              ],
+              "hex": "#1A1F23",
+              "sample_ratio": 0.0394
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0272
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0204
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0109
+            }
+          ],
+          "size": [
+            464,
+            112
+          ]
+        },
+        "top": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_top.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3984
+            },
+            {
+              "rgb": [
+                118,
+                107,
+                96
+              ],
+              "hex": "#766B60",
+              "sample_ratio": 0.2667
+            },
+            {
+              "rgb": [
+                182,
+                177,
+                170
+              ],
+              "hex": "#B6B1AA",
+              "sample_ratio": 0.194
+            },
+            {
+              "rgb": [
+                50,
+                45,
+                42
+              ],
+              "hex": "#322D2A",
+              "sample_ratio": 0.0763
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0299
+            },
+            {
+              "rgb": [
+                25,
+                30,
+                34
+              ],
+              "hex": "#191E22",
+              "sample_ratio": 0.0246
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0086
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0015
+            }
+          ],
+          "size": [
+            459,
+            267
+          ]
+        },
+        "bottom": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\slate roof_bottom.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3268
+            },
+            {
+              "rgb": [
+                1,
+                1,
+                1
+              ],
+              "hex": "#010101",
+              "sample_ratio": 0.2485
+            },
+            {
+              "rgb": [
+                106,
+                103,
+                98
+              ],
+              "hex": "#6A6762",
+              "sample_ratio": 0.1187
+            },
+            {
+              "rgb": [
+                51,
+                51,
+                49
+              ],
+              "hex": "#333331",
+              "sample_ratio": 0.1071
+            },
+            {
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "hex": "#000000",
+              "sample_ratio": 0.0673
+            },
+            {
+              "rgb": [
+                16,
+                16,
+                16
+              ],
+              "hex": "#101010",
+              "sample_ratio": 0.05
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0458
+            },
+            {
+              "rgb": [
+                35,
+                35,
+                33
+              ],
+              "hex": "#232321",
+              "sample_ratio": 0.0357
+            }
+          ],
+          "size": [
+            434,
+            157
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\slate roof_multi_view_contact_sheet.jpg"
+    },
+    "timber post": {
+      "view_count": 10,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7273
+            },
+            {
+              "rgb": [
+                43,
+                37,
+                33
+              ],
+              "hex": "#2B2521",
+              "sample_ratio": 0.0968
+            },
+            {
+              "rgb": [
+                82,
+                68,
+                59
+              ],
+              "hex": "#52443B",
+              "sample_ratio": 0.0472
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0368
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0344
+            },
+            {
+              "rgb": [
+                32,
+                28,
+                26
+              ],
+              "hex": "#201C1A",
+              "sample_ratio": 0.0281
+            },
+            {
+              "rgb": [
+                40,
+                35,
+                32
+              ],
+              "hex": "#282320",
+              "sample_ratio": 0.0247
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0048
+            }
+          ],
+          "size": [
+            500,
+            540
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_back.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6689
+            },
+            {
+              "rgb": [
+                118,
+                95,
+                78
+              ],
+              "hex": "#765F4E",
+              "sample_ratio": 0.1148
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0619
+            },
+            {
+              "rgb": [
+                26,
+                32,
+                36
+              ],
+              "hex": "#1A2024",
+              "sample_ratio": 0.0474
+            },
+            {
+              "rgb": [
+                60,
+                54,
+                50
+              ],
+              "hex": "#3C3632",
+              "sample_ratio": 0.0461
+            },
+            {
+              "rgb": [
+                151,
+                133,
+                118
+              ],
+              "hex": "#978576",
+              "sample_ratio": 0.0372
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0165
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0071
+            }
+          ],
+          "size": [
+            502,
+            540
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.8085
+            },
+            {
+              "rgb": [
+                33,
+                24,
+                16
+              ],
+              "hex": "#211810",
+              "sample_ratio": 0.0439
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0434
+            },
+            {
+              "rgb": [
+                37,
+                32,
+                28
+              ],
+              "hex": "#25201C",
+              "sample_ratio": 0.0364
+            },
+            {
+              "rgb": [
+                111,
+                104,
+                95
+              ],
+              "hex": "#6F685F",
+              "sample_ratio": 0.0261
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0161
+            },
+            {
+              "rgb": [
+                39,
+                35,
+                32
+              ],
+              "hex": "#272320",
+              "sample_ratio": 0.0131
+            },
+            {
+              "rgb": [
+                38,
+                39,
+                38
+              ],
+              "hex": "#262726",
+              "sample_ratio": 0.0125
+            }
+          ],
+          "size": [
+            308,
+            540
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7464
+            },
+            {
+              "rgb": [
+                172,
+                158,
+                147
+              ],
+              "hex": "#AC9E93",
+              "sample_ratio": 0.0949
+            },
+            {
+              "rgb": [
+                63,
+                59,
+                57
+              ],
+              "hex": "#3F3B39",
+              "sample_ratio": 0.0483
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0432
+            },
+            {
+              "rgb": [
+                25,
+                30,
+                33
+              ],
+              "hex": "#191E21",
+              "sample_ratio": 0.0358
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0227
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.008
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0008
+            }
+          ],
+          "size": [
+            311,
+            540
+          ]
+        },
+        "front_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_front_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.686
+            },
+            {
+              "rgb": [
+                47,
+                40,
+                36
+              ],
+              "hex": "#2F2824",
+              "sample_ratio": 0.1029
+            },
+            {
+              "rgb": [
+                101,
+                89,
+                80
+              ],
+              "hex": "#655950",
+              "sample_ratio": 0.0692
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0444
+            },
+            {
+              "rgb": [
+                33,
+                30,
+                28
+              ],
+              "hex": "#211E1C",
+              "sample_ratio": 0.0384
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0338
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                34
+              ],
+              "hex": "#252322",
+              "sample_ratio": 0.0141
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0111
+            }
+          ],
+          "size": [
+            507,
+            540
+          ]
+        },
+        "front_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_front_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6828
+            },
+            {
+              "rgb": [
+                150,
+                135,
+                123
+              ],
+              "hex": "#96877B",
+              "sample_ratio": 0.1015
+            },
+            {
+              "rgb": [
+                50,
+                45,
+                42
+              ],
+              "hex": "#322D2A",
+              "sample_ratio": 0.0701
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0494
+            },
+            {
+              "rgb": [
+                33,
+                30,
+                28
+              ],
+              "hex": "#211E1C",
+              "sample_ratio": 0.0387
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0292
+            },
+            {
+              "rgb": [
+                36,
+                35,
+                35
+              ],
+              "hex": "#242323",
+              "sample_ratio": 0.0241
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0043
+            }
+          ],
+          "size": [
+            508,
+            540
+          ]
+        },
+        "back_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_back_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6745
+            },
+            {
+              "rgb": [
+                140,
+                124,
+                111
+              ],
+              "hex": "#8C7C6F",
+              "sample_ratio": 0.1222
+            },
+            {
+              "rgb": [
+                58,
+                52,
+                47
+              ],
+              "hex": "#3A342F",
+              "sample_ratio": 0.0707
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0509
+            },
+            {
+              "rgb": [
+                30,
+                30,
+                30
+              ],
+              "hex": "#1E1E1E",
+              "sample_ratio": 0.0324
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                34
+              ],
+              "hex": "#252322",
+              "sample_ratio": 0.0253
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0141
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0097
+            }
+          ],
+          "size": [
+            507,
+            540
+          ]
+        },
+        "back_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_back_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6575
+            },
+            {
+              "rgb": [
+                136,
+                115,
+                99
+              ],
+              "hex": "#887363",
+              "sample_ratio": 0.1191
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0565
+            },
+            {
+              "rgb": [
+                182,
+                172,
+                163
+              ],
+              "hex": "#B6ACA3",
+              "sample_ratio": 0.0549
+            },
+            {
+              "rgb": [
+                72,
+                64,
+                57
+              ],
+              "hex": "#484039",
+              "sample_ratio": 0.0481
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                35
+              ],
+              "hex": "#1A1F23",
+              "sample_ratio": 0.0295
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0208
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0135
+            }
+          ],
+          "size": [
+            508,
+            540
+          ]
+        },
+        "top": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_top.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3828
+            },
+            {
+              "rgb": [
+                117,
+                105,
+                94
+              ],
+              "hex": "#75695E",
+              "sample_ratio": 0.2558
+            },
+            {
+              "rgb": [
+                180,
+                175,
+                169
+              ],
+              "hex": "#B4AFA9",
+              "sample_ratio": 0.1981
+            },
+            {
+              "rgb": [
+                46,
+                44,
+                42
+              ],
+              "hex": "#2E2C2A",
+              "sample_ratio": 0.08
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0283
+            },
+            {
+              "rgb": [
+                26,
+                32,
+                35
+              ],
+              "hex": "#1A2023",
+              "sample_ratio": 0.0225
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0179
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0147
+            }
+          ],
+          "size": [
+            461,
+            269
+          ]
+        },
+        "bottom": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\timber post_bottom.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4107
+            },
+            {
+              "rgb": [
+                1,
+                1,
+                1
+              ],
+              "hex": "#010101",
+              "sample_ratio": 0.2465
+            },
+            {
+              "rgb": [
+                76,
+                74,
+                71
+              ],
+              "hex": "#4C4A47",
+              "sample_ratio": 0.1375
+            },
+            {
+              "rgb": [
+                17,
+                16,
+                15
+              ],
+              "hex": "#11100F",
+              "sample_ratio": 0.0796
+            },
+            {
+              "rgb": [
+                35,
+                35,
+                34
+              ],
+              "hex": "#232322",
+              "sample_ratio": 0.0593
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0404
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0216
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0045
+            }
+          ],
+          "size": [
+            462,
+            268
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\timber post_multi_view_contact_sheet.jpg"
+    },
+    "triangular gable window": {
+      "view_count": 4,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\triangular gable window_front.png",
+          "palette": [
+            {
+              "rgb": [
+                49,
+                37,
+                28
+              ],
+              "hex": "#31251C",
+              "sample_ratio": 0.194
+            },
+            {
+              "rgb": [
+                70,
+                80,
+                84
+              ],
+              "hex": "#465054",
+              "sample_ratio": 0.1423
+            },
+            {
+              "rgb": [
+                43,
+                32,
+                25
+              ],
+              "hex": "#2B2019",
+              "sample_ratio": 0.1414
+            },
+            {
+              "rgb": [
+                29,
+                22,
+                16
+              ],
+              "hex": "#1D1610",
+              "sample_ratio": 0.1396
+            },
+            {
+              "rgb": [
+                46,
+                35,
+                27
+              ],
+              "hex": "#2E231B",
+              "sample_ratio": 0.1259
+            },
+            {
+              "rgb": [
+                26,
+                19,
+                14
+              ],
+              "hex": "#1A130E",
+              "sample_ratio": 0.092
+            },
+            {
+              "rgb": [
+                37,
+                28,
+                21
+              ],
+              "hex": "#251C15",
+              "sample_ratio": 0.0836
+            },
+            {
+              "rgb": [
+                53,
+                43,
+                35
+              ],
+              "hex": "#352B23",
+              "sample_ratio": 0.0813
+            }
+          ],
+          "size": [
+            104,
+            38
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\triangular gable window_back.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.684
+            },
+            {
+              "rgb": [
+                136,
+                116,
+                100
+              ],
+              "hex": "#887464",
+              "sample_ratio": 0.1375
+            },
+            {
+              "rgb": [
+                64,
+                56,
+                51
+              ],
+              "hex": "#403833",
+              "sample_ratio": 0.0588
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0479
+            },
+            {
+              "rgb": [
+                27,
+                32,
+                36
+              ],
+              "hex": "#1B2024",
+              "sample_ratio": 0.0349
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0201
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0165
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0004
+            }
+          ],
+          "size": [
+            500,
+            540
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\triangular gable window_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.2712
+            },
+            {
+              "rgb": [
+                146,
+                140,
+                135
+              ],
+              "hex": "#928C87",
+              "sample_ratio": 0.2712
+            },
+            {
+              "rgb": [
+                214,
+                211,
+                207
+              ],
+              "hex": "#D6D3CF",
+              "sample_ratio": 0.2406
+            },
+            {
+              "rgb": [
+                68,
+                63,
+                60
+              ],
+              "hex": "#443F3C",
+              "sample_ratio": 0.0865
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0542
+            },
+            {
+              "rgb": [
+                28,
+                30,
+                31
+              ],
+              "hex": "#1C1E1F",
+              "sample_ratio": 0.0354
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0257
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0153
+            }
+          ],
+          "size": [
+            205,
+            65
+          ]
+        },
+        "top": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\triangular gable window_top.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3806
+            },
+            {
+              "rgb": [
+                116,
+                105,
+                94
+              ],
+              "hex": "#74695E",
+              "sample_ratio": 0.2563
+            },
+            {
+              "rgb": [
+                180,
+                175,
+                169
+              ],
+              "hex": "#B4AFA9",
+              "sample_ratio": 0.1992
+            },
+            {
+              "rgb": [
+                47,
+                44,
+                42
+              ],
+              "hex": "#2F2C2A",
+              "sample_ratio": 0.0802
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0294
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                35
+              ],
+              "hex": "#1A1F23",
+              "sample_ratio": 0.024
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0169
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0134
+            }
+          ],
+          "size": [
+            460,
+            269
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\triangular gable window_multi_view_contact_sheet.jpg"
+    },
+    "wall bracket": {
+      "view_count": 4,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\wall bracket_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.734
+            },
+            {
+              "rgb": [
+                43,
+                37,
+                33
+              ],
+              "hex": "#2B2521",
+              "sample_ratio": 0.0694
+            },
+            {
+              "rgb": [
+                56,
+                47,
+                40
+              ],
+              "hex": "#382F28",
+              "sample_ratio": 0.0431
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0378
+            },
+            {
+              "rgb": [
+                106,
+                89,
+                77
+              ],
+              "hex": "#6A594D",
+              "sample_ratio": 0.0318
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0309
+            },
+            {
+              "rgb": [
+                32,
+                29,
+                26
+              ],
+              "hex": "#201D1A",
+              "sample_ratio": 0.0286
+            },
+            {
+              "rgb": [
+                40,
+                35,
+                32
+              ],
+              "hex": "#282320",
+              "sample_ratio": 0.0245
+            }
+          ],
+          "size": [
+            501,
+            540
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\wall bracket_back.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6816
+            },
+            {
+              "rgb": [
+                120,
+                96,
+                79
+              ],
+              "hex": "#78604F",
+              "sample_ratio": 0.1173
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0528
+            },
+            {
+              "rgb": [
+                63,
+                56,
+                51
+              ],
+              "hex": "#3F3833",
+              "sample_ratio": 0.0466
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                36
+              ],
+              "hex": "#1A1F24",
+              "sample_ratio": 0.0348
+            },
+            {
+              "rgb": [
+                152,
+                135,
+                121
+              ],
+              "hex": "#988779",
+              "sample_ratio": 0.0332
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0202
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0135
+            }
+          ],
+          "size": [
+            501,
+            540
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\wall bracket_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4549
+            },
+            {
+              "rgb": [
+                26,
+                18,
+                12
+              ],
+              "hex": "#1A120C",
+              "sample_ratio": 0.1406
+            },
+            {
+              "rgb": [
+                68,
+                66,
+                61
+              ],
+              "hex": "#44423D",
+              "sample_ratio": 0.1363
+            },
+            {
+              "rgb": [
+                34,
+                29,
+                24
+              ],
+              "hex": "#221D18",
+              "sample_ratio": 0.0944
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0917
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.041
+            },
+            {
+              "rgb": [
+                34,
+                35,
+                36
+              ],
+              "hex": "#222324",
+              "sample_ratio": 0.0238
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0174
+            }
+          ],
+          "size": [
+            178,
+            112
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\wall bracket_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7491
+            },
+            {
+              "rgb": [
+                147,
+                132,
+                121
+              ],
+              "hex": "#938479",
+              "sample_ratio": 0.0663
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0475
+            },
+            {
+              "rgb": [
+                196,
+                184,
+                174
+              ],
+              "hex": "#C4B8AE",
+              "sample_ratio": 0.0436
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                34
+              ],
+              "hex": "#1A1F22",
+              "sample_ratio": 0.0333
+            },
+            {
+              "rgb": [
+                63,
+                59,
+                56
+              ],
+              "hex": "#3F3B38",
+              "sample_ratio": 0.0277
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0225
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.01
+            }
+          ],
+          "size": [
+            312,
+            540
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\wall bracket_multi_view_contact_sheet.jpg"
+    },
+    "window frame": {
+      "view_count": 9,
+      "views": {
+        "front": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_front.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.7292
+            },
+            {
+              "rgb": [
+                52,
+                43,
+                37
+              ],
+              "hex": "#342B25",
+              "sample_ratio": 0.0562
+            },
+            {
+              "rgb": [
+                42,
+                37,
+                33
+              ],
+              "hex": "#2A2521",
+              "sample_ratio": 0.0486
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0405
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0364
+            },
+            {
+              "rgb": [
+                104,
+                87,
+                74
+              ],
+              "hex": "#68574A",
+              "sample_ratio": 0.036
+            },
+            {
+              "rgb": [
+                33,
+                29,
+                26
+              ],
+              "hex": "#211D1A",
+              "sample_ratio": 0.0283
+            },
+            {
+              "rgb": [
+                40,
+                35,
+                32
+              ],
+              "hex": "#282320",
+              "sample_ratio": 0.0248
+            }
+          ],
+          "size": [
+            499,
+            540
+          ]
+        },
+        "back": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_back.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.684
+            },
+            {
+              "rgb": [
+                136,
+                116,
+                100
+              ],
+              "hex": "#887464",
+              "sample_ratio": 0.1375
+            },
+            {
+              "rgb": [
+                64,
+                56,
+                51
+              ],
+              "hex": "#403833",
+              "sample_ratio": 0.0588
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0479
+            },
+            {
+              "rgb": [
+                27,
+                32,
+                36
+              ],
+              "hex": "#1B2024",
+              "sample_ratio": 0.0349
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0201
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0165
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0004
+            }
+          ],
+          "size": [
+            500,
+            540
+          ]
+        },
+        "left": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_left.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.9107
+            },
+            {
+              "rgb": [
+                33,
+                24,
+                18
+              ],
+              "hex": "#211812",
+              "sample_ratio": 0.0201
+            },
+            {
+              "rgb": [
+                37,
+                32,
+                29
+              ],
+              "hex": "#25201D",
+              "sample_ratio": 0.0181
+            },
+            {
+              "rgb": [
+                74,
+                71,
+                67
+              ],
+              "hex": "#4A4743",
+              "sample_ratio": 0.0145
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0132
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0088
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                39
+              ],
+              "hex": "#1E2327",
+              "sample_ratio": 0.0087
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                33
+              ],
+              "hex": "#252321",
+              "sample_ratio": 0.0059
+            }
+          ],
+          "size": [
+            720,
+            540
+          ]
+        },
+        "right": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_right.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.2812
+            },
+            {
+              "rgb": [
+                145,
+                139,
+                134
+              ],
+              "hex": "#918B86",
+              "sample_ratio": 0.2719
+            },
+            {
+              "rgb": [
+                214,
+                211,
+                207
+              ],
+              "hex": "#D6D3CF",
+              "sample_ratio": 0.2392
+            },
+            {
+              "rgb": [
+                69,
+                64,
+                60
+              ],
+              "hex": "#45403C",
+              "sample_ratio": 0.0861
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.0455
+            },
+            {
+              "rgb": [
+                27,
+                29,
+                30
+              ],
+              "hex": "#1B1D1E",
+              "sample_ratio": 0.041
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0177
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0174
+            }
+          ],
+          "size": [
+            206,
+            65
+          ]
+        },
+        "front_left_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_front_left_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6954
+            },
+            {
+              "rgb": [
+                45,
+                40,
+                36
+              ],
+              "hex": "#2D2824",
+              "sample_ratio": 0.0721
+            },
+            {
+              "rgb": [
+                72,
+                60,
+                52
+              ],
+              "hex": "#483C34",
+              "sample_ratio": 0.0546
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0485
+            },
+            {
+              "rgb": [
+                128,
+                116,
+                105
+              ],
+              "hex": "#807469",
+              "sample_ratio": 0.0417
+            },
+            {
+              "rgb": [
+                34,
+                30,
+                28
+              ],
+              "hex": "#221E1C",
+              "sample_ratio": 0.0374
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0319
+            },
+            {
+              "rgb": [
+                38,
+                35,
+                33
+              ],
+              "hex": "#262321",
+              "sample_ratio": 0.0184
+            }
+          ],
+          "size": [
+            506,
+            540
+          ]
+        },
+        "front_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_front_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6725
+            },
+            {
+              "rgb": [
+                149,
+                134,
+                122
+              ],
+              "hex": "#95867A",
+              "sample_ratio": 0.1017
+            },
+            {
+              "rgb": [
+                49,
+                44,
+                41
+              ],
+              "hex": "#312C29",
+              "sample_ratio": 0.0758
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0475
+            },
+            {
+              "rgb": [
+                33,
+                30,
+                29
+              ],
+              "hex": "#211E1D",
+              "sample_ratio": 0.033
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0325
+            },
+            {
+              "rgb": [
+                37,
+                35,
+                34
+              ],
+              "hex": "#252322",
+              "sample_ratio": 0.0295
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0075
+            }
+          ],
+          "size": [
+            506,
+            540
+          ]
+        },
+        "back_right_45": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_back_right_45.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.6471
+            },
+            {
+              "rgb": [
+                137,
+                115,
+                99
+              ],
+              "hex": "#897363",
+              "sample_ratio": 0.1205
+            },
+            {
+              "rgb": [
+                32,
+                35,
+                38
+              ],
+              "hex": "#202326",
+              "sample_ratio": 0.06
+            },
+            {
+              "rgb": [
+                182,
+                172,
+                164
+              ],
+              "hex": "#B6ACA4",
+              "sample_ratio": 0.0536
+            },
+            {
+              "rgb": [
+                72,
+                64,
+                58
+              ],
+              "hex": "#48403A",
+              "sample_ratio": 0.0483
+            },
+            {
+              "rgb": [
+                26,
+                31,
+                35
+              ],
+              "hex": "#1A1F23",
+              "sample_ratio": 0.0352
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0206
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0148
+            }
+          ],
+          "size": [
+            509,
+            540
+          ]
+        },
+        "top": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_top.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.3828
+            },
+            {
+              "rgb": [
+                117,
+                105,
+                94
+              ],
+              "hex": "#75695E",
+              "sample_ratio": 0.2558
+            },
+            {
+              "rgb": [
+                180,
+                175,
+                169
+              ],
+              "hex": "#B4AFA9",
+              "sample_ratio": 0.1981
+            },
+            {
+              "rgb": [
+                46,
+                44,
+                42
+              ],
+              "hex": "#2E2C2A",
+              "sample_ratio": 0.08
+            },
+            {
+              "rgb": [
+                31,
+                36,
+                39
+              ],
+              "hex": "#1F2427",
+              "sample_ratio": 0.0283
+            },
+            {
+              "rgb": [
+                26,
+                32,
+                35
+              ],
+              "hex": "#1A2023",
+              "sample_ratio": 0.0225
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0179
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0147
+            }
+          ],
+          "size": [
+            461,
+            269
+          ]
+        },
+        "bottom": {
+          "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\multi_view\\window frame_bottom.png",
+          "palette": [
+            {
+              "rgb": [
+                31,
+                35,
+                38
+              ],
+              "hex": "#1F2326",
+              "sample_ratio": 0.4107
+            },
+            {
+              "rgb": [
+                1,
+                1,
+                1
+              ],
+              "hex": "#010101",
+              "sample_ratio": 0.2465
+            },
+            {
+              "rgb": [
+                76,
+                74,
+                71
+              ],
+              "hex": "#4C4A47",
+              "sample_ratio": 0.1375
+            },
+            {
+              "rgb": [
+                17,
+                16,
+                15
+              ],
+              "hex": "#11100F",
+              "sample_ratio": 0.0796
+            },
+            {
+              "rgb": [
+                35,
+                35,
+                34
+              ],
+              "hex": "#232322",
+              "sample_ratio": 0.0593
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                39
+              ],
+              "hex": "#1F2327",
+              "sample_ratio": 0.0404
+            },
+            {
+              "rgb": [
+                31,
+                35,
+                37
+              ],
+              "hex": "#1F2325",
+              "sample_ratio": 0.0216
+            },
+            {
+              "rgb": [
+                30,
+                35,
+                38
+              ],
+              "hex": "#1E2326",
+              "sample_ratio": 0.0045
+            }
+          ],
+          "size": [
+            462,
+            268
+          ]
+        }
+      },
+      "contact_sheet": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\window frame_multi_view_contact_sheet.jpg"
+    }
+  }
+}

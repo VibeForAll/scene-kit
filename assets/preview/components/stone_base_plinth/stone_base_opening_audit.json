@@ -1,0 +1,20 @@
+{
+  "body": {
+    "door_gap_segments": [
+      {
+        "approx_width_m": 1.032
+      }
+    ],
+    "gap_count": 1
+  },
+  "cap": {
+    "door_gap_segments": [
+      {
+        "approx_width_m": 1.044
+      }
+    ],
+    "gap_count": 1
+  },
+  "expected_door_width_m": 1.0,
+  "method": "Short BVH rays through only the front base/cap body at representative heights."
+}

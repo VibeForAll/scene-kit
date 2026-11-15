@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project_id": "fairy-tale-castle-01",
+  "name": "童话城堡 01",
+  "skill_version": "7.21",
+  "concept_first": true,
+  "delivery": {
+    "profile": "unity_realtime",
+    "camera_use": "street_three_quarter"
+  },
+  "render_policy": {
+    "qa_render": "required",
+    "display_mode": "summary_only",
+    "display_requires_confirmation": true,
+    "extra_presentation_renders_require_confirmation": true,
+    "user_clarification": "材质渲染必须执行；聊天中是否逐张展示图片可按需决定。"
+  },
+  "created_at": "2026-11-14T15:04:13+08:00",
+  "skill_version_reviewed_at": "2026-11-15T11:58:26+08:00"
+}

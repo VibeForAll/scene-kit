@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "revision": 11,
+  "source_directory": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图",
+  "view_count": 10,
+  "contact_sheet": "assets/preview/concepts/source_ten_view_contact_sheet_v11.jpg",
+  "contact_sheet_sha256": "142be74d331081c5504237d6c809e9f729f41f16681a7ef9810401d7d059baa6",
+  "checks": {
+    "ten_views_present": true,
+    "all_source_files_exist": true,
+    "all_project_copies_byte_identical": true
+  },
+  "views": [
+    {
+      "view": "front.png",
+      "label": "正视图",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\正视图.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/front.png",
+      "original_sha256": "3a009ba2b713a04eca99dbccbdccf47c4ce305a2a942a63173e4e8a9dee68194",
+      "project_copy_sha256": "3a009ba2b713a04eca99dbccbdccf47c4ce305a2a942a63173e4e8a9dee68194",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "front_left_45.png",
+      "label": "左上",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\左上.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/front_left_45.png",
+      "original_sha256": "6dd01e2894b0bb47454eab751567915898306337f2eb82217651ff0b863943a3",
+      "project_copy_sha256": "6dd01e2894b0bb47454eab751567915898306337f2eb82217651ff0b863943a3",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "front_right_45.png",
+      "label": "右上",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\右上.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/front_right_45.png",
+      "original_sha256": "e78593947ddc78cc5ddc32778479b51e46e99482a0d2a7f57b09e4e8ecce743f",
+      "project_copy_sha256": "e78593947ddc78cc5ddc32778479b51e46e99482a0d2a7f57b09e4e8ecce743f",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "left.png",
+      "label": "左侧",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\左侧.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/left.png",
+      "original_sha256": "a714b87f9974c12dd154b29994eb069ceb93db9f37e385ae957e60783e2f14c2",
+      "project_copy_sha256": "a714b87f9974c12dd154b29994eb069ceb93db9f37e385ae957e60783e2f14c2",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "right.png",
+      "label": "右侧",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\右侧.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/right.png",
+      "original_sha256": "2f0bf5b39fee0112507b7b045cdf4692c6d1f3e6cedb0505477a1b03aad8e706",
+      "project_copy_sha256": "2f0bf5b39fee0112507b7b045cdf4692c6d1f3e6cedb0505477a1b03aad8e706",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "back.png",
+      "label": "背面图",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\背面图.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/back.png",
+      "original_sha256": "8fe271131273f7d26eb0f40888ceccb99336dbf81aae8532dcfc3602fa23c484",
+      "project_copy_sha256": "8fe271131273f7d26eb0f40888ceccb99336dbf81aae8532dcfc3602fa23c484",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "back_left_45.png",
+      "label": "左下",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\左下.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/back_left_45.png",
+      "original_sha256": "89eddd7d832e26b16d1b0e24d8ae7c66e6788f756e98b7a36a26dc6a347fbbc2",
+      "project_copy_sha256": "89eddd7d832e26b16d1b0e24d8ae7c66e6788f756e98b7a36a26dc6a347fbbc2",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "back_right_45.png",
+      "label": "右下",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\右下.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/back_right_45.png",
+      "original_sha256": "1cbe8bd7ce71cc0c9a9e1ceb57578d152e518acaa6f056a12347ed9f45cfb90f",
+      "project_copy_sha256": "1cbe8bd7ce71cc0c9a9e1ceb57578d152e518acaa6f056a12347ed9f45cfb90f",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "top.png",
+      "label": "上方",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\上方.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/top.png",
+      "original_sha256": "2d0ba64be7a004cf46ef5debd83a8278806e67c0643acb400a6178e53ed5eee3",
+      "project_copy_sha256": "2d0ba64be7a004cf46ef5debd83a8278806e67c0643acb400a6178e53ed5eee3",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    },
+    {
+      "view": "bottom.png",
+      "label": "下方",
+      "original_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Images\\素材图\\下方.png",
+      "project_copy": "assets/raw/concepts/imported-castle-01/views/bottom.png",
+      "original_sha256": "e55a32371964fc164efffb4e372d291617ea895e809d6946fd634e306559e0e1",
+      "project_copy_sha256": "e55a32371964fc164efffb4e372d291617ea895e809d6946fd634e306559e0e1",
+      "byte_identical": true,
+      "pixel_dimensions": [
+        2496,
+        1664
+      ]
+    }
+  ]
+}

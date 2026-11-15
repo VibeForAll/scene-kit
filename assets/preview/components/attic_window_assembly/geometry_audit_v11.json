@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "attic_window_assembly",
+  "revision": 11,
+  "body_object": "SK_attic_window_assembly_dormer_body",
+  "body_bounds_m": {
+    "min": [
+      -1.0,
+      -3.83,
+      5.82
+    ],
+    "max": [
+      1.0,
+      -2.46875,
+      7.05
+    ],
+    "size": [
+      2.0,
+      1.36125,
+      1.23
+    ]
+  },
+  "body_dimensions_m": [
+    2.0,
+    1.36125,
+    1.23
+  ],
+  "body_projection_beyond_host_m": 0.08,
+  "front_eave_setback_m": 0.09,
+  "dormer_roof_bounds_m": {
+    "min": [
+      -1.1,
+      -3.95,
+      6.97
+    ],
+    "max": [
+      1.1,
+      -1.71,
+      7.375
+    ],
+    "size": [
+      2.2,
+      2.24,
+      0.405
+    ]
+  },
+  "roof_covers_body_rear": true,
+  "roof_rear_burial_margin_m": 0.21285,
+  "main_roof_plane": {
+    "front_y_m": -3.95,
+    "front_z_m": 6.0,
+    "pitch": 0.708861
+  },
+  "cheek_junction_error_m": 0.0,
+  "meshes": 13,
+  "triangles": 3228,
+  "host_connections": {
+    "main_roof_assembly": {
+      "intersections": [
+        {
+          "object": "SK_main_roof_assembly_v1_roof",
+          "triangle_pairs": 32
+        }
+      ],
+      "status": "pass"
+    },
+    "wall_envelope": {
+      "front_wall_y_m": -3.75,
+      "body_front_projection_m": 0.08,
+      "status": "pass"
+    },
+    "main_eave": {
+      "front_y_m": -4.04,
+      "setback_m": 0.09,
+      "status": "pass"
+    }
+  },
+  "checks": {
+    "body_exists": true,
+    "body_has_volume": true,
+    "body_projects_beyond_host": true,
+    "roof_front_inside_main_eave": true,
+    "roof_covers_body_rear": true,
+    "body_extends_behind_window": true,
+    "body_reaches_below_window": true,
+    "body_intersects_main_roof": true,
+    "cheek_follows_main_roof": true,
+    "no_exposed_rear_cheek_end": true,
+    "paired_windows_preserved": true,
+    "not_front_plane_only": true
+  }
+}

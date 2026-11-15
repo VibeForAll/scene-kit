@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "revision": 11,
+  "policy": "Retain original user-supplied ten views, revision-11 attic QA, current assembly renders, and structural audit evidence. Remove only superseded attic images and records.",
+  "removed_count": 11,
+  "removed": [
+    "assets/preview/components/attic_window_assembly/attic_window_assembly_v6_front.png",
+    "assets/preview/components/attic_window_assembly/attic_window_assembly_v6_material_comparison.jpg",
+    "assets/preview/components/attic_window_assembly/attic_window_assembly_v6_side.png",
+    "assets/preview/components/attic_window_assembly/attic_window_assembly_v6_three_quarter.png",
+    "assets/preview/components/attic_window_assembly/blender_audit_v6.json",
+    "assets/preview/components/attic_window_assembly/geometry_audit_v10.json",
+    "assets/preview/process/attic_body_and_front_vines_revision10.jpg",
+    "internal/attachment_integrity_audit_v10.json",
+    "internal/finishing_revision10_surface_audit.json",
+    "internal/quantity_audit_v10.json",
+    "internal/revision10_component_qa.json"
+  ],
+  "manifest_item_count": 184
+}

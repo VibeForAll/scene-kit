@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "part_id": "climbing_vine_module",
+  "revision": 2,
+  "status": "pass",
+  "method": "PIL color sampling on rendered QA views (2px grid), background masked",
+  "role_samples": {
+    "front": {
+      "foliage_rgb": [
+        77.57,
+        93.06,
+        64.46
+      ],
+      "foliage_samples": 5326,
+      "stem_rgb": [
+        75.77,
+        61.64,
+        57.76
+      ],
+      "stem_samples": 721,
+      "background_samples": 8989
+    },
+    "three_quarter": {
+      "foliage_rgb": [
+        78.12,
+        94.97,
+        63.2
+      ],
+      "foliage_samples": 5186,
+      "stem_rgb": [
+        67.17,
+        52.43,
+        47.69
+      ],
+      "stem_samples": 1425,
+      "background_samples": 4064
+    },
+    "closeup": {
+      "foliage_rgb": [
+        78.89,
+        96.37,
+        63.05
+      ],
+      "foliage_samples": 14722,
+      "stem_rgb": [
+        65.62,
+        51.33,
+        46.68
+      ],
+      "stem_samples": 2839,
+      "background_samples": 14369
+    }
+  },
+  "reference_foliage": {
+    "foliage_rgb": [
+      87.37,
+      99.48,
+      48.12
+    ],
+    "foliage_samples": 1563,
+    "stem_rgb": [
+      92.92,
+      72.95,
+      55.65
+    ],
+    "stem_samples": 5062,
+    "background_samples": 354
+  },
+  "checks": {
+    "two_reference_views_used": true,
+    "four_current_rendered_views": true,
+    "green_foliage_present": true,
+    "woody_stems_present": true,
+    "green_and_brown_distinct": true,
+    "reference_green_detected": true,
+    "mapping_risk_zero": true,
+    "normal_and_roughness_aligned": true
+  },
+  "texture_source": "tripo_text_to_model_pbr_atlas_plus_hsv_finish",
+  "notes": [
+    "文生 3D 自带 2K PBR 图集（Color/ORM/NormalGL），材质审计零贴图风险。",
+    "Color 贴图经 Hue/Saturation/Value 节点（Sat 0.82, Val 0.85）向参考的暗橄榄绿收敛，原始贴图文件保留不改。",
+    "参考裁剪含墙面环境光，RGB 绝对值仅作色调方向对照，不作为逐像素匹配要求。"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "checks": {
+    "mesh_exists": true,
+    "windows_present": true,
+    "vines_present": true,
+    "planter_present": true,
+    "no_reference_or_ground_objects": true,
+    "materials_present": true,
+    "texture_images_present": true,
+    "bounds_reasonable": true
+  },
+  "mesh_objects": 137,
+  "triangles": 271352,
+  "materials": 23,
+  "images": [
+    "black_painted_planks_diff_2k",
+    "black_painted_planks_nor_gl_2k",
+    "black_painted_planks_rough_2k",
+    "climbing_vine_v2_color",
+    "climbing_vine_v2_normal_gl",
+    "climbing_vine_v2_orm",
+    "fine_grained_wood_diff_2k",
+    "fine_grained_wood_nor_gl_2k",
+    "fine_grained_wood_rough_2k",
+    "old_stone_wall_diff_2k",
+    "old_stone_wall_nor_gl_2k",
+    "old_stone_wall_rough_2k",
+    "roof_slates_02_diff_2k",
+    "roof_slates_02_nor_gl_2k",
+    "roof_slates_02_rough_2k"
+  ],
+  "bounds_world_m": {
+    "min": [
+      -6.08,
+      -5.67,
+      -0.22
+    ],
+    "max": [
+      6.02553,
+      4.04,
+      9.98114
+    ],
+    "size": [
+      12.10553,
+      9.71,
+      10.20114
+    ]
+  },
+  "forbidden_objects": []
+}

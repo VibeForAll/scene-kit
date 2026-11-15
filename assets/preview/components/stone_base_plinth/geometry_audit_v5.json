@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "stone_base_plinth",
+  "revision": 5,
+  "source": "components/stone_base_plinth.blend",
+  "bounds_min_m": [
+    -5.85,
+    -3.9,
+    0.0
+  ],
+  "bounds_max_m": [
+    5.85,
+    3.9,
+    0.51
+  ],
+  "dimensions_m": [
+    11.7,
+    7.8,
+    0.51
+  ],
+  "mesh_count": 9,
+  "triangles": 1188,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ]
+}

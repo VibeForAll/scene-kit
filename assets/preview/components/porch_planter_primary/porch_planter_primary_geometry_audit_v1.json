@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "porch_planter_primary",
+  "revision": 1,
+  "generated_at": "2026-11-15T00:34:43+08:00",
+  "parameter_document": "internal/porch_planter_v1.json",
+  "parameter_document_sha256": "5a7d71008e49f6f565dcf5efdd6a93c39bca3afbcd8ef08380d020db6ad81a0f",
+  "bounds_m": {
+    "SK_porch_planter_primary_pot": {
+      "min": [
+        -0.1484,
+        -0.1484,
+        0.0
+      ],
+      "max": [
+        0.1484,
+        0.1484,
+        0.20875
+      ]
+    },
+    "SK_porch_planter_primary_soil": {
+      "min": [
+        -0.1232,
+        -0.1232,
+        0.185
+      ],
+      "max": [
+        0.1232,
+        0.1232,
+        0.205
+      ]
+    },
+    "SK_porch_planter_primary_stems": {
+      "min": [
+        -0.09077,
+        -0.11505,
+        0.19608
+      ],
+      "max": [
+        0.07446,
+        0.00386,
+        0.53034
+      ]
+    },
+    "SK_porch_planter_primary_leaves": {
+      "min": [
+        -0.10136,
+        -0.12363,
+        0.19767
+      ],
+      "max": [
+        0.09371,
+        -0.04066,
+        0.44962
+      ]
+    }
+  },
+  "triangles": 2156,
+  "checks": {
+    "pot_ground_contact": true,
+    "pot_closed_volume": true,
+    "soil_inside_pot": true,
+    "foliage_above_soil": true,
+    "leaf_petioles_reach_stems": true,
+    "three_material_zones": true,
+    "root_hierarchy": true
+  },
+  "leaf_to_stem_nearest_distance_m": {
+    "max": 0.036105,
+    "mean": 0.015011
+  },
+  "unresolved": [],
+  "notes": [
+    "采用确定性程序化盆栽；Tripo 图像尝试因串入建筑而未采用。",
+    "花盆本体闭合、底面落在 z=0，土壤和植株均位于盆口上方。"
+  ]
+}

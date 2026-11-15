@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "wall_envelope",
+  "revision": 5,
+  "source": "components/wall_envelope.blend",
+  "bounds_min_m": [
+    -5.7,
+    -3.75,
+    0.0
+  ],
+  "bounds_max_m": [
+    5.7,
+    3.75,
+    6.0
+  ],
+  "dimensions_m": [
+    11.4,
+    7.5,
+    6.0
+  ],
+  "mesh_count": 4,
+  "triangles": 3010,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true,
+    "all_facade_openings_clear": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ],
+  "opening_audit": {
+    "opening_count": 22,
+    "door_count": 1,
+    "window_count": 21,
+    "failed": []
+  }
+}

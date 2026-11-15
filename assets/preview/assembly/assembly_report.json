@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "part_id": "B01",
+  "revision": 11,
+  "status": "pass",
+  "checks": {
+    "global_ai_classification_corrected": true,
+    "tower_visible_with_14_meshes": true,
+    "window_instance_count_21": true,
+    "attic_dormer_roof_present": true,
+    "attic_dormer_gable_present": true,
+    "attic_dormer_body_present": true,
+    "attic_dormer_projects_beyond_wall": true,
+    "attic_roof_inside_main_eave": true,
+    "attic_roof_covers_body_rear": true,
+    "metal_chimney_flues_removed": true,
+    "vine_instance_count_3": true,
+    "planter_present": true,
+    "railing_present": true,
+    "reference_hidden": true,
+    "review_geometry_hidden": true,
+    "materials_complete": true,
+    "texture_images_loaded": true,
+    "five_renders_exist": true
+  },
+  "visible_component_meshes": 137,
+  "triangles": 271352,
+  "bounds_world_m": {
+    "min": [
+      -6.08,
+      -5.67,
+      -0.22
+    ],
+    "max": [
+      6.02553,
+      4.04,
+      9.98114
+    ],
+    "size": [
+      12.10553,
+      9.71,
+      10.20114
+    ]
+  },
+  "render_paths": [
+    "assets/preview/assembly/castle_assembly_front_ortho.png",
+    "assets/preview/assembly/castle_assembly_side_ortho.png",
+    "assets/preview/assembly/castle_assembly_hero_three_quarter.png",
+    "assets/preview/assembly/castle_assembly_entrance_closeup.png",
+    "assets/preview/assembly/castle_assembly_roof_chimney_closeup.png"
+  ],
+  "missing_texture_images": [],
+  "missing_material_objects": [],
+  "blend_path": "assembly/castle_assembly.blend",
+  "blend_sha256": "388a31b8e6b3095ddd5d7d67fe130cb47d277c54c97bedb9ba79e5febd14b45d",
+  "glb_path": "assembly/fairy_tale_castle_01.glb",
+  "glb_sha256": "7a1f7f054675974e4300c1439a9fce9b2526590d270498cf29d884fbad978206"
+}

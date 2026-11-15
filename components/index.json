@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "revision": 11,
+  "components": [
+    {
+      "part_id": "wall_envelope",
+      "name": "wall_envelope",
+      "type": "castle_wall_envelope",
+      "asset_class": "structure",
+      "blend": "components/wall_envelope.blend",
+      "glb": "components/wall_envelope.glb",
+      "dimensions_m": [
+        11.4,
+        7.5,
+        6.0
+      ],
+      "triangles": 3010,
+      "qa": "pass",
+      "preview": "assets/preview/components/wall_envelope/wall_envelope_v5_material_comparison.jpg",
+      "references": "assets/preview/references/wall_envelope"
+    },
+    {
+      "part_id": "floor_slab_system",
+      "name": "floor_slab_system",
+      "type": "floor_slab",
+      "asset_class": "structure",
+      "blend": "components/floor_slab_system.blend",
+      "glb": "components/floor_slab_system.glb",
+      "dimensions_m": [
+        11.0,
+        7.1,
+        3.22
+      ],
+      "triangles": 216,
+      "qa": "pass",
+      "preview": "assets/preview/components/floor_slab_system/floor_slab_system_v5_material_comparison.jpg",
+      "references": "assets/preview/references/floor_slab_system"
+    },
+    {
+      "part_id": "stone_base_plinth",
+      "name": "stone_base_plinth",
+      "type": "stone_base",
+      "asset_class": "structure",
+      "blend": "components/stone_base_plinth.blend",
+      "glb": "components/stone_base_plinth.glb",
+      "dimensions_m": [
+        11.7,
+        7.8,
+        0.51
+      ],
+      "triangles": 1188,
+      "qa": "pass",
+      "preview": "assets/preview/components/stone_base_plinth/stone_base_plinth_v5_material_comparison.jpg",
+      "references": "assets/preview/references/stone_base_plinth"
+    },
+    {
+      "part_id": "main_roof_assembly",
+      "name": "main_roof_assembly",
+      "type": "slate_roof",
+      "asset_class": "structure",
+      "blend": "components/main_roof_assembly.blend",
+      "glb": "components/main_roof_assembly.glb",
+      "dimensions_m": [
+        12.05106,
+        8.08,
+        3.083
+      ],
+      "triangles": 164,
+      "qa": "pass",
+      "preview": "assets/preview/components/main_roof_assembly/main_roof_assembly_v5_material_comparison.jpg",
+      "references": "assets/preview/references/main_roof_assembly"
+    },
+    {
+      "part_id": "tall_window_assembly",
+      "name": "Fairy-tale divided-light window",
+      "type": "divided_light_window",
+      "asset_class": "architectural_component",
+      "blend": "components/tall_window_assembly.blend",
+      "glb": "components/tall_window_assembly.glb",
+      "dimensions_m": [
+        1.2,
+        0.32,
+        1.5
+      ],
+      "triangles": 3564,
+      "qa": "pass",
+      "preview": "assets/preview/components/tall_window_assembly/v5_component_boundary_comparison.jpg",
+      "references": "assets/preview/references/tall_window_assembly"
+    },
+    {
+      "part_id": "entrance_portal",
+      "name": "Storybook castle entrance portal",
+      "type": "entrance_portal",
+      "asset_class": "architectural_component",
+      "blend": "components/entrance_portal.blend",
+      "glb": "components/entrance_portal.glb",
+      "dimensions_m": [
+        1.18,
+        0.32,
+        2.26
+      ],
+      "triangles": 792,
+      "qa": "pass",
+      "preview": "assets/preview/components/entrance_portal/entrance_portal_v2_material_comparison.jpg",
+      "references": "assets/preview/references/entrance_portal"
+    },
+    {
+      "part_id": "stone_facade_trim",
+      "name": "stone_facade_trim",
+      "type": "stone_facade_trim",
+      "asset_class": "decorative_ornament",
+      "blend": "components/stone_facade_trim.blend",
+      "glb": "components/stone_facade_trim.glb",
+      "dimensions_m": [
+        11.56,
+        7.66,
+        2.85
+      ],
+      "triangles": 288,
+      "qa": "pass",
+      "preview": "assets/preview/components/stone_facade_trim/stone_facade_trim_v5_material_comparison.jpg",
+      "references": "assets/preview/references/stone_facade_trim"
+    },
+    {
+      "part_id": "corner_stone_detail",
+      "name": "corner_stone_detail",
+      "type": "corner_quoin",
+      "asset_class": "decorative_ornament",
+      "blend": "components/corner_stone_detail.blend",
+      "glb": "components/corner_stone_detail.glb",
+      "dimensions_m": [
+        11.52,
+        7.62,
+        5.1192
+      ],
+      "triangles": 1824,
+      "qa": "pass",
+      "preview": "assets/preview/components/corner_stone_detail/corner_stone_detail_v5_material_comparison.jpg",
+      "references": "assets/preview/references/corner_stone_detail"
+    },
+    {
+      "part_id": "stone_chimney_primary",
+      "name": "Tall stone storybook chimney",
+      "type": "stone_chimney",
+      "asset_class": "architectural_component",
+      "blend": "components/stone_chimney_primary.blend",
+      "glb": "components/stone_chimney_primary.glb",
+      "dimensions_m": [
+        0.98,
+        0.98,
+        2.14
+      ],
+      "triangles": 96,
+      "qa": "pass",
+      "preview": "assets/preview/components/stone_chimney_primary/stone_chimney_primary_v2_material_comparison.jpg",
+      "references": "assets/preview/references/stone_chimney_primary"
+    },
+    {
+      "part_id": "porch_railing_primary",
+      "name": "Dark wooden porch railing",
+      "type": "wooden_porch_railing",
+      "asset_class": "architectural_component",
+      "blend": "components/porch_railing_primary.blend",
+      "glb": "components/porch_railing_primary.glb",
+      "dimensions_m": [
+        3.6415,
+        0.144,
+        0.99
+      ],
+      "triangles": 312,
+      "qa": "pass",
+      "preview": "assets/preview/components/porch_railing_primary/porch_railing_primary_v1_material_comparison.jpg",
+      "references": "assets/preview/references/porch_railing_primary"
+    },
+    {
+      "part_id": "attic_window_assembly",
+      "name": "Paired storybook attic window",
+      "type": "paired_attic_window",
+      "asset_class": "architectural_component",
+      "blend": "components/attic_window_assembly.blend",
+      "glb": "components/attic_window_assembly.glb",
+      "dimensions_m": [
+        2.2976,
+        2.24,
+        1.325
+      ],
+      "triangles": 3228,
+      "qa": "pass",
+      "preview": "assets/preview/components/attic_window_assembly/attic_window_assembly_v7_material_comparison.jpg",
+      "references": "assets/preview/references/attic_window_assembly"
+    },
+    {
+      "part_id": "wooden_entrance_porch",
+      "name": "wooden_entrance_porch",
+      "type": "timber_entrance_porch",
+      "asset_class": "structure",
+      "blend": "components/wooden_entrance_porch.blend",
+      "glb": "components/wooden_entrance_porch.glb",
+      "dimensions_m": [
+        1.75,
+        0.83,
+        2.785
+      ],
+      "triangles": 328,
+      "qa": "pass",
+      "preview": "assets/preview/components/wooden_entrance_porch/wooden_entrance_porch_v5_material_comparison.jpg",
+      "references": "assets/preview/references/wooden_entrance_porch"
+    },
+    {
+      "part_id": "entrance_steps",
+      "name": "entrance_steps",
+      "type": "entrance_steps",
+      "asset_class": "structure",
+      "blend": "components/entrance_steps.blend",
+      "glb": "components/entrance_steps.glb",
+      "dimensions_m": [
+        1.8,
+        1.04,
+        0.51
+      ],
+      "triangles": 72,
+      "qa": "pass",
+      "preview": "assets/preview/components/entrance_steps/entrance_steps_v1_material_comparison.jpg",
+      "references": "assets/preview/references/entrance_steps"
+    },
+    {
+      "part_id": "wall_lantern_primary",
+      "name": "Storybook entry wall lantern",
+      "type": "wall_lantern",
+      "asset_class": "site_element",
+      "blend": "components/wall_lantern_primary.blend",
+      "glb": "components/wall_lantern_primary.glb",
+      "dimensions_m": [
+        1.43,
+        0.32,
+        0.503
+      ],
+      "triangles": 336,
+      "qa": "pass",
+      "preview": "assets/preview/components/wall_lantern_primary/wall_lantern_primary_v5_material_comparison.jpg",
+      "references": "assets/preview/references/wall_lantern_primary"
+    },
+    {
+      "part_id": "climbing_vine_module",
+      "name": "Climbing fairy-tale vine module",
+      "type": "climbing_vine",
+      "asset_class": "vegetation",
+      "blend": "components/climbing_vine_module.blend",
+      "glb": "components/climbing_vine_module.glb",
+      "dimensions_m": [
+        0.75596,
+        0.18,
+        1.2
+      ],
+      "triangles": 60000,
+      "qa": "pass",
+      "preview": "assets/preview/components/climbing_vine_module/climbing_vine_module_v2_material_comparison.jpg",
+      "references": "assets/preview/references/climbing_vine_module"
+    },
+    {
+      "part_id": "porch_planter_primary",
+      "name": "Small porch potted plant",
+      "type": "potted_plant",
+      "asset_class": "vegetation",
+      "blend": "components/porch_planter_primary.blend",
+      "glb": "components/porch_planter_primary.glb",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        0.55
+      ],
+      "triangles": 2156,
+      "qa": "pass",
+      "preview": "assets/preview/components/porch_planter_primary/porch_planter_primary_v1_material_comparison.jpg",
+      "references": "assets/preview/references/porch_planter_primary"
+    },
+    {
+      "part_id": "round_corner_tower",
+      "name": "Storybook round corner tower",
+      "type": "round_corner_tower",
+      "asset_class": "architectural_component",
+      "blend": "components/round_corner_tower.blend",
+      "glb": "components/round_corner_tower.glb",
+      "dimensions_m": [
+        2.56,
+        2.56,
+        7.28
+      ],
+      "triangles": 2498,
+      "qa": "pass",
+      "preview": "assets/preview/components/round_corner_tower/round_corner_tower_v3_material_comparison.jpg",
+      "references": "assets/preview/references/round_corner_tower"
+    }
+  ]
+}

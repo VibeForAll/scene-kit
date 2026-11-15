@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "climbing_vine_module",
+  "revision": 2,
+  "generated_at": "2026-11-15T09:04:36+08:00",
+  "generation_method": "ai_text_to_model_then_blender_normalization",
+  "provider": {
+    "name": "tripo",
+    "model": "v3.1-20260211",
+    "task_id": "267b4dba-2c9c-4e3d-be30-1137d43a9af8",
+    "input_mode": "text_to_model",
+    "prompt_chars": 880,
+    "raw_glb": "raw/climbing_vine_module_text_to_model_v2_raw.glb",
+    "raw_glb_sha256": "e60c171b09357c0265d918737059410e3fdb1574e7226e7ac6fd639b4d4dc7cb"
+  },
+  "postprocess": [
+    "bake 90deg Z rotation so broad foliage face spans X and depth spans Y",
+    "decimate 1,478,190 -> 60,000 tris (UV-delimited collapse)",
+    "uniform height fit to 1.2 m, depth flatten to 0.18 m locked envelope",
+    "bottom-center origin baked, base at z=0",
+    "extract 2K Color/ORM/NormalGL PBR atlas from GLB, externalize under textures/vegetation/v2",
+    "non-destructive HSV foliage finish (Sat 0.82, Val 0.85) toward muted olive reference",
+    "delete 143 decimation wire edges; open-shell boundary edges retained (expected for foliage)",
+    "add CAM_Review_front/side/three_quarter orthographic review cameras"
+  ],
+  "bounds_m": {
+    "min": [
+      -0.37798,
+      -0.09,
+      0.0
+    ],
+    "max": [
+      0.37798,
+      0.09,
+      1.2
+    ],
+    "size": [
+      0.75596,
+      0.18,
+      1.2
+    ],
+    "locked_envelope": [
+      0.9,
+      0.18,
+      1.2
+    ]
+  },
+  "triangles": 60000,
+  "vertices": 54123,
+  "triangle_budget": {
+    "target_total": 60000,
+    "hard_max": 120000,
+    "within_budget": true
+  },
+  "mesh_islands": 1165,
+  "wire_edges": 0,
+  "boundary_edges_open_shell": 45916,
+  "checks": {
+    "envelope_width_ok": true,
+    "envelope_depth_ok": true,
+    "envelope_height_ok": true,
+    "origin_bottom_center": true,
+    "forward_minus_y_ready": true,
+    "triangle_budget_ok": true,
+    "no_wire_edges": true,
+    "single_root_object": true,
+    "vegetation_collection": true,
+    "review_cameras_present": true,
+    "pbr_atlas_complete": true,
+    "isolated_asset_no_context": true
+  },
+  "materials": [
+    "MAT_vegetation_TripoIvyPBR_v2"
+  ],
+  "textures": {
+    "Color_267b4dba-2c9c-4e3d-be30-1137d43a9af8": {
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "//..\\textures\\vegetation\\v2\\climbing_vine_v2_color.jpg"
+    },
+    "ORM_267b4dba-2c9c-4e3d-be30-1137d43a9af8": {
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "//..\\textures\\vegetation\\v2\\climbing_vine_v2_orm.jpg"
+    },
+    "NormalGL_267b4dba-2c9c-4e3d-be30-1137d43a9af8": {
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "//..\\textures\\vegetation\\v2\\climbing_vine_v2_normal_gl.png"
+    }
+  },
+  "outputs": {
+    "root_object": "SK_climbing_vine_module_ROOT",
+    "collection": "SK_COL_Vegetation",
+    "blend_path": "out/climbing_vine_module_v2.blend",
+    "blend_sha256": "6fba66f6f23643c2e0619f3dde900649bc5646417d50e7a761ceddb9d3915202",
+    "source_path": "raw/climbing_vine_module_v2.glb",
+    "source_sha256": "58a41406af39ca112464a15a871e8fdb08186470bfa76d8ea4124ff64e5df9ce"
+  },
+  "open_shell_note": "45,916 boundary edges are intrinsic open-shell foliage (thin leaves and stems), not construction errors; manifold sealing would destroy leaf identity and blow the triangle budget.",
+  "replaces": {
+    "revision": 1,
+    "reason": "程序化 v1 为扁平菱形叶片与木棍枝条，造型抽象；图生 3D 又串入建筑。改为纯文生 3D 隔离单体后本地归一化减面。",
+    "superseded_blend": "out/climbing_vine_module_v1.blend"
+  },
+  "unresolved": []
+}

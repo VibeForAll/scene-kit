@@ -1,0 +1,23 @@
+SCENE KIT · climbing_vine_module · climbing_vine
+参考图角色
+- geometry: preview/references-current/climbing_vine_module/geometry_front.png, preview/references-current/climbing_vine_module/geometry_side.png
+- appearance: preview/references-current/climbing_vine_module/appearance_front.png, preview/references-current/climbing_vine_module/appearance_side.png, preview/references-current/climbing_vine_module/generation_input.png
+- review_only: concepts/imported-castle-01/contact-sheet.jpg, preview/detail-scan/annotated-overview.jpg
+
+主生成输入：preview/references-current/climbing_vine_module/generation_input.png
+
+ENGLISH POSITIVE
+One isolated representative climbing vine module for a storybook stone wall, irregular upward woody stems, restrained dark green leaf clusters and curling tendrils, clear wall/ground attachment, complete module boundary and sparse transparent gaps. A two-storey storybook European castle-house matching the approved ten-view reference set. Preserve the observed main-body proportions, two tall stone chimneys, roof silhouette, facade opening rhythm, entrance position and relative material balance across every component. Use weathered warm-grey masonry, aged cream plaster or pale stone, dark slate, dark stained timber, muted blue-grey glazing, white-painted window trim and restrained dark iron. Architectural details should feel handmade, romantic and construction-legible, with substantial stone surrounds, clear supporting masonry, coherent roof and chimney junctions and practical wall openings. Natural matte materials, softly weathered surfaces, neutral architectural presentation, no style drift.
+
+ENGLISH NEGATIVE
+complete building, wall slab, entire landscape, tree, dense unreadable foliage, isolated floating leaves, excessive geometry, labels, watermark. different castle, changed chimney count, changed chimney placement, added tower, changed roof silhouette, changed entrance, modern villa, generic suburban house, excessive gingerbread ornament, plastic surfaces, glossy toy materials, mixed architectural styles, floating structure, unsupported chimney, broken roof, impossible overhang, people, text, labels, watermark.
+
+中文正向
+一个独立完整的代表性攀援藤蔓模块，不规则向上的木质枝干，克制的深绿色叶簇和卷须，清楚的墙面/地面附着关系，完整模块边界和适度透空。 两层童话欧式城堡住宅，严格对应已确认的十视图参考集。所有构件必须保持画面中观察到的主体比例、两座高石烟囱、屋顶轮廓、立面孔洞节奏、入口位置和相对材料比例。使用风化暖灰砌石、做旧奶油色抹灰或浅色石材、深色石板、深色木材、低饱和蓝灰玻璃、白色窗线和克制的深色铁件。细节应具有手工感、浪漫感和清楚的建造逻辑，石质洞口、支撑砌体和屋面/烟囱交接应可信，并保留实际可用的墙体洞口。自然哑光材质、轻微风化表面、中性建筑展示，不允许风格漂移。
+
+中文负向
+完整建筑，墙体切片，整个景观，树，无法分清的密集叶团，漂浮叶片，过量几何，文字，标注，水印。 不同的城堡，改变烟囱数量，改变烟囱位置，额外塔楼，改变屋顶轮廓，改变入口，现代别墅，普通郊区住宅，过度的姜饼屋装饰，塑料表面，高光玩具材质，风格混搭失控，漂浮结构，无支撑烟囱，断裂屋顶，无法解释的悬挑，人物，文字，标注，水印。
+
+VIEW
+EN: Front elevation and side profile, complete module outline and wall/ground attachment visible.
+中文：正面立面和侧视轮廓，完整显示模块外轮廓及墙面/地面附着。

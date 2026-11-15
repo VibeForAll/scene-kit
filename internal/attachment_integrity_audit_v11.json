@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "revision": 11,
+  "source_views": [
+    "assets/raw/concepts/imported-castle-01/views/front.png",
+    "assets/raw/concepts/imported-castle-01/views/front_left_45.png",
+    "assets/raw/concepts/imported-castle-01/views/right.png"
+  ],
+  "items": [
+    {
+      "attachment_id": "attic_dormer_body",
+      "part_id": "attic_window_assembly",
+      "attachment_type": "enclosed_dormer_body",
+      "host_part_ids": [
+        "main_roof_assembly",
+        "attic_window_assembly"
+      ],
+      "has_volume": true,
+      "has_back_enclosure": true,
+      "has_side_enclosure": true,
+      "front_plane_only": false,
+      "host_contact_verified": true,
+      "host_contact_evidence": [
+        "assets/preview/components/attic_window_assembly/geometry_audit_v11.json"
+      ],
+      "evidence_views": [
+        "assets/preview/components/attic_window_assembly/attic_window_assembly_v7_side.png",
+        "assets/preview/components/attic_window_assembly/attic_window_assembly_v7_three_quarter.png"
+      ],
+      "status": "pass",
+      "body_projection_beyond_host_m": 0.08,
+      "front_eave_setback_m": 0.09,
+      "roof_covers_body_rear": true
+    }
+  ],
+  "checks": {
+    "attachments_inventoried": true,
+    "front_plane_only_rejected": true,
+    "host_contacts_verified": true,
+    "side_back_volume_verified": true,
+    "source_and_assembly_current": true,
+    "host_projection_verified": true,
+    "coplanar_front_rejected": true,
+    "dormer_roof_inside_host_eave": true,
+    "dormer_roof_covers_rear_wall": true
+  },
+  "unresolved": []
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "part_id": "wall_envelope",
+  "version": 2,
+  "basis": {
+    "footprint_width_m": 11.4,
+    "footprint_depth_m": 7.5,
+    "wall_height_m": 6.0,
+    "wall_thickness_m": 0.2,
+    "floor_height_m": 3.0,
+    "front_axis": "-Y",
+    "lower_window": {
+      "bottom_m": 0.9,
+      "width_m": 1.2,
+      "height_m": 1.5
+    },
+    "upper_window": {
+      "bottom_m": 3.9,
+      "width_m": 1.2,
+      "height_m": 1.5
+    },
+    "door": {
+      "bottom_m": 0.0,
+      "width_m": 1.0,
+      "height_m": 2.1
+    }
+  },
+  "openings": [
+    {"id": "door_front", "facade": "front", "kind": "door", "offset_m": 0.0, "bottom_m": 0.0, "width_m": 1.0, "height_m": 2.61},
+
+    {"id": "win_front_lower_01", "facade": "front", "kind": "window", "offset_m": -2.4, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_front_lower_02", "facade": "front", "kind": "window", "offset_m": 1.4, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_front_lower_03", "facade": "front", "kind": "window", "offset_m": 3.8, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+
+    {"id": "win_front_upper_01", "facade": "front", "kind": "window", "offset_m": -2.4, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_front_upper_02", "facade": "front", "kind": "window", "offset_m": 0.0, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_front_upper_03", "facade": "front", "kind": "window", "offset_m": 2.4, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_front_upper_04", "facade": "front", "kind": "window", "offset_m": 4.8, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+
+    {"id": "win_back_lower_01", "facade": "back", "kind": "window", "offset_m": -3.6, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_lower_02", "facade": "back", "kind": "window", "offset_m": 0.0, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_lower_03", "facade": "back", "kind": "window", "offset_m": 3.6, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_upper_01", "facade": "back", "kind": "window", "offset_m": -3.8, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_upper_02", "facade": "back", "kind": "window", "offset_m": -1.27, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_upper_03", "facade": "back", "kind": "window", "offset_m": 1.27, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_back_upper_04", "facade": "back", "kind": "window", "offset_m": 3.8, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+
+    {"id": "win_left_lower_01", "facade": "left", "kind": "window", "offset_m": 0.0, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_left_upper_01", "facade": "left", "kind": "window", "offset_m": -1.4, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_left_upper_02", "facade": "left", "kind": "window", "offset_m": 1.4, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+
+    {"id": "win_right_lower_01", "facade": "right", "kind": "window", "offset_m": -1.2, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_right_lower_02", "facade": "right", "kind": "window", "offset_m": 1.2, "bottom_m": 0.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_right_upper_01", "facade": "right", "kind": "window", "offset_m": -1.2, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5},
+    {"id": "win_right_upper_02", "facade": "right", "kind": "window", "offset_m": 1.2, "bottom_m": 3.9, "width_m": 1.2, "height_m": 1.5}
+  ],
+  "counts": {
+    "doors": 1,
+    "main_windows": 21,
+    "front_lower_windows": 3,
+    "front_upper_windows": 4,
+    "front_tall_windows": 7,
+    "back_tall_windows": 7,
+    "left_tall_windows": 3,
+    "right_tall_windows": 4
+  },
+  "notes": [
+    "Front facade has three ground-floor windows and four upper-floor windows.",
+    "The ground floor skips the door axis; the upper floor includes a centered window above the door.",
+    "Footprint width increased from 9.0 m to 11.4 m so the four-axis facade and left corner tower can coexist without overlap."
+  ]
+}

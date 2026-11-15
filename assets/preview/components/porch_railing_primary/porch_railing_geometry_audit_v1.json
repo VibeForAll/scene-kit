@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "porch_railing_primary",
+  "revision": 1,
+  "render_status": "pass",
+  "visual_qa": "pass",
+  "generated_at": "2026-11-14T23:32:44+08:00",
+  "parameter_document": "internal/porch_railing_v1.json",
+  "parameter_document_sha256": "b1fdf2ec8488596701f3d238a2b254e1e1c19dd997bae006d457c1a6754f5496",
+  "bounds_m": {
+    "railing": {
+      "min": [
+        -1.82075,
+        -3.832,
+        0.51
+      ],
+      "max": [
+        1.82075,
+        -3.688,
+        1.5
+      ]
+    },
+    "porch_landing_wood": {
+      "min": [
+        -1.94,
+        -4.98,
+        0.18
+      ],
+      "max": [
+        1.94,
+        -3.38,
+        3.2
+      ]
+    },
+    "steps": {
+      "min": [
+        -0.9,
+        -4.86,
+        0.0
+      ],
+      "max": [
+        0.9,
+        -3.82,
+        0.51
+      ]
+    },
+    "door": {
+      "min": [
+        -0.43,
+        -3.83,
+        0.555
+      ],
+      "max": [
+        0.43,
+        -3.745,
+        2.535
+      ]
+    }
+  },
+  "bays": {
+    "left": {
+      "min_x_m": -1.82075,
+      "max_x_m": -0.9
+    },
+    "right": {
+      "min_x_m": 0.9,
+      "max_x_m": 1.82075
+    },
+    "center_opening_m": 1.8
+  },
+  "checks": {
+    "rail_rests_on_porch_top": true,
+    "central_opening_matches_stair_width": true,
+    "rail_front_lies_on_landing": true,
+    "two_mirrored_bays": true,
+    "closed_root": true,
+    "no_float_above_mount": true
+  },
+  "unresolved": [],
+  "notes": [
+    "两个对称栏杆开间围绕 1.8 m 中央楼梯口布置。",
+    "栏杆底边落在 0.51 m 木廊平台顶面。",
+    "强制材质 QA 渲染已完成并保存。"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "wall_lantern_primary",
+  "revision": 5,
+  "source": "components/wall_lantern_primary.blend",
+  "bounds_min_m": [
+    -0.715,
+    -4.07,
+    1.93
+  ],
+  "bounds_max_m": [
+    0.715,
+    -3.75,
+    2.433
+  ],
+  "dimensions_m": [
+    1.43,
+    0.32,
+    0.503
+  ],
+  "mesh_count": 2,
+  "triangles": 336,
+  "checks": {
+    "mesh_exists": true,
+    "positive_dimensions": true,
+    "triangles_reported": true,
+    "standalone_source_matches_assembly": true,
+    "texture_mapping_pass": true,
+    "window_clearance_audited": true
+  },
+  "notes": [
+    "Standalone source was rebuilt directly from the verified assembly hierarchy.",
+    "No additional horizontal scale factor is applied in the component source."
+  ],
+  "instance_centers_m": [
+    [
+      -0.56,
+      -3.75,
+      2.12
+    ],
+    [
+      0.56,
+      -3.75,
+      2.12
+    ]
+  ]
+}

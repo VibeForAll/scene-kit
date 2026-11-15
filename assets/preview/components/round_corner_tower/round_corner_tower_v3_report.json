@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "part_id": "round_corner_tower",
+  "revision": 3,
+  "parameters_path": "internal/round_corner_tower_v3.json",
+  "parameters_hash": "916d63c6f38ff33afd5bd64adc845a85bf5b277cc601f15f357d3831bba95fd5",
+  "root": "SK_round_corner_tower_ROOT",
+  "objects": [
+    "SK_round_corner_tower_body",
+    "SK_round_corner_tower_plinth",
+    "SK_round_corner_tower_band_0",
+    "SK_round_corner_tower_band_1",
+    "SK_round_corner_tower_band_2",
+    "SK_round_corner_tower_eave_ring",
+    "SK_round_corner_tower_roof",
+    "SK_round_corner_tower_finial",
+    "SK_round_corner_tower_window_front_stone",
+    "SK_round_corner_tower_window_front_wood",
+    "SK_round_corner_tower_window_front_glass",
+    "SK_round_corner_tower_window_left_stone",
+    "SK_round_corner_tower_window_left_wood",
+    "SK_round_corner_tower_window_left_glass"
+  ],
+  "component_blend": "components/round_corner_tower.blend",
+  "component_glb": "components/round_corner_tower.glb",
+  "assembly_blend": "assembly/castle_assembly.blend",
+  "assembly_glb": "assembly/fairy_tale_castle_01.glb",
+  "meshes": 14,
+  "triangles": 2498,
+  "bounds_min": [
+    -1.28,
+    -1.28,
+    0.0
+  ],
+  "bounds_max": [
+    1.28,
+    1.28,
+    7.28
+  ],
+  "dimensions": [
+    2.56,
+    2.56,
+    7.28
+  ],
+  "render_paths": [
+    "assets/preview/components/round_corner_tower/round_corner_tower_v3_front.png",
+    "assets/preview/components/round_corner_tower/round_corner_tower_v3_side.png",
+    "assets/preview/components/round_corner_tower/round_corner_tower_v3_three_quarter.png",
+    "assets/preview/components/round_corner_tower/round_corner_tower_v3_closeup.png"
+  ],
+  "component_blend_sha256": "d0e5f94f20b4d5c07459da83fe1f1f3897feef7971768af10bfe56b36b420c25",
+  "component_glb_sha256": "2c7b3838a12c5f0f73666414394224ea09145e8a8040e1f3ede26607f67329c8",
+  "assembly_glb_sha256": "4f956ca2bc8ccd79eb94d55b19909aa693edb0d99296b6e7edbc82c900830928"
+}

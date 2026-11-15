@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "part_id": "entrance_steps",
+  "generated_at": "2026-11-14T23:14:08+08:00",
+  "blend_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\out\\entrance_steps_parametric_v1.blend",
+  "blend_sha256": "feac5e4e1834315d1d52a98b141d9591e9146772cdf08b9578845031ba4f1433",
+  "objects": {
+    "root": "SK_entrance_steps_v1_ROOT",
+    "mesh": "SK_entrance_steps_v1_steps",
+    "mesh_triangles": 72,
+    "step_count": 3
+  },
+  "coordinates": {
+    "x_values": [
+      -0.9,
+      0.9
+    ],
+    "y_values": [
+      -4.86,
+      -4.82,
+      -4.5,
+      -4.46,
+      -4.14,
+      -4.1,
+      -3.82
+    ],
+    "z_values": [
+      0.0,
+      0.152,
+      0.17,
+      0.322,
+      0.34,
+      0.492,
+      0.51
+    ],
+    "step_top_vertex_counts": {
+      "0.17": 8,
+      "0.34": 8,
+      "0.51": 8
+    },
+    "step_top_y_ranges_m": {
+      "0.17": [
+        -4.86,
+        -3.82
+      ],
+      "0.34": [
+        -4.5,
+        -3.82
+      ],
+      "0.51": [
+        -4.14,
+        -3.82
+      ]
+    }
+  },
+  "world_bounds_m": {
+    "steps": {
+      "min": [
+        -0.9,
+        -4.86,
+        0.0
+      ],
+      "max": [
+        0.9,
+        -3.82,
+        0.51
+      ]
+    },
+    "portal_stone": {
+      "min": [
+        -0.59,
+        -3.86,
+        0.51
+      ],
+      "max": [
+        0.59,
+        -3.54,
+        2.77
+      ]
+    },
+    "door": {
+      "min": [
+        -0.43,
+        -3.83,
+        0.555
+      ],
+      "max": [
+        0.43,
+        -3.745,
+        2.535
+      ]
+    }
+  },
+  "dimensions_m": [
+    1.8,
+    1.04,
+    0.51
+  ],
+  "expected": {
+    "dimensions_m": [
+      1.8,
+      1.04,
+      0.51
+    ],
+    "bottom_z_m": 0.0,
+    "platform_height_m": 0.51,
+    "riser_height_m": 0.17,
+    "tread_depth_m": 0.36,
+    "landing_depth_m": 0.32,
+    "nosing_projection_m": 0.04
+  },
+  "contact": {
+    "tolerance_m": 0.0005,
+    "portal_plan_overlap_m": [
+      1.18,
+      0.04,
+      0.0
+    ],
+    "meeting_plane_z_m": 0.51,
+    "door_aabb_overlap_m": [
+      0.86,
+      0.01,
+      -0.045
+    ]
+  },
+  "checks": {
+    "dimensions_match_contract": true,
+    "ground_contact": true,
+    "platform_top_matches_portal_bottom": true,
+    "portal_plan_overlap_nonzero": true,
+    "door_has_vertical_clearance": true,
+    "steps_centered_on_portal": true,
+    "three_tread_tops_present": true,
+    "top_surfaces_have_depth": true,
+    "single_connected_root": true
+  },
+  "unresolved": [],
+  "notes": [
+    "鼻线外挑已包含在合同总深度 1.04 m 内，不再额外增加占地。",
+    "台阶从地面连续抬升到 0.51 m 平台顶，最高一级与入口石质门槛底面接触。",
+    "台阶与门扇在高度方向保留 0.045 m 净距，不穿透门扇。"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "part_id": "stone_chimney_primary",
+  "revision": 2,
+  "status": "pass",
+  "mesh_count": 8,
+  "triangles": 96,
+  "counts": {
+    "stone_chimney_instances": 2,
+    "metal_flues": 0
+  },
+  "instance_dimensions_m": {
+    "SK_stone_chimney_primary_v1_chimney_back_right_ROOT": [
+      0.98,
+      0.98,
+      2.14
+    ],
+    "SK_stone_chimney_primary_v1_chimney_front_left_ROOT": [
+      0.98,
+      0.98,
+      2.14
+    ]
+  },
+  "checks": {
+    "two_stone_chimney_instances": true,
+    "metal_flues_removed": true,
+    "caps_present": true,
+    "shafts_present": true
+  }
+}

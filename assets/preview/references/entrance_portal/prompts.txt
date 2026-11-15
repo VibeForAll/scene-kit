@@ -1,0 +1,23 @@
+SCENE KIT · entrance_portal · entrance_portal
+参考图角色
+- geometry: preview/references-current/entrance_portal/geometry_front.png, preview/references-current/entrance_portal/geometry_side.png
+- appearance: preview/references-current/entrance_portal/appearance_front.png, preview/references-current/entrance_portal/appearance_side.png, preview/references-current/entrance_portal/generation_input.png
+- review_only: concepts/imported-castle-01/contact-sheet.jpg, preview/detail-scan/annotated-overview.jpg
+
+主生成输入：preview/references-current/entrance_portal/generation_input.png
+
+ENGLISH POSITIVE
+One isolated arched timber entrance portal for a two-storey storybook castle, heavy dark stained wood door, deep warm-grey stone surround, stone threshold, matte iron hinges and handle, complete opening front, side reveal thickness, rear wall attachment and ground contact. A two-storey storybook European castle-house matching the approved ten-view reference set. Preserve the observed main-body proportions, two tall stone chimneys, roof silhouette, facade opening rhythm, entrance position and relative material balance across every component. Use weathered warm-grey masonry, aged cream plaster or pale stone, dark slate, dark stained timber, muted blue-grey glazing, white-painted window trim and restrained dark iron. Architectural details should feel handmade, romantic and construction-legible, with substantial stone surrounds, clear supporting masonry, coherent roof and chimney junctions and practical wall openings. Natural matte materials, softly weathered surfaces, neutral architectural presentation, no style drift.
+
+ENGLISH NEGATIVE
+complete building, surrounding facade, adjacent windows, porch platform, steps, extra door, floating parts, cropped arch, missing threshold, plastic material, labels, watermark. different castle, changed chimney count, changed chimney placement, added tower, changed roof silhouette, changed entrance, modern villa, generic suburban house, excessive gingerbread ornament, plastic surfaces, glossy toy materials, mixed architectural styles, floating structure, unsupported chimney, broken roof, impossible overhang, people, text, labels, watermark.
+
+中文正向
+一个独立完整的两层童话城堡拱形入口组件，厚重做旧深木门，深凹暖灰石质洞口，石质门槛，哑光铁艺铰链和把手，包含完整洞口正面、侧向内凹厚度、背面墙体安装面和地面接触面。 两层童话欧式城堡住宅，严格对应已确认的十视图参考集。所有构件必须保持画面中观察到的主体比例、两座高石烟囱、屋顶轮廓、立面孔洞节奏、入口位置和相对材料比例。使用风化暖灰砌石、做旧奶油色抹灰或浅色石材、深色石板、深色木材、低饱和蓝灰玻璃、白色窗线和克制的深色铁件。细节应具有手工感、浪漫感和清楚的建造逻辑，石质洞口、支撑砌体和屋面/烟囱交接应可信，并保留实际可用的墙体洞口。自然哑光材质、轻微风化表面、中性建筑展示，不允许风格漂移。
+
+中文负向
+完整建筑，周围立面，相邻窗，门廊平台，台阶，额外门，漂浮部件，裁切拱券，缺失门槛，塑料材质，文字，标注，水印。 不同的城堡，改变烟囱数量，改变烟囱位置，额外塔楼，改变屋顶轮廓，改变入口，现代别墅，普通郊区住宅，过度的姜饼屋装饰，塑料表面，高光玩具材质，风格混搭失控，漂浮结构，无支撑烟囱，断裂屋顶，无法解释的悬挑，人物，文字，标注，水印。
+
+VIEW
+EN: Straight-on entrance elevation and one side profile, complete arch, threshold and rear wall contact visible.
+中文：入口正视和侧视轮廓，完整显示拱券、门槛和背面墙体接触面。

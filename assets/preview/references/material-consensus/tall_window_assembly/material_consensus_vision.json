@@ -1,0 +1,548 @@
+{
+  "back_upper_mid": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\back_upper_mid.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "The image is of a window on the side of a building. The building is white with black painted lines on it. There is a decorative ledge on the front of the window. The window is made of wood. The wood is dark brown in color. The glass on the window is reflecting the outside of it."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          0.993
+        ],
+        [
+          "no",
+          0.007
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.832
+        ],
+        [
+          "no",
+          0.165
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.982
+        ],
+        [
+          "yes",
+          0.018
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.845
+        ],
+        [
+          "yes",
+          0.154
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.994
+        ],
+        [
+          "no",
+          0.005
+        ]
+      ]
+    }
+  },
+  "front_left_45": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\front_left_45.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "A window is on the side of a building. The window has a wooden frame. The frame is dark brown. There is a bench under the window. The bench is made of wood. The seat of the bench is covered with a patterned fabric. The wall of the building is beige. There are trees in the background."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          0.997
+        ],
+        [
+          "no",
+          0.003
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.6
+        ],
+        [
+          "no",
+          0.396
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.926
+        ],
+        [
+          "no",
+          0.071
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.659
+        ],
+        [
+          "yes",
+          0.34
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.872
+        ],
+        [
+          "yes",
+          0.127
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.997
+        ],
+        [
+          "no",
+          0.003
+        ]
+      ]
+    }
+  },
+  "front_lower_left": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\front_lower_left.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "A window is on the side of a building. The building is made of stone. There is a small green plant next to the window. "
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.992
+        ],
+        [
+          "no",
+          0.008
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "no",
+          0.936
+        ],
+        [
+          "yes",
+          0.063
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.903
+        ],
+        [
+          "yes",
+          0.096
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "yes",
+          0.774
+        ],
+        [
+          "no",
+          0.225
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.992
+        ],
+        [
+          "no",
+          0.008
+        ]
+      ]
+    }
+  },
+  "front_right_45": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\front_right_45.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "The image is of a window on the side of a house. The window is made of wood. The wood is dark brown in color. There is a stone ledge on the window sill. The wall of the house is white. There are dark brown trim around the window. The leaves on the top of the image are dark green."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.835
+        ],
+        [
+          "no",
+          0.162
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "no",
+          0.96
+        ],
+        [
+          "yes",
+          0.039
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "yes",
+          0.551
+        ],
+        [
+          "no",
+          0.448
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.608
+        ],
+        [
+          "yes",
+          0.391
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ]
+    }
+  },
+  "front_upper_mid": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\front_upper_mid.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "A picture of a window on a building. The window is made of wood. The wood is dark brown in color. There are glass panels on the window. There is a window sill on the wall. The wall is painted yellow. The blinds are dark gray. There appears to be a piece of fabric on the ledge. The fabric is white."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.001
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.971
+        ],
+        [
+          "no",
+          0.027
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.94
+        ],
+        [
+          "yes",
+          0.06
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.863
+        ],
+        [
+          "yes",
+          0.136
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.998
+        ],
+        [
+          "no",
+          0.002
+        ]
+      ]
+    }
+  },
+  "left_main": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\left_main.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "A window is on the wall of a house. The window has a wooden frame. The frame is dark brown. There is a bench in front of the window. The bench is made of wood. The seat of the bench is covered with a patterned fabric. The wall of the house is beige. There are cracks in the wall."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.831
+        ],
+        [
+          "no",
+          0.166
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          0.998
+        ],
+        [
+          "no",
+          0.002
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.611
+        ],
+        [
+          "yes",
+          0.388
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.809
+        ],
+        [
+          "yes",
+          0.19
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.001
+        ]
+      ]
+    }
+  },
+  "right_main": {
+    "path": "preview\\material-consensus\\tall_window_assembly\\right_main.png",
+    "caption": {
+      "<MORE_DETAILED_CAPTION>": "The image is of a window on the side of a house. The window has a wooden frame. The frame is dark brown. There is a window sill on the bottom of the window. The wall on the house is beige. There are black lines on the wall. The windows have glass panes. The blinds are dark gray. The sun is shining through the blinds."
+    },
+    "vqa": {
+      "Is the window frame deep brown?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.001
+        ]
+      ],
+      "Is the window frame gray brown?": [
+        [
+          "yes",
+          0.96
+        ],
+        [
+          "no",
+          0.038
+        ]
+      ],
+      "Is the window frame black?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the window made of wood?": [
+        [
+          "yes",
+          1.0
+        ],
+        [
+          "no",
+          0.0
+        ]
+      ],
+      "Is the wood matte?": [
+        [
+          "no",
+          0.947
+        ],
+        [
+          "yes",
+          0.053
+        ]
+      ],
+      "Is the window surround pale stone?": [
+        [
+          "no",
+          0.97
+        ],
+        [
+          "yes",
+          0.03
+        ]
+      ],
+      "Does the window have small panes?": [
+        [
+          "yes",
+          0.999
+        ],
+        [
+          "no",
+          0.001
+        ]
+      ]
+    }
+  }
+}

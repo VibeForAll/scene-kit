@@ -1,0 +1,5057 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-15T00:35:50+08:00",
+  "tool": "scene-kit blender_audit.py",
+  "strict_requested": false,
+  "blend_file": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\out\\porch_planter_primary_v1.blend",
+  "scene": {
+    "name": "Scene",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "frame_start": 1,
+    "frame_end": 250,
+    "render_engine": "BLENDER_EEVEE",
+    "resolution": [
+      720,
+      560
+    ],
+    "resolution_percentage": 100
+  },
+  "inventory": {
+    "objects_total": 159,
+    "mesh_objects": 63,
+    "cameras": [
+      "CAM_CTX_structure_front",
+      "CAM_CTX_structure_three_quarter",
+      "CAM_MASK_wall_back",
+      "CAM_MASK_wall_front",
+      "CAM_MASK_wall_left",
+      "CAM_MASK_wall_right",
+      "CAM_QA_attic_window",
+      "CAM_QA_chimney_closeup",
+      "CAM_QA_chimney_front",
+      "CAM_QA_chimney_side",
+      "CAM_QA_chimney_three_quarter",
+      "CAM_QA_entrance_closeup",
+      "CAM_QA_entrance_front",
+      "CAM_QA_entrance_hood_v2_closeup",
+      "CAM_QA_entrance_hood_v2_front",
+      "CAM_QA_entrance_hood_v2_side",
+      "CAM_QA_entrance_hood_v2_three_quarter",
+      "CAM_QA_entrance_side",
+      "CAM_QA_entrance_steps_closeup",
+      "CAM_QA_entrance_steps_front",
+      "CAM_QA_entrance_steps_side",
+      "CAM_QA_entrance_steps_three_quarter",
+      "CAM_QA_entrance_three_quarter",
+      "CAM_QA_floor_slab_front",
+      "CAM_QA_floor_slab_three_quarter",
+      "CAM_QA_floor_slab_top",
+      "CAM_QA_hood_v2_roof_front",
+      "CAM_QA_hood_v2_roof_three_quarter",
+      "CAM_QA_porch_railing_closeup",
+      "CAM_QA_porch_railing_front",
+      "CAM_QA_porch_railing_three_quarter",
+      "CAM_QA_roof_eave_closeup",
+      "CAM_QA_roof_front",
+      "CAM_QA_roof_side",
+      "CAM_QA_roof_three_quarter",
+      "CAM_QA_stone_base_front",
+      "CAM_QA_stone_base_side",
+      "CAM_QA_stone_base_three_quarter",
+      "CAM_QA_tall_window",
+      "CAM_QA_vegetation",
+      "CAM_QA_wall_front",
+      "CAM_QA_wall_lantern_closeup",
+      "CAM_QA_wall_lantern_front",
+      "CAM_QA_wall_lantern_side",
+      "CAM_QA_wall_lantern_three_quarter",
+      "CAM_QA_wall_side",
+      "CAM_QA_wall_three_quarter",
+      "CAM_QA_wooden_porch_closeup",
+      "CAM_QA_wooden_porch_front",
+      "CAM_QA_wooden_porch_side",
+      "CAM_QA_wooden_porch_three_quarter",
+      "CAM_REF_RIG_back",
+      "CAM_REF_RIG_back_left_45",
+      "CAM_REF_RIG_back_right_45",
+      "CAM_REF_RIG_bottom",
+      "CAM_REF_RIG_front",
+      "CAM_REF_RIG_front_left_45",
+      "CAM_REF_RIG_front_right_45",
+      "CAM_REF_RIG_left",
+      "CAM_REF_RIG_right",
+      "CAM_REF_RIG_top",
+      "CAM_REF_axis_negY",
+      "CAM_REF_axis_posX",
+      "CAM_REF_axis_posY",
+      "CAM_REF_axis_posZ",
+      "CAM_REF_whole_building_3q",
+      "CAM_Review_tall_window_front",
+      "CAM_Review_tall_window_side",
+      "CAM_Review_tall_window_three_quarter",
+      "Camera"
+    ],
+    "review_cameras": [
+      "CAM_Review_tall_window_front",
+      "CAM_Review_tall_window_side",
+      "CAM_Review_tall_window_three_quarter"
+    ],
+    "lights": [
+      "Light",
+      "SK_QA_Fill",
+      "SK_QA_Key",
+      "SK_QA_Rim",
+      "SK_REVIEW_wall_fill",
+      "SK_REVIEW_wall_key",
+      "SK_REVIEW_wall_rim"
+    ],
+    "collections": [
+      "Collection",
+      "SK_COL_AI",
+      "SK_COL_Cameras",
+      "SK_COL_Debug",
+      "SK_COL_Ornament",
+      "SK_COL_Reference",
+      "SK_COL_Review",
+      "SK_COL_Site",
+      "SK_COL_Structure",
+      "SK_COL_Vegetation"
+    ],
+    "materials_total": 22
+  },
+  "totals": {
+    "vertices": 106720,
+    "edges": 269735,
+    "polygons": 164578,
+    "triangles": 173481,
+    "non_manifold_edges": 36833,
+    "boundary_edges": 36833,
+    "wire_edges": 0,
+    "loose_vertices": 0,
+    "zero_area_faces": 0,
+    "ngons": 394,
+    "duplicate_edges": 0,
+    "duplicate_faces": 0
+  },
+  "images": [
+    {
+      "name": "black_painted_planks_diff_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_diff_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_diff_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "black_painted_planks_nor_gl_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_nor_gl_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_nor_gl_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "black_painted_planks_rough_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_rough_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\black_painted_planks\\black_painted_planks_rough_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "Color_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "Color_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "Color_e4a54a1a-4f35-42c9-8056-5d428c925144",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "fine_grained_wood_diff_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_diff_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_diff_2k.jpg",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "fine_grained_wood_nor_gl_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_nor_gl_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_nor_gl_2k.jpg",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "fine_grained_wood_rough_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_rough_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\fine_grained_wood\\fine_grained_wood_rough_2k.jpg",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "NormalGL_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "NormalGL_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "NormalGL_e4a54a1a-4f35-42c9-8056-5d428c925144",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "old_stone_wall_diff_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_diff_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_diff_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "old_stone_wall_nor_gl_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_nor_gl_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_nor_gl_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "old_stone_wall_rough_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_rough_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\old_stone_wall\\old_stone_wall_rough_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "ORM_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "ORM_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "ORM_e4a54a1a-4f35-42c9-8056-5d428c925144",
+      "source": "FILE",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": true
+    },
+    {
+      "name": "Render Result",
+      "source": "VIEWER",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": false
+    },
+    {
+      "name": "roof_slates_03_diff_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_diff_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_diff_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "roof_slates_03_nor_gl_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_nor_gl_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_nor_gl_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "roof_slates_03_rough_2k.jpg",
+      "source": "FILE",
+      "filepath": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_rough_2k.jpg",
+      "resolved_path": "D:\\MyProjects\\AIVideoWork\\20261108-课程\\Projects\\CodexDs\\cases\\case-01\\textures\\polyhaven\\roof_slates_03\\roof_slates_03_rough_2k.jpg",
+      "exists": true,
+      "packed": false
+    },
+    {
+      "name": "Viewer Node",
+      "source": "VIEWER",
+      "filepath": "",
+      "resolved_path": "",
+      "exists": null,
+      "packed": false
+    }
+  ],
+  "texture_mapping_audit": {
+    "status": "pass",
+    "image_texture_materials": 11,
+    "materials": [
+      {
+        "material": "MAT_entrance_portal_AgedDarkWood_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "fine_grained_wood_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "fine_grained_wood_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "fine_grained_wood_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_floor_slab_system_StructuralStone_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "old_stone_wall_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "old_stone_wall_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "old_stone_wall_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_main_roof_assembly_Slate_roof_slates_03_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "roof_slates_03_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "roof_slates_03_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "roof_slates_03_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_porch_planter_Soil_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_porch_planter_Terracotta_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_porch_railing_DarkPaintedTimber_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "black_painted_planks_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "black_painted_planks_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "black_painted_planks_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_REVIEW_ground",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_roof_system_FasciaDarkWood_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_roof_system_GutterDarkMetal_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_stone_base_plinth_OldStoneWall_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "old_stone_wall_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "old_stone_wall_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "old_stone_wall_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_stone_base_plinth_OldStoneWallCap_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "old_stone_wall_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "old_stone_wall_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "old_stone_wall_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_stone_chimney_Moss_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "fine_grained_wood_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              1.25,
+              1.25,
+              1.25
+            ],
+            "coordinate_source": "UVMAP",
+            "coordinate_output": "UV"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "fine_grained_wood_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              1.25,
+              1.25,
+              1.25
+            ],
+            "coordinate_source": "UVMAP",
+            "coordinate_output": "UV"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "fine_grained_wood_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              1.25,
+              1.25,
+              1.25
+            ],
+            "coordinate_source": "UVMAP",
+            "coordinate_output": "UV"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_tall_window_assembly_SmokyGlazing_v2",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_tall_window_assembly_WeatheredWarmStone_v2",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_vegetation_DarkWoodyStem_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_vegetation_MutedGreenLeaves_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_wall_envelope_OldStoneWall_v1",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "old_stone_wall_diff_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "old_stone_wall_nor_gl_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "old_stone_wall_rough_2k.jpg",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "BOX",
+            "extension": "REPEAT",
+            "mapping_scale": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "coordinate_source": "TEX_COORD",
+            "coordinate_output": "Object"
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "MAT_wall_lantern_WarmGlass_v1",
+        "use_nodes": true,
+        "image_textures": [],
+        "risk_findings": []
+      },
+      {
+        "material": "tripo_material_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "Color_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "ORM_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "NormalGL_366e1b02-c3e0-4b1d-82ba-6398a7cc1c59",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "tripo_material_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "Color_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "ORM_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "NormalGL_c5639bbe-dc78-4037-a45a-704e4d80bc34",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          }
+        ],
+        "risk_findings": []
+      },
+      {
+        "material": "tripo_material_e4a54a1a-4f35-42c9-8056-5d428c925144",
+        "use_nodes": true,
+        "image_textures": [
+          {
+            "node": "图像纹理",
+            "image": "Color_e4a54a1a-4f35-42c9-8056-5d428c925144",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.001",
+            "image": "ORM_e4a54a1a-4f35-42c9-8056-5d428c925144",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          },
+          {
+            "node": "图像纹理.002",
+            "image": "NormalGL_e4a54a1a-4f35-42c9-8056-5d428c925144",
+            "image_size": [
+              2048,
+              2048
+            ],
+            "projection": "FLAT",
+            "extension": "REPEAT",
+            "mapping_scale": null,
+            "coordinate_source": null,
+            "coordinate_output": null
+          }
+        ],
+        "risk_findings": []
+      }
+    ],
+    "risk_findings": []
+  },
+  "objects": [
+    {
+      "name": "REF_whole_building_tripo_front_right_45_decimated_v1",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Reference"
+      ],
+      "parent": null,
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.000252,
+        5.265628,
+        5.825959
+      ],
+      "world_bounds": {
+        "min": [
+          -4.499641,
+          -2.63318,
+          0.0
+        ],
+        "max": [
+          4.50061,
+          2.632448,
+          5.825959
+        ]
+      },
+      "vertices": 93644,
+      "edges": 243413,
+      "polygons": 149999,
+      "triangles": 149999,
+      "modifiers": [],
+      "data_name": "MESH_REF_whole_building_tripo_front_right_45_decimated_v1",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "tripo_material_c5639bbe-dc78-4037-a45a-704e4d80bc34"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 36829,
+      "boundary_edges": 36829,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_hood",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.5,
+        0.212,
+        0.16
+      ],
+      "world_bounds": {
+        "min": [
+          -0.75,
+          -3.792,
+          5.19
+        ],
+        "max": [
+          0.75,
+          -3.58,
+          5.35
+        ]
+      },
+      "vertices": 30,
+      "edges": 45,
+      "polygons": 23,
+      "triangles": 44,
+      "modifiers": [],
+      "data_name": "MESH_SK_attic_window_assembly_hood.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_left_glass",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.486,
+        0.02,
+        0.746
+      ],
+      "world_bounds": {
+        "min": [
+          -0.683,
+          -3.6664,
+          4.317
+        ],
+        "max": [
+          -0.197,
+          -3.6464,
+          5.063
+        ]
+      },
+      "vertices": 224,
+      "edges": 432,
+      "polygons": 216,
+      "triangles": 432,
+      "modifiers": [],
+      "data_name": "立方体.105",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_SmokyGlazing_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_left_stone",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.72,
+        0.26,
+        0.98
+      ],
+      "world_bounds": {
+        "min": [
+          -0.8,
+          -3.85,
+          4.2
+        ],
+        "max": [
+          -0.08,
+          -3.59,
+          5.18
+        ]
+      },
+      "vertices": 224,
+      "edges": 432,
+      "polygons": 216,
+      "triangles": 432,
+      "modifiers": [],
+      "data_name": "立方体.095",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_WeatheredWarmStone_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_left_wood",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.576,
+        0.13,
+        0.836
+      ],
+      "world_bounds": {
+        "min": [
+          -0.728,
+          -3.75,
+          4.272
+        ],
+        "max": [
+          -0.152,
+          -3.62,
+          5.108
+        ]
+      },
+      "vertices": 336,
+      "edges": 648,
+      "polygons": 324,
+      "triangles": 648,
+      "modifiers": [],
+      "data_name": "立方体.099",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_right_glass",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.486,
+        0.02,
+        0.746
+      ],
+      "world_bounds": {
+        "min": [
+          0.197,
+          -3.6664,
+          4.317
+        ],
+        "max": [
+          0.683,
+          -3.6464,
+          5.063
+        ]
+      },
+      "vertices": 224,
+      "edges": 432,
+      "polygons": 216,
+      "triangles": 432,
+      "modifiers": [],
+      "data_name": "立方体.119",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_SmokyGlazing_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_right_stone",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.72,
+        0.26,
+        0.98
+      ],
+      "world_bounds": {
+        "min": [
+          0.08,
+          -3.85,
+          4.2
+        ],
+        "max": [
+          0.8,
+          -3.59,
+          5.18
+        ]
+      },
+      "vertices": 224,
+      "edges": 432,
+      "polygons": 216,
+      "triangles": 432,
+      "modifiers": [],
+      "data_name": "立方体.109",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_WeatheredWarmStone_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_right_wood",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.576,
+        0.13,
+        0.836
+      ],
+      "world_bounds": {
+        "min": [
+          0.152,
+          -3.75,
+          4.272
+        ],
+        "max": [
+          0.728,
+          -3.62,
+          5.108
+        ]
+      },
+      "vertices": 336,
+      "edges": 648,
+      "polygons": 324,
+      "triangles": 648,
+      "modifiers": [],
+      "data_name": "立方体.113",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_attic_window_assembly_stone_lintel",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_attic_window_assembly_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.58,
+        0.18,
+        0.065
+      ],
+      "world_bounds": {
+        "min": [
+          -0.79,
+          -3.77,
+          5.1425
+        ],
+        "max": [
+          0.79,
+          -3.59,
+          5.2075
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_attic_window_assembly_stone_lintel.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_WeatheredWarmStone_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_climbing_vine_module_leaves",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_climbing_vine_module_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.790539,
+        0.074043,
+        0.72938
+      ],
+      "world_bounds": {
+        "min": [
+          -0.395715,
+          -0.086402,
+          0.006035
+        ],
+        "max": [
+          0.394824,
+          -0.012359,
+          0.735415
+        ]
+      },
+      "vertices": 864,
+      "edges": 1296,
+      "polygons": 576,
+      "triangles": 1440,
+      "modifiers": [],
+      "data_name": "MESH_SK_climbing_vine_module_leaves.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_vegetation_MutedGreenLeaves_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 144,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_climbing_vine_module_stems",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_climbing_vine_module_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.726905,
+        0.090255,
+        0.926885
+      ],
+      "world_bounds": {
+        "min": [
+          -0.374652,
+          -0.082815,
+          -0.002369
+        ],
+        "max": [
+          0.352253,
+          0.00744,
+          0.924517
+        ]
+      },
+      "vertices": 912,
+      "edges": 1404,
+      "polygons": 672,
+      "triangles": 1464,
+      "modifiers": [],
+      "data_name": "MESH_SK_climbing_vine_module_stems.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_vegetation_DarkWoodyStem_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 60,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_corner_stone_detail_v1_stones",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Ornament"
+      ],
+      "parent": "SK_corner_stone_detail_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.12,
+        7.62,
+        5.1192
+      ],
+      "world_bounds": {
+        "min": [
+          -4.56,
+          -3.81,
+          0.5154
+        ],
+        "max": [
+          4.56,
+          3.81,
+          5.6346
+        ]
+      },
+      "vertices": 1216,
+      "edges": 1824,
+      "polygons": 912,
+      "triangles": 1824,
+      "modifiers": [],
+      "data_name": "MESH_SK_corner_stone_detail_v1_stones.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_entrance_portal_v1_door",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_entrance_portal_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.86,
+        0.085,
+        1.98
+      ],
+      "world_bounds": {
+        "min": [
+          -0.43,
+          -3.83,
+          0.555
+        ],
+        "max": [
+          0.43,
+          -3.745,
+          2.535
+        ]
+      },
+      "vertices": 222,
+      "edges": 333,
+      "polygons": 161,
+      "triangles": 344,
+      "modifiers": [],
+      "data_name": "MESH_SK_entrance_portal_v1_door.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_entrance_portal_AgedDarkWood_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_entrance_portal_v1_iron",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_entrance_portal_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.7282,
+        0.045,
+        0.566667
+      ],
+      "world_bounds": {
+        "min": [
+          -0.43,
+          -3.855,
+          1.046667
+        ],
+        "max": [
+          0.2982,
+          -3.81,
+          1.613333
+        ]
+      },
+      "vertices": 152,
+      "edges": 292,
+      "polygons": 146,
+      "triangles": 292,
+      "modifiers": [],
+      "data_name": "MESH_SK_entrance_portal_v1_iron.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_entrance_portal_v1_stone",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_entrance_portal_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.18,
+        0.32,
+        2.26
+      ],
+      "world_bounds": {
+        "min": [
+          -0.59,
+          -3.86,
+          0.51
+        ],
+        "max": [
+          0.59,
+          -3.54,
+          2.77
+        ]
+      },
+      "vertices": 104,
+      "edges": 156,
+      "polygons": 78,
+      "triangles": 156,
+      "modifiers": [],
+      "data_name": "MESH_SK_entrance_portal_v1_stone.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_entrance_steps_v1_steps",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_entrance_steps_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.8,
+        1.04,
+        0.51
+      ],
+      "world_bounds": {
+        "min": [
+          -0.9,
+          -4.86,
+          0.0
+        ],
+        "max": [
+          0.9,
+          -3.82,
+          0.51
+        ]
+      },
+      "vertices": 48,
+      "edges": 72,
+      "polygons": 36,
+      "triangles": 72,
+      "modifiers": [],
+      "data_name": "MESH_SK_entrance_steps_v1_steps.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_floor_slab_system_v1_ground",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_floor_slab_system_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        -0.11
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        8.6,
+        7.1,
+        0.22
+      ],
+      "world_bounds": {
+        "min": [
+          -4.3,
+          -3.55,
+          -0.22
+        ],
+        "max": [
+          4.3,
+          3.55,
+          0.0
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.037",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_floor_slab_system_StructuralStone_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_floor_slab_system_v1_upper",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_floor_slab_system_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        2.89
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        8.6,
+        7.1,
+        0.22
+      ],
+      "world_bounds": {
+        "min": [
+          -4.3,
+          -3.55,
+          2.78
+        ],
+        "max": [
+          4.3,
+          3.55,
+          3.0
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.038",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_floor_slab_system_StructuralStone_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_main_roof_assembly_v1_fascia",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_main_roof_assembly_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.4,
+        7.9,
+        0.18
+      ],
+      "world_bounds": {
+        "min": [
+          -4.7,
+          -3.95,
+          5.82
+        ],
+        "max": [
+          4.7,
+          3.95,
+          6.0
+        ]
+      },
+      "vertices": 16,
+      "edges": 24,
+      "polygons": 12,
+      "triangles": 24,
+      "modifiers": [],
+      "data_name": "MESH_SK_main_roof_assembly_v1_fascia.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_FasciaDarkWood_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_main_roof_assembly_v1_gable",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_main_roof_assembly_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.0,
+        7.5,
+        2.8
+      ],
+      "world_bounds": {
+        "min": [
+          -4.5,
+          -3.75,
+          6.0
+        ],
+        "max": [
+          4.5,
+          3.75,
+          8.8
+        ]
+      },
+      "vertices": 12,
+      "edges": 18,
+      "polygons": 10,
+      "triangles": 16,
+      "modifiers": [],
+      "data_name": "MESH_SK_main_roof_assembly_v1_gable.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_main_roof_assembly_v1_gutter",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_main_roof_assembly_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.4,
+        8.08,
+        0.12
+      ],
+      "world_bounds": {
+        "min": [
+          -4.7,
+          -4.04,
+          5.817
+        ],
+        "max": [
+          4.7,
+          4.04,
+          5.937
+        ]
+      },
+      "vertices": 16,
+      "edges": 24,
+      "polygons": 12,
+      "triangles": 24,
+      "modifiers": [],
+      "data_name": "MESH_SK_main_roof_assembly_v1_gutter.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_main_roof_assembly_v1_ridge_cap",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_main_roof_assembly_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.6,
+        0.2,
+        0.2
+      ],
+      "world_bounds": {
+        "min": [
+          -4.8,
+          -0.1,
+          8.7
+        ],
+        "max": [
+          4.8,
+          0.1,
+          8.9
+        ]
+      },
+      "vertices": 40,
+      "edges": 60,
+      "polygons": 22,
+      "triangles": 76,
+      "modifiers": [],
+      "data_name": "MESH_SK_main_roof_assembly_v1_ridge_cap.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_main_roof_assembly_v1_roof",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_main_roof_assembly_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.4,
+        7.9,
+        2.98
+      ],
+      "world_bounds": {
+        "min": [
+          -4.7,
+          -3.95,
+          5.82
+        ],
+        "max": [
+          4.7,
+          3.95,
+          8.8
+        ]
+      },
+      "vertices": 16,
+      "edges": 24,
+      "polygons": 12,
+      "triangles": 24,
+      "modifiers": [],
+      "data_name": "MESH_SK_main_roof_assembly_v1_roof.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_main_roof_assembly_Slate_roof_slates_03_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_porch_planter_primary_leaves",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_porch_planter_primary_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.195076,
+        0.082973,
+        0.251952
+      ],
+      "world_bounds": {
+        "min": [
+          -0.101362,
+          -0.123633,
+          0.197671
+        ],
+        "max": [
+          0.093713,
+          -0.040659,
+          0.449623
+        ]
+      },
+      "vertices": 408,
+      "edges": 612,
+      "polygons": 272,
+      "triangles": 680,
+      "modifiers": [],
+      "data_name": "MESH_SK_porch_planter_primary_leaves.003",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_vegetation_MutedGreenLeaves_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 68,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_porch_planter_primary_pot",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_porch_planter_primary_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2968,
+        0.2968,
+        0.20875
+      ],
+      "world_bounds": {
+        "min": [
+          -0.1484,
+          -0.1484,
+          0.0
+        ],
+        "max": [
+          0.1484,
+          0.1484,
+          0.20875
+        ]
+      },
+      "vertices": 80,
+      "edges": 120,
+      "polygons": 44,
+      "triangles": 152,
+      "modifiers": [],
+      "data_name": "MESH_SK_porch_planter_primary_pot.003",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_porch_planter_Terracotta_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 4,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_porch_planter_primary_soil",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_porch_planter_primary_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2464,
+        0.2464,
+        0.02
+      ],
+      "world_bounds": {
+        "min": [
+          -0.1232,
+          -0.1232,
+          0.185
+        ],
+        "max": [
+          0.1232,
+          0.1232,
+          0.205
+        ]
+      },
+      "vertices": 40,
+      "edges": 60,
+      "polygons": 22,
+      "triangles": 76,
+      "modifiers": [],
+      "data_name": "MESH_SK_porch_planter_primary_soil.003",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_porch_planter_Soil_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_porch_planter_primary_stems",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Vegetation"
+      ],
+      "parent": "SK_porch_planter_primary_ROOT",
+      "hide_render": false,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.165225,
+        0.118905,
+        0.334264
+      ],
+      "world_bounds": {
+        "min": [
+          -0.090766,
+          -0.115047,
+          0.19608
+        ],
+        "max": [
+          0.074459,
+          0.003858,
+          0.530344
+        ]
+      },
+      "vertices": 774,
+      "edges": 1164,
+      "polygons": 540,
+      "triangles": 1248,
+      "modifiers": [],
+      "data_name": "MESH_SK_porch_planter_primary_stems.003",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_vegetation_DarkWoodyStem_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 84,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_REVIEW_wall_ground",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Review"
+      ],
+      "parent": null,
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        -0.01
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        30.0,
+        30.0,
+        0.0
+      ],
+      "world_bounds": {
+        "min": [
+          -15.0,
+          -15.0,
+          -0.01
+        ],
+        "max": [
+          15.0,
+          15.0,
+          -0.01
+        ]
+      },
+      "vertices": 4,
+      "edges": 4,
+      "polygons": 1,
+      "triangles": 2,
+      "modifiers": [],
+      "data_name": "平面",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_REVIEW_ground"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 4,
+      "boundary_edges": 4,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_back",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        3.8,
+        0.225
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.2,
+        0.1,
+        0.45
+      ],
+      "world_bounds": {
+        "min": [
+          -4.6,
+          3.75,
+          0.0
+        ],
+        "max": [
+          4.6,
+          3.85,
+          0.45
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.027",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_cap_back",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        3.825,
+        0.48
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.3,
+        0.15,
+        0.06
+      ],
+      "world_bounds": {
+        "min": [
+          -4.65,
+          3.75,
+          0.45
+        ],
+        "max": [
+          4.65,
+          3.9,
+          0.51
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.031",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_cap_front",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        -3.825,
+        0.48
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.3,
+        0.15,
+        0.06
+      ],
+      "world_bounds": {
+        "min": [
+          -4.65,
+          -3.9,
+          0.45
+        ],
+        "max": [
+          4.65,
+          -3.75,
+          0.51
+        ]
+      },
+      "vertices": 112,
+      "edges": 216,
+      "polygons": 108,
+      "triangles": 216,
+      "modifiers": [],
+      "data_name": "立方体.030",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_cap_left",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        -4.575,
+        0.0,
+        0.48
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.15,
+        7.5,
+        0.06
+      ],
+      "world_bounds": {
+        "min": [
+          -4.65,
+          -3.75,
+          0.45
+        ],
+        "max": [
+          -4.5,
+          3.75,
+          0.51
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.032",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_cap_right",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        4.575,
+        0.0,
+        0.48
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.15,
+        7.5,
+        0.06
+      ],
+      "world_bounds": {
+        "min": [
+          4.5,
+          -3.75,
+          0.45
+        ],
+        "max": [
+          4.65,
+          3.75,
+          0.51
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.033",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_front",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        -3.8,
+        0.225
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.2,
+        0.1,
+        0.45
+      ],
+      "world_bounds": {
+        "min": [
+          -4.6,
+          -3.85,
+          0.0
+        ],
+        "max": [
+          4.6,
+          -3.75,
+          0.45
+        ]
+      },
+      "vertices": 112,
+      "edges": 216,
+      "polygons": 108,
+      "triangles": 216,
+      "modifiers": [],
+      "data_name": "立方体.026",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_left",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        -4.55,
+        0.0,
+        0.225
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.1,
+        7.5,
+        0.45
+      ],
+      "world_bounds": {
+        "min": [
+          -4.6,
+          -3.75,
+          0.0
+        ],
+        "max": [
+          -4.5,
+          3.75,
+          0.45
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.028",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_right",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        4.55,
+        0.0,
+        0.225
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.1,
+        7.5,
+        0.45
+      ],
+      "world_bounds": {
+        "min": [
+          4.5,
+          -3.75,
+          0.0
+        ],
+        "max": [
+          4.6,
+          3.75,
+          0.45
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.029",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_base_plinth_v1_threshold",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_base_plinth_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        -3.72,
+        0.025
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.06,
+        0.28,
+        0.05
+      ],
+      "world_bounds": {
+        "min": [
+          -0.53,
+          -3.86,
+          0.0
+        ],
+        "max": [
+          0.53,
+          -3.58,
+          0.05
+        ]
+      },
+      "vertices": 56,
+      "edges": 108,
+      "polygons": 54,
+      "triangles": 108,
+      "modifiers": [],
+      "data_name": "立方体.034",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_cap",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.92,
+        0.92,
+        0.14
+      ],
+      "world_bounds": {
+        "min": [
+          1.84,
+          0.54,
+          9.841139
+        ],
+        "max": [
+          2.76,
+          1.46,
+          9.981139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__cap_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_collar",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.98,
+        0.98,
+        0.47
+      ],
+      "world_bounds": {
+        "min": [
+          1.81,
+          0.51,
+          7.841139
+        ],
+        "max": [
+          2.79,
+          1.49,
+          8.311139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__collar_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_flue_0",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        0.26
+      ],
+      "world_bounds": {
+        "min": [
+          2.32,
+          0.91,
+          9.981139
+        ],
+        "max": [
+          2.5,
+          1.09,
+          10.241138
+        ]
+      },
+      "vertices": 32,
+      "edges": 48,
+      "polygons": 18,
+      "triangles": 60,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__flue_0_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_flue_1",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        0.26
+      ],
+      "world_bounds": {
+        "min": [
+          2.1,
+          0.91,
+          9.981139
+        ],
+        "max": [
+          2.28,
+          1.09,
+          10.241138
+        ]
+      },
+      "vertices": 32,
+      "edges": 48,
+      "polygons": 18,
+      "triangles": 60,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__flue_1_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_moss",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.832,
+        0.832,
+        0.08
+      ],
+      "world_bounds": {
+        "min": [
+          1.884,
+          0.584,
+          8.091139
+        ],
+        "max": [
+          2.716,
+          1.416,
+          8.171139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__moss_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_chimney_Moss_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_back_right_shaft",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_back_right_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.82,
+        0.82,
+        2.0
+      ],
+      "world_bounds": {
+        "min": [
+          1.89,
+          0.59,
+          7.841139
+        ],
+        "max": [
+          2.71,
+          1.41,
+          9.841139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__shaft_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_cap",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.92,
+        0.92,
+        0.14
+      ],
+      "world_bounds": {
+        "min": [
+          -2.76,
+          -1.46,
+          9.841139
+        ],
+        "max": [
+          -1.84,
+          -0.54,
+          9.981139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__cap_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_base_plinth_OldStoneWallCap_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_collar",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.98,
+        0.98,
+        0.47
+      ],
+      "world_bounds": {
+        "min": [
+          -2.79,
+          -1.49,
+          7.841139
+        ],
+        "max": [
+          -1.81,
+          -0.51,
+          8.311139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__collar_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_flue_0",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        0.26
+      ],
+      "world_bounds": {
+        "min": [
+          -2.5,
+          -1.09,
+          9.981139
+        ],
+        "max": [
+          -2.32,
+          -0.91,
+          10.241138
+        ]
+      },
+      "vertices": 32,
+      "edges": 48,
+      "polygons": 18,
+      "triangles": 60,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__flue_0_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_flue_1",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        0.26
+      ],
+      "world_bounds": {
+        "min": [
+          -2.28,
+          -1.09,
+          9.981139
+        ],
+        "max": [
+          -2.1,
+          -0.91,
+          10.241138
+        ]
+      },
+      "vertices": 32,
+      "edges": 48,
+      "polygons": 18,
+      "triangles": 60,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__flue_1_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 2,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_moss",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.832,
+        0.832,
+        0.08
+      ],
+      "world_bounds": {
+        "min": [
+          -2.716,
+          -1.416,
+          8.091139
+        ],
+        "max": [
+          -1.884,
+          -0.584,
+          8.171139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__moss_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_stone_chimney_Moss_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_chimney_primary_v1_chimney_front_left_shaft",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_stone_chimney_primary_v1_chimney_front_left_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.82,
+        0.82,
+        2.0
+      ],
+      "world_bounds": {
+        "min": [
+          -2.71,
+          -1.41,
+          7.841139
+        ],
+        "max": [
+          -1.89,
+          -0.59,
+          9.841139
+        ]
+      },
+      "vertices": 8,
+      "edges": 12,
+      "polygons": 6,
+      "triangles": 12,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_chimney_primary_v1__shaft_source",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_stone_facade_trim_v1_stone",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Ornament"
+      ],
+      "parent": "SK_stone_facade_trim_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.16,
+        7.66,
+        2.85
+      ],
+      "world_bounds": {
+        "min": [
+          -4.58,
+          -3.83,
+          2.93
+        ],
+        "max": [
+          4.58,
+          3.83,
+          5.78
+        ]
+      },
+      "vertices": 192,
+      "edges": 288,
+      "polygons": 144,
+      "triangles": 288,
+      "modifiers": [],
+      "data_name": "MESH_SK_stone_facade_trim_v1_stone.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_tall_window_assembly_parametric_v2",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_AI"
+      ],
+      "parent": null,
+      "hide_render": true,
+      "visible": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.2,
+        0.24,
+        1.5
+      ],
+      "world_bounds": {
+        "min": [
+          -0.6,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.6,
+          0.12,
+          1.5
+        ]
+      },
+      "vertices": 1680,
+      "edges": 4860,
+      "polygons": 3240,
+      "triangles": 3240,
+      "modifiers": [],
+      "data_name": "MESH_tall_window_assembly_parametric_v2",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_WeatheredWarmStone_v2"
+        },
+        {
+          "index": 1,
+          "name": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4"
+        },
+        {
+          "index": 2,
+          "name": "MAT_tall_window_assembly_SmokyGlazing_v2"
+        }
+      ],
+      "material_count": 3,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_tall_window_v5_glass",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_AI"
+      ],
+      "parent": "SK_tall_window_v5_ROOT",
+      "hide_render": true,
+      "visible": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.836,
+        0.035,
+        1.141
+      ],
+      "world_bounds": {
+        "min": [
+          -0.418,
+          -0.025,
+          0.187
+        ],
+        "max": [
+          0.418,
+          0.01,
+          1.328
+        ]
+      },
+      "vertices": 896,
+      "edges": 2592,
+      "polygons": 1728,
+      "triangles": 1728,
+      "modifiers": [],
+      "data_name": "MESH_tall_window_v5_glass",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_SmokyGlazing_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_tall_window_v5_stone",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_AI"
+      ],
+      "parent": "SK_tall_window_v5_ROOT",
+      "hide_render": true,
+      "visible": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.2,
+        0.32,
+        1.5
+      ],
+      "world_bounds": {
+        "min": [
+          -0.6,
+          -0.2,
+          0.0
+        ],
+        "max": [
+          0.6,
+          0.12,
+          1.5
+        ]
+      },
+      "vertices": 392,
+      "edges": 1134,
+      "polygons": 756,
+      "triangles": 756,
+      "modifiers": [],
+      "data_name": "MESH_tall_window_v5_stone",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_WeatheredWarmStone_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_tall_window_v5_wood",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_AI"
+      ],
+      "parent": "SK_tall_window_v5_ROOT",
+      "hide_render": true,
+      "visible": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.98,
+        0.165,
+        1.285
+      ],
+      "world_bounds": {
+        "min": [
+          -0.49,
+          -0.1,
+          0.115
+        ],
+        "max": [
+          0.49,
+          0.065,
+          1.4
+        ]
+      },
+      "vertices": 560,
+      "edges": 1620,
+      "polygons": 1080,
+      "triangles": 1080,
+      "modifiers": [],
+      "data_name": "MESH_tall_window_v5_wood",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_DeepBrownFineGrainedWood_v4"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_back",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        3.65,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.0,
+        0.2,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          -4.5,
+          3.55,
+          0.0
+        ],
+        "max": [
+          4.5,
+          3.75,
+          6.0
+        ]
+      },
+      "vertices": 451,
+      "edges": 897,
+      "polygons": 434,
+      "triangles": 926,
+      "modifiers": [],
+      "data_name": "立方体.042",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 6,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_front",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        -3.65,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        9.0,
+        0.2,
+        6.000345
+      ],
+      "world_bounds": {
+        "min": [
+          -4.5,
+          -3.75,
+          0.0
+        ],
+        "max": [
+          4.5,
+          -3.55,
+          6.000345
+        ]
+      },
+      "vertices": 504,
+      "edges": 1000,
+      "polygons": 484,
+      "triangles": 1032,
+      "modifiers": [],
+      "data_name": "立方体.041",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 4,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_left",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        -4.4,
+        0.0,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2,
+        7.1,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          -4.5,
+          -3.55,
+          0.0
+        ],
+        "max": [
+          -4.3,
+          3.55,
+          6.0
+        ]
+      },
+      "vertices": 227,
+      "edges": 449,
+      "polygons": 218,
+      "triangles": 462,
+      "modifiers": [],
+      "data_name": "立方体.043",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 6,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_envelope_v1_right",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wall_envelope_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        4.4,
+        0.0,
+        3.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.2,
+        7.1,
+        6.0
+      ],
+      "world_bounds": {
+        "min": [
+          4.3,
+          -3.55,
+          0.0
+        ],
+        "max": [
+          4.5,
+          3.55,
+          6.0
+        ]
+      },
+      "vertices": 280,
+      "edges": 556,
+      "polygons": 270,
+      "triangles": 572,
+      "modifiers": [],
+      "data_name": "立方体.044",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_envelope_OldStoneWall_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 4,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_lantern_primary_v1_glass",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Site"
+      ],
+      "parent": "SK_wall_lantern_primary_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.752,
+        0.154,
+        0.336
+      ],
+      "world_bounds": {
+        "min": [
+          -0.876,
+          -4.031,
+          1.952
+        ],
+        "max": [
+          0.876,
+          -3.877,
+          2.288
+        ]
+      },
+      "vertices": 48,
+      "edges": 72,
+      "polygons": 36,
+      "triangles": 72,
+      "modifiers": [],
+      "data_name": "MESH_SK_wall_lantern_primary_v1_glass.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_wall_lantern_WarmGlass_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wall_lantern_primary_v1_metal",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Site"
+      ],
+      "parent": "SK_wall_lantern_primary_v1_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.83,
+        0.32,
+        0.503
+      ],
+      "world_bounds": {
+        "min": [
+          -0.915,
+          -4.07,
+          1.93
+        ],
+        "max": [
+          0.915,
+          -3.75,
+          2.433
+        ]
+      },
+      "vertices": 176,
+      "edges": 264,
+      "polygons": 132,
+      "triangles": 264,
+      "modifiers": [],
+      "data_name": "MESH_SK_wall_lantern_primary_v1_metal.002",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_roof_system_GutterDarkMetal_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wooden_entrance_porch_v4_glass",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wooden_entrance_porch_v4_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.504,
+        0.006,
+        0.089
+      ],
+      "world_bounds": {
+        "min": [
+          -0.252,
+          -4.336,
+          2.888
+        ],
+        "max": [
+          0.252,
+          -4.33,
+          2.977
+        ]
+      },
+      "vertices": 6,
+      "edges": 9,
+      "polygons": 5,
+      "triangles": 8,
+      "modifiers": [],
+      "data_name": "MESH_SK_wooden_entrance_porch_v4_glass.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_tall_window_assembly_SmokyGlazing_v2"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wooden_entrance_porch_v4_roof",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wooden_entrance_porch_v4_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.75,
+        0.72,
+        0.21
+      ],
+      "world_bounds": {
+        "min": [
+          -0.875,
+          -4.3,
+          2.825
+        ],
+        "max": [
+          0.875,
+          -3.58,
+          3.035
+        ]
+      },
+      "vertices": 16,
+      "edges": 24,
+      "polygons": 12,
+      "triangles": 24,
+      "modifiers": [],
+      "data_name": "MESH_SK_wooden_entrance_porch_v4_roof.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_main_roof_assembly_Slate_roof_slates_03_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    },
+    {
+      "name": "SK_wooden_entrance_porch_v4_wood",
+      "type": "MESH",
+      "collections": [
+        "SK_COL_Structure"
+      ],
+      "parent": "SK_wooden_entrance_porch_v4_ROOT",
+      "hide_render": true,
+      "visible": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.75,
+        0.842,
+        2.785
+      ],
+      "world_bounds": {
+        "min": [
+          -0.875,
+          -4.342,
+          0.27
+        ],
+        "max": [
+          0.875,
+          -3.5,
+          3.055
+        ]
+      },
+      "vertices": 198,
+      "edges": 297,
+      "polygons": 149,
+      "triangles": 296,
+      "modifiers": [],
+      "data_name": "MESH_SK_wooden_entrance_porch_v4_wood.001",
+      "material_slots": [
+        {
+          "index": 0,
+          "name": "MAT_entrance_portal_AgedDarkWood_v1"
+        }
+      ],
+      "material_count": 1,
+      "missing_material_slots": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "loose_vertices": 0,
+      "zero_area_faces": 0,
+      "ngons": 0,
+      "duplicate_edges": 0,
+      "duplicate_faces": 0
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "non_manifold_edges",
+      "message": "存在非流形边；区分真实边界、开放壳和布线错误。",
+      "affected_count": 2,
+      "affected": [
+        "REF_whole_building_tripo_front_right_45_decimated_v1",
+        "SK_REVIEW_wall_ground"
+      ]
+    }
+  ],
+  "limitations": [
+    "Report does not judge concept match, proportions, construction logic, material quality, or target-engine acceptance.",
+    "Boundary and non-manifold edges may be intentional on open or temporary surfaces.",
+    "Non-unit scaling may be intentional for instances and must be checked against export requirements."
+  ]
+}

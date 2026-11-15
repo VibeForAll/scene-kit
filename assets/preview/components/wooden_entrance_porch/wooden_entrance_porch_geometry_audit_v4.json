@@ -1,0 +1,227 @@
+{
+  "schema_version": 4,
+  "status": "pass",
+  "part_id": "wooden_entrance_porch",
+  "revision": 4,
+  "generated_at": "2026-11-15T00:14:51+08:00",
+  "parameter_document": "internal/wooden_entrance_porch_v2.json",
+  "parameter_document_sha256": "a73a1903da9cf8b8c38a17304bcdd5af9784d28b5979e484d9d09ec01c9dc21e",
+  "bounds_m": {
+    "wood": {
+      "min": [
+        -0.875,
+        -4.342,
+        0.27
+      ],
+      "max": [
+        0.875,
+        -3.5,
+        3.055
+      ]
+    },
+    "roof": {
+      "min": [
+        -0.875,
+        -4.3,
+        2.825
+      ],
+      "max": [
+        0.875,
+        -3.58,
+        3.035
+      ]
+    },
+    "glass": {
+      "min": [
+        -0.252,
+        -4.336,
+        2.888
+      ],
+      "max": [
+        0.252,
+        -4.33,
+        2.977
+      ]
+    },
+    "steps": {
+      "min": [
+        -0.9,
+        -4.86,
+        0.0
+      ],
+      "max": [
+        0.9,
+        -3.82,
+        0.51
+      ]
+    },
+    "door": {
+      "min": [
+        -0.43,
+        -3.83,
+        0.555
+      ],
+      "max": [
+        0.43,
+        -3.745,
+        2.535
+      ]
+    }
+  },
+  "triangle_count": 328,
+  "wood_island_count": 25,
+  "column_islands": [
+    {
+      "vertices": 8,
+      "min": [
+        -0.73,
+        -3.81,
+        0.51
+      ],
+      "max": [
+        -0.63,
+        -3.71,
+        2.72
+      ]
+    },
+    {
+      "vertices": 8,
+      "min": [
+        0.63,
+        -3.81,
+        0.51
+      ],
+      "max": [
+        0.73,
+        -3.71,
+        2.72
+      ]
+    }
+  ],
+  "column_base_islands": [
+    {
+      "vertices": 8,
+      "min": [
+        -0.7525,
+        -3.8325,
+        0.51
+      ],
+      "max": [
+        -0.6075,
+        -3.6875,
+        0.59
+      ]
+    },
+    {
+      "vertices": 8,
+      "min": [
+        0.6075,
+        -3.8325,
+        0.51
+      ],
+      "max": [
+        0.7525,
+        -3.6875,
+        0.59
+      ]
+    }
+  ],
+  "column_capital_islands": [
+    {
+      "vertices": 8,
+      "min": [
+        -0.75,
+        -3.83,
+        2.66
+      ],
+      "max": [
+        -0.61,
+        -3.69,
+        2.72
+      ]
+    },
+    {
+      "vertices": 8,
+      "min": [
+        0.61,
+        -3.83,
+        2.66
+      ],
+      "max": [
+        0.75,
+        -3.69,
+        2.72
+      ]
+    }
+  ],
+  "column_top_beam_islands": [
+    {
+      "vertices": 8,
+      "min": [
+        -0.73,
+        -3.82,
+        2.705
+      ],
+      "max": [
+        0.73,
+        -3.7,
+        2.805
+      ]
+    }
+  ],
+  "roof_support_shoe_islands": [
+    {
+      "vertices": 8,
+      "min": [
+        -0.76,
+        -3.82,
+        2.7734
+      ],
+      "max": [
+        -0.6,
+        -3.7,
+        2.869
+      ]
+    },
+    {
+      "vertices": 8,
+      "min": [
+        0.6,
+        -3.82,
+        2.7734
+      ],
+      "max": [
+        0.76,
+        -3.7,
+        2.869
+      ]
+    }
+  ],
+  "underside_at_columns_m": 2.8562,
+  "column_beam_top_m": 2.805,
+  "checks": {
+    "two_columns_present": true,
+    "columns_stand_on_landing": true,
+    "column_bases_present": true,
+    "column_capitals_present": true,
+    "column_top_beam_spans_columns": true,
+    "two_sloped_roof_shoes_present": true,
+    "roof_shoe_contacts_beam": true,
+    "roof_shoe_tops_follow_roof_underside": true,
+    "columns_and_beam_clear_roof": true,
+    "columns_clear_door_width": true,
+    "triangular_window_present": true,
+    "triangular_window_above_door_surround": true,
+    "triangular_window_below_ridge": true,
+    "triangular_window_fits_gable": true,
+    "glass_has_three_sided_frame": true,
+    "components_share_root": true,
+    "no_legacy_v3_in_current_scene": true
+  },
+  "unresolved": [],
+  "notes": [
+    "v4 恢复两根檐柱、柱础、柱帽和柱顶横梁。",
+    "两段随坡短托木连接柱顶横梁与屋面下侧，闭合支撑链。",
+    "山墙三角玻璃窗含木框、底边、斜边和中央中梃。"
+  ]
+}

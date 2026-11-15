@@ -1,0 +1,130 @@
+{
+  "column": {
+    "source_view": "front",
+    "box": [
+      111,
+      0,
+      610,
+      540
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\column_front.png",
+    "caption": {
+      "raw": "</s><s>The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small triangular structure at the top of the structure.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small triangular structure at the top of the structure."
+      }
+    }
+  },
+  "roof": {
+    "source_view": "right",
+    "box": [
+      255,
+      0,
+      386,
+      58
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\roof_right.png",
+    "caption": {
+      "raw": "</s><s>This is an image of a room. The room is made of wood. The wood is light brown. There is a black box on the floor. The box is black. The black box is square. The white box is rectangular. There are lines on the white box. The lines are dark brown. The boxes are made of cardboard.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "This is an image of a room. The room is made of wood. The wood is light brown. There is a black box on the floor. The box is black. The black box is square. The white box is rectangular. There are lines on the white box. The lines are dark brown. The boxes are made of cardboard."
+      }
+    }
+  },
+  "roof eave": {
+    "source_view": "front",
+    "box": [
+      131,
+      0,
+      589,
+      98
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\roof eave_front.png",
+    "caption": {
+      "raw": "</s><s>This is an image of a building. The building is made of wood. The wood is light brown. There is a triangular shape on the roof of the building. There are two large pillars on the sides of the structure. The pillars are dark brown. The background of the image is dark blue. The image is blurred.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "This is an image of a building. The building is made of wood. The wood is light brown. There is a triangular shape on the roof of the building. There are two large pillars on the sides of the structure. The pillars are dark brown. The background of the image is dark blue. The image is blurred."
+      }
+    }
+  },
+  "slate roof": {
+    "source_view": "front",
+    "box": [
+      131,
+      0,
+      591,
+      98
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\slate roof_front.png",
+    "caption": {
+      "raw": "</s><s>This is an image of a building. The building is made of wood. The wood is light brown. There is a triangle on the top of the building. There are two pillars on the bottom of the structure. The pillars are dark brown. The background of the image is dark blue. The image is blurred. The roof is made up of wood planks.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "This is an image of a building. The building is made of wood. The wood is light brown. There is a triangle on the top of the building. There are two pillars on the bottom of the structure. The pillars are dark brown. The background of the image is dark blue. The image is blurred. The roof is made up of wood planks."
+      }
+    }
+  },
+  "timber post": {
+    "source_view": "front",
+    "box": [
+      111,
+      0,
+      611,
+      540
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\timber post_front.png",
+    "caption": {
+      "raw": "</s><s>The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small light at the top of the structure.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small light at the top of the structure."
+      }
+    }
+  },
+  "triangular gable window": {
+    "source_view": "front",
+    "box": [
+      309,
+      0,
+      413,
+      38
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\triangular gable window_front.png",
+    "caption": {
+      "raw": "</s><s>The image is a triangle. The background of the image is brown. The triangle is made of wood. There are two lines in the middle of the triangle. There is nothing in the image.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "The image is a triangle. The background of the image is brown. The triangle is made of wood. There are two lines in the middle of the triangle. There is nothing in the image."
+      }
+    }
+  },
+  "wall bracket": {
+    "source_view": "front",
+    "box": [
+      111,
+      0,
+      612,
+      540
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\wall bracket_front.png",
+    "caption": {
+      "raw": "</s><s>The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small light at the top of the structure.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small light at the top of the structure."
+      }
+    }
+  },
+  "window frame": {
+    "source_view": "front",
+    "box": [
+      111,
+      0,
+      610,
+      540
+    ],
+    "crop": "preview\\qa\\wooden_entrance_porch\\v4_detail_scan\\crops\\window frame_front.png",
+    "caption": {
+      "raw": "</s><s>The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small triangular structure at the top of the structure.</s>",
+      "parsed": {
+        "<MORE_DETAILED_CAPTION>": "The image is of a structure. The structure is made of wood. The wood is a light brown color. The background is dark blue. There is a small triangular structure at the top of the structure."
+      }
+    }
+  }
+}

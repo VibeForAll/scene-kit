@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "revision": 11,
+  "source_views": [
+    "assets/raw/concepts/imported-castle-01/views/front.png",
+    "assets/raw/concepts/imported-castle-01/views/back.png",
+    "assets/raw/concepts/imported-castle-01/views/left.png",
+    "assets/raw/concepts/imported-castle-01/views/right.png",
+    "assets/raw/concepts/imported-castle-01/views/top.png",
+    "assets/raw/concepts/imported-castle-01/views/front_left_45.png"
+  ],
+  "counts": {
+    "main_windows": {
+      "expected": 21,
+      "actual": 21,
+      "unit": "window_instance",
+      "part_id": "tall_window_assembly",
+      "count_scope": "live_part_instances",
+      "facade_breakdown": {
+        "front": {
+          "lower": 3,
+          "upper": 4,
+          "total": 7
+        },
+        "back": {
+          "lower": 3,
+          "upper": 4,
+          "total": 7
+        },
+        "left": {
+          "lower": 1,
+          "upper": 2,
+          "total": 3
+        },
+        "right": {
+          "lower": 2,
+          "upper": 2,
+          "total": 4
+        }
+      },
+      "evidence": [
+        "internal/wall_openings_v2.json",
+        "internal/assembly_front_visibility_audit.json"
+      ]
+    },
+    "entry_doors": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "door",
+      "part_id": "entrance_portal",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "internal/wall_openings_v2.json"
+      ]
+    },
+    "attic_window_pairs": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "paired_window_group",
+      "part_id": "attic_window_assembly",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "assets/preview/components/attic_window_assembly/geometry_audit_v11.json"
+      ]
+    },
+    "attic_dormer_roofs": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "small_roof",
+      "part_id": "attic_window_assembly",
+      "count_scope": "embedded_geometry",
+      "evidence": [
+        "assets/preview/components/attic_window_assembly/geometry_audit_v11.json",
+        "internal/dormer_roof_and_chimney_fix_v6.json"
+      ]
+    },
+    "stone_chimney_stacks": {
+      "expected": 2,
+      "actual": 2,
+      "unit": "chimney_instance",
+      "part_id": "stone_chimney_primary",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "assets/preview/components/stone_chimney_primary/geometry_audit_v2.json",
+        "internal/assembly_front_visibility_audit.json"
+      ]
+    },
+    "metal_chimney_flues": {
+      "expected": 0,
+      "actual": 0,
+      "unit": "flue",
+      "part_id": "stone_chimney_primary",
+      "count_scope": "removed_feature",
+      "evidence": [
+        "assets/preview/components/stone_chimney_primary/geometry_audit_v2.json"
+      ]
+    },
+    "round_corner_towers": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "tower",
+      "part_id": "round_corner_tower",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "internal/assembly_front_visibility_audit.json"
+      ]
+    },
+    "wall_lanterns": {
+      "expected": 2,
+      "actual": 2,
+      "unit": "lantern",
+      "part_id": "wall_lantern_primary",
+      "count_scope": "embedded_geometry",
+      "evidence": [
+        "assets/preview/components/wall_lantern_primary/geometry_audit_v5.json"
+      ]
+    },
+    "climbing_vines": {
+      "expected": 3,
+      "actual": 3,
+      "unit": "vine_instance",
+      "part_id": "climbing_vine_module",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "internal/assembly_front_visibility_audit.json"
+      ]
+    },
+    "porch_planters": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "planter_instance",
+      "part_id": "porch_planter_primary",
+      "count_scope": "live_part_instances",
+      "evidence": [
+        "internal/assembly_front_visibility_audit.json"
+      ]
+    },
+    "attic_dormer_bodies": {
+      "expected": 1,
+      "actual": 1,
+      "unit": "enclosed_dormer_body",
+      "part_id": "attic_window_assembly",
+      "count_scope": "embedded_geometry",
+      "evidence": [
+        "assets/preview/components/attic_window_assembly/geometry_audit_v11.json",
+        "internal/dormer_setback_fix_v10.json"
+      ]
+    }
+  },
+  "checks": {
+    "facade_by_floor_window_matrix_verified": true,
+    "front_lower_three_upper_four": true,
+    "ground_floor_skips_door_axis": true,
+    "repeated_features_counted_separately": true,
+    "attic_roof_counted": true,
+    "chimney_flues_recorded_as_zero": true,
+    "live_assembly_counts_match": true,
+    "attachment_volumes_counted": true,
+    "projecting_dormer_body_verified": true,
+    "dormer_roof_inside_main_eave": true,
+    "dormer_roof_covers_rear_wall": true
+  },
+  "unresolved": [],
+  "user_corrections": [
+    "Ground floor has 3 front windows; upper floor has 4 front windows.",
+    "The attic dormer has one small roof that was initially omitted.",
+    "The black cylindrical flues above both stone chimneys are not wanted."
+  ]
+}
