@@ -69,6 +69,43 @@ class VegetationModuleGeneratorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "taper outward"):
             generate_vegetation_module.validate_parameters(parameters)
 
+    def test_legacy_v1_contract_still_validates(self) -> None:
+        result = generate_vegetation_module.validate_parameters(
+            self.planter_parameters()
+        )
+        # 7.23 organic options get deterministic defaults for old contracts.
+        self.assertEqual(result["lateral_branches"], 0)
+        self.assertEqual(result["leaf_density"], 1.0)
+        self.assertGreater(result["leaf_curl_m"], 0.0)
+        self.assertGreater(result["leaf_cup_m"], 0.0)
+
+    def test_organic_overrides_validate(self) -> None:
+        parameters = self.planter_parameters()
+        parameters.update(
+            {
+                "lateral_branches": 3,
+                "leaf_density": 1.6,
+                "leaf_curl_m": 0.012,
+                "leaf_cup_m": 0.008,
+            }
+        )
+        result = generate_vegetation_module.validate_parameters(parameters)
+        self.assertEqual(result["lateral_branches"], 3)
+        self.assertAlmostEqual(result["leaf_density"], 1.6)
+        self.assertAlmostEqual(result["leaf_curl_m"], 0.012)
+
+    def test_leaf_density_bounds(self) -> None:
+        parameters = self.planter_parameters()
+        parameters["leaf_density"] = 3.0
+        with self.assertRaisesRegex(ValueError, "leaf_density"):
+            generate_vegetation_module.validate_parameters(parameters)
+
+    def test_lateral_branch_bounds(self) -> None:
+        parameters = self.planter_parameters()
+        parameters["lateral_branches"] = 12
+        with self.assertRaisesRegex(ValueError, "lateral_branches"):
+            generate_vegetation_module.validate_parameters(parameters)
+
 
 if __name__ == "__main__":
     unittest.main()

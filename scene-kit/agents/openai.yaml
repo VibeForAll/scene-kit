@@ -1,4 +1,4 @@
 interface:
   display_name: "Scene Kit"
-  short_description: "参考模型优先、数量前置、参数组件、背面连接、实时遮挡与材质门禁"
-  default_prompt: "Use $scene-kit to create a quantity-verified building inventory from the reference views, build a provider-neutral whole-building 3D reference, define parametric component contracts with backside volume and host connections, audit live silhouettes, attachments, materials, and assembly evidence."
+  short_description: "参考模型优先、数量前置、参数组件、背面连接、实时遮挡、有机植物与材质门禁"
+  default_prompt: "Use $scene-kit to create a quantity-verified building inventory from the reference views, build a provider-neutral whole-building 3D reference, define parametric component contracts with backside volume and host connections, audit live silhouettes, attachments, organic vegetation, materials, and assembly evidence."

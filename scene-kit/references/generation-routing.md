@@ -132,7 +132,7 @@
 
 ## 小尺度有机构件的文生 3D 例外（7.16）
 
-默认仍然是“有参考图先图生 3D，纯文字是最后方案”。但藤蔓、花簇、盆栽、苔藓等小尺度有机构件经常只有在境裁剪（同框包含石墙、窗户、地面或花盆）。把这种裁剪交给图生 3D 时，提供方倾向于把环境一起建成网格，事后无法可靠拆回单体；程序化重建又容易退化成扁平贴图叶片加木棍枝条，造型抽象。满足下列任一信号时，该组件允许并应优先选择纯文生 3D：
+默认仍然是“有参考图先图生 3D，纯文字是最后方案”。但藤蔓、花簇、盆栽、苔藓等小尺度有机构件经常只有在境裁剪（同框包含石墙、窗户、地面或花盆）。把这种裁剪交给图生 3D 时，提供方倾向于把环境一起建成网格，事后无法可靠拆回单体；旧版程序化重建又容易退化成扁平贴图叶片加木棍枝条，造型抽象。满足下列任一信号时，该组件允许并应优先选择纯文生 3D：
 
 - `reference_pack` 没有隔离单体参考（`isolated_asset_available=false` 或缺失），可用图片全部是在境裁剪。
 - 已有图生 3D 尝试因串入建筑/环境被标记 `ai_3d_attempt.result=not_used/failed`，原因包含 context/building/surrounding 或“串景/串入建筑”。
@@ -140,9 +140,11 @@
 
 `generation_route_audit.py` 对每个 AI 组件输出 `input_mode_guidance`：有机且只有在境参考或图生失败时给出 `preferred=text_to_3d`；已有隔离单体或非有机构件仍推荐 `image_to_3d/multiview_to_3d`。该字段是诊断建议，最终输入模式仍需写入 `route_assessment` 并取得用户当次确认。
 
+7.23 起，程序化植物不再接受旧版抽象低模作为替代。只有在生成器具备弯曲分枝、渐细枝干、密集小叶、三档叶色和冠层轮廓门禁后，才允许把程序化路线作为未使用 AI 3D 的正式方案；生成后写 `organic_quality` 并在多个视图确认。若程序化结果仍像直杆加扁平叶，应停止该路线并按质量决定本地重做或申请新的文生 3D，不得直接进入装配。
+
 ### 文生 3D 提示词合同
 
-- 正向必须先声明“one isolated <asset> on a plain neutral background”，再描述枝干走向、叶片/花簇形态、扁平贴墙轮廓、根部附着和 PBR 材质，最后声明“the asset alone is the subject, centered as a standalone 3D asset”。
+- 正向必须先声明“one isolated <asset> on a plain neutral background”，再描述弯曲渐细枝干、分枝层级、小叶/花簇大小与密度、叶片卷曲和朝向变化、多档叶色、末梢芽、扁平贴墙轮廓、根部附着和 PBR 材质，最后声明“the asset alone is the subject, centered as a standalone 3D asset”。
 - 负面必须显式排除：wall, building, house, window, stone, pot, planter, ground plane, soil, flowers/grass/tree（按构件取舍）, landscape, people, text, labels, watermark, extra objects, plastic/glossy toy material, cartoon look。
 - 不写绝对尺寸；尺寸在 Blender 中按锁定包络校准。
 - 单次只提交 1 个候选、不做付费重试；提示词超过提供方上限（如 Tripo 1024 字符）时先精简措辞，不拆成多次生成。
@@ -157,6 +159,7 @@
 6. 从 GLB 容器无损提取 Color/ORM/NormalGL 图集，外置到项目 `textures/` 并保持节点引用；需要向参考色调收敛时优先加非破坏性 HSV 节点，不改写原始贴图文件。
 7. 删除减面残留的无线边和游离点；开放壳边界边是叶片等薄型植物的固有形态，记录为预期发现，不做实体化封装。
 8. 补建正交审阅相机，重渲染正面、侧面、3/4 和近景四视图，制作参考对照合页并跑 `blender_audit.py` 与几何审计。
+9. 写入 `organic_quality`：枝条与叶簇是否可读、是否存在机械重复、三档以上自然色差、冠层填充、漂浮叶和基部附着。任何一项失败都保持 `repair_required`。
 
 ### 记录要求
 

@@ -33,6 +33,7 @@ Scene Kit turns these problems into executable data and audits:
 - Parameter changes produce a new build fingerprint; old geometry, screenshots, and audits become invalid.
 - Approved components can be reused across projects and accumulate into a real component library.
 - Rework feeds back into the quantity inventory, contracts, component sources, and assembly.
+- Vines, potted plants, flower clusters, shrubs, and groundcover use one organic-plant gate instead of accepting stick stems and flat placeholder leaves.
 
 ## 2. Core Workflow
 
@@ -70,6 +71,8 @@ The contract also records implementation route, editable parameters, output file
 
 Rule-based walls, slabs, windows, doors, railings, and steps favor Blender parameterization or existing assets. Organic sculptures and vegetation may use AI 3D. Components are normalized in scale, origin, and interface before assembly, then the standalone sources and assembly are compared for consistency.
 
+Vegetation follows a vine-grade organic standard: curved tapered stems, hierarchical branching, sufficiently dense small leaves or flower clusters, at least three natural tone variants, terminal buds, and a connected irregular silhouette. Procedural, AI-generated, and library plants all receive the same semantic visual review; open-shell leaf boundaries are allowed, but floating leaves, wire edges, and zero-area faces are not.
+
 ### 2.5 Finishing and acceptance
 
 Assembly is not delivery. Surfaces, normals, seams, intersections, supports, materials, texture projection, and construction logic must still be checked, followed by fresh renders of the current revision.
@@ -78,6 +81,7 @@ Assembly is not delivery. Surfaces, normals, seams, intersections, supports, mat
 
 - **Parametric batch changes:** wall widths, floor heights, openings, window groups, roofs, and arrays are contract-driven and rebuild together.
 - **Component reuse:** approved windows, moldings, chimneys, railings, roof systems, and vegetation can be recombined across buildings.
+- **Reusable plant quality:** procedural plants require curved branches, tapered stems, dense small leaves, three or more natural tones, and a filled organic silhouette; AI-generated and library plants receive the same semantic review.
 - **Traceable quality:** every conclusion is supported by quantity, geometry, material, mask, host-connection, or export evidence.
 - **Controlled rework:** a defect maps to a specific component and revision instead of forcing a complete rebuild.
 - **Stable iteration:** rule-based parts stay reusable while explicit free zones preserve design variation.
