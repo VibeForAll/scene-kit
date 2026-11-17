@@ -37,7 +37,7 @@ Scene Kit turns these problems into executable data and audits:
 
 ## 2. Core Workflow
 
-![Scene Kit core workflow](assets/scene-kit-core-workflow.png)
+<p align="center"><img src="assets/scene-kit-core-workflow.png" width="100%" alt="Scene Kit core workflow"></p>
 
 ### 2.1 Concept and fixed reference
 

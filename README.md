@@ -37,7 +37,7 @@ Scene Kit 把这些问题变成可执行的数据和审计：
 
 ## 2. 核心工作流
 
-![Scene Kit 核心工作流](assets/scene-kit-core-workflow.png)
+<p align="center"><img src="assets/scene-kit-core-workflow.png" width="100%" alt="Scene Kit 核心工作流"></p>
 
 ### 2.1 概念与固定参考
 
