@@ -2,15 +2,15 @@
 
 Language: [中文](README.md) | English
 
-**An auditable, component-based and parametric architectural workflow for Blender.**
+**An auditable, component-based and parametric 3D scene workflow for Blender.**
 
-Scene Kit is an architectural 3D workflow skill, not a fixed model pack and not a one-shot modeling prompt. It organizes concept development, quantity auditing, decomposition, generation, assembly, and finishing into a reusable, parametric, version-audited process.
+Scene Kit is a 3D workflow skill, not a fixed model pack and not a one-shot modeling prompt. It organizes the journey from concept to delivery into a reusable, parametric, version-audited process. The method itself is subject-agnostic; buildings, blocks, and other whole-scene assemblies are currently its main application area.
 
-> **Input:** architectural concepts, original multi-view references, dimensional and style constraints.
+> **Input:** concept images, original multi-view references, dimensional and style constraints.
 >
-> **Output:** decomposable, reusable, reproducible, and auditable Blender components and whole-building assemblies.
+> **Output:** decomposable, reusable, reproducible, and auditable Blender components and complete assemblies.
 
-Scene Kit can work with Blender, parametric generators, and optional AI 3D providers. Those models are execution tools. The long-term efficiency and quality come from component contracts, parameter propagation, asset reuse, and evidence-based gates.
+Scene Kit can work with Blender, parametric generators, and optional AI 3D providers. Those models are execution tools. Long-term efficiency and quality come from component contracts, parameter propagation, asset reuse, and evidence-based gates.
 
 ![Bilingual Scene Kit workflow illustration](assets/scene-kit-workflow-bilingual.png)
 
@@ -18,94 +18,82 @@ Scene Kit can work with Blender, parametric generators, and optional AI 3D provi
 
 ## 1. What Scene Kit Is
 
-The most common architectural-production problems are not simply "one component is not attractive enough." They are:
+The recurring problems in component-based 3D projects are usually not that "one component is not attractive enough," but that the process lacks constraints. Typical examples:
 
-- The references are understood, but chimneys, brackets, louvers, or roof attachments are missed during decomposition.
-- A facade width, window type, or roof parameter changes, but related components and the assembly do not follow.
-- Every new building requires regenerating the same windows, doors, railings, and moldings.
-- Something looks correct from the front, but later turns out to have no side thickness, rear enclosure, or support.
-- Final screenshots and QA no longer belong to the current model, yet old evidence continues to be used.
+- References are understood, yet attached parts or decorative details are missed during decomposition (for example chimneys, brackets, or roof attachments on a building).
+- A dimension or style parameter changes, but related components and the assembly do not follow.
+- Repeated components are regenerated every time instead of accumulating into an asset library.
+- Something looks correct from the front, but another view reveals missing thickness, rear enclosure, or support.
+- Final screenshots and QA no longer belong to the current model, yet old evidence keeps being used.
 
 Scene Kit turns these problems into executable data and audits:
 
-- The reference model establishes spatial context, but remains one baseline inside the process.
+- The reference model only establishes spatial context. It is one baseline in the process and never replaces original source material.
 - Every component has a contract for interfaces, parameters, materials, source output, and current QA.
-- Parameter changes produce a new build fingerprint; old geometry, screenshots, and audits become invalid.
-- Approved components can be reused across projects and accumulate into a real component library.
+- Parameter changes produce a new build fingerprint; old geometry, screenshots, and audits become invalid immediately.
+- Approved components can be reused across projects and gradually accumulate into a component library.
 - Rework feeds back into the quantity inventory, contracts, component sources, and assembly.
-- Vines, potted plants, flower clusters, shrubs, and groundcover use one organic-plant gate instead of accepting stick stems and flat placeholder leaves.
+- Organic modules (for example vines, planters, flower clusters, shrubs, and other vegetation) pass one organic-quality gate; stick stems with flat placeholder leaves are rejected.
 
 ## 2. Core Workflow
 
-```mermaid
-flowchart LR
-    A[Brief] --> B[Concept + Ten Views]
-    B --> C[Reference Model]
-    C --> D[Quantity Audit]
-    D --> E[Component Contracts]
-    E --> F[Blender / AI 3D Components]
-    F --> G[Assembly]
-    G --> H[Finishing and QA]
-    H --> I[User Review]
-```
+![Scene Kit core workflow](assets/scene-kit-core-workflow.png)
 
 ### 2.1 Concept and fixed reference
 
-Freeze the design language, key dimensions, and canonical ten views first. The reference model then produces fixed views from one shared center, orthographic scale, and resolution to verify massing, depth, occlusion, and attachments. Original source views remain distinct and are never replaced by derived renders.
+Freeze the design language, key dimensions, and a canonical set of multi-view references (for example ten views) first. The reference model then produces fixed views from one shared center, orthographic scale, and resolution to verify massing, depth, occlusion, and attachments. Original source views remain distinct and are never replaced by derived renders.
 
 ### 2.2 Quantities before geometry
 
-Complete a three-level inventory of macro components, repeated modules, and attachment details before modeling. Windows and doors are counted by elevation and floor; main roofs, dormer roofs, tower caps, and porch roofs are counted separately; chimney shafts, caps, and metal flues have their own quantities.
+Before modeling, complete a three-level inventory of macro components, repeated modules, and attachment details, with counts grouped by location (for example windows and doors counted by elevation and floor, and roof or chimney types counted separately). Do not enter batch modeling until the quantities are confirmed.
 
 ### 2.3 Component contracts
 
-Every component defines:
+Every component defines at least three layers of constraints:
 
 - `locked`: openings, interfaces, thickness, origin, orientation, and contact surfaces.
-- `guided`: massing silhouette, roof and wall language, material tendency, and period style.
+- `guided`: massing silhouette, formal language, material tendency, and period style.
 - `free`: ornaments, window patterns, foliage distribution, and other generator-controlled details.
 
 The contract also records implementation route, editable parameters, output files, material bindings, and the current build fingerprint. A component becomes a traceable, replaceable, reusable asset instead of a disposable AI result.
 
 ### 2.4 Generation and assembly
 
-Rule-based walls, slabs, windows, doors, railings, and steps favor Blender parameterization or existing assets. Organic sculptures and vegetation may use AI 3D. Components are normalized in scale, origin, and interface before assembly, then the standalone sources and assembly are compared for consistency.
+Rule-based components (for example wall segments, slabs, windows, doors, railings, and steps) favor parametric generation or existing assets. Organic sculptures and vegetation may use AI 3D. Components are normalized in scale, origin, and interface before assembly, then the standalone sources and the assembly are compared for consistency.
 
-Vegetation follows a vine-grade organic standard: curved tapered stems, hierarchical branching, sufficiently dense small leaves or flower clusters, at least three natural tone variants, terminal buds, and a connected irregular silhouette. Procedural, AI-generated, and library plants all receive the same semantic visual review; open-shell leaf boundaries are allowed, but floating leaves, wire edges, and zero-area faces are not.
+Taking vegetation as an example, every source — procedural, AI-generated, or library — must meet the same organic standard: curved tapered stems, hierarchical branching, dense leaves or flower clusters, natural tone variation, terminal buds, and an irregular silhouette, reviewed through the same multi-view semantic checks. Open-shell leaf boundaries are allowed; floating leaves, wire edges, and zero-area faces are not.
 
 ### 2.5 Finishing and acceptance
 
-Assembly is not delivery. Surfaces, normals, seams, intersections, supports, materials, texture projection, and construction logic must still be checked, followed by fresh renders of the current revision.
+Assembly is not delivery. Continue checking surfaces, normals, seams, intersections, supports, materials, texture projection, and construction logic, then re-render the current revision's overall views, key close-ups, and reference comparisons.
 
 ## 3. Why the Method Works
 
-- **Parametric batch changes:** wall widths, floor heights, openings, window groups, roofs, and arrays are contract-driven and rebuild together.
-- **Component reuse:** approved windows, moldings, chimneys, railings, roof systems, and vegetation can be recombined across buildings.
-- **Reusable plant quality:** procedural plants require curved branches, tapered stems, dense small leaves, three or more natural tones, and a filled organic silhouette; AI-generated and library plants receive the same semantic review.
-- **Traceable quality:** every conclusion is supported by quantity, geometry, material, mask, host-connection, or export evidence.
-- **Controlled rework:** a defect maps to a specific component and revision instead of forcing a complete rebuild.
-- **Stable iteration:** rule-based parts stay reusable while explicit free zones preserve design variation.
+- **Parametric bulk edits:** dimensions, openings, component groups, and arrays are controlled by contract parameters; one adjustment rebuilds in bulk and reruns the audits.
+- **Reusable component assets:** approved components can be recombined to avoid repeated modeling and AI 3D generation (for example windows, moldings, railings, roofing, and vegetation modules).
+- **Reusable organic quality:** with vegetation as the reference case, procedural and AI assets share one semantic acceptance bar, so approved modules drop straight into later projects.
+- **Traceable quality:** every conclusion is backed by quantity, geometry, material, mask, host-connection, or export evidence rather than "looks about right."
+- **Controlled rework cost:** problems are traced to a specific component and revision instead of discarding the whole model.
+- **Built for iteration:** well-defined parts stay stable and reusable; uncertain form stays inside local free zones.
 
 ## 4. Quality Gates
 
-| Common failure | How Scene Kit checks it |
+| Common problem | How Scene Kit checks it |
 |---|---|
-| Incomplete component inventory | Three-level inventory of macro components, repeated modules, and attachment details |
-| Quantity drift | Cross-check `quantity_audit`, parametric contracts, and live assembly instances |
-| Front-only parts with no depth or mounting surface | Verify side walls, rear enclosure, volume, projection depth, and host contact |
-| Dormer roof crosses the eave or misses the rear wall | Verify eave setback, rear-wall coverage, and real intersection with the main roof |
-| Tower, window, railing, or ornament occlusion | Measure live component masks, projected overlap, and front-to-back depth |
-| Close color but wrong surface identity | Validate material semantics, texture scale, normals, roughness, and projection separately |
-| Standalone components disagree with the assembly | Compare bounds, object counts, triangles, origins, and material bindings |
-| Stale screenshots or approvals | Bind revision, parameter hash, file hashes, and current QA together |
+| Incomplete component inventory | Three-level inventory (macro, repeated, attached), with every item linked to a real component |
+| Drifting counts of repeated components | Quantity audit, parametric contracts, and live assembly instances cross-checked together |
+| Front-only parts with no thickness or mounting surface | Side walls, rear panels, volume, projection depth, and host contact checks |
+| Attachments overshooting or failing to cover their host | Setback distance, rear coverage, and real intersection with the host surface |
+| Components occluding each other | Live component masks, projected overlap, and front-to-back depth audits |
+| Matching color but wrong material identity | Material semantics, texture scale, normals, roughness, and projection checked separately |
+| Standalone component inconsistent with the assembly | Bounding boxes, object counts, triangles, origins, and material bindings compared |
+| Stale screenshots or approvals still in use | Revision, parameter fingerprint, file hashes, and current QA bound together |
 
-## 5. Enhanced Detail Recognition
+## 5. Detail-Recognition Enhancements
 
-The canonical ten views remain mandatory and continue to gate `analysis_ready`. If a local feature remains unclear, such as a roof joint, hidden rear face, window depth, railing connection, attachment, or repeated quantity, additional temporary close-up or oblique views may be rendered from the same normalized reference model.
+The fixed multi-view set remains the mandatory primary reference and the `analysis_ready` gate. When a local feature remains unclear (for example seams, an occluded back side, component depth, connection details, or repeated counts), temporary close-up or oblique diagnostic views can be captured from the same normalized reference model.
 
-These diagnostic views support identification and cross-checking. They do not replace or reorder the fixed ten views and do not need to be retained in the final project. Conclusions from a diagnostic view must still be verified against an existing canonical view or original source material.
-
-Attachment-integrity requirements also remain in force: dormer components need real volume, side and rear enclosure, projection beyond the host, an inboard roof edge, and a verified connection to the main roof.
+These supplementary views support recognition and cross-confirmation only. They never replace or reorder the fixed view set and are not required in the final project; any conclusion drawn from them must still be cross-validated against the fixed views or original sources. Components attached to a host surface also pass a dedicated attachment gate: real volume, side and rear structure, projection depth, and a reliable connection to the host.
 
 ## 6. Case Study: Fairy-Tale Castle 01
 
@@ -173,7 +161,7 @@ scene-kit/                 Scene Kit skill
 scene-kit.standalone.md    single-file rule variant
 assembly/                  case-study Blender and GLB files
 components/                case component index and QA; standalone component binaries remain in the full project workspace
-assets/preview/            case references, QA, and current renders
+assets/                    workflow diagrams, plus case references, QA, and current renders (previews under assets/preview/)
 internal/                  current quantity, opening, host, and acceptance audits
 ```
 
